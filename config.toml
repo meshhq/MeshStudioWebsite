@@ -1,3 +1,29 @@
-baseURL = "http://example.org/"
+baseURL = "https://meshstudio.io/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Mesh Studio"
+
+[params]
+    googleAnalyticsUserID = "UA-90144908-1"
+    logo = "images/mesh-logo.png"
+
+# Menu
+[[menu.main]]
+    name = "WORK"
+    url = "/work"
+    weight = 1
+[[menu.main]]
+    name = "SERVICES"
+    url = "/services"
+    weight = 5
+[[menu.main]]
+    name = "ABOUT"
+    url = "/about"
+    weight = 5
+[[menu.main]]
+    name = "JOIN US"
+    url = "/careers"
+    weight = 5
+[[menu.main]]
+    name = "BLOG"
+    url = "/blog"
+    weight = 5

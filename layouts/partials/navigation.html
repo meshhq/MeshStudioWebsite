@@ -1,0 +1,30 @@
+<div class="container">
+    <nav class="navbar navbar-expand-md navbar-light mt-5">
+
+        <!-- Small Viewport Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Logo -->
+        <!-- TODO - lets use a svg instead when we have good support for those -->
+        <a class="navbar-brand" href="{{.Site.BaseURL}}">
+            <img class="img-fluid main-logo" src="{{ .Site.Params.logo }}" alt="Home" />
+        </a>
+
+        <!-- Menu Items -->
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <form class="form-inline ml-auto my-2 my-lg-0">
+                <ul class="navbar-nav">
+                    {{ range .Site.Menus.main }}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+                    </li>
+                    {{end}}
+                </ul>
+            </form>
+        </div>
+        
+    </nav>
+</div>

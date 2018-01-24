@@ -1,0 +1,36 @@
+/* ==========================================================================
+   1. Site Wide Defaults
+   ========================================================================== */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --mesh-black:#1A2233;
+}
+  
+/* ==========================================================================
+   1. Header - Top of every page
+   ========================================================================== */
+
+.navbar .main-logo {
+    max-width: 197px;
+    height: auto;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    padding-left: 30px;
+    padding-right: 0px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--mesh-black);
+    font-weight: 300;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   9. Footer - The bottom of every page
+   ========================================================================== */
