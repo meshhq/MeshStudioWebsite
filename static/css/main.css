@@ -6,19 +6,48 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     letter-spacing: 2px;
 }
 
+
+/* CSS Variable Decls */
+
 :root {
     /* Colors */
-    --mesh-black:#1A2233;
-    --mesh-dk-blue:#1F2533;
+    /* Blacls */
+    --mesh-black: #1A2233;
+    /* Blues */
+    --mesh-dk-blue: #1F2533;
+    --mesh-dk-blue-bg: rgba(31, 37, 50, 0.02);
+    --mesh-dk-blue-bg-border: rgba(31, 37, 50, 0.08);
 }
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#container,
+#content {
+    flex: 1 0 auto;
+}
+
 
 /* ==========================================================================
    Partials
    ========================================================================== */
+
 
 /* ==========================================================================
    Hero Block
@@ -39,7 +68,8 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.25em;
     width: 50%;
 }
-  
+
+
 /* ==========================================================================
    Header - Top of every page
    ========================================================================== */
@@ -61,6 +91,7 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
 
+
 /* ==========================================================================
    2. Home - Main Index Page
    ========================================================================== */
@@ -69,14 +100,22 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 8em;
 }
 
+.home .primary-section {
+    background: var(--mesh-dk-blue-bg);
+    border: var(--mesh-dk-blue-bg-border);
+    border-width: 1px;
+    border-style: solid;
+}
+
 
 /* ==========================================================================
    9. Footer - The bottom of every page
    ========================================================================== */
+
 footer {
     background: var(--mesh-dk-blue);
     color: white;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0px;
     left: 0px;
     right: 0px;
@@ -92,10 +131,11 @@ footer .footer-list h5 {
     opacity: .5;
 }
 
-footer li, footer li a {
+footer li,
+footer li a {
     letter-spacing: 1px;
     font-size: 15px;
-    color:#fff;
+    color: #fff;
     font-weight: 300;
 }
 
