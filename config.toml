@@ -4,26 +4,31 @@ title = "Mesh Studio"
 
 [params]
     googleAnalyticsUserID = "UA-90144908-1"
-    logo = "images/mesh-logo.png"
+    logoBlack = "/images/mesh-logo-black.png"
+    logoWhite = "/images/mesh-logo-white.png"
 
 # Menu
 [[menu.main]]
-    name = "WORK"
-    url = "/work"
+    name = "Home"
+    url = "/"
     weight = 1
 [[menu.main]]
-    name = "SERVICES"
+    name = "Work"
+    url = "/work"
+    weight = 2
+[[menu.main]]
+    name = "Services"
     url = "/services"
     weight = 5
 [[menu.main]]
-    name = "ABOUT"
+    name = "About"
     url = "/about"
-    weight = 5
+    weight = 4
 [[menu.main]]
-    name = "JOIN US"
+    name = "Join Us"
     url = "/careers"
     weight = 5
 [[menu.main]]
-    name = "BLOG"
+    name = "Blog"
     url = "/blog"
     weight = 5

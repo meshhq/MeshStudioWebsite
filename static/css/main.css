@@ -6,8 +6,14 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 2px;
+}
+
 :root {
+    /* Colors */
     --mesh-black:#1A2233;
+    --mesh-dk-blue:#1F2533;
 }
   
 /* ==========================================================================
@@ -34,3 +40,58 @@ body {
 /* ==========================================================================
    9. Footer - The bottom of every page
    ========================================================================== */
+footer {
+    background: var(--mesh-dk-blue);
+    color: white;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+footer .footer-list h5 {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: .5;
+}
+
+footer li, footer li a {
+    letter-spacing: 1px;
+    font-size: 15px;
+    color:#fff;
+    font-weight: 300;
+}
+
+footer li a:hover {
+    color: #fff;
+    opacity: 0.6;
+}
+
+footer .nav-list ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+footer .nav-list ul a {
+    padding: 0px;
+    text-transform: uppercase;
+}
+
+footer .blog-title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+footer .blog-sub-title {
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    opacity: 0.5;
+    font-weight: 300;
+}
