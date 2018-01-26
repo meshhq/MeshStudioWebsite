@@ -8,8 +8,9 @@
     </div>
 
     <div class="primary-section">
+        <!-- GET IN TOUCH -->
         <div class="button-container d-flex justify-content-center">
-            <button type="button" class="btn">get in touch</button>
+            <button type="button" class="btn get-in-touch-btn">get in touch</button>
         </div>
         <div class="container">
             <!-- CASE STUDIES -->
@@ -31,10 +32,23 @@
                 {{partial "contentSections/capabilities" .}}
             </div>
 
-            <!-- Testimonial -->
+            <!-- TESTIMONIAL -->
             <div class="row testimonial">
                 <p class="testimonial-quote">{{.Params.testimonial}}</p>
                 <p class="testimonial-attr">{{.Params.testimonial_attr}}</p>
+            </div>
+
+            <!-- LOWER GET IN TOUCH -->
+            <div class="get-in-touch-top-border"></div>
+            <div class="row get-in-touch">
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-start align-items-center my-5">
+                    <p class="get-in-touch-header mb-0">{{.Params.get_in_touch_title}}</p>
+                    <p class="get-in-touch-content">{{.Params.get_in_touch_content}}</p>
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-end align-items-center">
+                    <button type="button" class="btn get-in-touch-btn">get in touch</button>
+                </div>
+
             </div>
 
         </div>

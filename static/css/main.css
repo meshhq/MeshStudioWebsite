@@ -158,6 +158,16 @@ body {
     margin: 8em 0em;
 }
 
+.home .primary-section .get-in-touch-btn {
+    height: 60px;
+    width: 300px;
+    top: -30px;
+    color: #fff;
+    background: var(--mesh-blue);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 .home .primary-section {
     background: var(--mesh-dk-blue-bg);
     border: var(--mesh-dk-blue-bg-border) 1px solid;
@@ -169,13 +179,7 @@ body {
 
 .home .primary-section .button-container button {
     position: absolute;
-    height: 60px;
-    width: 300px;
     top: -30px;
-    color: #fff;
-    background: var(--mesh-blue);
-    text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 .home .primary-section .container .testimonial,
@@ -241,6 +245,10 @@ body {
     margin-bottom: 0px;
 }
 
+.home .primary-section .testimonial {
+    margin-bottom: 8em;
+}
+
 .home .primary-section .testimonial .testimonial-quote {
     font-weight: 300;
     text-align: center;
@@ -253,6 +261,30 @@ body {
     font-weight: 300;
     text-align: center;
     font-size: 1.5em;
+    width: 100%;
+}
+
+.home .primary-section .get-in-touch-top-border {
+    height: 1px;
+    background: var(--mesh-dk-blue-content-border);
+    margin-left:-100%;
+    margin-right:-100%;
+}
+
+.home .primary-section .get-in-touch .get-in-touch-header {
+    color: var(--mesh-dk-blue);
+    font-weight: 500;
+    text-align: left;
+    font-size: 1.0em;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.home .primary-section .get-in-touch .get-in-touch-content {
+    color: var(--mesh-dk-blue);
+    font-weight: 300;
+    text-align: left;
+    font-size: 2em;
     width: 100%;
 }
 
