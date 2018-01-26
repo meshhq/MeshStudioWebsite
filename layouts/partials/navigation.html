@@ -17,14 +17,14 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <form class="form-inline ml-auto my-2 my-lg-0">
                 <ul class="navbar-nav">
-                    {{ range .Site.Menus.main }}
+                    {{ range where .Site.Menus.main "Name" "!=" "Home" }}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
                     </li>
-                    {{end}}
+                    {{ end }}
                 </ul>
             </form>
         </div>
-        
+
     </nav>
 </div>

@@ -8,8 +8,17 @@
     </div>
 
     <div class="primary-section">
+        <div class="button-container d-flex justify-content-center">
+            <button type="button" class="btn">get in touch</button>
+        </div>
         <div class="container">
-            {{partial "contentSections/caseStudies" .}}
+            <div class="row casestudies-title mb-5">
+                <a class="casestudy-link mr-4" href="{{ .URL }}">case studies</a>
+                <a class="casestudy-seeall-link" href="{{ .URL }}">see all</a>
+            </div>
+            <div class="casestudies">
+                {{partial "contentSections/caseStudies" .}}
+            </div>
         </div>
     </div>
 

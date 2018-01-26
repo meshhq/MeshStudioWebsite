@@ -1,15 +1,18 @@
-<div class="row d-flex justify-content-center my-5">
+<div class="row d-flex justify-content-between">
     {{ range first 2 (where .Data.Pages "Section" "work").ByDate }}
-    <div class="col-12 col-sm-6 case-study-card mx-3">
+    <div class="col-12 col-sm-6 case-study-card">
         <div class="row m-2">
-            <div class="col-9 card-container">
+            <div class="col-9 card-container mb-3">
                 <div class="logo-container d-flex justify-content-start align-items-center my-2">
                     <a class="case-study-link" href="{{.Site.BaseURL}}">
                         <img class="img-fluid case-study-logo" src="{{ .Params.header_image }}" alt="Home" />
                     </a>
                 </div>
-                <p class="title">{{ .Params.title }}.</p>
-                <p class="sub-title mb-5">{{ .Params.sub_title }}</p>
+                <p class="title mb-1">{{ .Params.title }}.</p>
+                <p class="sub-title">{{ .Params.sub_title }}</p>
+
+                <p>Ima tag!!</p>
+
             </div>
             <div class="col-3 arrow-container d-flex justify-content-end align-items-center">
                 <a class="case-study-link" href="{{.Site.BaseURL}}">

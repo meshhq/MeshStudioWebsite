@@ -23,7 +23,10 @@ h6 {
     /* Blacls */
     --mesh-black: #1A2233;
     /* Blues */
+    --mesh-blue: #1B5FCC;
     --mesh-dk-blue: #1F2533;
+    --mesh-dk-blue-light: rgba(31, 37, 50, 0.5);
+    --mesh-dk-blue-ultralight: rgba(31, 37, 50, 0.25);
     --mesh-dk-blue-bg: rgba(31, 37, 50, 0.02);
     --mesh-dk-blue-bg-border: rgba(31, 37, 50, 0.08);
     --mesh-dk-blue-dk-border: rgba(31, 37, 50, 0.1);
@@ -37,6 +40,10 @@ body {
 body {
     display: flex;
     flex-direction: column;
+}
+
+.btn:focus {
+    box-shadow: none;
 }
 
 #container,
@@ -62,8 +69,8 @@ body {
 }
 
 .hero-title-block h2 {
-    font-weight: 200;
-    font-size: 3em;
+    font-weight: 300;
+    font-size: 2em;
     width: 50%;
 }
 
@@ -79,7 +86,7 @@ body {
    ========================================================================== */
 
 .home .case-study-card {
-    max-width: 40%;
+    max-width: 46%;
     background: #fff;
     border: var(--mesh-dk-blue-dk-border) 1px solid;
 }
@@ -128,7 +135,7 @@ body {
 .navbar-light .navbar-nav .nav-link {
     color: var(--mesh-black);
     font-weight: 300;
-    font-size: 17px;
+    font-size: .9em;
     text-transform: uppercase;
 }
 
@@ -139,6 +146,7 @@ body {
 
 .home .hero {
     margin-top: 8em;
+    margin-bottom: 8em;
 }
 
 .home .primary-section {
@@ -146,6 +154,46 @@ body {
     border: var(--mesh-dk-blue-bg-border) 1px solid;
 }
 
+.home .primary-section .button-container {
+    position: relative;
+}
+
+.home .primary-section .button-container button {
+    position: absolute;
+    height: 60px;
+    width: 300px;
+    top: -30px;
+    color: #fff;
+    background: var(--mesh-blue);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.home .primary-section .container {
+    margin-top: 8em;
+}
+
+.home .primary-section .casestudy-link {
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--mesh-dk-blue);
+}
+
+.home .primary-section .casestudy-link:hover {
+    text-decoration: none;
+    color: var(--mesh-dk-blue-ultralight);
+}
+
+.home .primary-section .casestudy-seeall-link {
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--mesh-dk-blue-light);
+}
+
+.home .primary-section .casestudy-seeall-link:hover {
+    text-decoration: none;
+    color: var(--mesh-dk-blue);
+}
 
 /* ==========================================================================
    9. Footer - The bottom of every page
