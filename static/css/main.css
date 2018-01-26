@@ -155,8 +155,7 @@ body {
    ========================================================================== */
 
 .home .hero {
-    margin-top: 8em;
-    margin-bottom: 8em;
+    margin: 8em 0em;
 }
 
 .home .primary-section {
@@ -179,6 +178,7 @@ body {
     letter-spacing: 2px;
 }
 
+.home .primary-section .container .testimonial,
 .home .primary-section .container .casestudies-title,
 .home .primary-section .container .capabilties-title {
     margin-top: 8em;
@@ -239,6 +239,21 @@ body {
     font-weight: 300;
     width: 90%;
     margin-bottom: 0px;
+}
+
+.home .primary-section .testimonial .testimonial-quote {
+    font-weight: 300;
+    text-align: center;
+    font-size: 2em;
+    width: 100%;
+}
+
+.home .primary-section .testimonial .testimonial-attr {
+    color: var(--mesh-blue);
+    font-weight: 300;
+    text-align: center;
+    font-size: 1.5em;
+    width: 100%;
 }
 
 /* ==========================================================================
