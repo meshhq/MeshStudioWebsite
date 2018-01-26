@@ -6,6 +6,8 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+p,
+a,
 h1,
 h2,
 h3,
@@ -28,6 +30,7 @@ h6 {
     --mesh-dk-blue-light: rgba(31, 37, 50, 0.5);
     --mesh-dk-blue-ultralight: rgba(31, 37, 50, 0.25);
     --mesh-dk-blue-bg: rgba(31, 37, 50, 0.02);
+    --mesh-dk-blue-content-border: rgba(31, 37, 50, 0.15);
     --mesh-dk-blue-bg-border: rgba(31, 37, 50, 0.08);
     --mesh-dk-blue-dk-border: rgba(31, 37, 50, 0.1);
 }
@@ -169,30 +172,66 @@ body {
     letter-spacing: 2px;
 }
 
-.home .primary-section .container {
+.home .primary-section .container .casestudies-title,
+.home .primary-section .container .capabilties-title {
     margin-top: 8em;
 }
 
-.home .primary-section .casestudy-link {
+.home .primary-section .section-link {
     font-weight: 500;
     text-transform: uppercase;
     color: var(--mesh-dk-blue);
 }
 
-.home .primary-section .casestudy-link:hover {
+.home .primary-section .section-link:hover {
     text-decoration: none;
     color: var(--mesh-dk-blue-ultralight);
 }
 
-.home .primary-section .casestudy-seeall-link {
+.home .primary-section .section-seeall-link {
     font-weight: 500;
     text-transform: uppercase;
     color: var(--mesh-dk-blue-light);
 }
 
-.home .primary-section .casestudy-seeall-link:hover {
+.home .primary-section .section-seeall-link:hover {
     text-decoration: none;
     color: var(--mesh-dk-blue);
+}
+
+.home .primary-section .capabilities .capabilities-statement {
+    font-size: 2em;
+    font-weight: 300;
+    width: 90%
+}
+
+.home .primary-section .capabilities .capabilitiy-row .title {
+    font-size: 2em;
+    font-weight: 500;
+    width: 90%;
+    text-transform: capitalize;
+}
+
+.home .primary-section .capabilities .capabilitiy-row .capability-card {
+    padding: 20px;
+    background: #fff;
+    border: var(--mesh-dk-blue-content-border) 1px solid;
+    height: 100%;
+}
+
+.home .primary-section .capabilities .capabilitiy-row .card-title {
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: 500;
+    width: 90%
+}
+
+.home .primary-section .capabilities .capabilitiy-row .card-description {
+    text-align: center;
+    font-size: 1em;
+    font-weight: 300;
+    width: 90%;
+    margin-bottom: 0px;
 }
 
 /* ==========================================================================

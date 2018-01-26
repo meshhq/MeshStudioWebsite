@@ -12,12 +12,23 @@
             <button type="button" class="btn">get in touch</button>
         </div>
         <div class="container">
+            <!-- CASE STUDIES -->
             <div class="row casestudies-title mb-5">
-                <a class="casestudy-link mr-4" href="{{ .URL }}">case studies</a>
-                <a class="casestudy-seeall-link" href="{{ .URL }}">see all</a>
+                <a class="section-link mr-4" href="{{ .URL }}">case studies</a>
+                <a class="section-seeall-link" href="{{ .URL }}">see all</a>
             </div>
             <div class="casestudies">
                 {{partial "contentSections/caseStudies" .}}
+            </div>
+
+            <!-- CAPABILITIES -->
+            <div class="row capabilties-title mb-3">
+                <a class="section-link mr-4" href="{{ .URL }}">capabilites</a>
+                <a class="section-seeall-link" href="{{ .URL }}">see all</a>
+            </div>
+            <div class="capabilities">
+                <p class="capabilities-statement mb-5">{{.Params.capabilities_statement}}</p>
+                {{partial "contentSections/capabilities" .}}
             </div>
         </div>
     </div>
