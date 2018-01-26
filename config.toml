@@ -4,6 +4,7 @@ title = "Mesh Studio"
 
 [params]
     googleAnalyticsUserID = "UA-90144908-1"
+    rainImg = "/images/site/rain.svg"
     logoBlack = "/images/site/meshlogo-black-vector.svg"
     logoWhite = "/images/site/meshlogo-white-vector.svg"
 

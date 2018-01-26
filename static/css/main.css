@@ -54,6 +54,13 @@ body {
     flex: 1 0 auto;
 }
 
+.seattle-rain {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 40px;
+}
 
 /**
 
