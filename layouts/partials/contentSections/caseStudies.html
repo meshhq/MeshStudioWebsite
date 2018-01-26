@@ -1,0 +1,22 @@
+<div class="row d-flex justify-content-center my-5">
+    {{ range first 2 (where .Data.Pages "Section" "work").ByDate }}
+    <div class="col-12 col-sm-6 case-study-card mx-3">
+        <div class="row m-2">
+            <div class="col-9 card-container">
+                <div class="logo-container d-flex justify-content-start align-items-center my-2">
+                    <a class="case-study-link" href="{{.Site.BaseURL}}">
+                        <img class="img-fluid case-study-logo" src="{{ .Params.header_image }}" alt="Home" />
+                    </a>
+                </div>
+                <p class="title">{{ .Params.title }}.</p>
+                <p class="sub-title mb-5">{{ .Params.sub_title }}</p>
+            </div>
+            <div class="col-3 arrow-container d-flex justify-content-end align-items-center">
+                <a class="case-study-link" href="{{.Site.BaseURL}}">
+                    <img class="img-fluid case-study-logo" src="/images/site/right-arrow.png" alt="Home" />
+                </a>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+</div>

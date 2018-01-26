@@ -26,6 +26,7 @@ h6 {
     --mesh-dk-blue: #1F2533;
     --mesh-dk-blue-bg: rgba(31, 37, 50, 0.02);
     --mesh-dk-blue-bg-border: rgba(31, 37, 50, 0.08);
+    --mesh-dk-blue-dk-border: rgba(31, 37, 50, 0.1);
 }
 
 html,
@@ -42,6 +43,9 @@ body {
 #content {
     flex: 1 0 auto;
 }
+
+
+/**
 
 
 /* ==========================================================================
@@ -69,6 +73,43 @@ body {
     width: 50%;
 }
 
+
+/* ==========================================================================
+   Case Studies
+   ========================================================================== */
+
+.home .case-study-card {
+    max-width: 40%;
+    background: #fff;
+    border: var(--mesh-dk-blue-dk-border) 1px solid;
+}
+
+.home .case-study-card .logo-container {
+    height: 80px;
+    width: 400px;
+}
+
+.home .case-study-card .logo-container img {
+    height: 25px;
+    width: auto;
+}
+
+.home .case-study-card .title {
+    font-weight: 500;
+    font-size: 1em;
+    max-width: 800%
+}
+
+.home .case-study-card .sub-title {
+    font-weight: 300;
+    font-size: 1em;
+    max-width: 800%
+}
+
+.home .case-study-card .arrow-container img {
+    height: 25px;
+    width: auto;
+}
 
 /* ==========================================================================
    Header - Top of every page
@@ -102,9 +143,7 @@ body {
 
 .home .primary-section {
     background: var(--mesh-dk-blue-bg);
-    border: var(--mesh-dk-blue-bg-border);
-    border-width: 1px;
-    border-style: solid;
+    border: var(--mesh-dk-blue-bg-border) 1px solid;
 }
 
 
