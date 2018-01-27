@@ -1,0 +1,43 @@
+
+<!-- 
+WORK CARD
+
+This card captures a unit of work. For now, it represents either a product or case study.
+
+Required Params in Dict
+- title 
+- sub_title 
+- base_url (link for clicking on the disclosures)
+- header_image (link for clicking on the disclosures)
+- header_image_max_height (max height for logo to display)
+- tags (array of strings that summarize the work)
+-->
+<div class="col-12 col-sm-6 case-study-card mb-4">
+    <div class="row card-row p-4">
+        <div class="col-9 card-container mb-3 d-flex flex-column">
+            <div class="logo-container d-flex justify-content-start align-items-center mt-4 mb-5">
+                <a class="case-study-link" href="{{.base_url}}">
+                    <img class="img-fluid case-study-logo" src="{{.header_image}}" alt="Home" style="max-height: {{.header_image_max_height}}px;"
+                    />
+                </a>
+            </div>
+            <p class="title my-2">{{ .title }}.</p>
+            <p class="sub-title">{{ .sub_title }}</p>
+            <div class="tag-box d-flex align-items-end">
+                {{ $count := len .tags }} 
+                {{ range $idx, $value := .tags }}
+                    <span class="tag">{{$value}}</span>
+                    {{ $limit := add $idx 1 }} 
+                    {{ if gt $count $limit }}
+                        <div class="tag-spacer"></div>
+                    {{ end }} 
+                {{ end }}
+            </div>
+        </div>
+        <div class="col-3 arrow-container d-flex justify-content-end align-items-center">
+            <a class="case-study-link" href="{{.base_url}}">
+                <img class="img-fluid case-study-disclosure" src="/images/site/right-arrow.png" alt="Home" />
+            </a>
+        </div>
+    </div>
+</div>

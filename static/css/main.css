@@ -95,40 +95,70 @@ body {
    Case Studies
    ========================================================================== */
 
-.home .case-study-card {
-    max-width: 46%;
+.case-study-card {
+    max-width: 48%;
     background: #fff;
     border: var(--mesh-dk-blue-dk-border) 1px solid;
 }
 
-.home .case-study-card .logo-container {
+.case-study-card .card-row,
+.case-study-card .card-container {
+    height: 100%;
+}
+
+.case-study-card .logo-container {
     height: 80px;
     width: 400px;
 }
 
-.home .case-study-card .logo-container img {
-    height: 25px;
+.case-study-card .logo-container img {
     width: auto;
 }
 
-.home .case-study-card .title {
+.case-study-card .title {
     font-weight: 500;
     font-size: 1em;
     max-width: 800%
 }
 
-.home .case-study-card .sub-title {
+.case-study-card .sub-title {
     font-weight: 300;
     font-size: 1em;
     max-width: 800%
 }
 
-.home .case-study-card .arrow-container img {
+.case-study-card .arrow-container img {
     height: 25px;
     width: auto;
 }
 
-.home .case-study-card .arrow-container .case-study-disclosure:hover {
+.case-study-card .tag-box {
+    position: relative;
+    height: 100%;
+}
+
+.case-study-card .tag {
+    font-size: .95em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--mesh-dk-blue-light);
+}
+
+.case-study-card .tag-spacer {
+    display: inline-block;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background: var(--mesh-blue);
+    
+    /* We do this since the letter-spacing css prop of the text padds the end of text..? */
+    margin: 3px;
+    margin-bottom: 9px;
+    margin-right: 9px;
+    margin-left: 6px;
+}
+
+.case-study-card .arrow-container .case-study-disclosure:hover {
     fill: blue;
 }
 
@@ -141,9 +171,16 @@ body {
     height: auto;
 }
 
-.navbar-light .navbar-nav .nav-link {
-    padding-left: 30px;
-    padding-right: 0px;
+.navbar-light .navbar-nav .nav-item {
+    margin-left: 30px;
+}
+
+.navbar-light .navbar-nav .active {
+    border-bottom: var(--mesh-dk-blue) 1px solid;
+}
+
+.navbar-light .navbar-nav li:hover {
+    border-bottom: var(--mesh-dk-blue-ultralight) 1px solid;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -151,6 +188,7 @@ body {
     font-weight: 300;
     font-size: .9em;
     text-transform: uppercase;
+    padding: 0px;
 }
 
 
@@ -217,7 +255,8 @@ body {
 .home .primary-section .capabilities .capabilities-statement {
     font-size: 2em;
     font-weight: 300;
-    width: 90%
+    width: 90%;
+    margin-left: -15px;
 }
 
 .home .primary-section .capabilities .capabilitiy-row .title {
@@ -290,6 +329,35 @@ body {
     text-align: left;
     font-size: 2em;
     width: 100%;
+}
+
+/* ==========================================================================
+   3. Home - Main Index Page
+   ========================================================================== */
+
+.work .hero {
+    margin: 8em 0em;
+}
+
+.work .primary-section {
+    background: var(--mesh-dk-blue-bg);
+    border: var(--mesh-dk-blue-bg-border) 1px solid;
+}
+
+.work .primary-section .section-headers {
+    margin-top: 8em;
+}
+
+.work .primary-section .section-headers .title {
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 80%;
+}
+
+.work .primary-section .section-headers .content {
+    font-size: 2em;
+    font-weight: 300;
+    width: 80%;
 }
 
 /* ==========================================================================

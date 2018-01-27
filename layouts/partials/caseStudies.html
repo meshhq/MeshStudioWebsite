@@ -1,0 +1,9 @@
+<!-- This partial expects a dict with a value for `context` and for `limit` -->
+
+{{ $context := .context }}
+{{ $limit := .limit }}
+<div class="row d-flex justify-content-between">
+    {{ range first $limit (where $context.Data.Pages "Section" "work").ByDate }}
+        {{partial "contentSections/workCard" (dict "title" .Params.title "sub_title" .Params.sub_title "base_url" .Site.BaseURL "header_image" .Params.header_image "header_image_max_height" .Params.header_image_max_height "tags" .Params.tags)}}
+    {{ end }}
+</div>
