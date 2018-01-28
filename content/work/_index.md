@@ -10,5 +10,20 @@ testimonial: “We work with companies of all sizes, from Fortune 500s venture-f
 testimonial_attr: Aarti; Otto
 get_in_touch_title: Ready to get started
 get_in_touch_content: Let's talk about your project
+products:
+    - title: Standup
+      product_color: 4A90E2
+      sub_title: Automated and painless standup reports for your whole team.
+      product_image: /images/products/standupShot.png
+      header_image: /images/products/standup-vector.svg
+      header_image_max_height: 35
+      tags: ["innovation", "security"]
+    - title: Grokk
+      product_color: 347AB7
+      sub_title: User testing for developer products
+      product_image: /images/products/grokkShot.png
+      header_image: /images/products/grokk-vector.svg
+      header_image_max_height: 35
+      tags: ["innovation", "security"]
 ---
 

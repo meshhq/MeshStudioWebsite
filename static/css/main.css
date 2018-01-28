@@ -45,6 +45,10 @@ body {
     flex-direction: column;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 .btn:focus {
     box-shadow: none;
 }
@@ -96,7 +100,6 @@ body {
    ========================================================================== */
 
 .case-study-card {
-    max-width: 48%;
     background: #fff;
     border: var(--mesh-dk-blue-dk-border) 1px solid;
 }
@@ -163,6 +166,44 @@ body {
 }
 
 /* ==========================================================================
+   Get In Touch Partial
+   ========================================================================== */
+
+.get-in-touch-btn {
+    height: 60px;
+    width: 300px;
+    top: -30px;
+    color: #fff;
+    background: var(--mesh-blue);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.get-in-touch-top-border {
+    height: 1px;
+    background: var(--mesh-dk-blue-content-border);
+    margin-left:-100%;
+    margin-right:-100%;
+}
+
+.get-in-touch .get-in-touch-header {
+    color: var(--mesh-dk-blue);
+    font-weight: 500;
+    text-align: left;
+    font-size: 1.0em;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.get-in-touch .get-in-touch-content {
+    color: var(--mesh-dk-blue);
+    font-weight: 300;
+    text-align: left;
+    font-size: 2em;
+    width: 100%;
+}
+
+/* ==========================================================================
    Header - Top of every page
    ========================================================================== */
 
@@ -198,16 +239,6 @@ body {
 
 .home .hero {
     margin: 8em 0em;
-}
-
-.home .primary-section .get-in-touch-btn {
-    height: 60px;
-    width: 300px;
-    top: -30px;
-    color: #fff;
-    background: var(--mesh-blue);
-    text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 .home .primary-section {
@@ -307,32 +338,8 @@ body {
     width: 100%;
 }
 
-.home .primary-section .get-in-touch-top-border {
-    height: 1px;
-    background: var(--mesh-dk-blue-content-border);
-    margin-left:-100%;
-    margin-right:-100%;
-}
-
-.home .primary-section .get-in-touch .get-in-touch-header {
-    color: var(--mesh-dk-blue);
-    font-weight: 500;
-    text-align: left;
-    font-size: 1.0em;
-    width: 100%;
-    text-transform: uppercase;
-}
-
-.home .primary-section .get-in-touch .get-in-touch-content {
-    color: var(--mesh-dk-blue);
-    font-weight: 300;
-    text-align: left;
-    font-size: 2em;
-    width: 100%;
-}
-
 /* ==========================================================================
-   3. Home - Main Index Page
+   3. Work - Work page for products and clients
    ========================================================================== */
 
 .work .hero {
@@ -359,6 +366,36 @@ body {
     font-weight: 300;
     width: 80%;
 }
+
+.work .primary-section .products {
+    margin-bottom: 8em;
+}
+
+.work .primary-section .product-row {
+    width: 100%;
+    border: 1px solid var(--mesh-dk-blue-bg-border);
+    border-radius: 5px;
+}
+
+.work .primary-section .casestudies .case-study-card {
+    max-width: 48%;
+    margin-bottom: 16px;
+}
+
+.work .primary-section .products .case-study-card,
+.work .primary-section .products .product-shot {
+    marign: 0;
+    width: 100%;
+    height: 100%;
+}
+.work .primary-section .product-shot {
+    background: blue;
+}
+
+.work .primary-section .product-shot img {
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);;
+}
+
 
 /* ==========================================================================
    9. Footer - The bottom of every page
