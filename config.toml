@@ -20,7 +20,7 @@ title = "Mesh Studio"
 [[menu.main]]
     name = "Services"
     url = "/services/"
-    weight = 5
+    weight = 2
 [[menu.main]]
     name = "About"
     url = "/about/"
@@ -32,4 +32,4 @@ title = "Mesh Studio"
 [[menu.main]]
     name = "Blog"
     url = "/blog/"
-    weight = 5
+    weight = 6

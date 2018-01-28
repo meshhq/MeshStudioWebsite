@@ -1,6 +1,73 @@
 {{ define "main" }}
 
-<p>{{.Title}}</p>
-<p>{{.CurrentSection}}</p>
+<div class="about">
+    <div class="hero">
+        <div class="container">
+            {{partial "heroTitleBlock" .Params}}
+        </div>
+    </div>
+
+    <div class="primary-section">
+        <div class="container">
+            <!-- ABOUT INTRO -->
+            <div class="row section intro-summary">
+                <div class="col-12 col-md-8 offset-md-2">
+                    <p class="title">{{.Params.intro_title}}</p>
+                    <p class="content">{{.Params.intro_content}}</p>
+                </div>
+            </div>
+
+            <!-- VALUES -->
+            <div class="row section values">
+                <div class="col-12 col-md-8 offset-md-2">
+                    <p class="title mb-4">{{.Params.values_title}}</p>
+                    {{ $count := len .Params.values_content }} 
+                    {{ range $idx, $hash := .Params.values_content }} 
+                        {{ $limit := add $idx 1 }}
+                        <div class="value{{ if gt $count $limit }} mb-5{{ end }} ">
+                            <p class="sub-title">{{$hash.title}}</p>
+                            <p class="content">{{$hash.summary}}</p>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+
+            <!-- VALUES -->
+            <div class="row section story">
+                <div class="col-12 col-md-8 offset-md-2">
+                    <p class="title">{{.Params.story_title}}</p>
+                    <p class="content">{{.Params.story_content}}</p>
+                </div>
+            </div>
+
+            <!-- FOUNDERS -->
+            <div class="row section founders">
+                
+                <div class="col-12 col-md-8 offset-md-2">
+                    <p class="title mb-4">{{.Params.founders_title}}</p>
+                    {{ $count := len .Params.founders_content }} 
+                    {{ range $idx, $hash := .Params.founders_content }} 
+                        {{ $limit := add $idx 1 }}
+                        <div class="founder row">
+                            <div class="col-3">
+                                <a class="founder-link" href="{{.base_url}}">
+                                    <img class="img-fluid founder-image" src="{{$hash.image}}"/>
+                                </a>
+                            </div>
+                            <div class="col-9">
+                                <div class="value{{ if gt $count $limit }} mb-5{{ end }} ">
+                                    <p class="sub-title">{{$hash.name}}</p>
+                                    <p class="content">{{$hash.description}}</p>
+                                </div>                
+                            </div>
+                        </div>        
+                    {{ end }}                
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
 
 {{ end }}

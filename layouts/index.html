@@ -16,7 +16,7 @@
             <!-- CASE STUDIES -->
             <div class="row casestudies-title mb-5">
                 <a class="section-link mr-4" href="{{ .URL }}">case studies</a>
-                <a class="section-see-all-link" href="{{ .URL }}">see all</a>
+                <a class="section-seeall-link" href="{{ .URL }}">see all</a>
             </div>
             <div class="casestudies">
                 {{partial "caseStudies" (dict "context" . "limit" "2")}}
@@ -34,12 +34,11 @@
 
             <!-- TESTIMONIAL -->
             <div class="row testimonial">
+                <a class="section-link mr-4 mb-4">what our clients are saying</a>
+                <a class="section-seeall-link" href="{{ .URL }}">see all</a>
                 <p class="testimonial-quote">{{.Params.testimonial}}</p>
                 <p class="testimonial-attr">{{.Params.testimonial_attr}}</p>
             </div>
-
-            <!-- LOWER GET IN TOUCH -->
-            {{partial "getInTouch" .}}
         </div>
     </div>
 

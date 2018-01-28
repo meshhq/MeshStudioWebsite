@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{.Site.LanguageCode}}">
-<img class="seattle-rain" src="{{ .Site.Params.rainImg }}" alt="Home" />
+
 {{ partial "header.html" . }}
 
 <body class="nav-closed">
-
+    <img class="seattle-rain" src="{{ .Site.Params.rainImg }}" alt="Home" />
     <main id="content" class="content" role="main">
 
         {{block "main" .}} {{end}}

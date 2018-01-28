@@ -43,6 +43,7 @@ body {
 body {
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 a:hover {
@@ -179,11 +180,8 @@ a:hover {
     letter-spacing: 2px;
 }
 
-.get-in-touch-top-border {
-    height: 1px;
-    background: var(--mesh-dk-blue-content-border);
-    margin-left:-100%;
-    margin-right:-100%;
+.get-in-touch-container {
+    background: #fff;
 }
 
 .get-in-touch .get-in-touch-header {
@@ -283,6 +281,11 @@ a:hover {
     color: var(--mesh-dk-blue);
 }
 
+.home .primary-section .casestudies .case-study-card {
+    max-width: 48%;
+    margin-bottom: 16px;
+}
+
 .home .primary-section .capabilities .capabilities-statement {
     font-size: 2em;
     font-weight: 300;
@@ -320,7 +323,7 @@ a:hover {
 }
 
 .home .primary-section .testimonial {
-    margin-bottom: 8em;
+    margin-bottom:4em;
 }
 
 .home .primary-section .testimonial .testimonial-quote {
@@ -396,6 +399,49 @@ a:hover {
     box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);;
 }
 
+/* ==========================================================================
+   4. About - Story of Mesh / Founders
+   ========================================================================== */
+
+.about .hero {
+    margin: 8em 0em;
+}
+
+.about .section {
+    margin-bottom: 6em;
+}
+
+.about .primary-section {
+    background: var(--mesh-dk-blue-bg);
+    border: var(--mesh-dk-blue-bg-border) 1px solid;
+}
+
+.about .primary-section .title {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1em;
+    letter-spacing: 4px;
+}
+
+.about .primary-section .sub-title {
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+
+.about .primary-section .intro-summary {
+    margin-top: 6em;
+}
+
+.about .primary-section .content {
+    font-weight: 300;
+    font-size: 1.3em;
+}
+
+.about .primary-section .founders .founder img {
+    border: var(--mesh-dk-blue-light) 1px solid;
+    border-radius: 50%;
+}
 
 /* ==========================================================================
    9. Footer - The bottom of every page
@@ -404,7 +450,6 @@ a:hover {
 footer {
     background: var(--mesh-dk-blue);
     color: white;
-    /* position: fixed; */
     bottom: 0px;
     left: 0px;
     right: 0px;
