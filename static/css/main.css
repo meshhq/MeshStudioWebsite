@@ -438,9 +438,14 @@ a:hover {
     font-size: 1.3em;
 }
 
-.about .primary-section .founders .founder img {
+.about .primary-section .founders .founder .founder-image {
     border: var(--mesh-dk-blue-light) 1px solid;
     border-radius: 50%;
+}
+
+.about .primary-section .founders .twitter-bird {
+    height: 20px;
+    width: 20px;
 }
 
 /* ==========================================================================
