@@ -1,6 +1,7 @@
 baseURL = "https://meshstudio.io/"
 languageCode = "en-us"
 title = "Mesh Studio"
+publishDir = "docs"
 
 [params]
     googleAnalyticsUserID = "UA-90144908-1"
