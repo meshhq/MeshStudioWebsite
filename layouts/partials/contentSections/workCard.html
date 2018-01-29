@@ -22,16 +22,7 @@ Required Params in Dict
             </div>
             <p class="title my-2">{{ .title }}.</p>
             <p class="sub-title">{{ .sub_title }}</p>
-            <div class="tag-box d-flex align-items-end">
-                {{ $count := len .tags }} 
-                {{ range $idx, $value := .tags }}
-                    <span class="tag">{{$value}}</span>
-                    {{ $limit := add $idx 1 }} 
-                    {{ if gt $count $limit }}
-                        <div class="tag-spacer"></div>
-                    {{ end }} 
-                {{ end }}
-            </div>
+            {{ partial "contentSections/tagBox" . }}
         </div>
         <div class="col-3 arrow-container d-flex justify-content-end align-items-center">
             <a class="case-study-link" href="{{.base_url}}">

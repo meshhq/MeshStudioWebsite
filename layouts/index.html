@@ -27,11 +27,8 @@
                 <a class="section-link mr-4" href="{{ .URL }}">capabilites</a>
                 <a class="section-seeall-link" href="{{ .URL }}">see all</a>
             </div>
-            <div class="capabilities">
-                <p class="capabilities-statement mb-5">{{.Params.capabilities_statement}}</p>
-                {{partial "contentSections/capabilities" .}}
-            </div>
 
+            {{partial "contentSections/capabilities"  (dict "context" . "show_subtitle" false )}}
             <!-- TESTIMONIAL -->
             <div class="row testimonial">
                 <a class="section-link mr-4 mb-4">what our clients are saying</a>

@@ -7,6 +7,9 @@ title = "Mesh Studio"
     rainImg = "/images/site/rain.svg"
     logoBlack = "/images/site/meshlogo-black-vector.svg"
     logoWhite = "/images/site/meshlogo-white-vector.svg"
+    get_in_touch_title = "Ready to get started"
+    get_in_touch_content = "Let's talk about your project"
+
 
 # Menu
 [[menu.main]]

@@ -1,5 +1,19 @@
 {{ define "main" }}
 
-<p>yo3</p>
+<div class="services">
+    <div class="hero">
+        <div class="container">
+            {{partial "heroTitleBlock" .Params}}
+        </div>
+    </div>
+
+    <div class="primary-section">
+        <div class="container">
+            <!-- CAPABILITIES -->
+            {{partial "contentSections/capabilities" (dict "context" . "show_subtitle" true )}}
+        </div>
+    </div>
+
+</div>
 
 {{ end }}

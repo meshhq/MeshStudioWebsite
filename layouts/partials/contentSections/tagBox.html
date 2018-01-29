@@ -1,0 +1,20 @@
+
+<!-- 
+TAG BOX
+
+This partial enumerates an array of strings
+
+Required Params in Dict
+- tags (array of strings)
+-->
+
+<div class="tag-box d-flex align-items-end">
+    {{ $count := len .tags }} 
+    {{ range $idx, $value := .tags }}
+        <span class="tag">{{$value}}</span>
+        {{ $limit := add $idx 1 }} 
+        {{ if gt $count $limit }}
+            <div class="tag-spacer"></div>
+        {{ end }} 
+    {{ end }}
+</div>                    
