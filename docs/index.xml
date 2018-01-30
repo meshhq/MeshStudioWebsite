@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ship Better Software, Faster on Mesh Studio</title>
+    <link>https://meshstudio.io/</link>
+    <description>Recent content in Ship Better Software, Faster on Mesh Studio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://meshstudio.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Authentication vs. Authorization</title>
+      <link>https://meshstudio.io/blog/2018-01-05-authentication-vs-authorization/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-01-05-authentication-vs-authorization/</guid>
+      <description>You allowed in here? Lately I have noticed quite a few people mixing up the the concepts of Authentication and Authorization. This isn’t a big deal if you’re using them interchangeably when talking about most anything besides tech, but these concepts are quite different and worth explaining.
+So, What is the Difference Authentication is simply the notion of identity, but it’s a powerful concept. It’s proving to someone (your local TSA agent), or something (the IRS website) that you are who you say you are.</description>
+    </item>
+    
+    <item>
+      <title>Session Tokens</title>
+      <link>https://meshstudio.io/blog/2018-01-10-session-tokens/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-01-10-session-tokens/</guid>
+      <description>Authentication and session management are two areas almost all developers have to deal with repeatedly throughout their career. It’s common for us to reach for a well tested open-source library to bolt onto our app, and that’s a good thing since security logic is one of those things you want a lot of eyes on. But as everything in programming, it helps to know the underlying logic behind the tools we use.</description>
+    </item>
+    
+    <item>
+      <title>Setting Up CircleCI</title>
+      <link>https://meshstudio.io/blog/2018-01-20-setting-up-circle/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-01-20-setting-up-circle/</guid>
+      <description>Contiuons Integration with Node.js and CircleCI Software developers tend to come up with complicated names for simple topics. Examples of this include Dependency Injection, Orthogonality, or [think of something]. While these terms sound impressive, they often produce an adverse side effect; novice developers assume the subjects they are describing are complicated and unapproachable.
+https://mobile.twitter.com/tenderlove/status/748579020703313920
+The above proved to be true for me when I first learned about Continuous Integration (CI).</description>
+    </item>
+    
+    <item>
+      <title>Spectre Explained</title>
+      <link>https://meshstudio.io/blog/2018-01-15-spectre/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-01-15-spectre/</guid>
+      <description>Spectre and Meltdown Pt 1: What you need to know This is a two-part series that covers both Spectre and Meltdown. In the following piece we will attempt to give an explanation of a recent security exploit known as Spectre
+In the news If you&amp;rsquo;ve been paying attention to tech chatter over the past week, you have probably heard about two catastrophic security flaws called Spectre and Meltdown. With so many security breaches in the news, it can be hard to discern which headlines you should be concerned with.</description>
+    </item>
+    
+    <item>
+      <title>Spanish Gusto</title>
+      <link>https://meshstudio.io/work/runa/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/work/runa/</guid>
+      <description>We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship great software products. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
+      <title>Locking Up Innovation</title>
+      <link>https://meshstudio.io/work/otto/</link>
+      <pubDate>Sun, 23 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/work/otto/</guid>
+      <description>We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship great software products. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
+      <title>Making Staples Easy Again</title>
+      <link>https://meshstudio.io/work/staples/</link>
+      <pubDate>Thu, 23 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/work/staples/</guid>
+      <description>We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship great software products. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://meshstudio.io/post/post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/post/post/</guid>
+      <description> Hi </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://meshstudio.io/services/services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/services/services/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    
+    <link rel="shortcut icon" href="https://meshstudio.io/images/favicon.ico">
+    <link rel="apple-touch-icon" href="https://meshstudio.io/images/apple-touch-icon.png" />
+
+    
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <meta property="og:title" content=" Session Tokens &middot;  Mesh Studio" />
+  <meta property="og:site_name" content="Mesh Studio" />
+  <meta property="og:url" content="https://meshstudio.io/blog/2018-01-10-session-tokens/" />
+
+
+  <meta property="og:type" content="article" />
+
+<meta property="og:article:published_time" content="2018-01-05T00:00:00Z" />
+
+
+<meta property="og:article:tag" content="innovation" />
+
+<meta property="og:article:tag" content="security" />
+
+
+
+<title>
+ Session Tokens &middot;  Mesh Studio
+</title>
+
+<meta name="description" content="" />
+
+<meta name="HandheldFriendly" content="True" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://meshstudio.io/css/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,900" rel="stylesheet">
+
+    
+    
+      
+          <link href="https://meshstudio.io/index.xml" rel="alternate" type="application/rss+xml" title="Mesh Studio" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.34" />
+
+    <link rel="canonical" href="https://meshstudio.io/blog/2018-01-10-session-tokens/" />
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-90144908-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+</head>
+<body class="nav-closed">
+
+  <div class="container" id="container">
+    <nav class="navbar navbar-expand-md navbar-light mt-5">
+
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        
+        <a class="navbar-brand" href="https://meshstudio.io/">
+            <img class="img-fluid main-logo" src="/images/site/meshlogo-black-vector.svg" alt="Home" />
+        </a>
+
+        
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <form class="form-inline ml-auto my-2 my-lg-0">
+                <ul class="navbar-nav">
+                    
+                     
+                    <li class="nav-item">
+                        <a class="nav-link" href="/work/">Work</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/services/">Services</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about/">About</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/careers/">Join Us</a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/blog/">Blog</a>
+                    </li>
+                    
+                </ul>
+            </form>
+        </div>
+
+    </nav>
+</div>
+
+
+
+<body class="nav-closed">
+    <img class="seattle-rain" src="/images/site/rain.svg" alt="Home" />
+    <main id="content" class="content" role="main">
+
+        
+
+<div class="blog-post">
+    <div class="hero">
+        <div class="container">
+            <p class="blog-header">Mesh Studio blog</p>
+            <div class="row d-flex flex-row align-items-center justify-content-center">
+                <div class="row justify-content-center hero-title-block">
+    <div class="col-12">
+        <div class="d-flex justify-content-center">
+            <h2>Session Tokens</h2>
+        </div>
+    </div>
+    <div class="col-12 mt-2">
+        <div class="d-flex justify-content-center">
+            <h3>A deep-dive into what session tokens are, and what you need to be aware of when implementing them.</h3>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="primary-section">
+        <div class="hero-container d-flex justify-content-center">
+            <img class="img-fluid" src="/images/blog/blog-hero.png" />
+        </div>
+        
+        <div class="container post-container">
+                    
+            <div class="row blog-meta-row">
+                <div class="col-12 col-md-8 offset-md-2">
+                    <header class="meta-header mb-5 d-flex flex-row align-items-center">
+                        <div class="author-picture mr-3">
+                            <a class="founder-twitter ml-2 mb-5" href="https://twitter.com/tayhalliday">
+                                <img class="img-fluid author-pic rounded-circle" src="https://avatars2.githubusercontent.com/u/1266416?s=460&amp;v=4" />
+                            </a>
+                        </div>
+                        <div class="author-meta">
+                            <p class="post-meta author-name">Taylor Halliday</p>
+                            <p class="post-meta post-date">Jan 5 | 5 min read</p>
+                            <p class="post-meta post-words">900 Words</p>
+                        </div>
+                    </header>
+                </div>
+            </div>
+            <div class="row blog-content-row">
+                <div class="col-12 col-md-8 offset-md-2">
+                    <article class="post">
+                        
+
+<p>Authentication and session management are two areas almost all developers have to deal with repeatedly throughout their career. It’s common for us to reach for a well tested open-source library to bolt onto our app, and that’s a good thing since security logic is one of those things you want a lot of eyes on. But as everything in programming, it helps to know the underlying logic behind the tools we use.</p>
+
+<p>Authentication is the process of verifying you are who you say you are. When you enter a username/password to Facebook/bank/etc, you attempt to validate your identity - that process is called authentication. All you’re doing here is (attempting) to prove you are the same person who signed up for XYZ service in the first place. There’s plenty of articles on authentication methods (username/password, OAuth, social logins, etc), so we’re going to look at what happens after you’ve accomplished the authentication step - Session Management.</p>
+
+<p>Session management is the process of keeping track of who you are after you’ve authenticated. For security and practical considerations, it’s generally not a good idea to hand over your authentication credentials every time you wish to access a protected resource.</p>
+
+<p>By way of example, I had the opportunity to visit the pentagon a few years back. When I arrived, the front desk spent 30+ min validating (authenticating) that I was a US citizen and was scheduled to be on a tour. After that process they gave me a badge (session token), which was continuously checked by security guards as I moved to different places in the building. Same practice holds true for most secure buildings - hospitals, exclusive events, overly concerned corporate offices, etc.</p>
+
+<p>This is also the same song/dance that all websites, apps, and servers follow, but, what makes a good session token and why does it matter? Session tokens need to follow a few principles to be considered secure. Let’s look at the major pieces:</p>
+
+<h4 id="meaningless-content">Meaningless Content</h4>
+
+<p>Session tokens should NEVER contain any identifiable information about the user outside of the token itself. You gain nothing from this practice, and at a minimum expose breadcrumbs for an attack to recreate your token. Never do this.</p>
+
+<h4 id="entropy-and-id-length">Entropy and ID Length</h4>
+
+<p>Entropy is just a fancy way of saying that the token needs to be random…. Like really random. When you get into security, there’s differing levels of <a href="https://www.owasp.org/index.php/Insecure_Randomness">randomness</a>. The point is that session tokens can’t relate to any information about the user and need to be near impossible to guess. On top of randomness, keeping these strings sufficiently long with a large character set will make it robust.</p>
+
+<h4 id="key-obscurity">Key Obscurity</h4>
+
+<p>When we’re storing these tokens in a browser, or header, there’s no point in calling out what it’s there for. Don’t use keys that are obvious, such as “SESSION_TOKEN”, opt for something that doesn’t imply to an attacker that this is where they should be concentrating their efforts.</p>
+
+<h4 id="ephemerality-and-rotation">Ephemerality and Rotation</h4>
+
+<p>If you’ve adhered to the points above, then your session tokens are truly meaningless outside of the association you make behind the scenes with the user profile. These tokens should be expired and recreated on a regular basis. Your app may have different needs, but 1-2 weeks is generally a good lifetime for a session token.</p>
+
+<h3 id="common-attacks">Common Attacks</h3>
+
+<p>If you don’t implement sessions properly, you leave your app open to a few common attacks. It’s worth going through some to help reinforce the lessons from above:</p>
+
+<h4 id="man-in-the-middle-mim-https-www-owasp-org-index-php-man-in-the-middle-attack">Man in the Middle <a href="https://www.owasp.org/index.php/Man-in-the-middle_attack">MIM</a></h4>
+
+<p>A man in the middle attack is when the attacker has found some way to place themselves between your users and your app. The strongest way to prevent this is to require a recent version of TLS to be enforced for all communication, but they still can happen for various reasons. If you have a user who’s fallen victim to this attack, their session token will be leaked. Aggressive rotation of your session tokens will be the best defense outside of patching the MIM vulnerability itself.</p>
+
+<h4 id="cross-site-request-forgery-csrf-https-www-owasp-org-index-php-cross-site-request-forgery-csrf-and-cross-site-scripting-xss-https-www-owasp-org-index-php-cross-site-scripting-xss">Cross Site Request Forgery <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)">CSRF</a> and Cross Site Scripting <a href="https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)">XSS</a></h4>
+
+<p>Like the MIM attack, CSRF allow an attacker to pose as one of your users and make ‘authenticated’ requests. XSS attacks involve running malicious javascript in the browser, which can lead to leaked client-side keys as well. Again, rotation of session tokens will be your best defense outside of patching those attacks themselves.</p>
+
+<h4 id="brute-force">Brute Force</h4>
+
+<p>The last thing you want is an attacker to be able to be able to reconstruct one of these tokens, or infer how to alter one in such a way that they gain more privileged access. The recommendations on meaningless content and sufficient entropy guard against this attack.</p>
+
+<h2 id="it-s-not-all-that-scary">It’s not all that scary</h2>
+
+<p>Depending on your language / framework of choice, there are lots of libraries that supposedly do session tokens right. But, ultimately it’s up to you as the developer to deliver an application that meets the security needs of the project you’re working on. Knowing the ins and outs of session tokens and the motivations behind their features will better help you assess and implement the best security for your application.</p>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+    </main>
+
+</body>
+
+<footer>
+    
+    <div class="get-in-touch-container">
+    <div class="container">
+        <div class="row get-in-touch">
+            <div class="col-12 col-md-6 d-flex flex-column justify-content-start align-items-center my-5">
+                <p class="get-in-touch-header mb-0">Ready to get started</p>
+                <p class="get-in-touch-content">Let&#39;s talk about your project</p>
+            </div>
+            <div class="col-12 col-md-6 d-flex justify-content-end align-items-center">
+                <button type="button" class="btn get-in-touch-btn">get in touch</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <div class="container footer-container py-5" id="container">
+        <div class="row">
+            
+            <div class="col">
+                <a class="navbar-brand mb-5 mt-2" href="https://meshstudio.io/">
+                    <img class="img-fluid main-logo" src="/images/site/meshlogo-white-vector.svg" alt="Home" />
+                </a>
+            </div>
+        </div>
+        <div class="row">
+
+            
+            <div class="col-6 col-md-3 footer-list">
+                <h5>Contact</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        3621 Stone Way N Suite G
+                    </li>
+                    <li>
+                        Seattle, WA 98103
+                    </li>
+                    <li>
+                        info@meshstudio.io
+                    </li>
+
+                </ul>
+            </div>
+
+            
+            <div class="col-6 col-md-3 footer-list nav-list">
+                <h5>Pages</h5>
+                <ul class="list-unstyled text-small">
+
+                    <ul class="footer-nav">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/">Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/work/">Work</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/services/">Services</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/about/">About</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/careers/">Join Us</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/blog/">Blog</a>
+                        </li>
+                        
+                    </ul>
+                </ul>
+            </div>
+
+            
+            <div class="col-12 col-md-4 offset-md-2  footer-list">
+                <h5>Latest Blog Post</h5>
+                
+                <a class="blog-title d-block" href="#">Mesh Open Source — Typescript React and Typescript Node Boilerplate</a>
+                <a class="blog-sub-title d-block pt-2" href="#">We start a lot of new software projects at Mesh. Whether we are kicking off a new project for a customer,
+                    or prototyping a new internal…</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,935 @@
+/* ==========================================================================
+   1. Site Wide Defaults
+   ========================================================================== */
+
+/* Site Base Print Font */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+/* Increasing the letter spacing to accomodate for roboto */
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 2px;
+}
+
+/* CSS Variable Decls */
+
+:root {
+    /* Colors */
+    /* Blacls */
+    --mesh-black: #1A2233;
+    /* Blues */
+    --mesh-blue: #1B5FCC;
+    --mesh-dk-blue: #1F2533;
+    --mesh-dk-blue-light: rgba(31, 37, 50, 0.5);
+    --mesh-dk-blue-ultralight: rgba(31, 37, 50, 0.25);
+    --mesh-dk-blue-bg: rgba(31, 37, 50, 0.02);
+    --mesh-dk-blue-content-border: rgba(31, 37, 50, 0.15);
+    --mesh-dk-blue-bg-border: rgba(31, 37, 50, 0.08);
+    --mesh-dk-blue-dk-border: rgba(31, 37, 50, 0.1);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+#container,
+#content {
+    flex: 1 0 auto;
+}
+
+.seattle-rain {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 40px;
+}
+
+/* ==========================================================================
+   ARTICLE STYLING
+   ========================================================================== */
+
+   /* Article (Blog/CaseStudy) Font */
+/* HelveticaNueue way easier to read in paragraphs (print) */
+article {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;    
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.primary-section article p {
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
+/* Block Quote Styling */
+blockquote {
+    margin: 2em 0em;
+    font-size: 1.5em;
+}
+
+blockquote p:first-child {
+    margin: 0em;
+}
+
+blockquote p {
+    font-size: .75em;
+}
+
+blockquote p cite a {
+    font-size: .75em;
+    font-weight: 400;
+    color: var(--mesh-dk-blue-light);
+}
+
+blockquote p cite a:hover {
+    color: var(--mesh-dk-blue);
+}
+
+
+/* ==========================================================================
+   PARTIALS
+   ========================================================================== */
+
+/* ==========================================================================
+   Section Headers
+   ========================================================================== */
+
+.section-headers .title {
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 80%;
+}
+
+.section-headers .content {
+    font-size: 2em;
+    font-weight: 300;
+    width: 80%;
+}
+
+
+/* ==========================================================================
+   Hero Block
+   ========================================================================== */
+
+.hero-title-block {
+    text-align: center;
+}
+
+.hero-title-block h2 {
+    font-weight: 300;
+    font-size: 2em;
+    width: 50%;
+}
+
+.hero-title-block h3 {
+    font-weight: 300;
+    font-size: 1.25em;
+    width: 50%;
+}
+
+
+/* ==========================================================================
+   Case Studies
+   ========================================================================== */
+
+.case-study-card {
+    background: #fff;
+    border: var(--mesh-dk-blue-dk-border) 1px solid;
+}
+
+.case-study-card .card-row,
+.case-study-card .card-container {
+    height: 100%;
+}
+
+.case-study-card .logo-container {
+    height: 80px;
+    width: 400px;
+}
+
+.case-study-card .logo-container img {
+    width: auto;
+}
+
+.case-study-card .title {
+    font-weight: 500;
+    font-size: 1em;
+    max-width: 800%
+}
+
+.case-study-card .sub-title {
+    font-weight: 300;
+    font-size: 1em;
+    max-width: 800%
+}
+
+.case-study-card .arrow-container img {
+    height: 25px;
+    width: auto;
+}
+
+/* ==========================================================================
+   Tag Box
+   ========================================================================== */
+
+.tag-box {
+    position: relative;
+    height: 100%;
+}
+
+.tag-box .tag {
+    font-size: .95em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--mesh-dk-blue-light);
+}
+
+.tag-box .tag-spacer {
+    display: inline-block;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background: var(--mesh-blue);
+    
+    /* We do this since the letter-spacing css prop of the text padds the end of text..? */
+    margin: 3px;
+    margin-bottom: 9px;
+    margin-right: 9px;
+    margin-left: 6px;
+}
+
+.tag-box .arrow-container .case-study-disclosure:hover {
+    fill: blue;
+}
+
+/* ==========================================================================
+   Get In Touch Partial
+   ========================================================================== */
+
+.get-in-touch-btn {
+    height: 60px;
+    width: 300px;
+    top: -30px;
+    color: #fff;
+    background: var(--mesh-blue);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.get-in-touch-container {
+    background: #fff;
+}
+
+.get-in-touch .get-in-touch-header {
+    color: var(--mesh-dk-blue);
+    font-weight: 500;
+    text-align: left;
+    font-size: 1.0em;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.get-in-touch .get-in-touch-content {
+    color: var(--mesh-dk-blue);
+    font-weight: 300;
+    text-align: left;
+    font-size: 2em;
+    width: 100%;
+}
+
+/* ==========================================================================
+   Capabilities
+   ========================================================================== */
+
+.capabilities .capabilities-statement {
+    font-size: 2em;
+    font-weight: 300;
+    width: 90%;
+    margin-left: -15px;
+}
+
+.capabilities .capabilitiy-row .capability-title {
+    font-size: 1.1em;
+    font-weight: 500;
+    width: 90%;
+    text-transform: uppercase;
+}
+
+.capabilities .capabilitiy-row .capability-sub-title {
+    font-size: 1.5em;
+    font-weight: 300;
+    width: 90%;
+    text-transform: capitalize;
+}
+
+.capabilities .capabilitiy-row .capability-card {
+    padding: 20px;
+    background: #fff;
+    border: var(--mesh-dk-blue-content-border) 1px solid;
+    height: 100%;
+}
+
+.capabilities .capabilitiy-row .card-title {
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: 500;
+    width: 90%
+}
+
+.capabilities .capabilitiy-row .card-description {
+    text-align: center;
+    font-size: 1em;
+    font-weight: 300;
+    width: 90%;
+    margin-bottom: 0px;
+}
+
+.capabilities .tag-box {
+    margin-top: 2em;
+}
+
+.capabilities .tag-box .tag {
+    font-size: .6em;
+}
+
+.capabilities .tag-box .tag-spacer {
+    margin-bottom: 6px;
+}
+
+
+/* ==========================================================================
+   Header - Top of every page
+   ========================================================================== */
+
+.navbar .main-logo {
+    max-width: 197px;
+    height: auto;
+}
+
+.navbar-light .navbar-nav .nav-item {
+    margin-left: 30px;
+}
+
+.navbar-light .navbar-nav .active {
+    border-bottom: var(--mesh-dk-blue) 1px solid;
+}
+
+.navbar-light .navbar-nav li:hover {
+    border-bottom: var(--mesh-dk-blue-ultralight) 1px solid;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--mesh-black);
+    font-weight: 300;
+    font-size: .9em;
+    text-transform: uppercase;
+    padding: 0px;
+}
+
+
+/* ==========================================================================
+   2. Home - Main Index Page
+   ========================================================================== */
+
+.home .hero {
+    margin: 8em 0em;
+}
+
+.home .primary-section {
+    background: var(--mesh-dk-blue-bg);
+    border: var(--mesh-dk-blue-bg-border) 1px solid;
+}
+
+.home .primary-section .button-container {
+    position: relative;
+}
+
+.home .primary-section .button-container button {
+    position: absolute;
+    top: -30px;
+}
+
+.home .primary-section .container .testimonial,
+.home .primary-section .container .casestudies-title,
+.home .primary-section .container .capabilties-title {
+    margin-top: 8em;
+}
+
+.home .primary-section .section-link {
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--mesh-dk-blue);
+}
+
+.home .primary-section .section-link:hover {
+    text-decoration: none;
+    color: var(--mesh-dk-blue-ultralight);
+}
+
+.home .primary-section .section-seeall-link {
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--mesh-dk-blue-light);
+}
+
+.home .primary-section .section-seeall-link:hover {
+    text-decoration: none;
+    color: var(--mesh-dk-blue);
+}
+
+.home .primary-section .casestudies .case-study-card {
+    max-width: 48%;
+    margin-bottom: 16px;
+}
+
+.home .primary-section .testimonial {
+    margin-bottom:4em;
+}
+
+.home .primary-section .testimonial .testimonial-quote {
+    font-weight: 300;
+    text-align: center;
+    font-size: 2em;
+    width: 100%;
+}
+
+.home .primary-section .testimonial .testimonial-attr {
+    color: var(--mesh-blue);
+    font-weight: 300;
+    text-align: center;
+    font-size: 1.5em;
+    width: 100%;
+}
+
+/* ==========================================================================
+   3. Work Index - Work page for products and clients
+   ========================================================================== */
+
+.work .hero {
+    margin: 8em 0em;
+}
+
+.work .primary-section {
+    background: var(--mesh-dk-blue-bg);
+    border: var(--mesh-dk-blue-bg-border) 1px solid;
+}
+
+.work .primary-section .section-headers {
+    margin-top: 8em;
+}
+
+.work .primary-section .products {
+    margin-bottom: 8em;
+}
+
+.work .primary-section .product-row {
+    width: 100%;
+    border: 1px solid var(--mesh-dk-blue-bg-border);
+    border-radius: 5px;
+}
+
+.work .primary-section .casestudies .case-study-card {
+    max-width: 49%;
+    margin-bottom: 24px;
+}
+
+.work .primary-section .products .case-study-card,
+.work .primary-section .products .product-shot {
+    marign: 0;
+    width: 100%;
+    height: 100%;
+}
+.work .primary-section .product-shot {
+    background: blue;
+}
+
+.work .primary-section .product-shot img {
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);;
+}
+
+/* ==========================================================================
+   3. Work Single - Case Study
+   ========================================================================== */
+
+.case-study .hero {
+    margin-top: 8em;
+    margin-bottom: 10em;
+}
+
+.case-study .case-study-header {
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.case-study .case-study-title {
+    text-align: left;
+    margin-bottom: 0em;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+.case-study .case-study-sub-title {
+    text-align: left;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.case-study .primary-section {
+    background: var(--mesh-dk-blue-bg);
+    border: var(--mesh-dk-blue-bg-border) 1px solid;
+}
+
+.case-study .primary-section .hero-container {
+    position: relative;
+}
+
+.case-study .primary-section .hero-wrapper {
+    position: absolute;
+    top: -100px;
+}
+
+.case-study .summary-row {
+    margin-top: 6em;
+    margin-bottom: 3em;
+}
+
+.case-study .hero-title-block {
+    margin-bottom: 2em;
+}
+
+.case-study .hero-title-block h2 {
+    font-size: 2.5em;
+}
+
+.case-study .primary-section .title {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 4px;
+}
+
+.case-study .primary-section .sub-title {
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+
+.case-study .primary-section .case-study-content-row {
+    margin-top: 10em;
+    margin-bottom: 4em;
+}
+
+.case-study .primary-section .post-meta {
+    font-weight: 500;
+    font-size: 1.25em;
+    margin-bottom: 0px;
+}
+
+.case-study .primary-section .author-picture,
+.case-study .primary-section .author-meta {
+    display: inline;    
+}
+
+.case-study .primary-section .post-meta {
+    font-weight: 300;
+    margin: 0px;
+}
+
+.case-study .primary-section .author-name {
+    font-weight: 400;
+    font-size: .9em;
+}
+
+.case-study .primary-section .post-date {
+    font-weight: 500;
+    font-size: .8em;
+    color: var(--mesh-dk-blue-light)
+}
+
+.case-study .primary-section .post-words {
+    font-weight: 500;
+    font-size: .8em;
+    color: var(--mesh-dk-blue-light)
+}
+
+.case-study .primary-section .author-pic {
+    width: 60px;
+    height: auto;
+    border: var(--mesh-dk-blue-light) 1px solid;
+}
+
+.case-study .primary-section .sub-title {
+    font-size: 1.25em;
+    color: var(--mesh-dk-blue-light);
+}
+
+/* ==========================================================================
+   4. About - Story of Mesh / Founders
+   ========================================================================== */
+
+.about .hero {
+    margin: 8em 0em;
+}
+
+.about .section {
+    margin-bottom: 6em;
+}
+
+.about .primary-section {
+    background: var(--mesh-dk-blue-bg);
+    border: var(--mesh-dk-blue-bg-border) 1px solid;
+}
+
+.about .primary-section .title {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1em;
+    letter-spacing: 4px;
+}
+
+.about .primary-section .sub-title {
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+
+.about .primary-section .intro-summary {
+    margin-top: 6em;
+}
+
+.about .primary-section .content {
+    font-weight: 300;
+    font-size: 1.3em;
+}
+
+.about .primary-section .founders .founder .founder-image {
+    border: var(--mesh-dk-blue-light) 1px solid;
+    border-radius: 50%;
+}
+
+.about .primary-section .founders .twitter-bird {
+    height: 20px;
+    width: 20px;
+}
+
+/* ==========================================================================
+   5. Services - What Mesh Can Do
+   ========================================================================== */
+
+.services .hero {
+    margin: 8em 0em;
+}
+
+.services .capabilities .capabilitiy-row {
+    margin-bottom: 6em;
+}
+
+.services .primary-section {
+    background: var(--mesh-dk-blue-bg);
+    border: var(--mesh-dk-blue-bg-border) 1px solid;
+}
+
+.services .primary-section .title {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1em;
+    letter-spacing: 4px;
+}
+
+.services .primary-section .sub-title {
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+
+.services .primary-section .capabilities {
+    margin: 6em 0em;
+}
+
+
+/* ==========================================================================
+   6. Blog Index - All of our Blog Posts
+   ========================================================================== */
+
+.blog .hero {
+    margin: 8em 0em;
+}
+
+.blog .primary-section {
+    background: var(--mesh-dk-blue-bg);
+    border: var(--mesh-dk-blue-bg-border) 1px solid;
+}
+
+.blog .summary-row {
+    margin-top: 6em;
+    margin-bottom: 3em;
+}
+
+.blog .primary-section .title {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1em;
+    letter-spacing: 4px;
+}
+
+.blog .primary-section .sub-title {
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+
+.blog .primary-section .title-link {
+    font-weight: 300;
+    font-size: 1em;
+    letter-spacing: 2px;
+    color: var(--mesh-dk-blue)
+}
+
+.blog .primary-section .blog-summary {
+    margin-bottom: 4em;
+}
+
+.blog .primary-section .blog-summary .image-box {
+    overflow: hidden;
+}
+
+.blog .primary-section .blog-summary .blog-hero {
+    max-height: 200px;
+    height: 200px;
+    width: auto;
+    margin: 0px;
+}
+
+.blog .primary-section .blog-summary .summary-box {
+    height: 100px;
+    font-style: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.blog .primary-section .blog-summary .summary-box p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.blog .primary-section .blog-summary .read-more-link {
+    color: var(--mesh-dk-blue-light);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+.blog .primary-section .blog-summary .read-more-link:hover {
+    color: var(--mesh-dk-blue);
+}
+
+.services .primary-section .capabilities {
+    margin: 6em 0em;
+}
+
+/* ==========================================================================
+   6. Blog Post (Single) - Individual Blog Post
+   ========================================================================== */
+
+.blog-post .hero {
+    margin-top: 8em;
+    margin-bottom: 10em;
+}
+
+.blog-post .blog-header {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.blog-post .primary-section {
+    background: var(--mesh-dk-blue-bg);
+    border: var(--mesh-dk-blue-bg-border) 1px solid;
+}
+
+.blog-post .primary-section .hero-container {
+    position: relative;
+}
+
+.blog-post .primary-section .hero-container img {
+    height: 200px;
+    width: auto;
+    position: absolute;
+    top: -100px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);;
+}
+
+.blog-post .summary-row {
+    margin-top: 6em;
+    margin-bottom: 3em;
+}
+
+.blog-post .hero-title-block {
+    margin-bottom: 2em;
+}
+
+.blog-post .hero-title-block h2 {
+    font-size: 2.5em;
+}
+
+.blog-post .primary-section .title {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 4px;
+}
+
+.blog-post .primary-section .sub-title {
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+
+.blog-post .primary-section .blog-meta-row {
+    margin-top: 14em;
+}
+
+.blog-post .primary-section .blog-content-row {
+    margin-bottom: 4em;
+}
+
+.blog-post .primary-section .post-meta {
+    font-weight: 500;
+    font-size: 1.25em;
+    margin-bottom: 0px;
+}
+
+.blog-post .primary-section .author-picture,
+.blog-post .primary-section .author-meta {
+    display: inline;    
+}
+
+.blog-post .primary-section .post-meta {
+    font-weight: 300;
+    margin: 0px;
+}
+
+.blog-post .primary-section .author-name {
+    font-weight: 400;
+    font-size: .9em;
+}
+
+.blog-post .primary-section .post-date {
+    font-weight: 500;
+    font-size: .8em;
+    color: var(--mesh-dk-blue-light)
+}
+
+.blog-post .primary-section .post-words {
+    font-weight: 500;
+    font-size: .8em;
+    color: var(--mesh-dk-blue-light)
+}
+
+.blog-post .primary-section .author-pic {
+    width: 60px;
+    height: auto;
+    border: var(--mesh-dk-blue-light) 1px solid;
+}
+
+.blog-post .primary-section .sub-title {
+    font-size: 1.25em;
+    color: var(--mesh-dk-blue-light);
+}
+
+/* ==========================================================================
+   9. Footer - The bottom of every page
+   ========================================================================== */
+
+footer {
+    background: var(--mesh-dk-blue);
+    color: white;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+footer .footer-list h5 {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: .5;
+}
+
+footer li,
+footer li a {
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 300;
+}
+
+footer li a:hover {
+    color: #fff;
+    opacity: 0.6;
+}
+
+footer .nav-list ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+footer .nav-list ul a {
+    padding: 0px;
+    text-transform: uppercase;
+}
+
+footer .blog-title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+footer .blog-sub-title {
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    opacity: 0.5;
+    font-weight: 300;
+}
