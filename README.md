@@ -20,3 +20,18 @@ The resulting site will be located at `http://localhost:1313`. Hugo server comes
 
 ## Deployment
 TBD... not there yet.
+
+## Content
+
+### Case Studies
+
+#### Required Images
+
+- A 200x770px hero image is suggested for all case studies. We are enforcing a resizing at 200px height, so the 770px width should be considered a maximum.
+- A brand SVG must be included
+
+### Blog Posts
+
+#### Required Images
+
+- A 200x770px hero image is suggested for all blog posts. We are enforcing a resizing at 200px height, so the 770px width should be considered a maximum. 

@@ -2,10 +2,11 @@
    1. Site Wide Defaults
    ========================================================================== */
 
+/* Site Base Print Font */
 body {
     font-family: 'Roboto', sans-serif;
 }
-
+/* Increasing the letter spacing to accomodate for roboto */
 p,
 a,
 h1,
@@ -16,7 +17,6 @@ h5,
 h6 {
     letter-spacing: 2px;
 }
-
 
 /* CSS Variable Decls */
 
@@ -67,11 +67,58 @@ a:hover {
     height: 40px;
 }
 
-/**
+/* ==========================================================================
+   ARTICLE STYLING
+   ========================================================================== */
+
+   /* Article (Blog/CaseStudy) Font */
+/* HelveticaNueue way easier to read in paragraphs (print) */
+article {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;    
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.primary-section article p {
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
+/* Block Quote Styling */
+blockquote {
+    margin: 2em 0em;
+    font-size: 1.5em;
+}
+
+blockquote p:first-child {
+    margin: 0em;
+}
+
+blockquote p {
+    font-size: .75em;
+}
+
+blockquote p cite a {
+    font-size: .75em;
+    font-weight: 400;
+    color: var(--mesh-dk-blue-light);
+}
+
+blockquote p cite a:hover {
+    color: var(--mesh-dk-blue);
+}
 
 
 /* ==========================================================================
-   Partials
+   PARTIALS
    ========================================================================== */
 
 /* ==========================================================================
@@ -386,7 +433,7 @@ a:hover {
 }
 
 /* ==========================================================================
-   3. Work - Work page for products and clients
+   3. Work Index - Work page for products and clients
    ========================================================================== */
 
 .work .hero {
@@ -413,8 +460,8 @@ a:hover {
 }
 
 .work .primary-section .casestudies .case-study-card {
-    max-width: 48%;
-    margin-bottom: 16px;
+    max-width: 49%;
+    margin-bottom: 24px;
 }
 
 .work .primary-section .products .case-study-card,
@@ -429,6 +476,126 @@ a:hover {
 
 .work .primary-section .product-shot img {
     box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);;
+}
+
+/* ==========================================================================
+   3. Work Single - Case Study
+   ========================================================================== */
+
+.case-study .hero {
+    margin-top: 8em;
+    margin-bottom: 10em;
+}
+
+.case-study .case-study-header {
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.case-study .case-study-title {
+    text-align: left;
+    margin-bottom: 0em;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+.case-study .case-study-sub-title {
+    text-align: left;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.case-study .primary-section {
+    background: var(--mesh-dk-blue-bg);
+    border: var(--mesh-dk-blue-bg-border) 1px solid;
+}
+
+.case-study .primary-section .hero-container {
+    position: relative;
+}
+
+.case-study .primary-section .hero-wrapper {
+    position: absolute;
+    top: -100px;
+}
+
+.case-study .summary-row {
+    margin-top: 6em;
+    margin-bottom: 3em;
+}
+
+.case-study .hero-title-block {
+    margin-bottom: 2em;
+}
+
+.case-study .hero-title-block h2 {
+    font-size: 2.5em;
+}
+
+.case-study .primary-section .title {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 4px;
+}
+
+.case-study .primary-section .sub-title {
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+
+.case-study .primary-section .case-study-content-row {
+    margin-top: 10em;
+    margin-bottom: 4em;
+}
+
+.case-study .primary-section .post-meta {
+    font-weight: 500;
+    font-size: 1.25em;
+    margin-bottom: 0px;
+}
+
+.case-study .primary-section .author-picture,
+.case-study .primary-section .author-meta {
+    display: inline;    
+}
+
+.case-study .primary-section .post-meta {
+    font-weight: 300;
+    margin: 0px;
+}
+
+.case-study .primary-section .author-name {
+    font-weight: 400;
+    font-size: .9em;
+}
+
+.case-study .primary-section .post-date {
+    font-weight: 500;
+    font-size: .8em;
+    color: var(--mesh-dk-blue-light)
+}
+
+.case-study .primary-section .post-words {
+    font-weight: 500;
+    font-size: .8em;
+    color: var(--mesh-dk-blue-light)
+}
+
+.case-study .primary-section .author-pic {
+    width: 60px;
+    height: auto;
+    border: var(--mesh-dk-blue-light) 1px solid;
+}
+
+.case-study .primary-section .sub-title {
+    font-size: 1.25em;
+    color: var(--mesh-dk-blue-light);
 }
 
 /* ==========================================================================
@@ -533,7 +700,6 @@ a:hover {
     margin-bottom: 3em;
 }
 
-
 .blog .primary-section .title {
     text-transform: uppercase;
     font-weight: 500;
@@ -623,8 +789,11 @@ a:hover {
 }
 
 .blog-post .primary-section .hero-container img {
+    height: 200px;
+    width: auto;
     position: absolute;
-    top: -150px;
+    top: -100px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);;
 }
 
 .blog-post .summary-row {
@@ -703,24 +872,6 @@ a:hover {
 .blog-post .primary-section .sub-title {
     font-size: 1.25em;
     color: var(--mesh-dk-blue-light);
-}
-
-/**
- * Markdown Styling
- */
-
-.blog-post article h1,
-.blog-post article h2,
-.blog-post article h3,
-.blog-post article h4,
-.blog-post article h5 {
-    margin-top: 2em;
-    margin-bottom: 1em;
-}
-
-.blog-post .primary-section article p {
-    font-size: 1.25em;
-    font-weight: 300;
 }
 
 /* ==========================================================================

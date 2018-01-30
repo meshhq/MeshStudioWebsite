@@ -15,7 +15,7 @@ Required Params in Dict
     <div class="row card-row p-4">
         <div class="col-9 card-container mb-3 d-flex flex-column">
             <div class="logo-container d-flex justify-content-start align-items-center mt-4 mb-5">
-                <a class="case-study-link" href="{{.base_url}}">
+                <a class="case-study-link" href="{{.url}}">
                     <img class="img-fluid case-study-logo" src="{{.header_image}}" alt="Home" style="max-height: {{.header_image_max_height}}px;"
                     />
                 </a>
@@ -25,7 +25,7 @@ Required Params in Dict
             {{ partial "contentSections/tagBox" . }}
         </div>
         <div class="col-3 arrow-container d-flex justify-content-end align-items-center">
-            <a class="case-study-link" href="{{.base_url}}">
+            <a class="case-study-link" href="{{.url}}">
                 <img class="img-fluid case-study-disclosure" src="/images/site/right-arrow.png" alt="Home" />
             </a>
         </div>

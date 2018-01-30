@@ -1,0 +1,34 @@
+{{ define "main" }}
+<div class="case-study">
+    <div class="hero">
+        <div class="container">
+            <div class="col-12 col-md-8 offset-md-2">
+                <p class="case-study-header">Case Study</p>
+                <p class="case-study-title">{{ .Params.title }}</p>
+                <p class="case-study-sub-title">{{ .Params.sub_title }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="primary-section">
+        <div class="hero-container d-flex justify-content-center">
+            <div class="hero-wrapper">
+                <img class="img-fluid" src="{{$.Params.hero_image}}" />
+            </div>
+        </div>
+
+        <div class="container post-container">
+            <!-- CASE STUDIES -->
+            <div class="row case-study-content-row">
+                <div class="col-12 col-md-8 offset-md-2">
+                    <article class="post">
+                        {{ .Content }}
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{{ end }}
