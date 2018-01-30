@@ -74,6 +74,22 @@ a:hover {
    Partials
    ========================================================================== */
 
+/* ==========================================================================
+   Section Headers
+   ========================================================================== */
+
+.section-headers .title {
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 80%;
+}
+
+.section-headers .content {
+    font-size: 2em;
+    font-weight: 300;
+    width: 80%;
+}
+
 
 /* ==========================================================================
    Hero Block
@@ -386,18 +402,6 @@ a:hover {
     margin-top: 8em;
 }
 
-.work .primary-section .section-headers .title {
-    text-transform: uppercase;
-    font-weight: 500;
-    width: 80%;
-}
-
-.work .primary-section .section-headers .content {
-    font-size: 2em;
-    font-weight: 300;
-    width: 80%;
-}
-
 .work .primary-section .products {
     margin-bottom: 8em;
 }
@@ -477,11 +481,15 @@ a:hover {
 }
 
 /* ==========================================================================
-   Services - What Mesh Can Do
+   5. Services - What Mesh Can Do
    ========================================================================== */
 
 .services .hero {
     margin: 8em 0em;
+}
+
+.services .capabilities .capabilitiy-row {
+    margin-bottom: 6em;
 }
 
 .services .primary-section {
@@ -503,7 +511,216 @@ a:hover {
 }
 
 .services .primary-section .capabilities {
-    margin: 4em 0em;
+    margin: 6em 0em;
+}
+
+
+/* ==========================================================================
+   6. Blog Index - All of our Blog Posts
+   ========================================================================== */
+
+.blog .hero {
+    margin: 8em 0em;
+}
+
+.blog .primary-section {
+    background: var(--mesh-dk-blue-bg);
+    border: var(--mesh-dk-blue-bg-border) 1px solid;
+}
+
+.blog .summary-row {
+    margin-top: 6em;
+    margin-bottom: 3em;
+}
+
+
+.blog .primary-section .title {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1em;
+    letter-spacing: 4px;
+}
+
+.blog .primary-section .sub-title {
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+
+.blog .primary-section .title-link {
+    font-weight: 300;
+    font-size: 1em;
+    letter-spacing: 2px;
+    color: var(--mesh-dk-blue)
+}
+
+.blog .primary-section .blog-summary {
+    margin-bottom: 4em;
+}
+
+.blog .primary-section .blog-summary .image-box {
+    overflow: hidden;
+}
+
+.blog .primary-section .blog-summary .blog-hero {
+    max-height: 200px;
+    height: 200px;
+    width: auto;
+    margin: 0px;
+}
+
+.blog .primary-section .blog-summary .summary-box {
+    height: 100px;
+    font-style: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.blog .primary-section .blog-summary .summary-box p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.blog .primary-section .blog-summary .read-more-link {
+    color: var(--mesh-dk-blue-light);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+.blog .primary-section .blog-summary .read-more-link:hover {
+    color: var(--mesh-dk-blue);
+}
+
+.services .primary-section .capabilities {
+    margin: 6em 0em;
+}
+
+/* ==========================================================================
+   6. Blog Post (Single) - Individual Blog Post
+   ========================================================================== */
+
+.blog-post .hero {
+    margin-top: 8em;
+    margin-bottom: 10em;
+}
+
+.blog-post .blog-header {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.blog-post .primary-section {
+    background: var(--mesh-dk-blue-bg);
+    border: var(--mesh-dk-blue-bg-border) 1px solid;
+}
+
+.blog-post .primary-section .hero-container {
+    position: relative;
+}
+
+.blog-post .primary-section .hero-container img {
+    position: absolute;
+    top: -150px;
+}
+
+.blog-post .summary-row {
+    margin-top: 6em;
+    margin-bottom: 3em;
+}
+
+.blog-post .hero-title-block {
+    margin-bottom: 2em;
+}
+
+.blog-post .hero-title-block h2 {
+    font-size: 2.5em;
+}
+
+.blog-post .primary-section .title {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 4px;
+}
+
+.blog-post .primary-section .sub-title {
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+
+.blog-post .primary-section .blog-meta-row {
+    margin-top: 14em;
+}
+
+.blog-post .primary-section .blog-content-row {
+    margin-bottom: 4em;
+}
+
+.blog-post .primary-section .post-meta {
+    font-weight: 500;
+    font-size: 1.25em;
+    margin-bottom: 0px;
+}
+
+.blog-post .primary-section .author-picture,
+.blog-post .primary-section .author-meta {
+    display: inline;    
+}
+
+.blog-post .primary-section .post-meta {
+    font-weight: 300;
+    margin: 0px;
+}
+
+.blog-post .primary-section .author-name {
+    font-weight: 400;
+    font-size: .9em;
+}
+
+.blog-post .primary-section .post-date {
+    font-weight: 500;
+    font-size: .8em;
+    color: var(--mesh-dk-blue-light)
+}
+
+.blog-post .primary-section .post-words {
+    font-weight: 500;
+    font-size: .8em;
+    color: var(--mesh-dk-blue-light)
+}
+
+.blog-post .primary-section .author-pic {
+    width: 60px;
+    height: auto;
+    border: var(--mesh-dk-blue-light) 1px solid;
+}
+
+.blog-post .primary-section .sub-title {
+    font-size: 1.25em;
+    color: var(--mesh-dk-blue-light);
+}
+
+/**
+ * Markdown Styling
+ */
+
+.blog-post article h1,
+.blog-post article h2,
+.blog-post article h3,
+.blog-post article h4,
+.blog-post article h5 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.blog-post .primary-section article p {
+    font-size: 1.25em;
+    font-weight: 300;
 }
 
 /* ==========================================================================

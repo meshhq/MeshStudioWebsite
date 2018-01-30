@@ -1,5 +1,39 @@
 {{ define "main" }}
 
-<p>yo2</p>
+<div class="blog">
+    <div class="hero">
+        <div class="container">
+            {{partial "heroTitleBlock" .Params}}
+        </div>
+    </div>
+
+    <div class="primary-section">
+        <div class="container">
+            <!-- CAPABILITIES -->
+            <div class="row summary-row">
+                {{ range first 10 (where .Data.Pages "Section" "blog").ByDate }}
+                <div class="col-12 col-md-6 blog-summary">
+                    <article>
+                        <div class="image-box d-flex justify-content-center mb-4">
+                            <img class="blog-hero" src="{{ .Params.hero_image }}" alt="Home" />
+                        </div>
+                        <!-- this <div> includes the title summary -->
+                        <div>
+                            <h2>
+                                <a class="title-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                            </h2>
+                            <div class="summary-box">
+                                <p class="summary">{{ .Params.sub_title }}</p>
+                                <a class="read-more-link" href="{{ .RelPermalink }}">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                {{ end }}        
+            </div>
+        </div>
+    </div>
+
+</div>
 
 {{ end }}

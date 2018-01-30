@@ -17,8 +17,9 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <form class="form-inline ml-auto my-2 my-lg-0">
                 <ul class="navbar-nav">
+                    {{$currentSectionName := .CurrentSection.Name}}
                     {{ $url := .URL }} {{ range where .Site.Menus.main "Name" "!=" "Home" }}
-                    <li class="nav-item{{ if eq $url .URL }} active{{ end }}">
+                    <li class="nav-item{{ if eq $currentSectionName .Name }} active{{ end }}">
                         <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
                     </li>
                     {{ end }}
