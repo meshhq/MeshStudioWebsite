@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Services on Mesh Studio</title>
-    <link>https://meshstudio.io/services/</link>
+    <link>https://meshhq.github.io/MeshStudioWebsite/services/</link>
     <description>Recent content in Services on Mesh Studio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://meshstudio.io/services/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://meshhq.github.io/MeshStudioWebsite/services/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://meshstudio.io/services/services/</link>
+      <link>https://meshhq.github.io/MeshStudioWebsite/services/services/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://meshstudio.io/services/services/</guid>
+      <guid>https://meshhq.github.io/MeshStudioWebsite/services/services/</guid>
       <description></description>
     </item>
     

@@ -1,4 +1,4 @@
-baseURL = "https://meshstudio.io/"
+baseURL = "https://meshhq.github.io/MeshStudioWebsite/"
 languageCode = "en-us"
 title = "Mesh Studio"
 publishDir = "docs"

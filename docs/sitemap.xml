@@ -3,96 +3,96 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://meshstudio.io/blog/2018-01-05-authentication-vs-authorization/</loc>
+    <loc>https://meshhq.github.io/MeshStudioWebsite/blog/2018-01-05-authentication-vs-authorization/</loc>
     <lastmod>2018-01-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://meshstudio.io/blog/2018-01-10-session-tokens/</loc>
+    <loc>https://meshhq.github.io/MeshStudioWebsite/blog/2018-01-10-session-tokens/</loc>
     <lastmod>2018-01-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://meshstudio.io/blog/2018-01-20-setting-up-circle/</loc>
+    <loc>https://meshhq.github.io/MeshStudioWebsite/blog/2018-01-20-setting-up-circle/</loc>
     <lastmod>2018-01-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://meshstudio.io/blog/2018-01-15-spectre/</loc>
+    <loc>https://meshhq.github.io/MeshStudioWebsite/blog/2018-01-15-spectre/</loc>
     <lastmod>2018-01-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://meshstudio.io/work/runa/</loc>
+    <loc>https://meshhq.github.io/MeshStudioWebsite/work/runa/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://meshstudio.io/work/otto/</loc>
+    <loc>https://meshhq.github.io/MeshStudioWebsite/work/otto/</loc>
     <lastmod>2017-04-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://meshstudio.io/work/staples/</loc>
+    <loc>https://meshhq.github.io/MeshStudioWebsite/work/staples/</loc>
     <lastmod>2017-03-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://meshstudio.io/post/post/</loc>
+    <loc>https://meshhq.github.io/MeshStudioWebsite/post/post/</loc>
   </url>
   
   <url>
-    <loc>https://meshstudio.io/services/services/</loc>
+    <loc>https://meshhq.github.io/MeshStudioWebsite/services/services/</loc>
   </url>
   
   <url>
-    <loc>https://meshstudio.io/about/</loc>
+    <loc>https://meshhq.github.io/MeshStudioWebsite/about/</loc>
   </url>
   
   <url>
-    <loc>https://meshstudio.io/blog/</loc>
+    <loc>https://meshhq.github.io/MeshStudioWebsite/blog/</loc>
     <lastmod>2018-01-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://meshstudio.io/categories/</loc>
+    <loc>https://meshhq.github.io/MeshStudioWebsite/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://meshstudio.io/tags/innovation/</loc>
-    <lastmod>2018-01-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://meshstudio.io/post/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://meshstudio.io/tags/security/</loc>
+    <loc>https://meshhq.github.io/MeshStudioWebsite/tags/innovation/</loc>
     <lastmod>2018-01-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://meshstudio.io/services/</loc>
+    <loc>https://meshhq.github.io/MeshStudioWebsite/post/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://meshstudio.io/</loc>
-    <lastmod>2018-01-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://meshstudio.io/tags/</loc>
+    <loc>https://meshhq.github.io/MeshStudioWebsite/tags/security/</loc>
     <lastmod>2018-01-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://meshstudio.io/work/</loc>
+    <loc>https://meshhq.github.io/MeshStudioWebsite/services/</loc>
+  </url>
+  
+  <url>
+    <loc>https://meshhq.github.io/MeshStudioWebsite/</loc>
+    <lastmod>2018-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://meshhq.github.io/MeshStudioWebsite/tags/</loc>
+    <lastmod>2018-01-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://meshhq.github.io/MeshStudioWebsite/work/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
   </url>
   
