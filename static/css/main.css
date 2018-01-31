@@ -92,6 +92,15 @@ article h5 {
     font-weight: 300;
 }
 
+article a {
+    color: #777;
+    font-weight: 500;
+}
+
+article a:hover {
+    color: var(--mesh-blue);
+}
+
 /* Block Quote Styling */
 blockquote {
     margin: 2em 0em;
@@ -384,6 +393,10 @@ blockquote p cite a:hover {
 .home .primary-section .container .casestudies-title,
 .home .primary-section .container .capabilties-title {
     margin-top: 8em;
+}
+
+.home .primary-section .container .capabilitiy-row {
+    margin-bottom: 3em;
 }
 
 .home .primary-section .section-link {
@@ -681,7 +694,6 @@ blockquote p cite a:hover {
     margin: 6em 0em;
 }
 
-
 /* ==========================================================================
    6. Blog Index - All of our Blog Posts
    ========================================================================== */
@@ -710,7 +722,7 @@ blockquote p cite a:hover {
 .blog .primary-section .sub-title {
     font-weight: 500;
     font-size: 1.2em;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .blog .primary-section .title-link {
@@ -722,6 +734,12 @@ blockquote p cite a:hover {
 
 .blog .primary-section .blog-summary {
     margin-bottom: 4em;
+}
+
+.blog .primary-section .blog-summary .blog-card {
+    border: var(--mesh-dk-blue-bg-border) 1px solid;
+    margin: 1em;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);;
 }
 
 .blog .primary-section .blog-summary .image-box {
@@ -758,8 +776,77 @@ blockquote p cite a:hover {
     color: var(--mesh-dk-blue);
 }
 
-.services .primary-section .capabilities {
-    margin: 6em 0em;
+.blog .primary-section .spy-box {
+    position: sticky;
+    top: 30px;
+}
+
+.blog .primary-section .blog-info-column .row {
+    border-bottom: var(--mesh-dk-blue-dk-border) 1px solid;
+}
+
+.blog .primary-section .blog-info-column .row:last-child {
+    border-bottom: none;
+}
+
+.blog .primary-section .blog-info-column .header p:last-child {
+    margin-bottom: 1em;
+}
+
+.blog .primary-section .blog-info-column .newsletter {
+    margin-top: 1em;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.blog .primary-section .blog-info-column .newsletter input {
+    display: inline-block;
+    text-align: left;
+    width: 70%;
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+.blog .primary-section .blog-info-column .newsletter input:hover {
+    box-shadow: none;
+    border-color: var(--mesh-dk-blue);
+}
+
+.blog .primary-section .blog-info-column .newsletter input:focus {
+    box-shadow: none;
+    border-color: var(--mesh-dk-blue);
+}
+
+.blog .primary-section .blog-info-column .newsletter button {
+    display: inline-block;
+    background-color: var(--mesh-dk-blue);
+    border-color: var(--mesh-dk-blue);
+    padding: 0px;
+    padding-bottom: 3px;
+    width: 42px;
+    height: 40px;
+    border: none;
+}
+
+.blog .primary-section .blog-info-column .newsletter button:active {
+    box-shadow: none;
+}
+
+.blog .primary-section .blog-info-column #mc_embed_signup_scroll #mce-EMAIL {
+    padding-left: 6px;
+    color: var(--mesh-dk-blue);
+}
+
+.blog .primary-section .blog-info-column #mc_embed_signup_scroll .mce_inline_error {
+    background-color: none;
+    background: none;
+    text-align: left;
+    color: #F64C4C;
+    padding-left: 0px; 
+}
+
+.blog .primary-section .blog-info-column #mc_embed_signup_scroll #mce-error-response a {
+    display: none;
 }
 
 /* ==========================================================================
