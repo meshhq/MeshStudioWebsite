@@ -1,11 +1,11 @@
 ---
-title: Spanish Gusto
+title: RunaHR
 sub_title: Mesh Helped Runa Bring Modern Payroll To Latin America
-tags: ["innovation", "server shit"]
+tags: ["React", "web development"]
 date: 2018-01-01
 publishdate: 2018-01-01
-logo_image: /images/caseStudies/runa-vector.svg
-logo_image_max_height: 45
+logo: /images/caseStudies/runa-vector.svg
+logo_max_height: 45
 hero_image: /images/caseStudies/staples-hero.png
 ---
 

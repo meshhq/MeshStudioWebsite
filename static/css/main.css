@@ -97,6 +97,11 @@ article a {
     font-weight: 500;
 }
 
+article p {
+    line-height: 1.75;
+    letter-spacing: 2px;
+}
+
 article a:hover {
     color: var(--mesh-blue);
 }
