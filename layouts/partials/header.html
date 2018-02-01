@@ -3,11 +3,15 @@
 
 <head>
     <!-- Icons -->
-    <link rel="shortcut icon" href="{{.Site.BaseURL}}images/favicon.ico">
-    <link rel="apple-touch-icon" href="{{.Site.BaseURL}}images/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="{{.Site.BaseURL}}images/site/favicon.png">
+    <link rel="apple-touch-icon" href="{{.Site.BaseURL}}images/site/favicon.png" />
 
     <!-- Meta -->
     {{ partial "meta.html" . }}
+
+    <!-- Favicon -->
+
+    {{ partial "favicon.html" }}
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
