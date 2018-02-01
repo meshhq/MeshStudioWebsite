@@ -4,8 +4,8 @@ sub_title: Mesh helped Otto give it's cloud infastructure and security a makeove
 tags: ["innovation", "security"]
 date: 2017-04-23
 publishdate: 2017-04-23
-header_image: /images/caseStudies/otto-vector.svg
-header_image_max_height: 35
+logo: /images/caseStudies/otto-vector.svg
+logo_max_height: 35
 hero_image: /images/caseStudies/staples-hero.png
 ---
 

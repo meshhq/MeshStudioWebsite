@@ -2,6 +2,7 @@ baseURL = "http://stage.meshstudio.io/"
 languageCode = "en-us"
 title = "Mesh Studio"
 publishDir = "docs"
+disqusShortname = "yourdiscussshortname"
 
 [params]
     googleAnalyticsUserID = "UA-90144908-1"

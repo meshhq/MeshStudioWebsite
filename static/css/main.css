@@ -732,47 +732,90 @@ blockquote p cite a:hover {
     color: var(--mesh-dk-blue)
 }
 
-.blog .primary-section .blog-summary {
+.blog .primary-section .blog-card {
     margin-bottom: 4em;
 }
 
-.blog .primary-section .blog-summary .blog-card {
-    border: var(--mesh-dk-blue-bg-border) 1px solid;
+.blog .primary-section .blog-card {
+    border: var(--mesh-dk-blue-content-border) 1px solid;
     margin: 1em;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);;
-}
-
-.blog .primary-section .blog-summary .image-box {
+    margin-bottom: 2em;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 1%;
     overflow: hidden;
 }
 
-.blog .primary-section .blog-summary .blog-hero {
-    max-height: 200px;
-    height: 200px;
-    width: auto;
-    margin: 0px;
+.blog .primary-section .blog-card:first-child {
+    margin-top: 0em;
 }
 
-.blog .primary-section .blog-summary .summary-box {
-    height: 100px;
+.blog .primary-section .blog-card .image-box {
+    height: 180px;
+    width: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-bottom: var(--mesh-dk-blue-content-border) 1px solid;
+}
+
+.blog .primary-section .blog-card .summary-box {
     font-style: 1em;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.blog .primary-section .blog-summary .summary-box p {
+.blog .primary-section .blog-card .summary-box .meta {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: var(--mesh-dk-blue);
+}
+
+.blog .primary-section .blog-card .summary-box .meta .tag {
+    text-transform: uppercase;
+}
+
+.blog .primary-section .blog-card .summary-box .post-title {
+    margin: 0px;
+    margin-bottom: 6px;
+}
+
+.blog .primary-section .blog-card .summary-box .post-title a {
+    font-weight: 500;
+    font-size: 1.25em;
+}
+
+.blog .primary-section .blog-card .summary-box .summary {
+    font-weight: 300;
+    font-size: .9em;
+}
+
+.blog .primary-section .blog-card .summary-box p {
     font-size: 1.2em;
     font-weight: 300;
 }
 
-.blog .primary-section .blog-summary .read-more-link {
+.blog .primary-section .blog-card .summary-box .author-pic {
+    width: 30px;
+    border: var(--mesh-dk-blue-light) 2px solid;
+    height: auto;
+}
+
+.blog .primary-section .blog-card .founder-link:hover {
+    color: var(--mesh-dk-blue);
+}
+
+.blog .primary-section .blog-card .author-name:hover {
+    color: var(--mesh-dk-blue);
+}
+
+.blog .primary-section .blog-card .read-more-link {
     color: var(--mesh-dk-blue-light);
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
-.blog .primary-section .blog-summary .read-more-link:hover {
+.blog .primary-section .blog-card .read-more-link:hover {
     color: var(--mesh-dk-blue);
 }
 
@@ -796,6 +839,7 @@ blockquote p cite a:hover {
 .blog .primary-section .blog-info-column .newsletter {
     margin-top: 1em;
     font-weight: 400;
+    font-size: .9em;;
     letter-spacing: 1px;
 }
 
@@ -805,6 +849,7 @@ blockquote p cite a:hover {
     width: 70%;
     font-weight: 300;
     margin-bottom: 1em;
+    margin-top: .5em;
 }
 
 .blog .primary-section .blog-info-column .newsletter input:hover {

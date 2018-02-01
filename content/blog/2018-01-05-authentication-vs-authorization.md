@@ -4,7 +4,12 @@ sub_title: A deep-dive into what session tokens are, and what you need to be awa
 tags: ["innovation", "security"]
 date: 2018-01-05
 publishdate: 2018-01-05
-hero_image: /images/blog/bitcoin.jpeg
+hero_image: /images/caseStudies/staples-hero.png
+author:
+  name: Taylor Halliday
+  url: https://twitter.com/tayhalliday
+  mail: taylor@meshstudio.io
+  avatar: https://avatars2.githubusercontent.com/u/1266416?s=460&v=4
 ---
 
 ### You allowed in here?

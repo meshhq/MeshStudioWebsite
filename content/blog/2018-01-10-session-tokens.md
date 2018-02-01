@@ -9,7 +9,7 @@ hero_image: /images/blog/blog-hero.png
 author:
   name: Taylor Halliday
   url: https://twitter.com/tayhalliday
-  mail: taylor@meshstudio
+  mail: taylor@meshstudio.io
   avatar: https://avatars2.githubusercontent.com/u/1266416?s=460&v=4
 design:
   bg_color: "#222228"

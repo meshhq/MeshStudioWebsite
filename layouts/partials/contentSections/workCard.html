@@ -7,8 +7,8 @@ Required Params in Dict
 - title 
 - sub_title 
 - base_url (link for clicking on the disclosures)
-- header_image (Logo for the card)
-- header_image_max_height (max height for logo to display)
+- logo (Logo for the card)
+- logo_max_height (max height for logo to display)
 - tags (array of strings that summarize the work)
 -->
 <div class="col-12 col-md-6 case-study-card">
@@ -16,7 +16,7 @@ Required Params in Dict
         <div class="col-9 card-container mb-3 d-flex flex-column">
             <div class="logo-container d-flex justify-content-start align-items-center mt-4 mb-5">
                 <a class="case-study-link" href="{{.url}}">
-                    <img class="img-fluid case-study-logo" src="{{.header_image}}" alt="Home" style="max-height: {{.header_image_max_height}}px;"
+                    <img class="img-fluid case-study-logo" src="{{.logo}}" alt="Home" style="max-height: {{.logo_max_height}}px;"
                     />
                 </a>
             </div>

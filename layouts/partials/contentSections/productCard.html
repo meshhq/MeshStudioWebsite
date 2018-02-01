@@ -8,13 +8,13 @@ Required Params in Dict
 - sub_title 
 - base_url (link for clicking on the disclosures)
 - product_image (Image of the product)
-- header_image (Logo for the product)
-- header_image_max_height (max height for logo to display)
+- logo (Logo for the product)
+- logo_max_height (max height for logo to display)
 - tags (array of strings that summarize the work)
 -->
 <div class="row product-row mb-4">
     <div class="col-12 col-md-6 d-flex justify-content-center align-items-end product-shot" style="background: #{{.product_color}}">
         <img class="img-fluid product-shot-image" src="{{.product_image}}" alt="Home"/>
     </div>
-    {{partial "contentSections/workCard" (dict "title" .title "sub_title" .sub_title "base_url" .base_url "header_image" .header_image "header_image_max_height" .header_image_max_height "tags" .tags)}}
+    {{partial "contentSections/workCard" (dict "title" .title "sub_title" .sub_title "base_url" .base_url "logo" .logo "logo_max_height" .logo_max_height "tags" .tags)}}
 </div>
