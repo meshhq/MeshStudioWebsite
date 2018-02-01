@@ -64,6 +64,20 @@ All logos should be in a vector format, SVG is preferred. If you need help sourc
 
 Our blog posts will be hosted on this site as well in the `/content/blog` directory. 
 
+#### How to create a new blog post
+
+Our blog post filenames need to be prefaced with the date they were created in the following format:
+`YYYY-MM-DD`. To create a new case study, you can simply run the following command:
+
+```
+$ hugo new blog/{YYYY-MM-DD-BLOG-TITLE}.md
+```
+
+This will create a new case study template in the `/content/work` directory. The top portion will is templated meta information needed about the case study for it to work properly with the site.
+
+
 #### Required Images (Blog)
 
-- A 200x770px hero image is suggested for all blog posts. We are enforcing a resizing at 200px height, so the 770px width should be considered a maximum. 
+##### Hero Image
+
+- A 200x770px hero image is suggested for all blog posts. We are enforcing a resizing at 200px height, so the 770px width should be considered a maximum.
