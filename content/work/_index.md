@@ -18,6 +18,7 @@ products:
       logo: /images/products/standup-vector.svg
       logo_max_height: 35
       tags: ["innovation", "security"]
+      link: https://getstandup.com
     - title: Grokk
       product_color: 347AB7
       sub_title: User testing for developer products
@@ -25,5 +26,6 @@ products:
       logo: /images/products/grokk-vector.svg
       logo_max_height: 35
       tags: ["innovation", "security"]
+      link: https://grokk.io
 ---
 

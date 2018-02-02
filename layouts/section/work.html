@@ -25,7 +25,7 @@
             </div>    
             <div class="row products">
                 {{ range .Params.products }}
-                    {{partial "contentSections/productCard" (dict "title" .title "sub_title" .sub_title "base_url" .base_url "product_image" .product_image "logo" .logo "logo_max_height" .logo_max_height "tags" .tags "product_color" .product_color)}}
+                    {{partial "contentSections/productCard" (dict "title" .title "sub_title" .sub_title "base_url" .base_url "product_image" .product_image "logo" .logo "logo_max_height" .logo_max_height "tags" .tags "product_color" .product_color "link" .link)}}
                 {{ end }}
             </div>
 

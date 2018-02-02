@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Infrastructure on Mesh Studio</title>
+    <link>http://stage.meshstudio.io/tags/infrastructure/</link>
+    <description>Recent content in Infrastructure on Mesh Studio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://stage.meshstudio.io/tags/infrastructure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Locking Up Innovation</title>
+      <link>http://stage.meshstudio.io/work/otto/</link>
+      <pubDate>Sun, 23 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://stage.meshstudio.io/work/otto/</guid>
+      <description>Founded in 2014 by serial entrepreneur Sam Jadallah, Otto manufactures the future of ‘smart locks.’ Sam saw an opportunity to redefine home access and build a category-defining product. He felt that “a digital locking system was necessary to replace the antiquated and shockingly insecure physical key system of today.”
+To power this smart lock, Otto needed to build multiple sophisticated cloud services. These services would be responsible for coordinating interactions between the locks, users, and their smartphones.</description>
+    </item>
+    
+  </channel>
+</rss>

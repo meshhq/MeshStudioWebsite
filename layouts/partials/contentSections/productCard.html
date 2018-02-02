@@ -14,7 +14,9 @@ Required Params in Dict
 -->
 <div class="row product-row mb-4">
     <div class="col-12 col-md-6 d-flex justify-content-center align-items-end product-shot" style="background: #{{.product_color}}">
-        <img class="img-fluid product-shot-image" src="{{.product_image}}" alt="Home"/>
+        <a class="case-study-link" href="{{.link}}">
+                <img class="img-fluid product-shot-image" src="{{.product_image}}" alt="Home" />
+        </a>
     </div>
-    {{partial "contentSections/workCard" (dict "title" .title "sub_title" .sub_title "base_url" .base_url "logo" .logo "logo_max_height" .logo_max_height "tags" .tags)}}
+    {{partial "contentSections/workCard" (dict "title" .title "sub_title" .sub_title "base_url" .base_url "logo" .logo "logo_max_height" .logo_max_height "tags" .tags "url" .link)}}
 </div>

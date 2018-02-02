@@ -42,30 +42,7 @@
 
             <!-- FOUNDERS -->
             <div class="row section founders">
-                
-                <div class="col-12 col-md-8 offset-md-2">
-                    <p class="title mb-4">{{.Params.founders_title}}</p>
-                    {{ $count := len .Params.founders_content }} 
-                    {{ range $idx, $hash := .Params.founders_content }} 
-                        {{ $limit := add $idx 1 }}
-                        <div class="founder row">
-                            <div class="col-3">
-                                <a class="founder-link" href="{{.base_url}}">
-                                    <img class="img-fluid founder-image" src="{{$hash.image}}"/>
-                                </a>
-                            </div>
-                            <div class="col-9">
-                                <div class="value{{ if gt $count $limit }} mb-5{{ end }} ">
-                                    <span class="sub-title">{{$hash.name}}</span>
-                                    <a class="founder-twitter ml-2 mb-5" href="{{$hash.twitter_link}}">
-                                        <img class="img-fluid twitter-bird" src="/images/site/twitter-vector.svg"/>
-                                    </a>
-                                    <p class="content">{{$hash.description}}</p>
-                                </div>                
-                            </div>
-                        </div>        
-                    {{ end }}                
-                </div>
+                {{ partial "founders.html" . }}                
             </div>
 
         </div>
