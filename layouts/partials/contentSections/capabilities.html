@@ -13,11 +13,11 @@ Required Params in Dict
     <p class="capabilities-statement mb-5">{{$context.Params.capabilities_statement}}</p>
     {{ range first 2 (where $context.Data.Pages "Section" "services").ByDate }}
         {{ range $key, $value := .Params.capabilties }}
-            <div class="row d-flex justify-content-between capabilitiy-row">
+            <div class="row d-flex justify-content-between capability-row">
                 <p class="capability-title">{{.title}}</p>
                 {{ if $show_subtitle }}<p class="capability-sub-title mb-5">{{.sub_title}}</p>{{ end }}
                 {{ range $key, $value := .services }}
-                    <div class="col-12 col-sm-6 col-md-4">
+                    <div class="col-12 col-md-4 capability-col">
                         <div class="capability-card d-flex flex-column align-items-center">
                             <img class="img-fluid capability-glyph my-4" src="{{ $value.image }}" alt="Home" />
                             <p class="card-title my-4">{{$value.title}}</p>
