@@ -1,5 +1,39 @@
 /* ==========================================================================
-   1. Site Wide Defaults
+   CSS Table Of Contents
+    
+   * GENERAL *
+   1a - Site Wide Defaults
+   1b - Media Query Templates
+   1c - Article Styling
+
+   * PARTIALS *
+   2a - Section Headers
+   2b - Hero Block
+   2c - Case Studies
+   2d - Tag Box
+   2e - Get In Touch Partial
+   2f - Capabilities
+   2g - Header (Top of every page)
+   2h - Footer (The bottom of every page)
+   2i - Typeform Partial
+
+   * SITE SECTIONS * 
+   3a - Home (Main Index Page)
+   3b - Work Index (Work page for products and clients)
+   3c - Work Single (Case Study)
+   3d - About (Story of Mesh / Founders)
+   3e - Services (What Mesh Can Do)
+   3f - Blog Index (All of our Blog Posts)
+   3g - Blog Post (Single)
+
+   ========================================================================== */
+
+/* ==========================================================================
+   GENERAL
+   ========================================================================== */
+
+/* ==========================================================================
+   1a. Site Wide Defaults
    ========================================================================== */
 
 /* Site Base Print Font */
@@ -73,7 +107,7 @@ a:hover {
 }
 
 /* ==========================================================================
-   Media Query Templates
+   1b. Media Query Templates
    ========================================================================== */
 
 /* XL */
@@ -93,7 +127,7 @@ a:hover {
 @media (min-width: 576px) {}
 
 /* ==========================================================================
-   ARTICLE STYLING
+   1c. Article Styling
    ========================================================================== */
 
    /* Article (Blog/CaseStudy) Font */
@@ -161,7 +195,7 @@ blockquote p cite a:hover {
    ========================================================================== */
 
 /* ==========================================================================
-   Section Headers
+   2a - Section Headers
    ========================================================================== */
 
 .section-headers .title {
@@ -178,7 +212,7 @@ blockquote p cite a:hover {
 
 
 /* ==========================================================================
-   Hero Block
+   2b. Hero Block
    ========================================================================== */
 
 .hero-title-block {
@@ -208,7 +242,7 @@ blockquote p cite a:hover {
 
 
 /* ==========================================================================
-   Case Studies
+   2c - Case Studies
    ========================================================================== */
 
 .case-study-card {
@@ -265,7 +299,7 @@ blockquote p cite a:hover {
 }
 
 /* ==========================================================================
-   Tag Box
+   2d - Tag Box
    ========================================================================== */
 
 .tag-box {
@@ -307,7 +341,7 @@ blockquote p cite a:hover {
 }
 
 /* ==========================================================================
-   Get In Touch Partial
+   2e - Get In Touch Partial
    ========================================================================== */
 
 .get-in-touch-btn {
@@ -365,7 +399,7 @@ blockquote p cite a:hover {
 }
 
 /* ==========================================================================
-   Capabilities
+   2f - Capabilities
    ========================================================================== */
 
 .capabilities .capabilities-statement {
@@ -443,7 +477,7 @@ blockquote p cite a:hover {
 }
 
 /* ==========================================================================
-   Header - Top of every page
+   2g - Header (Top of every page)
    ========================================================================== */
 
 .navbar .main-logo {
@@ -477,7 +511,67 @@ blockquote p cite a:hover {
 }
 
 /* ==========================================================================
-   Typeform Partial
+   2h - Footer (The bottom of every page)
+   ========================================================================== */
+
+   footer {
+    background: var(--mesh-dk-blue);
+    color: white;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+footer .footer-list h5 {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: .5;
+}
+
+footer li,
+footer li a {
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 300;
+}
+
+footer li a:hover {
+    color: #fff;
+    opacity: 0.6;
+}
+
+footer .nav-list ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+footer .nav-list ul a {
+    padding: 0px;
+    text-transform: uppercase;
+}
+
+footer .blog-title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+footer .blog-sub-title {
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    opacity: 0.5;
+    font-weight: 300;
+}
+
+/* ==========================================================================
+   2i - Typeform Partial
    ========================================================================== */
 .jfmHCR {
     display: flex;
@@ -492,7 +586,11 @@ blockquote p cite a:hover {
 }
 
 /* ==========================================================================
-   2. Home - Main Index Page
+   SITE SECTIONS
+   ========================================================================== */
+
+/* ==========================================================================
+   3a. Home - Main Index Page
    ========================================================================== */
 
 .home .hero {
@@ -603,7 +701,7 @@ blockquote p cite a:hover {
 }
 
 /* ==========================================================================
-   3. Work Index - Work page for products and clients
+   3b. Work Index - Work page for products and clients
    ========================================================================== */
 
 .work .hero {
@@ -654,7 +752,7 @@ blockquote p cite a:hover {
 }
 
 /* ==========================================================================
-   3. Work Single - Case Study
+   3c - Work Single - Case Study
    ========================================================================== */
 
 .case-study .hero {
@@ -780,7 +878,7 @@ blockquote p cite a:hover {
 }
 
 /* ==========================================================================
-   4. About - Story of Mesh / Founders
+   3d. About - Story of Mesh / Founders
    ========================================================================== */
 
 .about .hero {
@@ -829,7 +927,7 @@ blockquote p cite a:hover {
 }
 
 /* ==========================================================================
-   5. Services - What Mesh Can Do
+   3e. Services - What Mesh Can Do
    ========================================================================== */
 
 .services .hero {
@@ -863,7 +961,7 @@ blockquote p cite a:hover {
 }
 
 /* ==========================================================================
-   6. Blog Index - All of our Blog Posts
+   3f. Blog Index - All of our Blog Posts
    ========================================================================== */
 
 .blog .hero {
@@ -1063,7 +1161,7 @@ blockquote p cite a:hover {
 }
 
 /* ==========================================================================
-   6. Blog Post (Single) - Individual Blog Post
+   3g. Blog Post (Single) - Individual Blog Post
    ========================================================================== */
 
 .blog-post .hero {
@@ -1172,64 +1270,4 @@ blockquote p cite a:hover {
 .blog-post .primary-section .sub-title {
     font-size: 1.25em;
     color: var(--mesh-dk-blue-light);
-}
-
-/* ==========================================================================
-   9. Footer - The bottom of every page
-   ========================================================================== */
-
-footer {
-    background: var(--mesh-dk-blue);
-    color: white;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
-}
-
-footer .footer-list h5 {
-    color: #fff;
-    font-size: 12px;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    opacity: .5;
-}
-
-footer li,
-footer li a {
-    letter-spacing: 1px;
-    font-size: 15px;
-    color: #fff;
-    font-weight: 300;
-}
-
-footer li a:hover {
-    color: #fff;
-    opacity: 0.6;
-}
-
-footer .nav-list ul {
-    list-style: none;
-    padding-left: 0px;
-}
-
-footer .nav-list ul a {
-    padding: 0px;
-    text-transform: uppercase;
-}
-
-footer .blog-title {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
-}
-
-footer .blog-sub-title {
-    color: #fff;
-    font-size: 14px;
-    letter-spacing: 2px;
-    opacity: 0.5;
-    font-weight: 300;
 }
