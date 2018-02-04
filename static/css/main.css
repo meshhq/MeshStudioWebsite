@@ -49,7 +49,7 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
-/* Increasing the letter spacing to accomodate for roboto */
+/* Increasing the letter spacing to accommodate for roboto */
 p,
 a,
 h1,
@@ -139,7 +139,7 @@ a:hover {
    1c. Article Styling
    ========================================================================== */
 
-   /* Article (Blog/CaseStudy) Font */
+/* Article (Blog/CaseStudy) Font */
 /* HelveticaNueue way easier to read in paragraphs (print) */
 article {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
@@ -197,7 +197,6 @@ blockquote p cite a {
 blockquote p cite a:hover {
     color: var(--mesh-dk-blue);
 }
-
 
 /* ==========================================================================
    PARTIALS
@@ -1247,6 +1246,18 @@ footer .blog-sub-title {
 
 .blog .primary-section .blog-info-column #mc_embed_signup_scroll #mce-error-response a {
     display: none;
+}
+
+@media (max-width: 768px) {
+
+    .blog .primary-section .blog-info-column {
+        margin-bottom: 2em;
+    }
+
+    .blog .primary-section .blog-info-column p {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* ==========================================================================
