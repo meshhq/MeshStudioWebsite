@@ -1371,3 +1371,23 @@ footer .blog-sub-title {
     font-size: 1.25em;
     color: var(--mesh-dk-blue-light);
 }
+
+@media (max-width: 768px) {
+    .blog-post .hero-title-block {
+        padding: 0em 1em;
+    }
+
+    .blog-post .primary-section .hero-container img {
+        height: auto;
+    }
+
+    .blog-post .primary-section .blog-meta-row {
+        margin-top: 6em;
+    }
+}
+
+@media (max-width: 576px) {
+    .blog-post .primary-section .blog-meta-row {
+        margin-top: 5em;
+    }
+}
