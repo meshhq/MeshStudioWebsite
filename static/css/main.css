@@ -1,5 +1,13 @@
 /* ==========================================================================
-   CSS Table Of Contents
+   * Style * 
+   All CSS classes should appear in the same linear order that they appear
+   on the html of their respective section
+
+   * Media Queries * 
+   All media queries should be located at the bottom of each respective section.
+   on the html of their respective section
+
+   CSS Table Of Contents:
     
    * GENERAL *
    1a - Site Wide Defaults
@@ -16,6 +24,7 @@
    2g - Header (Top of every page)
    2h - Footer (The bottom of every page)
    2i - Typeform Partial
+   2j - Founders
 
    * SITE SECTIONS * 
    3a - Home (Main Index Page)
@@ -585,6 +594,60 @@ footer .blog-sub-title {
 .jfmHCR iframe {
     width: 50%;
     height: 50%;
+}
+
+/* ==========================================================================
+   2j - Founders    
+   ========================================================================== */
+
+.founders .founder-link img {
+    max-width: 160px;
+}
+
+.founders .image-col,
+.founders .content-col {
+    justify-content: center;
+}
+
+.founders .content-col p {
+    text-align: left;
+}
+
+.founders .content-col .value {
+    align-items: flex-start;
+}
+
+@media (max-width: 992px) {
+    .founders .founder-link img {
+        width: 120px;
+        margin-right: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .founders .founder-link img {
+        width: 120px;
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 576px) {
+    .founders .founder-link img {
+        width: 120px;
+        margin-right: 0px;
+    }
+
+    .founders .content-col {
+        margin-top: 1em;
+    }
+
+    .founders .content-col p {
+        text-align: center;
+    }
+
+    .founders .content-col .value {
+        align-items: center;
+    }
 }
 
 /* ==========================================================================
