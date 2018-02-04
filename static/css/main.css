@@ -261,6 +261,7 @@ blockquote p cite a:hover {
     justify-content: start;
     height: 80px;
     width: 100%;
+    margin: 1em 0em;
 }
 
 .case-study-card .logo-container img {
@@ -287,6 +288,7 @@ blockquote p cite a:hover {
 @media (max-width: 576px) {
     .case-study-card .logo-container {
         justify-content: center;
+        margin: 0em;
     }
 
     .case-study-card .title {
@@ -725,10 +727,10 @@ footer .blog-sub-title {
     width: 100%;
     border: 1px solid var(--mesh-dk-blue-bg-border);
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .work .primary-section .casestudies .case-study-card {
-    max-width: 49%;
     margin-bottom: 24px;
 }
 
@@ -736,7 +738,6 @@ footer .blog-sub-title {
 .work .primary-section .products .product-shot {
     marign: 0;
     width: 100%;
-    height: 100%;
 }
 .work .primary-section .product-shot {
     background: blue;
@@ -749,6 +750,31 @@ footer .blog-sub-title {
 .work .products .row {
     margin-left: 0px;
     margin-right: 0px;  
+}
+
+@media (max-width: 768px) {
+    .work .primary-section .section-headers {
+        margin-top: 4em;
+        margin-bottom: 1em;
+    }
+
+    .work .primary-section .section-headers p {
+        text-align: center;
+        width: 100%;
+        padding: 0em .5em;
+    }
+}
+
+@media (min-width: 768px) {
+    .work .primary-section .casestudies .case-study-card {
+        max-width: 49%;
+    }
+}
+
+@media (max-width: 576px) {
+    .work .primary-section .product-row {
+        margin: 0px 15px;
+    }
 }
 
 /* ==========================================================================
