@@ -8,7 +8,7 @@ Required Params in Dict
 - tags (array of strings)
 -->
 
-<div class="tag-box d-flex align-items-end">
+<div class="tag-box d-flex flex-row flex-wrap">
     {{ $count := len .tags }} 
     {{ range $idx, $value := .tags }}
         <span class="tag">{{$value}}</span>

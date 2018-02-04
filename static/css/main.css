@@ -46,8 +46,13 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    color: var(--mesh-dk-blue);
+}
+
 a:hover {
     text-decoration: none;
+    color: var(--mesh-blue);
 }
 
 .btn:focus {
@@ -66,6 +71,26 @@ a:hover {
     margin: auto;
     height: 40px;
 }
+
+/* ==========================================================================
+   Media Query Templates
+   ========================================================================== */
+
+/* XL */
+@media (max-width: 1200px) {}
+@media (min-width: 1200px) {}
+
+/* LG */
+@media (max-width: 992px) {}
+@media (min-width: 992px) {}
+
+/* MD */
+@media (max-width: 768px) {}
+@media (min-width: 768px) {}
+
+/* SM */
+@media (max-width: 576px) {}
+@media (min-width: 576px) {}
 
 /* ==========================================================================
    ARTICLE STYLING
@@ -163,14 +188,23 @@ blockquote p cite a:hover {
 .hero-title-block h2 {
     font-weight: 300;
     font-size: 2em;
-    width: 50%;
 }
 
 .hero-title-block h3 {
     font-weight: 300;
     font-size: 1.25em;
-    width: 50%;
 }
+
+@media (min-width: 768px) {
+    .hero-title-block h2 {
+        width: 50%;
+    }
+    
+    .hero-title-block h3 {
+        width: 50%;
+    }
+}
+
 
 
 /* ==========================================================================
@@ -180,6 +214,8 @@ blockquote p cite a:hover {
 .case-study-card {
     background: #fff;
     border: var(--mesh-dk-blue-dk-border) 1px solid;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .case-study-card .card-row,
@@ -188,8 +224,9 @@ blockquote p cite a:hover {
 }
 
 .case-study-card .logo-container {
+    justify-content: start;
     height: 80px;
-    width: 400px;
+    width: 100%;
 }
 
 .case-study-card .logo-container img {
@@ -213,13 +250,27 @@ blockquote p cite a:hover {
     width: auto;
 }
 
+@media (max-width: 576px) {
+    .case-study-card .logo-container {
+        justify-content: center;
+    }
+
+    .case-study-card .title {
+        text-align: center;
+    }
+    
+    .case-study-card .sub-title {
+        text-align: center;
+    }    
+}
+
 /* ==========================================================================
    Tag Box
    ========================================================================== */
 
 .tag-box {
     position: relative;
-    height: 100%;
+    align-items: flex-end;
 }
 
 .tag-box .tag {
@@ -233,6 +284,8 @@ blockquote p cite a:hover {
     display: inline-block;
     height: 4px;
     width: 4px;
+    min-height: 4px;
+    min-width: 4px;
     border-radius: 50%;
     background: var(--mesh-blue);
     
@@ -245,6 +298,12 @@ blockquote p cite a:hover {
 
 .tag-box .arrow-container .case-study-disclosure:hover {
     fill: blue;
+}
+
+@media (max-width: 576px) {
+    .tag-box {
+        justify-content: center;
+    }    
 }
 
 /* ==========================================================================
@@ -291,6 +350,15 @@ blockquote p cite a:hover {
     font-weight: 300;
     width: 90%;
     margin-left: -15px;
+}
+
+@media (max-width: 576px) {
+    .capabilities .capabilities-statement {
+        text-align: center;
+        margin: 0px;
+        width: 100%;
+        font-size: 1em;
+    }   
 }
 
 .capabilities .capabilitiy-row .capability-title {
@@ -415,8 +483,16 @@ blockquote p cite a:hover {
 
 .home .primary-section .container .testimonial,
 .home .primary-section .container .casestudies-title,
-.home .primary-section .container .capabilties-title {
+.home .primary-section .container .capabilities-title {
     margin-top: 8em;
+}
+
+@media (max-width: 576px) {
+    .home .primary-section .container .testimonial,
+    .home .primary-section .container .casestudies-title,
+    .home .primary-section .container .capabilities-title {
+        margin-top: 4em;
+    }
 }
 
 .home .primary-section .container .capabilitiy-row {
@@ -427,11 +503,25 @@ blockquote p cite a:hover {
     font-weight: 500;
     text-transform: uppercase;
     color: var(--mesh-dk-blue);
+    margin-right: 16px;
 }
 
 .home .primary-section .section-link:hover {
     text-decoration: none;
     color: var(--mesh-dk-blue-ultralight);
+}
+
+@media (max-width: 576px) {
+    .home .primary-section .section-link {
+        width: 100%;
+        text-align: center;
+        margin: 0em;
+    }
+
+    .home .primary-section .section-seeall-link {
+        width: 100%;
+        text-align: center;    
+    }    
 }
 
 .home .primary-section .section-seeall-link {
@@ -445,9 +535,20 @@ blockquote p cite a:hover {
     color: var(--mesh-dk-blue);
 }
 
+@media (max-width: 576px) {
+    .casestudies .row {
+        padding: 20px;
+    }
+}
+
 .home .primary-section .casestudies .case-study-card {
-    max-width: 48%;
     margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+    .home .primary-section .casestudies .case-study-card {
+        max-width: 49%;
+    }
 }
 
 .home .primary-section .testimonial {
