@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on Mesh Studio</title>
+    <title>Mesh Studio Blog on Mesh Studio</title>
     <link>http://stage.meshstudio.io/blog/</link>
-    <description>Recent content in Blog on Mesh Studio</description>
+    <description>Recent content in Mesh Studio Blog on Mesh Studio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Jan 2018 00:00:00 +0000</lastBuildDate>

@@ -1,4 +1,5 @@
 ---
-title: Blog
-sub_title: We help companies build software, faster.
+title: Mesh Studio Blog
+sub_title: A collection of articles and posts from the Mesh team.
+newsletter_signup: Sign up for our monthly newsletter
 ---
