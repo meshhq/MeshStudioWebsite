@@ -1,35 +1,35 @@
 ---
 capabilties:
-  - development:
-    title: Development
-    sub_title: We work with companies of all sizes, from Fortune 500s venture-funded startups. We build products across several different platforms and languages
-    services:
-        - title: Mobile
-          description: Mesh builds beautiful mobile applications that help you serve this global audience. 
-          image: /images/services/mobile-glyph.svg
-          tags: ["ai", "ios", "server"]
-        - title: Web
-          description: Sophisticated, responsive, single-page front-end applications that look beautiful on any device.
-          image: /images/services/world-glyph.svg
-          tags: ["ai", "ios", "server"]
-        - title: Cross-Platform
-          description: Need your app to run on Android and iOS? We can do that. 
-          image: /images/services/cross-platform-glyph.svg
-          tags: ["ai", "ios", "server"]
   - cloud:
     title: Cloud
-    sub_title: We work with companies of all sizes, from Fortune 500s venture-funded startups. We build products across several different platforms and languages
+    sub_title: Building scalable and reliable cloud software is hard. We'll take care of your cloud, so you can focus on your customers.
     services:
-        - title: Server
-          description: Mesh builds beautiful mobile applications that help you serve this global audience. 
+        - title: Services
+          description: Scalable and reliable applications and microservices built in the cloud.
           image: /images/services/server-glyph.svg
-          tags: ["ai", "ios", "server"]
+          tags: []
         - title: DevOps
-          description: Sophisticated, responsive, single-page front-end applications that look beautiful on any device.
+          description: We help companies adopt a DevOps approach to software development.
           image: /images/services/devops-glyph.svg
-          tags: ["ai", "ios", "server"]
+          tags: []
         - title: Infrastructure
-          description: Need your app to run on Android and iOS? We can do that. 
+          description: Enterprise grade infrastructure built with modern tools on top of AWS and GCP. 
           image: /images/services/infra-glyph.svg
-          tags: ["ai", "ios", "server"]
+          tags: []
+  - development:
+    title: Applications
+    sub_title: Sophisticated front end applications built with a focus on usability and customer experience.
+    services:
+        - title: Mobile
+          description: Mesh develops beautiful native iOS and Android applications. 
+          image: /images/services/mobile-glyph.svg
+          tags: []
+        - title: Web
+          description: Sophisticated, responsive, single-page web applications that look great on any device.
+          image: /images/services/world-glyph.svg
+          tags: []
+        - title: Cross-Platform
+          description:  We build cross-platform iOS and Android applications with a single code base. 
+          image: /images/services/cross-platform-glyph.svg
+          tags: []
 ---

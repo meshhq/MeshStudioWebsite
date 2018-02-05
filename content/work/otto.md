@@ -1,7 +1,7 @@
 ---
-title: Locking Up Innovation
+title: Home Security, Cloud Delivered
 sub_title: Mesh helped Otto modernize its cloud infrastructure and security.
-tags: ["AWS", "infrastructure", "security"]
+tags: ["AWS", "Infrastructure", "Security"]
 date: 2017-04-23
 publishdate: 2017-04-23
 logo: /images/caseStudies/otto-vector.svg
