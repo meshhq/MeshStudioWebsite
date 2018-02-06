@@ -10,13 +10,15 @@
     <div class="primary-section">
         <!-- GET IN TOUCH -->
         <div class="button-container d-flex justify-content-center">
-            <button type="button" href="https://taylorhalliday.typeform.com/to/ji75xl" class="btn get-in-touch-btn typeform-share">get in touch</button>
+            <button type="button" href={{.Site.Params.typeformLink}} class="btn get-in-touch-btn typeform-share">get in touch</button>
         </div>
         <div class="container">
             <!-- CASE STUDIES -->
             <div class="row casestudies-title mb-5">
+                {{ range where .Site.Menus.main "Name" "==" "Work" }}
                 <a class="section-link" href="{{ .URL }}">case studies</a>
                 <a class="section-seeall-link" href="{{ .URL }}">see all</a>
+                {{ end }}
             </div>
             <div class="casestudies">
                 {{partial "caseStudies" (dict "context" . "limit" "2")}}
@@ -24,17 +26,18 @@
 
             <!-- CAPABILITIES -->
             <div class="row capabilities-title mb-3">
+                {{ range where .Site.Menus.main "Name" "==" "Services" }}
                 <a class="section-link" href="{{ .URL }}">capabilites</a>
                 <a class="section-seeall-link" href="{{ .URL }}">see all</a>
+                {{ end }}    
             </div>
 
             {{partial "contentSections/capabilities"  (dict "context" . "show_subtitle" false )}}
             <!-- TESTIMONIAL -->
             <div class="row testimonial">
                 <a class="section-link mb-4">what our clients are saying</a>
-                <a class="section-seeall-link" href="{{ .URL }}">see all</a>
                 <p class="testimonial-quote">{{.Params.testimonial}}</p>
-                <p class="testimonial-attr">{{.Params.testimonial_attr}}</p>
+                <a class="testimonial-attr" href="{{ .Params.testimonial_attr_link }}">{{.Params.testimonial_attr}}</a>
             </div>
         </div>
     </div>

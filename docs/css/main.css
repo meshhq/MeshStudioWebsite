@@ -719,7 +719,7 @@ footer .blog-sub-title {
 .home .primary-section .testimonial .testimonial-quote {
     font-weight: 300;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
     width: 100%;
 }
 
@@ -727,7 +727,7 @@ footer .blog-sub-title {
     color: var(--mesh-blue);
     font-weight: 300;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.75em;
     width: 100%;
 }
 
