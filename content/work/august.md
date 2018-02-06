@@ -1,6 +1,6 @@
 ---
-title: Democratizing Access To August Locks
-sub_title: August had perfected access to their hardware, but it was time to open the doors to other developers
+title: August Mobile SDKs
+sub_title: August had perfected access to their hardware, but it was time to open the doors to other developers.
 tags: ["Mobile", "SDK", "Integrations"]
 date: 2018-02-01T12:21:35-08:00
 publishdate: 2018-02-01T12:21:35-08:00
