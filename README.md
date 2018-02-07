@@ -22,7 +22,16 @@ The resulting site will be located at `http://localhost:1313`. Hugo server comes
 
 ## Deployment
 
-TBD... not there yet.
+We use Github Pages to host the site, with Cloudfare handling the reverse proxy responsibilities.
+
+### Building the site prior to pushing
+For your changes to be reflected, you need to rebuild the site prior to pushing up your changes. To rebuild the production site, run:
+
+```
+$ hugo server
+```
+
+In the very near future, we'll have an automated CI process to handle the rebuild on PR submission.
 
 ## Content
 
