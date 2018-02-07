@@ -23,13 +23,13 @@ If the integration were to happen, large portions of the existing core applicati
 
 ## Solution
 
-The technology leadership team at August decided to build mobile Software Development Kits (SDKs). SDKs would allow the current partner to quickly integrate August technology into their application.They would also open the door for other potential integration partnerships in the future. Mesh partnered with August and was asked to deliver SDKs for both Android and iOS. 
+The technology leadership team at August decided to build mobile Libraries. Libraries would allow the current partner to quickly integrate August technology into their application.They would also open the door for other potential integration partnerships in the future. Mesh partnered with August and was asked to deliver Libraries for both Android and iOS. 
 
 ## Execution
 
-### SDK Build
+### Library Build
 
-We worked closely with the mobile engineering team to get up to speed on the technical details of August’s connected devices and networking logic. We then carefully evaluated the existing mobile codebases to determine which units of logic would need to be included in the SDK. After identifying these components, we were able to extract the relevant code into a standalone project and assemble a cohesive package. We also added unit test coverage to ensure the SDKs functioned as expected
+We worked closely with the mobile engineering team to get up to speed on the technical details of August’s connected devices and networking logic. We then carefully evaluated the existing mobile codebases to determine which units of logic would need to be included in the Library. After identifying these components, we were able to extract the relevant code into a standalone project and assemble a cohesive package. We also added unit test coverage to ensure the Libraries functioned as expected
 
 ### Interface Design 
 
@@ -45,8 +45,8 @@ Significant portions of Augusts codebase needed to be refactored to support the 
 
 ### Framework Automation
 
-We delivered automation tools that would allow August mobile engineers to build, test and distribute framework binaries. This automation eliminates the potential for human error when building the SDKs and makes it trivial to ship SDK releases.
+We delivered automation tools that would allow August mobile engineers to build, test and distribute framework binaries. This automation eliminates the potential for human error when building the Libraries and makes it trivial to ship releases.
 
 ## Results
 
-Mesh engineers were able to complete the August SDKs for both Android and iOS ahead of schedule. We developed a close working relationship with members of August mobile teams to build high-quality SDKs that are simple to use and easy to implement. August was able to deliver the SDKs to their partner for integration on time and on budget.
+Mesh engineers were able to complete the August Libraries for both Android and iOS ahead of schedule. We developed a close working relationship with members of August mobile teams to build high-quality Libraries that are simple to use and easy to implement. August was able to deliver the Libraries to their partner for integration on time and on budget.
