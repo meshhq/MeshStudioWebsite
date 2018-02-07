@@ -1,4 +1,4 @@
-baseURL = "http://stage.meshstudio.io/"
+baseURL = "https://meshstudio.io/"
 languageCode = "en-us"
 title = "Mesh Studio"
 publishDir = "docs"
