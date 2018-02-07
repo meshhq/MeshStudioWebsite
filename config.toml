@@ -6,6 +6,7 @@ disqusShortname = "yourdiscussshortname"
 enableRobotsTXT = true
 
 [params]
+    description = "We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products."
     googleAnalyticsUserID = "UA-90144908-1"
     rainImg = "/images/site/rain.svg"
     logoBlack = "/images/site/meshlogo-black-vector.svg"
