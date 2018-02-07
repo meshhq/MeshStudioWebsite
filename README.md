@@ -3,6 +3,9 @@ This is the repository for the Mesh Studio website.
 
 ## Developing
 
+#### Hugo
+This site is build using [Hugo](https://gohugo.io/). Installation instructions can be found [here](https://gohugo.io/getting-started/installing/). We'll have a makefile soon enough handling the install...
+
 #### Site Generation
 
 To simply transpile all of the site code, running:
