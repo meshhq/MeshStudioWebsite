@@ -2,50 +2,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Security on Mesh Studio</title>
-    <link>https://meshstudio.io/tags/security/</link>
+    <link>http://meshstudio.io/tags/security/</link>
     <description>Recent content in Security on Mesh Studio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 29 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://meshstudio.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://meshstudio.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Spectre Explained</title>
-      <link>https://meshstudio.io/blog/2018-01-15-spectre/</link>
+      <link>http://meshstudio.io/blog/2018-01-15-spectre/</link>
       <pubDate>Mon, 29 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://meshstudio.io/blog/2018-01-15-spectre/</guid>
+      <guid>http://meshstudio.io/blog/2018-01-15-spectre/</guid>
       <description>Spectre and Meltdown Pt 1: What you need to know This is a two-part series that covers both Spectre and Meltdown. In the following piece we will attempt to give an explanation of a recent security exploit known as Spectre
 In the news If you&amp;rsquo;ve been paying attention to tech chatter over the past week, you have probably heard about two catastrophic security flaws called Spectre and Meltdown. With so many security breaches in the news, it can be hard to discern which headlines you should be concerned with.</description>
     </item>
     
     <item>
       <title>Session Tokens</title>
-      <link>https://meshstudio.io/blog/2018-01-10-session-tokens/</link>
+      <link>http://meshstudio.io/blog/2018-01-10-session-tokens/</link>
       <pubDate>Wed, 24 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://meshstudio.io/blog/2018-01-10-session-tokens/</guid>
+      <guid>http://meshstudio.io/blog/2018-01-10-session-tokens/</guid>
       <description>Authentication and session management are two areas almost all developers have to deal with repeatedly throughout their career. It’s common for us to reach for a well tested open-source library to bolt onto our app, and that’s a good thing since security logic is one of those things you want a lot of eyes on. But as everything in programming, it helps to know the underlying logic behind the tools we use.</description>
     </item>
     
     <item>
       <title>Authentication vs. Authorization</title>
-      <link>https://meshstudio.io/blog/2018-01-05-authentication-vs-authorization/</link>
+      <link>http://meshstudio.io/blog/2018-01-05-authentication-vs-authorization/</link>
       <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://meshstudio.io/blog/2018-01-05-authentication-vs-authorization/</guid>
+      <guid>http://meshstudio.io/blog/2018-01-05-authentication-vs-authorization/</guid>
       <description>You allowed in here? Lately I have noticed quite a few people mixing up the the concepts of Authentication and Authorization. This isn’t a big deal if you’re using them interchangeably when talking about most anything besides tech, but these concepts are quite different and worth explaining.
 So, What is the Difference Authentication is simply the notion of identity, but it’s a powerful concept. It’s proving to someone (your local TSA agent), or something (the IRS website) that you are who you say you are.</description>
     </item>
     
     <item>
       <title>Setting Up CircleCI</title>
-      <link>https://meshstudio.io/blog/2018-01-20-setting-up-circle/</link>
+      <link>http://meshstudio.io/blog/2018-01-20-setting-up-circle/</link>
       <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://meshstudio.io/blog/2018-01-20-setting-up-circle/</guid>
+      <guid>http://meshstudio.io/blog/2018-01-20-setting-up-circle/</guid>
       <description>Contiuons Integration with Node.js and CircleCI Software developers tend to come up with complicated names for simple topics. Examples of this include Dependency Injection, Orthogonality, or [think of something]. While these terms sound impressive, they often produce an adverse side effect; novice developers assume the subjects they are describing are complicated and unapproachable.
 https://mobile.twitter.com/tenderlove/status/748579020703313920
 The above proved to be true for me when I first learned about Continuous Integration (CI).</description>
@@ -53,20 +53,20 @@ The above proved to be true for me when I first learned about Continuous Integra
     
     <item>
       <title>Home Security, Cloud Delivered</title>
-      <link>https://meshstudio.io/work/otto/</link>
+      <link>http://meshstudio.io/work/otto/</link>
       <pubDate>Sun, 23 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://meshstudio.io/work/otto/</guid>
+      <guid>http://meshstudio.io/work/otto/</guid>
       <description>Founded in 2014 by serial entrepreneur Sam Jadallah, Otto manufactures the future of ‘smart locks.’ Sam saw an opportunity to redefine home access and build a category-defining product. He felt that “a digital locking system was necessary to replace the antiquated and shockingly insecure physical key system of today.”
 To power this smart lock, Otto needed to build multiple sophisticated cloud services. These services would be responsible for coordinating interactions between the locks, users, and their smartphones.</description>
     </item>
     
     <item>
       <title>Making Staples Easy Again</title>
-      <link>https://meshstudio.io/work/staples/</link>
+      <link>http://meshstudio.io/work/staples/</link>
       <pubDate>Thu, 23 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://meshstudio.io/work/staples/</guid>
+      <guid>http://meshstudio.io/work/staples/</guid>
       <description>Staples is known as the office supply superstore, with retail locations throughout North America. Founded in 1986, Staples has grown from its humble beginnings to to over 1,500 stores. The company is publicly listed and included in the Fortune 500.
 Despite being known for their extensive network of brick and mortar retail locations, over 60% of Staple’s annual revenue comes from its direct business-to-business (B2B) relationships.
 The Problem In the summer of 2016, these direct customer relationships were being threatened by digital native retailers, the biggest being Amazon.</description>
