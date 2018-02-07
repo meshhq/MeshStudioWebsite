@@ -14,6 +14,7 @@
                 <div class="col-12 col-md-8 offset-md-2">
                     <p class="title">{{.Params.intro_title}}</p>
                     <p class="content">{{.Params.intro_content}}</p>
+                    <a class="section-link" href="/content/WorkingWithMesh.pdf" target="_blank">Read more working with us</a>
                 </div>
             </div>
 
@@ -36,7 +37,8 @@
             <div class="row section story">
                 <div class="col-12 col-md-8 offset-md-2">
                     <p class="title">{{.Params.story_title}}</p>
-                    <p class="content">{{.Params.story_content}}</p>
+                    {{ .Content }}
+                    <a class="section-link" href="/content/AboutMesh.pdf" target="_blank">Read more about story</a>
                 </div>
             </div>
 
