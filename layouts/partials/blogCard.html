@@ -1,0 +1,28 @@
+<div class="blog-card">
+    <article>
+        <a class="img-link" href="{{ .RelPermalink }}">
+            <div class="image-box d-flex justify-content-center" style="background-image: url({{.Params.hero_image}})"></div>
+        </a>
+        <div class="summary-box m-3">
+            <div class="meta d-flex justify-content-between mb-3">
+                <span class="tag">{{ index (.Params.tags) 0}}</span>
+                <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+            </div>
+
+            <a class="title-link" href="{{ .RelPermalink }}">
+                <h4 class="post-title">
+                    {{ .Title }}
+                </h4>
+                <p class="summary mb-4">{{ .Params.sub_title }}</p>
+            </a>
+
+            <div class="meta-footer d-flex justify-content-between align-items-center">
+                <a class="founder-link d-flex align-items-center" href="{{.Params.author.url}}">
+                    <img class="img-fluid author-pic rounded-circle" src="{{.Params.author.avatar}}" />
+                    <span class="author-name ml-2">{{.Params.author.name}}</span>
+                </a>
+                <a class="read-more-link" href="{{ .RelPermalink }}">Continue reading</a>
+            </div>
+        </div>
+    </article>
+</div>

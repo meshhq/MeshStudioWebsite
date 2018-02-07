@@ -18,14 +18,22 @@ values_content:
   - title: Finish Strong
     summary: Whatever we do, we do it well and we do it to completion. We finish what we start. We do not leave tasks almost done. 
 story_title: Our Story
-story_content: Mesh Studio is a software consultancy based in Seattle. We specialize in mobile, web, and server application development, as well as infrastructure engineer and hosting solutions. We have worked with companies of all sizes, from Fortune 500s to venture-funded startups. We look to engage on challenging opportunities that span multiple technologies with brands we admire.
 founders_title: The Founders
 founders_content:
   - name: Taylor Halliday
-    description: We work to understand the business needs of our customer, and help shape the product road-map to meet those needs.
+    description: Taylor lives in Seattle with his wife Chelsea and his 18-month-old son Mason. Outside of Mesh, Taylor loves skiing, boating, hiking, grabbing a local beer, or diving into some new and interesting technical paper.
     image: https://avatars3.githubusercontent.com/u/1266416?v=4&s=400
-  - name: Doug Coleman
-    description: We work to understand the business needs of our customer, and help shape the product road-map to meet those needs.
+    twitter: https://twitter.com/tayhalliday
+  - name: Kevin Coleman
+    description: Kevin lives in Seattle with his wife Lindsey and their dog Kameron. Outside of Mesh, Kevin is an avid saltwater fly fisherman and can be found exploring the local beaches of Puget sound in pursuit of Sea-run Cutthroat Trout.
     image: https://avatars3.githubusercontent.com/u/1423931?v=4&s=400
+    twitter: https://twitter.com/KevFColeman
 ---
 
+Mesh founders, [Kevin Coleman](https://www.linkedin.com/in/kevin-coleman-a3737326/) and [Taylor Halliday](https://www.linkedin.com/in/taylor-halliday-7aa59814/), moved to San Francisco in 2014 to work for different venture-funded startups. Kevin built messaging software for [Layer](https://layer.com/) while Taylor built the future of private transportation for [Chariot](https://www.chariot.com/). 
+
+During their nights and weekends in the winter of 2015, the pair started working on a customer success product called [Mesh](https://meshdata.io/) Data. That product would eventually land them a spot in the prestigious [YCombinator](http://www.ycombinator.com/) fellowship accelerator.
+
+While participating in the accelerator, Kevin and Taylor came to realize that the market for customer success products was already fairly saturated. The real problem for companies, however, was that they were having difficulty knitting these platforms together with their own cloud systems. Kevin and Taylor realized that there was a massive shortage of sophisticated cloud engineers who could help companies integrate these services into a cohesive whole. 
+
+As a result, they decided to focus on building a consultancy that would help customers build applications, services, and integrations in the cloud. 

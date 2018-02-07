@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Iot on Mesh Studio</title>
+    <link>http://stage.meshstudio.io/tags/iot/</link>
+    <description>Recent content in Iot on Mesh Studio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Mar 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://stage.meshstudio.io/tags/iot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Making Staples Easy Again</title>
+      <link>http://stage.meshstudio.io/work/staples/</link>
+      <pubDate>Thu, 23 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://stage.meshstudio.io/work/staples/</guid>
+      <description>Staples is known as the office supply superstore, with retail locations throughout North America. Founded in 1986, Staples has grown from its humble beginnings to to over 1,500 stores. The company is publicly listed and included in the Fortune 500.
+Despite being known for their extensive network of brick and mortar retail locations, over 60% of Staple’s annual revenue comes from its direct business-to-business (B2B) relationships.
+The Problem In the summer of 2016, these direct customer relationships were being threatened by digital native retailers, the biggest being Amazon.</description>
+    </item>
+    
+  </channel>
+</rss>

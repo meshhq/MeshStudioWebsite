@@ -80,4 +80,4 @@ This will create a new case study template in the `/content/work` directory. The
 
 ##### Hero Image
 
-- A 200x770px hero image is suggested for all blog posts. We are enforcing a resizing at 200px height, so the 770px width should be considered a maximum.
+- A 230x770px hero image is suggested for all blog posts. We are enforcing a resizing at 200px height, so the 770px width should be considered a maximum.

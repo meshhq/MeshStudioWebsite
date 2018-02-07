@@ -719,7 +719,7 @@ footer .blog-sub-title {
 .home .primary-section .testimonial .testimonial-quote {
     font-weight: 300;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
     width: 100%;
 }
 
@@ -727,7 +727,7 @@ footer .blog-sub-title {
     color: var(--mesh-blue);
     font-weight: 300;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.75em;
     width: 100%;
 }
 
@@ -1002,6 +1002,23 @@ footer .blog-sub-title {
 .about .primary-section .content {
     font-weight: 300;
     font-size: 1.3em;
+    line-height: 1.75;
+    letter-spacing: 2px;
+    white-space: pre-wrap;
+}
+
+.about .primary-section .story p {
+    font-weight: 300;
+    font-size: 1.3em;
+    line-height: 1.75;
+    letter-spacing: 2px;
+}
+
+.about .primary-section .story .title {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1em;
+    letter-spacing: 4px;
 }
 
 .about .primary-section .founders .founder .founder-image {

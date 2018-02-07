@@ -5,7 +5,7 @@
         {{ $limit := add $idx 1 }}
         <div class="founder row {{ if gt $count $limit }} mb-4{{ end }}">
             <div class="col-12 col-sm-3 d-flex image-col align-items-center">
-                <a class="founder-link" href="{{.base_url}}">
+                <a class="founder-link" href="{{.twitter}}">
                     <img class="img-fluid founder-image" src="{{$hash.image}}"/>
                 </a>
             </div>
@@ -13,7 +13,7 @@
                 <div class="value d-flex flex-column">
                     <div>
                         <span class="sub-title">{{$hash.name}}</span>
-                        <a class="founder-twitter d-none d-sm-inline ml-2" href="{{$hash.twitter_link}}">
+                        <a class="founder-twitter d-none d-sm-inline ml-2" href="{{$hash.twitter}}">
                             <img class="img-fluid twitter-bird" src="/images/site/twitter-vector.svg"/>
                         </a>        
                     </div>

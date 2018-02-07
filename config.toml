@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Mesh Studio"
 publishDir = "docs"
 disqusShortname = "yourdiscussshortname"
+enableRobotsTXT = true
 
 [params]
     googleAnalyticsUserID = "UA-90144908-1"
@@ -11,6 +12,7 @@ disqusShortname = "yourdiscussshortname"
     logoWhite = "/images/site/meshlogo-white-vector.svg"
     get_in_touch_title = "Ready to get started"
     get_in_touch_content = "Let's talk about your project"
+    typeformLink = "https://taylorhalliday.typeform.com/to/ji75xl"
 
 
 # Menu
