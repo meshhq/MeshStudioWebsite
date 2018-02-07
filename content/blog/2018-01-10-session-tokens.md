@@ -10,12 +10,6 @@ author:
   url: https://twitter.com/tayhalliday
   mail: taylor@meshstudio.io
   avatar: https://avatars2.githubusercontent.com/u/1266416?s=460&v=4
-design:
-  bg_color: "#222228"
-  image: https://cdn.auth0.com/blog/breach/logo.png
-  image_size: "100%"
-  image_bg_color: "#f5f7f9"
-  blog_series: false
 ---
 
 Authentication and session management are two areas almost all developers have to deal with repeatedly throughout their career. It’s common for us to reach for a well tested open-source library to bolt onto our app, and that’s a good thing since security logic is one of those things you want a lot of eyes on. But as everything in programming, it helps to know the underlying logic behind the tools we use.
