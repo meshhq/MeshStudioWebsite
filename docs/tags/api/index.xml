@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Api on Mesh Studio</title>
-    <link>http://meshstudio.io/tags/api/</link>
+    <link>https://meshstudio.io/tags/api/</link>
     <description>Recent content in Api on Mesh Studio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 01 Feb 2018 15:35:36 -0800</lastBuildDate>
     
-	<atom:link href="http://meshstudio.io/tags/api/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://meshstudio.io/tags/api/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Leveling Up Health Savings Accounts</title>
-      <link>http://meshstudio.io/work/lively/</link>
+      <link>https://meshstudio.io/work/lively/</link>
       <pubDate>Thu, 01 Feb 2018 15:35:36 -0800</pubDate>
       
-      <guid>http://meshstudio.io/work/lively/</guid>
+      <guid>https://meshstudio.io/work/lively/</guid>
       <description>Lively is a software company that helps employers offer a modern Health Savings Account (HSA) to their employees. Their product streamlines the process of setting-up an HSA and offers a convenient dashboard to manage and administer the benefit. Lively also helps employees take full advantage of their HSA by allowing them to invest the money that they contribute into the account.
 “Our goal is to facilitate and optimize how individuals save for healthcare expenses.</description>
     </item>

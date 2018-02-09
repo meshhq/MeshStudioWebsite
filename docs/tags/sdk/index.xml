@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sdk on Mesh Studio</title>
-    <link>http://meshstudio.io/tags/sdk/</link>
+    <link>https://meshstudio.io/tags/sdk/</link>
     <description>Recent content in Sdk on Mesh Studio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 01 Feb 2018 12:21:35 -0800</lastBuildDate>
     
-	<atom:link href="http://meshstudio.io/tags/sdk/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://meshstudio.io/tags/sdk/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>August Mobile SDKs</title>
-      <link>http://meshstudio.io/work/august/</link>
+      <link>https://meshstudio.io/work/august/</link>
       <pubDate>Thu, 01 Feb 2018 12:21:35 -0800</pubDate>
       
-      <guid>http://meshstudio.io/work/august/</guid>
+      <guid>https://meshstudio.io/work/august/</guid>
       <description>August Home is the brainchild of famed industrial designer Yves Behar and Jason Johnson. Founded in 2013, the company designs and manufactures beautiful, connected home security products. August’s product lineup has grown to include connected locks, doorbells, and cameras.
 The company had raised over $70MM from-top tier venture capitalists like Maveron and Bessemer Venture Partners and was acquired by Assa Abloy in October of 2017.
 Problem August’s connected products are controlled with a smartphone through a mix of Bluetooth and WiFi.</description>
