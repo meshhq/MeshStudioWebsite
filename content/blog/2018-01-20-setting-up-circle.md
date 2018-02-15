@@ -46,7 +46,7 @@ Our sample project provides simple npm commands for each of these steps. These c
 
 ### Setting up CircleCI 
 
-Our CI provider of choice at Mesh is [Circle CI](). To run builds on CircleCI, we need to create a new directory in the root of our project called `.circleci`.
+Our CI provider of choice at Mesh is [Circle CI](https://circleci.com). To run builds on CircleCI, we need to create a new directory in the root of our project called `.circleci`.
 
 ```
 $ mkdir .circleci
