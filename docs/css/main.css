@@ -46,10 +46,13 @@
    ========================================================================== */
 
 /* Site Base Print Font */
+
 body {
     font-family: 'Roboto', sans-serif;
 }
+
 /* Increasing the letter spacing to accommodate for roboto */
+
 p,
 a,
 h1,
@@ -120,19 +123,27 @@ a:hover {
    ========================================================================== */
 
 /* XL */
+
 @media (max-width: 1200px) {}
+
 @media (min-width: 1200px) {}
 
 /* LG */
+
 @media (max-width: 992px) {}
+
 @media (min-width: 992px) {}
 
 /* MD */
+
 @media (max-width: 768px) {}
+
 @media (min-width: 768px) {}
 
 /* SM */
+
 @media (max-width: 576px) {}
+
 @media (min-width: 576px) {}
 
 /* ==========================================================================
@@ -140,10 +151,13 @@ a:hover {
    ========================================================================== */
 
 /* Article (Blog/CaseStudy) Font */
+
 /* HelveticaNueue way easier to read in paragraphs (print) */
+
 article {
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-    font-weight: 300;    
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
 }
 
 article h1,
@@ -151,8 +165,18 @@ article h2,
 article h3,
 article h4,
 article h5 {
-    margin-top: 2em;
-    margin-bottom: 1em;
+    margin-top: 1.0em;
+    margin-bottom: 0.5em;
+}
+
+/* Spacing */
+
+article blockquote p,
+article p,
+article a,
+article li {
+    letter-spacing: 1.5px;
+    line-height: 35px;
 }
 
 .primary-section article p {
@@ -160,14 +184,33 @@ article h5 {
     font-weight: 300;
 }
 
-article a {
-    color: #777;
-    font-weight: 500;
+article pre {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    color: rgba(0, 0, 0, 0.83);
+    border-radius: 6px;
+    margin-bottom: 2em;
 }
 
-article p {
-    line-height: 1.75;
-    letter-spacing: 2px;
+article .highlight pre {
+    background: #373d43;
+}
+
+article a {
+    color: #666;
+    font-weight: 400;
+}
+
+article blockquote {
+    font-style: italic;
+    padding: 0em 1.5em;
+    border-left: 1px solid #ccc;
+    font-size: 18px;
+}
+
+article ol {
+    font-size: 21px;
+    font-weight: 300;
 }
 
 article a:hover {
@@ -175,6 +218,12 @@ article a:hover {
 }
 
 /* Block Quote Styling */
+
+article blockquote,
+article p {
+    font-size: 21px;
+}
+
 blockquote {
     margin: 2em 0em;
     font-size: 1.5em;
@@ -198,6 +247,398 @@ blockquote p cite a:hover {
     color: var(--mesh-dk-blue);
 }
 
+@media (max-width: 768px) {
+    article h1,
+    article h2,
+    article h3,
+    article h4,
+    article h5 {
+        margin-top: 2em;
+        margin-bottom: .5em;
+    }
+    article {
+        padding: 0em .5em;
+    }
+    article p {
+        font-size: 18px;
+    }
+    article blockquote {
+        font-size: 16px;
+    }
+}
+
+/* Code Highlighting Theme */
+
+/* Background */
+
+.chroma {
+    color: #f8f8f2;
+    background-color: #272822
+}
+
+/* Error */
+
+.chroma .err {
+    color: #960050;
+    background-color: #1e0010
+}
+
+/* LineTableTD */
+
+.chroma .lntd {
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/* LineTable */
+
+.chroma .lntable {
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 100%;
+    overflow: auto;
+    display: block;
+}
+
+/* LineHighlight */
+
+.chroma .hl {
+    display: block;
+    width: 100%;
+    background-color: #ffffcc
+}
+
+/* LineNumbersTable */
+
+.chroma .lnt {
+    margin-right: 0.4em;
+    padding: 0 0.4em 0 0.4em;
+    display: block;
+}
+
+/* LineNumbers */
+
+.chroma .ln {
+    margin-right: 0.4em;
+    padding: 0 0.4em 0 0.4em;
+}
+
+/* Keyword */
+
+.chroma .k {
+    color: #66d9ef
+}
+
+/* KeywordConstant */
+
+.chroma .kc {
+    color: #66d9ef
+}
+
+/* KeywordDeclaration */
+
+.chroma .kd {
+    color: #66d9ef
+}
+
+/* KeywordNamespace */
+
+.chroma .kn {
+    color: #fff
+}
+
+/* KeywordPseudo */
+
+.chroma .kp {
+    color: #66d9ef
+}
+
+/* KeywordReserved */
+
+.chroma .kr {
+    color: #66d9ef
+}
+
+/* KeywordType */
+
+.chroma .kt {
+    color: #66d9ef
+}
+
+/* NameAttribute */
+
+.chroma .na {
+    color: #00fbca
+}
+
+/* NameClass */
+
+.chroma .nc {
+    color: #00fbca
+}
+
+/* NameConstant */
+
+.chroma .no {
+    color: #66d9ef
+}
+
+/* NameDecorator */
+
+.chroma .nd {
+    color: #00fbca
+}
+
+/* NameException */
+
+.chroma .ne {
+    color: #00fbca
+}
+
+/* NameFunction */
+
+.chroma .nf {
+    color: #00fbca
+}
+
+/* NameOther */
+
+.chroma .nx {
+    color: #00fbca
+}
+
+/* NameTag */
+
+.chroma .nt {
+    color: #42c7f4
+}
+
+/* Literal */
+
+.chroma .l {
+    color: #ae81ff
+}
+
+/* LiteralDate */
+
+.chroma .ld {
+    color: #ff9a56
+}
+
+/* LiteralString */
+
+.chroma .s {
+    color: #ff9a56
+}
+
+/* LiteralStringAffix */
+
+.chroma .sa {
+    color: #ff9a56
+}
+
+/* LiteralStringBacktick */
+
+.chroma .sb {
+    color: #ff9a56
+}
+
+/* LiteralStringChar */
+
+.chroma .sc {
+    color: #ff9a56
+}
+
+/* LiteralStringDelimiter */
+
+.chroma .dl {
+    color: #ff9a56
+}
+
+/* LiteralStringDoc */
+
+.chroma .sd {
+    color: #ff9a56
+}
+
+/* LiteralStringDouble */
+
+.chroma .s2 {
+    color: #ff9a56
+}
+
+/* LiteralStringEscape */
+
+.chroma .se {
+    color: #ae81ff
+}
+
+/* LiteralStringHeredoc */
+
+.chroma .sh {
+    color: #ff9a56
+}
+
+/* LiteralStringInterpol */
+
+.chroma .si {
+    color: #ff9a56
+}
+
+/* LiteralStringOther */
+
+.chroma .sx {
+    color: #ff9a56
+}
+
+/* LiteralStringRegex */
+
+.chroma .sr {
+    color: #ff9a56
+}
+
+/* LiteralStringSingle */
+
+.chroma .s1 {
+    color: #ff9a56
+}
+
+/* LiteralStringSymbol */
+
+.chroma .ss {
+    color: #ff9a56
+}
+
+/* LiteralNumber */
+
+.chroma .m {
+    color: #ae81ff
+}
+
+/* LiteralNumberBin */
+
+.chroma .mb {
+    color: #ae81ff
+}
+
+/* LiteralNumberFloat */
+
+.chroma .mf {
+    color: #ae81ff
+}
+
+/* LiteralNumberHex */
+
+.chroma .mh {
+    color: #ae81ff
+}
+
+/* LiteralNumberInteger */
+
+.chroma .mi {
+    color: #ae81ff
+}
+
+/* LiteralNumberIntegerLong */
+
+.chroma .il {
+    color: #ae81ff
+}
+
+/* LiteralNumberOct */
+
+.chroma .mo {
+    color: #ae81ff
+}
+
+/* Operator */
+
+.chroma .o {
+    color: #fff
+}
+
+/* OperatorWord */
+
+.chroma .ow {
+    color: #fff
+}
+
+/* Comment */
+
+.chroma .c {
+    color: #D3CDB0
+}
+
+/* CommentHashbang */
+
+.chroma .ch {
+    color: #D3CDB0
+}
+
+/* CommentMultiline */
+
+.chroma .cm {
+    color: #D3CDB0
+}
+
+/* CommentSingle */
+
+.chroma .c1 {
+    color: #D3CDB0
+}
+
+/* CommentSpecial */
+
+.chroma .cs {
+    color: #D3CDB0
+}
+
+/* CommentPreproc */
+
+.chroma .cp {
+    color: #D3CDB0
+}
+
+/* CommentPreprocFile */
+
+.chroma .cpf {
+    color: #D3CDB0
+}
+
+/* GenericDeleted */
+
+.chroma .gd {
+    color: #fff
+}
+
+/* GenericEmph */
+
+.chroma .ge {
+    font-style: italic
+}
+
+/* GenericInserted */
+
+.chroma .gi {
+    color: #00fbca
+}
+
+/* GenericStrong */
+
+.chroma .gs {
+    font-weight: bold
+}
+
+/* GenericSubheading */
+
+.chroma .gu {
+    color: #D3CDB0
+}
+
 /* ==========================================================================
    PARTIALS
    ========================================================================== */
@@ -217,7 +658,6 @@ blockquote p cite a:hover {
     font-weight: 300;
     width: 80%;
 }
-
 
 /* ==========================================================================
    2b. Hero Block
@@ -241,13 +681,10 @@ blockquote p cite a:hover {
     .hero-title-block h2 {
         width: 50%;
     }
-    
     .hero-title-block h3 {
         width: 50%;
     }
 }
-
-
 
 /* ==========================================================================
    2c - Case Studies
@@ -298,14 +735,12 @@ blockquote p cite a:hover {
         justify-content: center;
         margin: 0em;
     }
-
     .case-study-card .title {
         text-align: center;
     }
-    
     .case-study-card .sub-title {
         text-align: center;
-    }    
+    }
 }
 
 /* ==========================================================================
@@ -332,7 +767,6 @@ blockquote p cite a:hover {
     min-width: 4px;
     border-radius: 50%;
     background: var(--mesh-blue);
-    
     /* We do this since the letter-spacing css prop of the text padds the end of text..? */
     margin: 3px;
     margin-bottom: 9px;
@@ -347,7 +781,7 @@ blockquote p cite a:hover {
 @media (max-width: 576px) {
     .tag-box {
         justify-content: center;
-    }    
+    }
 }
 
 /* ==========================================================================
@@ -397,11 +831,9 @@ blockquote p cite a:hover {
     .get-in-touch .get-in-touch-header {
         text-align: center;
     }
-    
     .get-in-touch .get-in-touch-content {
         text-align: center;
     }
-
     .get-in-touch .btn-col {
         justify-content: center;
         margin-bottom: 2em;
@@ -471,7 +903,6 @@ blockquote p cite a:hover {
     .capabilities .capability-row .capability-title {
         margin-left: 15px;
     }
-
     .capabilities .capability-row .capability-col {
         margin-bottom: 15px;
     }
@@ -483,7 +914,7 @@ blockquote p cite a:hover {
         margin: 0px;
         width: 100%;
         font-size: 1em;
-    }   
+    }
 }
 
 /* ==========================================================================
@@ -524,7 +955,7 @@ blockquote p cite a:hover {
    2h - Footer (The bottom of every page)
    ========================================================================== */
 
-   footer {
+footer {
     background: var(--mesh-dk-blue);
     color: white;
     bottom: 0px;
@@ -583,6 +1014,7 @@ footer .blog-sub-title {
 /* ==========================================================================
    2i - Typeform Partial
    ========================================================================== */
+
 .jfmHCR {
     display: flex;
     align-content: center;
@@ -635,15 +1067,12 @@ footer .blog-sub-title {
         width: 120px;
         margin-right: 0px;
     }
-
     .founders .content-col {
         margin-top: 1em;
     }
-
     .founders .content-col p {
         text-align: center;
     }
-
     .founders .content-col .value {
         align-items: center;
     }
@@ -713,7 +1142,7 @@ footer .blog-sub-title {
 }
 
 .home .primary-section .testimonial {
-    margin-bottom:4em;
+    margin-bottom: 4em;
 }
 
 .home .primary-section .testimonial .testimonial-quote {
@@ -744,22 +1173,18 @@ footer .blog-sub-title {
     .home .primary-section .container .capabilities-title {
         margin-top: 4em;
     }
-
     .home .primary-section .section-link {
         width: 100%;
         text-align: center;
         margin: 0em;
     }
-
     .home .primary-section .section-seeall-link {
         width: 100%;
-        text-align: center;    
-    }    
-    
+        text-align: center;
+    }
     .casestudies .row {
         padding: 20px;
     }
-
     .home .primary-section .testimonial .testimonial-quote {
         font-size: 1.25em;
     }
@@ -802,17 +1227,19 @@ footer .blog-sub-title {
     marign: 0;
     width: 100%;
 }
+
 .work .primary-section .product-shot {
     background: blue;
 }
 
 .work .primary-section .product-shot img {
-    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);;
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
+    ;
 }
 
 .work .products .row {
     margin-left: 0px;
-    margin-right: 0px;  
+    margin-right: 0px;
 }
 
 @media (max-width: 768px) {
@@ -820,7 +1247,6 @@ footer .blog-sub-title {
         margin-top: 4em;
         margin-bottom: 1em;
     }
-
     .work .primary-section .section-headers p {
         text-align: center;
         width: 100%;
@@ -930,7 +1356,7 @@ footer .blog-sub-title {
 
 .case-study .primary-section .author-picture,
 .case-study .primary-section .author-meta {
-    display: inline;    
+    display: inline;
 }
 
 .case-study .primary-section .post-meta {
@@ -1211,7 +1637,8 @@ footer .blog-sub-title {
 .blog .primary-section .blog-info-column .newsletter {
     margin-top: 1em;
     font-weight: 400;
-    font-size: .9em;;
+    font-size: .9em;
+    ;
     letter-spacing: 1px;
 }
 
@@ -1259,7 +1686,7 @@ footer .blog-sub-title {
     background: none;
     text-align: left;
     color: #F64C4C;
-    padding-left: 0px; 
+    padding-left: 0px;
 }
 
 .blog .primary-section .blog-info-column #mc_embed_signup_scroll #mce-error-response a {
@@ -1267,11 +1694,9 @@ footer .blog-sub-title {
 }
 
 @media (max-width: 768px) {
-
     .blog .primary-section .blog-info-column {
         margin-bottom: 2em;
     }
-
     .blog .primary-section .blog-info-column p {
         width: 100%;
         text-align: center;
@@ -1309,7 +1734,8 @@ footer .blog-sub-title {
     width: auto;
     position: absolute;
     top: -100px;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+    ;
 }
 
 .blog-post .summary-row {
@@ -1354,7 +1780,7 @@ footer .blog-sub-title {
 
 .blog-post .primary-section .author-picture,
 .blog-post .primary-section .author-meta {
-    display: inline;    
+    display: inline;
 }
 
 .blog-post .primary-section .post-meta {
@@ -1394,11 +1820,9 @@ footer .blog-sub-title {
     .blog-post .hero-title-block {
         padding: 0em 1em;
     }
-
     .blog-post .primary-section .hero-container img {
         height: auto;
     }
-
     .blog-post .primary-section .blog-meta-row {
         margin-top: 6em;
     }

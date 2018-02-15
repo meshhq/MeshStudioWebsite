@@ -13,24 +13,26 @@
     <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <meta property="og:title" content=" Authentication vs. Authorization &middot;  Mesh Studio" />
+  <meta property="og:title" content=" Containerizing the Legacy &middot;  Mesh Studio" />
   <meta property="og:site_name" content="Mesh Studio" />
-  <meta property="og:url" content="https://meshstudio.io/blog/2018-01-05-authentication-vs-authorization/" />
+  <meta property="og:url" content="https://meshstudio.io/work/symetra/" />
 
 
   <meta property="og:type" content="article" />
 
-<meta property="og:article:published_time" content="2018-01-05T00:00:00Z" />
+<meta property="og:article:published_time" content="2018-02-14T00:00:00Z" />
 
 
-<meta property="og:article:tag" content="innovation" />
+<meta property="og:article:tag" content="Containers" />
 
-<meta property="og:article:tag" content="security" />
+<meta property="og:article:tag" content="API" />
+
+<meta property="og:article:tag" content="Cloud" />
 
 
 
 <title>
- Authentication vs. Authorization &middot;  Mesh Studio
+ Containerizing the Legacy &middot;  Mesh Studio
 </title>
 
 <meta name="description" content="We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products." />
@@ -73,7 +75,7 @@
     
     <meta name="generator" content="Hugo 0.34" />
 
-    <link rel="canonical" href="https://meshstudio.io/blog/2018-01-05-authentication-vs-authorization/" />
+    <link rel="canonical" href="https://meshstudio.io/work/symetra/" />
 
     
     <script>
@@ -113,7 +115,7 @@
                     
                      
                     
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="/work/">Work</a>
                     </li>
                     
@@ -147,73 +149,58 @@
     <main id="content" class="content" role="main">
 
         
-
-<div class="blog-post">
+<div class="case-study">
     <div class="hero">
         <div class="container">
-            <p class="blog-header">Mesh Studio blog</p>
-            <div class="row d-flex flex-row align-items-center justify-content-center">
-                <div class="row justify-content-center hero-title-block">
-    <div class="col-12">
-        <div class="d-flex justify-content-center">
-            <h2>Authentication vs. Authorization</h2>
-        </div>
-    </div>
-    <div class="col-12 mt-2">
-        <div class="d-flex justify-content-center">
-            <h3>A deep-dive into what session tokens are, and what you need to be aware of when implementing them.</h3>
-        </div>
-    </div>
-</div>
+            <div class="col-12 col-md-8 offset-md-2">
+                <p class="case-study-header">Case Study</p>
+                <p class="case-study-title">Containerizing the Legacy</p>
+                <p class="case-study-sub-title">How Mesh Studio Brought Modern Containerization To The Enterprise Insurance Market</p>
             </div>
         </div>
     </div>
 
     <div class="primary-section">
         <div class="hero-container d-flex justify-content-center">
-            <img class="img-fluid" src="/images/blog/authorized-hero.png" />
-        </div>
-        
-        <div class="container post-container">
-                    
-            <div class="row blog-meta-row">
-                <div class="col-12 col-md-8 offset-md-2">
-                    <header class="meta-header d-flex flex-row align-items-center">
-                        <div class="author-picture mr-3">
-                            <a class="founder-twitter ml-2 mb-5" href="https://twitter.com/tayhalliday">
-                                <img class="img-fluid author-pic rounded-circle" src="https://avatars2.githubusercontent.com/u/1266416?s=460&amp;v=4" />
-                            </a>
-                        </div>
-                        <div class="author-meta">
-                            <p class="post-meta author-name">Taylor Halliday</p>
-                            <p class="post-meta post-date">Jan 5 | 2 min read</p>
-                            <p class="post-meta post-words">400 Words</p>
-                        </div>
-                    </header>
-                </div>
+            <div class="hero-wrapper">
+                <img class="img-fluid" src="/images/caseStudies/symetra-hero.png" />
             </div>
-            <div class="row blog-content-row">
+        </div>
+
+        <div class="container post-container">
+            
+            <div class="row case-study-content-row">
                 <div class="col-12 col-md-8 offset-md-2">
                     <article class="post">
                         
 
-<h3 id="you-allowed-in-here">You allowed in here?</h3>
+<p>Founded in 1957 as a subsidiary of <a href="https://www.safeco.com">Safeco Insurance</a>, <a href="https://www.symetra.com/">Symetra Financial Corporation</a> offers a suite of insurance, benefit, and retirement products to consumers in the United States. Through a nationwide network of financial institutions, broker-dealers, independent agents, advisors, and benefits consultants, the company serves over 2 million customers and has over $42 billion in assets under management.</p>
 
-<p>Lately I have noticed quite a few people mixing up the the concepts of Authentication and Authorization. This isn’t a big deal if you’re using them interchangeably when talking about most anything besides tech, but these concepts are quite different and worth explaining.</p>
+<p>Symetra is publicly listed on the NYSE and is headquartered in <a href="https://en.wikipedia.org/wiki/Bellevue,_Washington">Bellevue, Washington</a>.</p>
 
-<h3 id="so-what-is-the-difference">So, What is the Difference</h3>
+<h2 id="the-problem">The Problem</h2>
 
-<p>Authentication is simply the notion of identity, but it’s a powerful concept. It’s proving to someone (your local TSA agent), or something (the IRS website) that you are who you say you are.</p>
+<p>Symetra&rsquo;s internal teams have accumulated a large number of repetitive and manual processes as the company has grown over several decades. These processes, while vital to Symetra&rsquo;s operations, offer a significant opportunity for cost savings and efficiency gains if they can be automated.</p>
 
-<p>Authorization actually has nothing to do with the former, it’s just the concept of whether some identity has the ability to access some resource. Just because I know, for a fact, that you are my dentist, that doesn’t mean you should be authorized to access my bank account. Likewise, if my accountant is authorized to access my bank, I need to know that the person writing me an email desiring to move money is who they say they are (authenticated).</p>
+<p>In the Spring of 2017, a team of Symetra architects set out to develop a platform that would automate these tasks. The platform would integrate with several existing Symetra business systems and be exposed via a RESTful API. This API would allow both internal and external partner applications to leverage the capabilities of their new system.</p>
 
-<h3 id="how-this-plays-out-in-computers">How this plays out in computers</h3>
+<p>The Symetra architects recognized that API architecture, design, and deployments were not yet a core internal competency, so they needed to find outside expertise.</p>
 
-<p>Most app developers have to interface with these concepts when deciding who should be permitted to use the shiny new application they are building. Commonly we turn to pre-built frameworks like Devise, Passport, or Goth, and that’s a good thing since it would suck to screw up the implementation of these concepts.</p>
+<h3 id="the-solution">The Solution</h3>
 
-<h3 id="how-does-oauth-play-into-this-conversation">How does OAuth play into this conversation</h3>
+<p>Symetra asked Mesh to help develop their Symetra platform API strategy. This strategy would encompass many facets including an API Management Gateway, deployment tooling, and infrastructure. We were also asked to develop a Symetra platform API which would incorporate our recommendations into a functioning prototype.</p>
 
-<p>Let’s say you and I know and really trust each other. I trust you so much that I take your word on who I should also trust. This is essentially what’s going on with OAuth implementations - we defer the idea of determining identity to another party who we trust. Once identity has been determined (authentication), it’s on us to determine the what the person is authorized to access in our application.</p>
+<h3 id="execution">Execution</h3>
+
+<p>Mesh engineers performed a landscape analysis and evaluated several different on-premise and hosted API management vendor tools. We recommended that Symetra adopt <a href="https://getkong.org">Kong</a>, by <a href="https://techcrunch.com/2015/04/28/mashape-open-sources-its-kong-api-management-platform/">Mashape</a>, because of its rich ecosystem of plugins, first-party Docker support, and its ability to be deployed on-premise with ease.</p>
+
+<p>Our team also recommended that Symetra adopt <a href="https://www.docker.com/">Docker</a>, a containerization technology, to deploy both Kong and their application servers. We worked closely with Symetra architects to ensure that Docker could be deployed on Symetra&rsquo;s Linux VMs, and we then deployed the first Docker container inside of a Symetra data center.</p>
+
+<p>Our engineers developed and deployed the Platform API as recommended. The service consisted of a Windows Server behind a Kong API with <a href="https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol">LDAP authentication</a>, all deployed inside of Symetra&rsquo;s <a href="https://en.wikipedia.org/wiki/DMZ_(computing)">DMZ</a>. This project was used to demonstrate the viability of the platform to other Symetra internal teams.</p>
+
+<h3 id="results">Results</h3>
+
+<p>Over the course of several months, we were able to deliver a suite of recommendations for how Symetra should build their API platform. We also successfully deployed a service built with our recommendations into Symetra&rsquo;s network that serves as a prime example for how Symetra can modernize access to the rest of their resources.</p>
 
                     </article>
                 </div>

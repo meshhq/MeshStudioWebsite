@@ -6,10 +6,20 @@
     <description>Recent content in Work on Mesh Studio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Feb 2018 15:35:36 -0800</lastBuildDate>
+    <lastBuildDate>Wed, 14 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://meshstudio.io/work/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Containerizing the Legacy</title>
+      <link>https://meshstudio.io/work/symetra/</link>
+      <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/work/symetra/</guid>
+      <description>Founded in 1957 as a subsidiary of Safeco Insurance, Symetra Financial Corporation offers a suite of insurance, benefit, and retirement products to consumers in the United States. Through a nationwide network of financial institutions, broker-dealers, independent agents, advisors, and benefits consultants, the company serves over 2 million customers and has over $42 billion in assets under management.
+Symetra is publicly listed on the NYSE and is headquartered in Bellevue, Washington.</description>
+    </item>
     
     <item>
       <title>Leveling Up Health Savings Accounts</title>
