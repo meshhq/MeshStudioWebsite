@@ -78,6 +78,8 @@ Our blog posts will be hosted on this site as well in the `/content/blog` direct
 
 #### How to create a new blog post
 
+To begin with, create a new branch with a name in the following format: `blog/BLOG-TITLE`
+
 Our blog post filenames need to be prefaced with the date they were created in the following format:
 `YYYY-MM-DD`. To create a new case study, you can simply run the following command:
 
