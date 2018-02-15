@@ -6,10 +6,20 @@
     <description>Recent content in Ship Better Software, Faster on Mesh Studio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Feb 2018 15:35:36 -0800</lastBuildDate>
+    <lastBuildDate>Wed, 14 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://meshstudio.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Containerizing the Legacy</title>
+      <link>https://meshstudio.io/work/symetra/</link>
+      <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/work/symetra/</guid>
+      <description>Founded in 1957 as a subsidiary of Safeco Insurance, Symetra Financial Corporation offers a suite of insurance, benefit, and retirement products to consumers in the United States. Through a nationwide network of financial institutions, broker-dealers, independent agents, advisors, and benefits consultants, the company serves over 2 million customers and has over $42 billion in assets under management.
+Symetra is publicly listed on the NYSE and is headquartered in Bellevue, Washington.</description>
+    </item>
     
     <item>
       <title>Leveling Up Health Savings Accounts</title>
@@ -48,7 +58,7 @@ In the news If you&amp;rsquo;ve been paying attention to tech chatter over the p
       <pubDate>Wed, 24 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2018-01-10-session-tokens/</guid>
-      <description>Authentication and session management are two areas almost all developers have to deal with repeatedly throughout their career. It’s common for us to reach for a well tested open-source library to bolt onto our app, and that’s a good thing since security logic is one of those things you want a lot of eyes on. But as everything in programming, it helps to know the underlying logic behind the tools we use.</description>
+      <description>Session Tokens Authentication and session management are two areas almost all developers have to deal with repeatedly throughout their career. It’s common for us to reach for a well tested open-source library to bolt onto our app, and that’s a good thing since security logic is one of those things you want a lot of eyes on. But as everything in programming, it helps to know the underlying logic behind the tools we use.</description>
     </item>
     
     <item>
@@ -70,6 +80,15 @@ So, What is the Difference Authentication is simply the notion of identity, but 
       <description>Contiuons Integration with Node.js and CircleCI Software developers tend to come up with complicated names for simple topics. Examples of this include Dependency Injection, Orthogonality, or [think of something]. While these terms sound impressive, they often produce an adverse side effect; novice developers assume the subjects they are describing are complicated and unapproachable.
 https://mobile.twitter.com/tenderlove/status/748579020703313920
 The above proved to be true for me when I first learned about Continuous Integration (CI).</description>
+    </item>
+    
+    <item>
+      <title>Serving HTML with Golang</title>
+      <link>https://meshstudio.io/blog/2017-11-06-serving-html-with-golang/</link>
+      <pubDate>Mon, 06 Nov 2017 10:09:12 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2017-11-06-serving-html-with-golang/</guid>
+      <description>Building your next web app with Go! Here at Mesh, we like to keep up-to-date with the latest trends in software development; often trying out various programming languages and frameworks. One of the languages that we like to use is Go. We appreciate that Go is strongly-typed, is opinionated about formatting, and is strict about keeping the structure of programs simple. It is also quite a versatile language, so in this post we will explore how it can be used to create an HTML server using gorilla/mux, jteeuwen/go-bindata, and html/template.</description>
     </item>
     
     <item>
