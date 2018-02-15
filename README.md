@@ -70,7 +70,7 @@ All logos should be in a vector format, SVG is preferred. If you need help sourc
 
 ##### Hero Image
 
-- A 200x770px hero image is required for all case studies. We are enforcing a resizing at 200px height, so the 770px width should be considered a maximum. Again, if you need help sourcing/creating one of these, grab a team member.
+- A 770x200 px hero image is required for all case studies. We are enforcing a resizing at 200px height, so the 770px width should be considered a maximum. Again, if you need help sourcing/creating one of these, grab a team member.
 
 ### Blog Posts
 
@@ -94,4 +94,4 @@ This will create a new case study template in the `/content/work` directory. The
 
 ##### Hero Image
 
-- A 230x770px hero image is suggested for all blog posts. We are enforcing a resizing at 200px height, so the 770px width should be considered a maximum.
+- A 770x230px hero image is suggested for all blog posts. We are enforcing a resizing at 200px height, so the 770px width should be considered a maximum.
