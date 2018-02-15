@@ -18,7 +18,7 @@ Despite being known for their extensive network of brick and mortar retail locat
 
 ## The Solution
 
-The solution was to breathe life into the [Easy Button](https://www.staples.com/Staples-Easy-Button/product_606396), an famous piece of brand marketing from the early 2000s. The Staples innovation team wanted to revive the Easy Button by turning it into an intelligent personal assistant similar to the [Google Home](https://store.google.com/product/google_home) or [Amazon Alexa](https://www.amazon.com/Amazon-Echo-And-Alexa-Devices). 
+The solution was to breathe life into the [Easy Button](https://www.staples.com/Staples-Easy-Button/product_606396), an famous piece of brand marketing from the early 2000s. The Staples innovation team wanted to revive the Easy Button by turning it into an intelligent personal assistant similar to the [Google Home](https://store.google.com/product/google_home) or [Amazon Alexa](https://www.amazon.com/Amazon-Echo-And-Alexa-Devices/b?ie=UTF8&node=9818047011). 
 
 To do so, Staples needed to build an artificially-intelligent conversational commerce platform that would power the Easy Button. This platform, called the ‘[Easy System](http://www.staplesinnovation.com/innovations/staples-easy-system/)’, would allow Staples’ customers to interact with its business and product systems via voice and chat interfaces, built on natural language processing platforms. 
 

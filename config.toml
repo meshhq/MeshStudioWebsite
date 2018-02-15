@@ -4,6 +4,8 @@ title = "Mesh Studio"
 publishDir = "docs"
 disqusShortname = "yourdiscussshortname"
 enableRobotsTXT = true
+pygmentsCodeFences = true
+pygmentsUseClasses = true
 
 [params]
     description = "We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products."
