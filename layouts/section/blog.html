@@ -11,7 +11,7 @@
         <div class="container">
             <!-- CAPABILITIES -->
             <div class="row summary-row">
-                <div class="col-12 col-md-3 order-md-2 blog-info-column">
+                <div class="col-12 col-md-4 order-md-2 blog-info-column">
                     <div class="spy-box">
                         <div class="row header">
                             <p class="title">{{.Params.title}}</p>
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-7 md-offset-1 order-md-1 blog-index-column">
+                <div class="col-12 col-md-8 md-offset-1 order-md-1 blog-index-column">
                     <div class="row">
                         {{ range first 10 (where .Data.Pages "Section" "blog").ByDate.Reverse }}
                         <div class="col-12">

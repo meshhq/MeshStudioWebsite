@@ -26,7 +26,7 @@ founders_content:
     twitter: https://twitter.com/tayhalliday
   - name: Kevin Coleman
     description: Kevin lives in Seattle with his wife Lindsey and their dog Kameron. Outside of Mesh, Kevin is an avid saltwater fly fisherman and can be found exploring the local beaches of Puget sound in pursuit of Sea-run Cutthroat Trout.
-    image: https://avatars3.githubusercontent.com/u/1423931?v=4&s=400
+    image: https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAlEAAAAJGJkOTBkNzc1LTIwMTYtNDUxNi05OTkzLTA3NmY5NTYzNGUyNA.jpg
     twitter: https://twitter.com/KevFColeman
 ---
 

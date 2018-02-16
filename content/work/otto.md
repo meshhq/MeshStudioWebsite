@@ -5,7 +5,7 @@ tags: ["AWS", "Infrastructure", "Security"]
 date: 2017-04-23
 publishdate: 2017-04-23
 logo: /images/caseStudies/otto-vector.svg
-logo_max_height: 35
+logo_max_height: 22
 hero_image: /images/caseStudies/otto-hero.png
 ---
 
