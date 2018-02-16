@@ -217,6 +217,11 @@ article a:hover {
     color: var(--mesh-blue);
 }
 
+article img,
+article table img {
+    max-width: 100%;
+}
+
 /* Block Quote Styling */
 
 article blockquote,
@@ -254,6 +259,14 @@ blockquote p cite a:hover {
     article h4,
     article h5 {
         margin-top: 2em;
+        margin-bottom: .5em;
+    }
+    article h1:first-child,
+    article h2:first-child,
+    article h3:first-child,
+    article h4:first-child,
+    article h5:first-child {
+        margin-top: 1em;
         margin-bottom: .5em;
     }
     article {
@@ -1764,7 +1777,7 @@ footer .blog-sub-title {
 }
 
 .blog-post .primary-section .blog-meta-row {
-    margin-top: 14em;
+    margin-top: 10em;
 }
 
 .blog-post .primary-section .blog-content-row {
@@ -1828,7 +1841,7 @@ footer .blog-sub-title {
 .blog-post table td {
     color: #212529;
     font-weight: 300;
-    font-size: .8em;
+    font-size: 1.0em;
     padding: 0px 30px 0px 30px;
 }
 
@@ -1840,12 +1853,12 @@ footer .blog-sub-title {
         height: auto;
     }
     .blog-post .primary-section .blog-meta-row {
-        margin-top: 6em;
+        margin-top: 10em;
     }
 }
 
 @media (max-width: 576px) {
     .blog-post .primary-section .blog-meta-row {
-        margin-top: 5em;
+        margin-top: 6em;
     }
 }

@@ -4,7 +4,7 @@ sub_title: "Making sense of Bitcoin and the blockchain"
 tags: ["Bitcoin", "Cryptocurrency", "Blockchain", "Ethereum", "Fintech"]
 date: 2017-12-20
 publishdate: 2017-12-20
-hero_image: /images/blog/2017-12-20-how-to-explain-bitcoin-at-your-holiday-dinner/bitcoin-hero.jpeg
+hero_image: /images/blog/2017-12-20-how-to-explain-bitcoin-at-your-holiday-dinner/bitcoin-hero.jpg
 author:
   name: "John Daly"
   url: "http://johnmcdaly.com/"
@@ -22,6 +22,7 @@ Bitcoin is what is known as a ‘cryptocurrency’; it is essentially digital ca
 
 ## What is the motivation behind the creation of Bitcoin?
 Bitcoin was created to allow for a way to make electronic payments without the need for a central authority. In other words, there is no need for a middleman like a bank or payment verification system, meaning faster transactions and fewer fees. It also protects against the risk of a central authority disappearing (a bank failing), and affecting all of its users.
+
 
 | ![Network Comparison](/images/blog/2017-12-20-how-to-explain-bitcoin-at-your-holiday-dinner/network-compare.png) |
 |:--:|

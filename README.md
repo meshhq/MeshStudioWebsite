@@ -87,7 +87,7 @@ Our blog post filenames need to be prefaced with the date they were created in t
 $ hugo new blog/{YYYY-MM-DD-BLOG-TITLE}.md
 ```
 
-This will create a new case study template in the `/content/work` directory. The top portion will is templated meta information needed about the case study for it to work properly with the site.
+This will create a new case study template in the `/content/blog` directory. The top portion will is templated meta information needed about the blog for it to work properly with the site.
 
 
 #### Required Images (Blog)
