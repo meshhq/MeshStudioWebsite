@@ -68,7 +68,7 @@ h6 {
 
 :root {
     /* Colors */
-    /* Blacls */
+    /* Blacks */
     --mesh-black: #1A2233;
     /* Blues */
     --mesh-blue: #1B5FCC;
@@ -1594,8 +1594,8 @@ footer .blog-sub-title {
 
 .blog .primary-section .blog-card .summary-box .author-pic {
     width: 30px;
-    border: var(--mesh-dk-blue-light) 2px solid;
-    height: auto;
+    height: 30px;
+    border: var(--mesh-dk-blue-light) 1px solid;
 }
 
 .blog .primary-section .blog-card .founder-link:hover {
@@ -1735,7 +1735,6 @@ footer .blog-sub-title {
     position: absolute;
     top: -100px;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
-    ;
 }
 
 .blog-post .summary-row {
@@ -1814,6 +1813,23 @@ footer .blog-sub-title {
 .blog-post .primary-section .sub-title {
     font-size: 1.25em;
     color: var(--mesh-dk-blue-light);
+}
+
+.blog-post table {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.blog-post table th {
+    text-align: center;
+}
+
+.blog-post table td {
+    color: #212529;
+    font-weight: 300;
+    font-size: .8em;
+    padding: 0px 30px 0px 30px;
 }
 
 @media (max-width: 768px) {
