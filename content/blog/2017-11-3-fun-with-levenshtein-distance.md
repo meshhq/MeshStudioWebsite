@@ -14,7 +14,7 @@ author:
 
 ## Fun with Levenshtein Distance
 
-The Levenshtein is a clever way to calculate how similar two strings are to each other. Every character that differs between two words will count against the two words’ ‘score’. The lower that ‘score’ the more similar the two words are to each other. So comparing a word to itself will yield a ‘score’ of 0, while two four letter words that have no common characters will yield a ‘score’ of 4.
+The [Levenshtein Distance](https://people.cs.pitt.edu/~kirk/cs1501/Pruhs/Spring2006/assignments/editdistance/Levenshtein%20Distance.htm) is a clever way to calculate how similar two strings are to each other. Every character that differs between two words will count against the two words’ ‘score’. The lower that ‘score’ the more similar the two words are to each other. So comparing a word to itself will yield a ‘score’ of 0, while two four letter words that have no common characters will yield a ‘score’ of 4.
 
 An easy way to visualize Levenshtein Distance is to build a matrix comparing the two words.
 
@@ -25,6 +25,7 @@ An easy way to visualize Levenshtein Distance is to build a matrix comparing the
 You compare the letters at each index and add 1 to its ‘score’ each time the characters don’t match. Anytime one of the words is longer than the other, another point is added (for example Mesh vs. Testing would have a score of 5 instead of 3).
 
 In Javascript:
+
 ```javascript
 var word1 = 'mesh'
 var word2 = 'tests'
@@ -65,6 +66,6 @@ function levenshteinDistance (firstWord, secondWord) {
 levenshteinDistance(word1, word2)
 ```
 
-So now you’re asking, “When would I use this?”. First, there’s almost certainly some sort of derivative of a Levenshtein counter in every auto-correct tool ever made. Aside from that, use your imagination to think of ways it could be used in trivia games, text adventures, language/speech recognition, and even AI. Being able to account for human error in typing and speaking can create a much more fluid and immersive UX.
+So now you’re asking, “When would I use this?”. First, there’s almost certainly some sort of derivative of a Levenshtein counter in every autocorrect tool ever made. Aside from that, use your imagination to think of ways it could be used in trivia games, text adventures, language/speech recognition, and even AI. Being able to account for human error in typing and speaking can create a much more fluid and immersive UX.
 
 The function above can get far more complex depending on how ‘smart’ you want you system to be. You can start comparing adjacent characters, syllables, parts of speech, and working point values into each of them depending on what your system values. Go wild with Levenshtein 🚀🙌

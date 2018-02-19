@@ -14,29 +14,33 @@ author:
 
 ## Intro to Docker with TypeScript
 
-In the past few years Docker has emerged as one of the most efficient ways to manage and deploy cloud based web applications☁️ 💻 . While containers have been around since 2008, Docker helped them go mainstream, fueling the Virtual Machine vs. Container argument.
+Over the past few years Docker has emerged as one of the most efficient ways to manage and deploy cloud-based web applications☁️ 💻 . While containers have been around since 2008, Docker helped them go mainstream, fueling the Virtual Machine vs. Container argument.
 
 ### What are Docker Containers? (and why should I care?)
 
 In short, a container is an operating system agnostic environment that hosts a fully functional application. Docker uses a virtual machine under the hood which allows developers to declare runtime dependencies via a Dockerfile.
 
-Prior to Docker, developers were forced to manually bootstrap run time dependencies in order to leverage a virtual machine. In contrast, a container ships with its runtimes specified. In fact, a container is intended to  comprised of only its runtime dependencies and the application code. We’ll talk a bit more later about how your Docker parent image will allow you to create containers that already have dependencies like node and typescript installed.
+Prior to Docker, developers were forced to manually bootstrap runtime dependencies in order to leverage a virtual machine. In contrast, a container ships with its runtime specified. In fact, a container is intended to be comprised of only its runtime dependencies and the application code. We’ll talk a bit more later about how your Docker parent image will allow you to create containers that already have dependencies like Node and Typescript installed.
 
-A container is able to ship without a dedicated operating system since the container’s VM will handle all the operating system translation needed. Developers can rest assured that their applications will run the same regardless of the local machine’s operating system or specifications. For more info (and nifty graphics) go [here](https://docs.docker.com/get-started/).
+A container is able to ship without a dedicated operating system since the container’s VM will handle all the operating system translation needed. Developers can rest assured that their applications will run the same, regardless of the local machine’s operating system or specifications.
+
+For more info (and nifty graphics) go [here](https://docs.docker.com/get-started/).
 
 ### Getting Started
 
 First you’ll have to go thru the installation process. Click the following for [macOS](https://docs.docker.com/docker-for-mac/install/) or [Windows](https://docs.docker.com/docker-for-windows/install/).
 
-__Note: You may have noticed the different pages in the docs for Docker CE and Docker EE. This is the Docker Community Edition vs. the Enterprise Edition. For this tutorial we don’t need to worry about EE. For the CE there are two options, stable and edge. We’ll be using stable since we aren’t going worry about the latest and greatest features being built out by the community (See the Docker CE repo here).__
+__Note: You may have noticed the different pages in the docs for Docker CE and Docker EE. This is the Docker Community Edition vs. the Enterprise Edition. For this tutorial we don’t need to worry about EE. For the CE there are two options: stable and edge. We’ll be using stable since we aren’t going worry about the latest and greatest features being built out by the community (See the Docker CE repo here).__
 
 Once you have Docker installed, make sure the Docker application is running by checking for the little whale on your top bar (I’m using a mac for this tutorial).
 
 | ![See if Docker is running.](/images/blog/2017-12-13-intro-to-docker-with-typescript/docker-running.png) |
 |:--:|
-|If Docker is not running, you’ll probably get an error in the console that looks like this: “docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.”|
+|If Docker is not running and you try to run a Docker command, you’ll get an error in the console that looks like this: “docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.”|
 
-Pull up the command line and run docker run hello-world; you should get this output:
+If you don’t have a Docker account, sign up at [cloud.docker.com](https://cloud.docker.com/). Then run `docker login` and enter your basic auth credentials.
+
+Pull up the command line and run `docker run hello-world`; you should get this output:
 
 ```
 Hello from Docker!
@@ -61,17 +65,19 @@ For more examples and ideas, visit:
  https://docs.docker.com/engine/userguide/
  ```
 
- Go ahead and run docker run -it ubuntu bash. This will pull the latest Ubuntu image and run it as a container on your machine. You can now issue commands to the new container from your existing console. If you run uname you can see that the console prints "Linux" — this means that your container is now running on the Docker VM (which has a virtual Linux kernel). Exit the Ubuntu shell by typing exit and pressing enter. If you run uname again, you’ll now see the “real” kernel type your machine is running on (in my case it’s "Darwin").
+What we’re doing here is fetching the `hello-world` image from DockerHub and running it on our local machine. This image is pretty basic since its only command is to print out the info above to the console (the exact steps are outlined in the above output).
+
+Now let’s run a different, more complex, image. Run `docker run -it ubuntu bash`. This will pull the latest Ubuntu image and run it as a container on your machine. The `bash` argument at the end of the command allows us to open a command line session inside the new container we created. You can now issue commands to the new container from your existing console. If you run `uname` you can see that the console prints `"Linux"` — this means that your container is now running on the Docker VM (which has a virtual Linux kernel). Exit the Ubuntu shell by typing exit and pressing enter. If you run `uname` again, you’ll now see the “real” kernel type your machine is running on (in my case it’s `"Darwin"`).
 
 ### Creating the Dockerfile
 
-Next we’re going to walk thru setting up a Dockerfile for a (very) simple web application that we will turn into a docker image that can be pulled and run on any local operating system.
+Next we’re going to walk thru setting up a Dockerfile for a (very) simple web application that we will turn into a docker image that can be pulled and run on any local operating system. The Dockerfile defines and builds your image to run in a container. You’ll define your parent image, create a working directory in the container, and define build commands. You can see all of the possible commands you can execute in the Dockerfile [here](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/).
 
-__Note: We’re going to use a bare-bones TypeScript server that you can access [here](https://github.com/Reidweb1/TypeScriptStarter).__
+__Note: We’re going to use a bare-bones TypeScript server that you can access [here](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/). Clone it to your local machine with: `git clone git@github.com:Reidweb1/TypeScriptStarter.git` or download the zip.__
 
-First, navigate into your application’s directory and run touch Dockerfile. Then go ahead and copy and paste the code below into your Dockerfile. We’ll walk through each line below.
+Navigate into your application’s directory and run `touch Dockerfile`. Then go ahead copy the code below into your `Dockerfile`. We’ll walk through each line below.
 
-```
+```Dockerfile
 # Docker Parent Image with Node and Typescript
 FROM reidweb1/node-typescript:1.0.0
 
@@ -142,13 +148,17 @@ Just like remote code repositories - images can be hosted and cloned. Next we’
 
 The command to associate a local image with a remote repository is docker tag image username/repository:tag.
 
-The image part should be the local image name, in our case it’s dockertsc. 
-The username is your Docker username. 
-The repository is whatever you want to name your remote repository. 
-The tag is optional, but highly recommended. A tag is a handy way for you to specify the difference between images stored in the same repo (very useful for versioning). It’s important to note that the default tag is “latest”.
+- The image part should be the local image name, in our case it’s dockertsc. 
+- The username is your Docker username. 
+- The repository is whatever you want to name your remote repository. 
+- The tag is optional, but highly recommended. 
 
-Now upload you new image to the remote with docker push username/repository:tag. username, repository, and tag should be the same as above.
+__Note: `tag` is a handy way for you to specify the difference between images stored in the same repo (very useful for versioning). It’s important to note that the default tag is `latest`.__
 
-Now you can run the remote image with `docker run -p 4000:80 username/repository:tag`. This will do the same thing as our run call above, but if it doesn’t find a local image, it will pull the tagged version from the remote repository.
+Now upload your new image to the remote with docker push image. Now the image is going to be the name (`username/repository`) of new image you just tagged (not the original image tagged `latest`). Use `docker images` to pull up all of your images to make sure you use the correct name.
+
+## Conclusion
+
+Now you can run the remote image with `docker run -p 4000:80 username/repository:tag`. This will do the same thing as our `run` call above, but if it doesn’t find a local image, it will pull the tagged version from the remote repository.
 
 Now you’re up and running with Docker! 🚢 🐳 🚢
