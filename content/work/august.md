@@ -5,7 +5,7 @@ tags: ["Mobile", "SDK", "Integrations"]
 date: 2018-02-01T12:21:35-08:00
 publishdate: 2018-02-01T12:21:35-08:00
 logo: /images/caseStudies/august-vector.svg
-logo_max_height: 45
+logo_max_height: 35
 hero_image: /images/caseStudies/august-hero.png
 ---
 

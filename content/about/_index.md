@@ -1,5 +1,6 @@
 ---
 title: About
+nav_title: About
 sub_title: We help amazing companies build software, faster
 intro_title: Who We Are
 intro_content: Mesh doesn’t just write software, we partner with our customers to understand the underlying business objectives that necessitate software development. We then design, architect and implement cloud software systems that help our customers meet those objectives.
