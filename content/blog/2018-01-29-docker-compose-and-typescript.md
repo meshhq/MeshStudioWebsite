@@ -90,7 +90,7 @@ __Note: One missing key here is volumes. Each service can define volumes to pers
 
 Now that we have our Compose file set up we can run the following: `docker-compose up`. Now our application is up and running!
 
-| ![See if Docker is running.](/images/blog/2017-12-29-docker-compose-and-typescript/docker-compose-running.png) |
+| ![See if Docker is running.](/images/blog/2018-01-29-docker-compose-and-typescript/docker-compose-running.png) |
 |:--:|
 | This will pull all the images we need and give us the container ID our application is running in (2f7b7a57d7c0 in this case). |
 

@@ -1920,9 +1920,11 @@ footer .nav-link {
 
 .blog-post table th {
     text-align: center;
+    align-content: center;
 }
 
 .blog-post table td {
+    align-content: center;
     color: #212529;
     font-weight: 300;
     font-size: 1.0em;

@@ -21,7 +21,7 @@ The allocations tool is the one I’ve found most useful in the past for spottin
 
 To access instruments, go Product→Profile (or hit ⌘+i). When Xcode is finished profiling the app, select the allocations tool and hit the ‘record’ button in the upper left. Instruments will start logging everything that calls [`malloc`] in your app. Use the search bar in the bottom right to filter out the system allocations you have no control over.
 
-| ![Allocations tool.](/images/blog/2017-10-13-avioding-retain-cycles-in-iOS/allocation-tool.png) |
+| ![Allocations tool.](/images/blog/2017-10-13-avoiding-retain-cycles-in-iOS/allocation-tool.png) |
 |:--:|
 |Our app running in the allocations tool.|
 
@@ -34,19 +34,19 @@ self.retainedChild = viewController;
 ```
 (Here is the simple storyboard we’re using for this example.)
 
-| ![Storyboard](/images/blog/2017-10-13-avioding-retain-cycles-in-iOS/storyboard.png) |
+| ![Storyboard](/images/blog/2017-10-13-avoiding-retain-cycles-in-iOS/storyboard.png) |
 |:--:|
 |Our app's simple storyboard.|
 
 You can search for the allocation information of your custom classes with the search bar in the lower left. If I search for `SecondViewController` we can see that, even after it popped off screen, it is still being retained by its former parent view controller.
 
-| ![SecondViewController allocation](/images/blog/2017-10-13-avioding-retain-cycles-in-iOS/vc-allocation.png) |
+| ![SecondViewController allocation](/images/blog/2017-10-13-avoiding-retain-cycles-in-iOS/vc-allocation.png) |
 |:--:|
 |Our Second View Controller is allocated.|
 
 You can also view a detailed view of a particular instance by clicking the little arrow to the right of the class name. This detail view will provide a stack trace that can be helpful for finding where allocation calls are originating.
 
-| ![Stack Trace](/images/blog/2017-10-13-avioding-retain-cycles-in-iOS/stack-trace.png) |
+| ![Stack Trace](/images/blog/2017-10-13-avoiding-retain-cycles-in-iOS/stack-trace.png) |
 |:--:|
 |Seeing the stacktrace from `malloc` to the Storyboard calling `instantiateViewController`|
 
