@@ -1,7 +1,7 @@
 ---
 title: Session Tokens
 sub_title: A deep-dive into what session tokens are, and what you need to be aware of when implementing them.
-tags: ["innovation", "security"]
+tags: ["security"]
 date: 2018-01-24
 publishdate: 2018-01-24
 hero_image: /images/blog/session-token-hero.png

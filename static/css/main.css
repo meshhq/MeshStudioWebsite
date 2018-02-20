@@ -48,7 +48,7 @@
 /* Site Base Print Font */
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'acumin-pro', sans-serif;
 }
 
 /* Increasing the letter spacing to accommodate for roboto */
@@ -115,7 +115,7 @@ a:hover {
     left: 0;
     right: 0;
     margin: auto;
-    height: 52px;
+    height: 46px;
 }
 
 /* ==========================================================================
@@ -209,7 +209,7 @@ article blockquote {
 
 article ol {
     font-size: 21px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 article a:hover {
@@ -649,6 +649,7 @@ blockquote p cite a:hover {
 .section-headers .title {
     text-transform: uppercase;
     font-weight: 500;
+    letter-spacing: 2px;
     width: 80%;
 }
 
@@ -667,14 +668,14 @@ blockquote p cite a:hover {
 }
 
 .hero-title-block h2 {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 3em;
     margin-bottom: 0.5em;
 }
 
 .hero-title-block h3 {
     font-weight: 300;
-    font-size: 1.25em;
+    font-size: 1.3em;
     line-height: 1.5;
 }
 
@@ -821,6 +822,7 @@ blockquote p cite a:hover {
     text-align: left;
     font-size: 1.0em;
     width: 100%;
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
 
@@ -870,14 +872,15 @@ blockquote p cite a:hover {
 }
 
 .capabilities .capability-row .capability-title {
-    font-size: 1.75em;
-    font-weight: 500;
+    font-size: 1.0em;
+    font-weight: 600;
     width: 90%;
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 .capabilities .capability-row .capability-sub-title {
-    font-size: 1.5em;
+    font-size: 1.75em;
     font-weight: 300;
     width: 90%;
     text-transform: capitalize;
@@ -954,19 +957,20 @@ blockquote p cite a:hover {
 }
 
 .navbar-light .navbar-nav .nav-item {
-    margin-left: 50px;
-}
-
-.navbar-light .navbar-nav .active {
-    border-bottom: var(--mesh-dk-blue) 1px solid;
+    margin-left: 30px;
 }
 
 .navbar-light .navbar-nav li {
     /* Clever trick for not letting border shove position on hover */
-    border-bottom: 1px solid transparent;
+    border-bottom: 2px solid transparent;
 }
 
 .navbar-light .navbar-nav li:hover {
+    border-bottom: var(--mesh-dk-blue) 2px solid;
+}
+
+.navbar-light .navbar-nav .active:hover,
+.navbar-light .navbar-nav .active {
     border-bottom: var(--mesh-blue) 2px solid;
 }
 
@@ -974,7 +978,7 @@ blockquote p cite a:hover {
     color: var(--mesh-black);
     font-weight: 400;
     font-size: .8em;
-    letter-spacing: 1px;
+    letter-spacing: 2.0px;
     text-transform: uppercase;
     padding: 0px;
 }
@@ -1038,6 +1042,11 @@ footer .blog-sub-title {
     opacity: 0.5;
     font-weight: 300;
 }
+
+footer .nav-link {
+    letter-spacing: 1.2px;
+}
+
 
 /* ==========================================================================
    2i - Typeform Partial
@@ -1146,6 +1155,7 @@ footer .blog-sub-title {
 
 .home .primary-section .section-link {
     font-weight: 500;
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--mesh-dk-blue);
     margin-right: 16px;
@@ -1157,6 +1167,7 @@ footer .blog-sub-title {
 }
 
 .home .primary-section .section-seeall-link {
+    letter-spacing: 2px;
     font-weight: 500;
     text-transform: uppercase;
     color: var(--mesh-dk-blue-light);
@@ -1187,6 +1198,7 @@ footer .blog-sub-title {
 .home .primary-section .testimonial .testimonial-attr {
     color: var(--mesh-blue);
     font-weight: 400;
+    letter-spacing: 2px;
     text-align: center;
     font-size: 1.25em;
     width: 100%;
@@ -1236,6 +1248,7 @@ footer .blog-sub-title {
 }
 
 .work .primary-section .section-headers {
+    letter-spacing: 2px;
     margin-top: 8em;
 }
 
@@ -1434,7 +1447,7 @@ footer .blog-sub-title {
 }
 
 .about .section {
-    margin-bottom: 6em;
+    margin-bottom: 4em;
 }
 
 .about .primary-section {
@@ -1445,7 +1458,8 @@ footer .blog-sub-title {
 .about .primary-section .title {
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 1.25em;
+    letter-spacing: 2px;
+    font-size: 1.1em;
 }
 
 .about .primary-section .sub-title {
@@ -1472,8 +1486,15 @@ footer .blog-sub-title {
 
 .about .primary-section .story .title {
     text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 1.1em;
+}
+
+.about .primary-section .story .section-link {
     font-weight: 500;
-    font-size: 1em;
+    letter-spacing: 2px;
+    font-size: 1.1em;
 }
 
 .about .primary-section .founders .founder .founder-image {
@@ -1615,23 +1636,22 @@ footer .blog-sub-title {
 
 .blog .primary-section .blog-card .summary-box .summary {
     font-weight: 300;
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 .blog .primary-section .blog-card .summary-box p {
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-weight: 300;
 }
 
 .blog .primary-section .blog-card .summary-box .author-pic {
-    width: 30px;
-    border: var(--mesh-dk-blue-light) 1px solid;
+    width: 34px;
     height: auto;
 }
 
 .blog .primary-section .blog-card .founder-link {
     color: black;
-    font-size: 0.75em;
+    font-size: 0.85em;
 }
 
 .blog .primary-section .blog-card .founder-link:hover {
@@ -1766,7 +1786,7 @@ footer .blog-sub-title {
     width: auto;
     position: absolute;
     top: -100px;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .blog-post .summary-row {

@@ -1,5 +1,6 @@
 ---
 title: Work
+nav_title: Work
 sub_title: Client and Product Software Projects
 case_section_title: case studies
 case_section_sub_title: We work with companies of all sizes, from Fortune 500s to young, venture-funded startups
