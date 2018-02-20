@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Continuous Integration on Mesh Studio</title>
+    <link>https://meshstudio.io/tags/continuous-integration/</link>
+    <description>Recent content in Continuous Integration on Mesh Studio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://meshstudio.io/tags/continuous-integration/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setting Up CircleCI</title>
+      <link>https://meshstudio.io/blog/2018-01-20-setting-up-circle/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-01-20-setting-up-circle/</guid>
+      <description>Contiuons Integration with Node.js and CircleCI Software developers tend to come up with complicated names for simple topics. Examples of this include Dependency Injection, Orthogonality, or [think of something]. While these terms sound impressive, they often produce an adverse side effect; novice developers assume the subjects they are describing are complicated and unapproachable.
+https://mobile.twitter.com/tenderlove/status/748579020703313920
+The above proved to be true for me when I first learned about Continuous Integration (CI).</description>
+    </item>
+    
+  </channel>
+</rss>
