@@ -1,10 +1,10 @@
 ---
 title: Intro to Docker with TypeScript
 sub_title: How to set up and run a Docker Container of a TypeScript application.
-tags: []
-date: 2018-02-13T13:47:59-08:00
-publishdate: 2018-02-13T13:47:59-08:00
-hero_image: /images/blog/2018-01-29-docker-compose-and-typescript/docker-compose-hero.png
+tags: ["Docker", "Typescript", "Tutorial", "Servers", "Cloud Service"]
+date: 2017-12-13
+publishdate: 2017-12-13
+hero_image: /images/blog/2017-12-13-intro-to-docker-with-typescript/docker-typescript-hero.png
 author:
   name: Reid Weber
   url: https://medium.com/@reidweber_34407
@@ -101,9 +101,9 @@ __Note: Your local Dockerfile should NOT have a .txt extension. Your Dockerfile 
 
 Below is a brief explanation of each consequential line in this file.
 
-`FROM zaherg/node-toolkit`
+`FROM reidweb1/node-typescript:1.0.0`
 
-This line defines a different docker image as our parent image. This means that our image will be “stacked” on top of zaherg/node-toolkit. We need this so the lightweight operating system our container will ship with (Ubuntu) is preinstalled with Typescript and Node. (See the Node Toolkit repo [here](https://github.com/docker/docker-ce)).
+This line defines a different docker image as our parent image. This means that our image will be “stacked” on top of reidweb1/node-typescript:1.0.0. We need this so the lightweight operating system our container will ship with (Ubuntu) is pre-installed with Typescript and Node.
 
 `WORKDIR /app`
 
@@ -137,8 +137,7 @@ Now you can run docker images and you’ll see your new image (id included) righ
 
 | ![Check the image id](/images/blog/2017-12-13-intro-to-docker-with-typescript/image-command.png) |
 |:--:|
-
-You’ll also see the parent image “zaherg/node-toolkit” since it was downloaded during the build phase.
+| You’ll also see the parent image “reidweb1/node-typescript:1.0.0” since it was downloaded during the build phase. |
 
 Now we can run our app locally using `docker run -p 4000:3000 dockertsc`. This command will map the container’s port 3000 (the one we exposed) to localhost:4000. You can now see your awesome HTML at localhost:4000. (You can also run curl http://localhost:4000.) Control+C stops the application.
 
@@ -161,4 +160,4 @@ Now upload your new image to the remote with docker push image. Now the image is
 
 Now you can run the remote image with `docker run -p 4000:80 username/repository:tag`. This will do the same thing as our `run` call above, but if it doesn’t find a local image, it will pull the tagged version from the remote repository.
 
-Now you’re up and running with Docker! 🚢 🐳 🚢
+Now you’re up and running with Docker! 🚢🐳🚢

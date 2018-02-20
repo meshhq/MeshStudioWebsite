@@ -2,8 +2,8 @@
 title: Avoiding Retain Cycles in iOS
 sub_title: Using the tools in Xcode to debug retain cycles in an ARC project.
 tags: []
-date: 2018-02-13T13:45:00-08:00
-publishdate: 2018-02-13T13:45:00-08:00
+date: 2017-10-13
+publishdate: 2017-10-13
 hero_image: /images/blog/2017-10-13-avoiding-retain-cycles-in-iOS/retain-cycle-hero.png
 author:
   name: Reid Weber

@@ -2,8 +2,8 @@
 title: Fun with Levenshtein Distance
 sub_title: Measure the similarity between two strings!
 tags: []
-date: 2018-02-13T13:46:22-08:00
-publishdate: 2018-02-13T13:46:22-08:00
+date: 2017-11-03
+publishdate: 2017-11-03
 hero_image: /images/blog/2017-11-3-fun-with-levenshtein-distance/levenshtein-hero.png
 author:
   name: Reid Weber
@@ -18,7 +18,7 @@ The [Levenshtein Distance](https://people.cs.pitt.edu/~kirk/cs1501/Pruhs/Spring2
 
 An easy way to visualize Levenshtein Distance is to build a matrix comparing the two words.
 
-| ![Example comparing 'Mesh' and 'Tests'](/images/blog/2017-11-3-fun-with-levenshtein-distance/levenshtein-hero.png) |
+| ![Example comparing 'Mesh' and 'Tests'](/images/blog/2017-11-3-fun-with-levenshtein-distance/string-example.png) |
 |:--:|
 |First word ‘Mesh’. Second word ‘Tests’. The 'Distance' between the words is 3.|
 

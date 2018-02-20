@@ -6,10 +6,48 @@
     <description>Recent content in Mesh Studio Blog on Mesh Studio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Feb 2018 13:48:41 -0800</lastBuildDate>
     
 	<atom:link href="https://meshstudio.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Docker Compose and TypeScript</title>
+      <link>https://meshstudio.io/blog/2018-01-29-docker-compose-and-typescript/</link>
+      <pubDate>Tue, 13 Feb 2018 13:48:41 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-01-29-docker-compose-and-typescript/</guid>
+      <description>Docker Compose and Typescript These days, it’s easy for web applications to quickly balloon with dependencies and third party libraries. Managing your applications within a team can be a real headache when you start running into versioning issues, db configuration issues, local machine compatibility issues, etc&amp;hellip; Docker Compose can help a lot with these issues — along with giving you a much cleaner way to get your app up and running.</description>
+    </item>
+    
+    <item>
+      <title>Intro to Docker with TypeScript</title>
+      <link>https://meshstudio.io/blog/2017-12-13-intro-to-docker-with-typescript/</link>
+      <pubDate>Tue, 13 Feb 2018 13:47:59 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2017-12-13-intro-to-docker-with-typescript/</guid>
+      <description>Intro to Docker with TypeScript Over the past few years Docker has emerged as one of the most efficient ways to manage and deploy cloud-based web applications☁️ 💻 . While containers have been around since 2008, Docker helped them go mainstream, fueling the Virtual Machine vs. Container argument.
+What are Docker Containers? (and why should I care?) In short, a container is an operating system agnostic environment that hosts a fully functional application.</description>
+    </item>
+    
+    <item>
+      <title>Fun with Levenshtein Distance</title>
+      <link>https://meshstudio.io/blog/2017-11-3-fun-with-levenshtein-distance/</link>
+      <pubDate>Tue, 13 Feb 2018 13:46:22 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2017-11-3-fun-with-levenshtein-distance/</guid>
+      <description>Fun with Levenshtein Distance The Levenshtein Distance is a clever way to calculate how similar two strings are to each other. Every character that differs between two words will count against the two words’ ‘score’. The lower that ‘score’ the more similar the two words are to each other. So comparing a word to itself will yield a ‘score’ of 0, while two four letter words that have no common characters will yield a ‘score’ of 4.</description>
+    </item>
+    
+    <item>
+      <title>Avoiding Retain Cycles in iOS</title>
+      <link>https://meshstudio.io/blog/2017-10-13-avoiding-retain-cycles-in-ios/</link>
+      <pubDate>Tue, 13 Feb 2018 13:45:00 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2017-10-13-avoiding-retain-cycles-in-ios/</guid>
+      <description>Retain cycles can be easily overlooked in the post ARC (automatic reference counting) world of iOS. They can quickly balloon out of control and crash your app with very cryptic crash logs if you don’t know how to catch them.
+For those who may not be familiar, retain cycles are when two objects hold strong references to each other. Objects are only deallocated when they are not being held by strong references, so two objects that are referencing each other will never be deallocated.</description>
+    </item>
     
     <item>
       <title>Spectre Explained</title>

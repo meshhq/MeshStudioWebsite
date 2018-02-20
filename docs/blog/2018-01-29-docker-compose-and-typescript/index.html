@@ -6,39 +6,27 @@
 
 <head>
     
-    <link rel="shortcut icon" href="https://meshstudio.io/images/site/favicon/favicon.png">
-    <link rel="apple-touch-icon" href="https://meshstudio.io/images/site/favicon/favicon.png" />
+    <link rel="shortcut icon" href="https://meshstudio.io/images/site/favicon.png">
+    <link rel="apple-touch-icon" href="https://meshstudio.io/images/site/favicon.png" />
 
     
     <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<meta property="og:title" content=" Session Tokens &middot;  Mesh Studio" />
-<meta property="og:site_name" content="Mesh Studio" />
-<meta property="og:url" content="https://meshstudio.io/blog/2018-01-10-session-tokens/" />
-
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:domain" value="meshstudio.io" />
-<meta name="twitter:title" value="Mesh Studio" />
-<meta name="twitter:description" value="We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products." />
-<meta name="twitter:image" content="https://meshstudio.io/images/site/twitter_logo.jpg">
-<meta name="twitter:url" value="https://meshstudio.io/" />
-<meta name="twitter:label1" value="Cloud Development" />
-<meta name="twitter:label2" value="Application Development" />
+  <meta property="og:title" content=" Docker Compose and TypeScript &middot;  Mesh Studio" />
+  <meta property="og:site_name" content="Mesh Studio" />
+  <meta property="og:url" content="https://meshstudio.io/blog/2018-01-29-docker-compose-and-typescript/" />
 
 
   <meta property="og:type" content="article" />
 
-<meta property="og:article:published_time" content="2018-01-24T00:00:00Z" />
+<meta property="og:article:published_time" content="2018-02-13T13:48:41-08:00" />
 
-
-<meta property="og:article:tag" content="security" />
 
 
 
 <title>
- Session Tokens &middot;  Mesh Studio
+ Docker Compose and TypeScript &middot;  Mesh Studio
 </title>
 
 <meta name="description" content="We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products." />
@@ -69,8 +57,7 @@
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://meshstudio.io/css/main.css" />
-    <link rel="stylesheet" href="https://use.typekit.net/qxb4anb.css">
-    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6268016/6917392/css/fonts.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,900" rel="stylesheet">
 
     
     
@@ -81,7 +68,7 @@
     
     <meta name="generator" content="Hugo 0.36" />
 
-    <link rel="canonical" href="https://meshstudio.io/blog/2018-01-10-session-tokens/" />
+    <link rel="canonical" href="https://meshstudio.io/blog/2018-01-29-docker-compose-and-typescript/" />
 
     
     <script>
@@ -137,7 +124,7 @@
                         <a class="nav-link" href="https://mesh.workable.com/">Join Us</a>
                     </li>
                     
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="/blog/">Blog</a>
                     </li>
                     
@@ -159,16 +146,17 @@
 <div class="blog-post">
     <div class="hero">
         <div class="container">
+            <p class="blog-header">Mesh Studio blog</p>
             <div class="row d-flex flex-row align-items-center justify-content-center">
                 <div class="row justify-content-center hero-title-block">
     <div class="col-12">
         <div class="d-flex justify-content-center">
-            <h2>Session Tokens</h2>
+            <h2>Docker Compose and TypeScript</h2>
         </div>
     </div>
     <div class="col-12 mt-2">
         <div class="d-flex justify-content-center">
-            <h3>A deep-dive into what session tokens are, and what you need to be aware of when implementing them.</h3>
+            <h3>Setting up Docker Compose for your TypeScript application.</h3>
         </div>
     </div>
 </div>
@@ -178,79 +166,128 @@
 
     <div class="primary-section">
         <div class="hero-container d-flex justify-content-center">
-            <img class="img-fluid" src="/images/blog/session-token-hero.png" />
+            <img class="img-fluid" src="/images/blog/2017-12-13-intro-to-docker-with-typescript/docker-typescript-hero.png" />
         </div>
         
         <div class="container post-container">
                     
             <div class="row blog-meta-row">
-                <div class="col-12 col-sm-12 col-lg-8 offset-lg-2">
+                <div class="col-12 col-md-8 offset-md-2">
                     <header class="meta-header d-flex flex-row align-items-center">
                         <div class="author-picture mr-3">
-                            <a class="founder-twitter ml-2 mb-5" href="https://twitter.com/tayhalliday">
-                                <img class="img-fluid author-pic rounded-circle" src="https://avatars2.githubusercontent.com/u/1266416?s=460&amp;v=4" />
+                            <a class="founder-twitter ml-2 mb-5" href="https://medium.com/@reidweber_34407">
+                                <img class="img-fluid author-pic rounded-circle" src="https://avatars2.githubusercontent.com/u/8824846?s=460&amp;v=4" />
                             </a>
                         </div>
                         <div class="author-meta">
-                            <p class="post-meta author-name">Taylor Halliday</p>
-                            <p class="post-meta post-date">Jan 24 | 5 min read</p>
+                            <p class="post-meta author-name">Reid Weber</p>
+                            <p class="post-meta post-date">Feb 13 | 4 min read</p>
                             <p class="post-meta post-words">900 Words</p>
                         </div>
                     </header>
                 </div>
             </div>
             <div class="row blog-content-row">
-                <div class="col-12 col-sm-12 col-lg-8 offset-lg-2">
+                <div class="col-12 col-md-8 offset-md-2">
                     <article class="post">
                         
 
-<h3 id="session-tokens">Session Tokens</h3>
+<h1 id="docker-compose-and-typescript">Docker Compose and Typescript</h1>
 
-<p>Authentication and session management are two areas almost all developers have to deal with repeatedly throughout their career. It’s common for us to reach for a well tested open-source library to bolt onto our app, and that’s a good thing since security logic is one of those things you want a lot of eyes on. But as everything in programming, it helps to know the underlying logic behind the tools we use.</p>
+<p>These days, it’s easy for web applications to quickly balloon with dependencies and third party libraries. Managing your applications within a team can be a real headache when you start running into versioning issues, db configuration issues, local machine compatibility issues, etc&hellip; Docker Compose can help a lot with these issues — along with giving you a much cleaner way to get your app up and running.</p>
 
-<p>Authentication is the process of verifying you are who you say you are. When you enter a username/password to Facebook/bank/etc, you attempt to validate your identity - that process is called authentication. All you’re doing here is (attempting) to prove you are the same person who signed up for XYZ service in the first place. There’s plenty of articles on authentication methods (username/password, OAuth, social logins, etc), so we’re going to look at what happens after you’ve accomplished the authentication step - Session Management.</p>
+<p><strong>If you want an intro to using Docker with Node and Typescript go <a href="https://blog.meshstudio.io/intro-to-docker-with-typescript-21b89d8f8470">here</a>.</strong></p>
 
-<p>Session management is the process of keeping track of who you are after you’ve authenticated. For security and practical considerations, it’s generally not a good idea to hand over your authentication credentials every time you wish to access a protected resource.</p>
+<h2 id="what-is-docker-compose">What is Docker Compose?</h2>
 
-<p>By way of example, I had the opportunity to visit the pentagon a few years back. When I arrived, the front desk spent 30+ min validating (authenticating) that I was a US citizen and was scheduled to be on a tour. After that process they gave me a badge (session token), which was continuously checked by security guards as I moved to different places in the building. Same practice holds true for most secure buildings - hospitals, exclusive events, overly concerned corporate offices, etc.</p>
+<p>Docker Compose allows you to package multiple Docker images into a single application. Each image is still going to run in it’s own container but it allows you to get complex applications up and running with a single command.</p>
 
-<p>This is also the same song/dance that all websites, apps, and servers follow, but, what makes a good session token and why does it matter? Session tokens need to follow a few principles to be considered secure. Let’s look at the major pieces:</p>
+<p>This is achieved with the <code>docker-compose.yml</code> file (more info on <a href="http://www.yaml.org/spec/1.2/spec.html">YAML</a>). The Docker Compose file defines all of the services (individual Docker images) provided in your application. In this post, we’re going to have a simple Typescript server that will ship with a <a href="https://www.postgresql.org/docs/9.1/static/tutorial-advanced-intro.html">PostgreSQL</a> image that will serve as the DB.</p>
 
-<h4 id="meaningless-content">Meaningless Content</h4>
+<h2 id="the-docker-compose-yml-file">The docker-compose.yml file</h2>
 
-<p>Session tokens should NEVER contain any identifiable information about the user outside of the token itself. You gain nothing from this practice, and at a minimum expose breadcrumbs for an attack to recreate your token. Never do this.</p>
+<p>We’ve built a starter app with Node, Express, and Typescript. You can go ahead and clone it here (note that this project already has a <code>Dockerfile</code> set up).</p>
 
-<h4 id="entropy-and-id-length">Entropy and ID Length</h4>
+<p>Create the <code>docker-compose.yml</code> file by running <code>touch docker-compose.yml</code>. Open it up and copy the following:</p>
 
-<p>Entropy is just a fancy way of saying that the token needs to be random…. Like really random. When you get into security, there’s differing levels of <a href="https://www.owasp.org/index.php/Insecure_Randomness">randomness</a>. The point is that session tokens can’t relate to any information about the user and need to be near impossible to guess. On top of randomness, keeping these strings sufficiently long with a large character set will make it robust.</p>
+<pre><code class="language-YAML">version: &quot;3&quot;
+services:
+  web:
+    build: .
+    command: gulp
+    ports:
+      - &quot;8080:3000&quot;
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:9.6.2-alpine
+</code></pre>
 
-<h4 id="key-obscurity">Key Obscurity</h4>
+<p>The most important function of the <code>docker-compose.yml</code> is to define what the compose application is going to look like. Think of it like a blueprint not only for each container, but for a complete application as well. The two main actions we’ll take with Compose file in this tutorial are:</p>
 
-<p>When we’re storing these tokens in a browser, or header, there’s no point in calling out what it’s there for. Don’t use keys that are obvious, such as “SESSION_TOKEN”, opt for something that doesn’t imply to an attacker that this is where they should be concentrating their efforts.</p>
+<ul>
+<li>Define the different services (containers).</li>
+<li>Link them to each other (using <code>depends on</code>).</li>
+</ul>
 
-<h4 id="ephemerality-and-rotation">Ephemerality and Rotation</h4>
+<p>Below we’ll go line by line and explain the reason for each key-value pairing.</p>
 
-<p>If you’ve adhered to the points above, then your session tokens are truly meaningless outside of the association you make behind the scenes with the user profile. These tokens should be expired and recreated on a regular basis. Your app may have different needs, but 1-2 weeks is generally a good lifetime for a session token.</p>
+<p><code>version: &quot;3&quot;</code></p>
 
-<h3 id="common-attacks">Common Attacks</h3>
+<p>This line defines which version of Compose we want to use. &ldquo;3&rdquo; is the most recent release so we’ll be using that.</p>
 
-<p>If you don’t implement sessions properly, you leave your app open to a few common attacks. It’s worth going through some to help reinforce the lessons from above:</p>
+<p><code>services:</code></p>
 
-<h4 id="man-in-the-middle-mim-https-www-owasp-org-index-php-man-in-the-middle-attack">Man in the Middle <a href="https://www.owasp.org/index.php/Man-in-the-middle_attack">MIM</a></h4>
+<p>This line is the key for the “array” that will hold all of the different docker images we’re including in the final application. Each of these services will end up being its own running container inside our application. We’re using the web key for the container that will be running our server. After the web: key you can add any amount of other services you want. In this example we only have one other service — postgres.</p>
 
-<p>A man in the middle attack is when the attacker has found some way to place themselves between your users and your app. The strongest way to prevent this is to require a recent version of TLS to be enforced for all communication, but they still can happen for various reasons. If you have a user who’s fallen victim to this attack, their session token will be leaked. Aggressive rotation of your session tokens will be the best defense outside of patching the MIM vulnerability itself.</p>
+<p><code>web:</code></p>
 
-<h4 id="cross-site-request-forgery-csrf-https-www-owasp-org-index-php-cross-site-request-forgery-csrf-and-cross-site-scripting-xss-https-www-owasp-org-index-php-cross-site-scripting-xss">Cross Site Request Forgery <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)">CSRF</a> and Cross Site Scripting <a href="https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)">XSS</a></h4>
+<p>This defines all the details for our main web application (in this case it’s just a Node server). In here we’ll define the build directory, an entry point run command, the ports we’re mapping from the container to the local machine, the other containers we’re listing as dependencies, and any ENV variables we want to set. We’ll go into greater detail for each of these below.</p>
 
-<p>Like the MIM attack, CSRF allow an attacker to pose as one of your users and make ‘authenticated’ requests. XSS attacks involve running malicious javascript in the browser, which can lead to leaked client-side keys as well. Again, rotation of session tokens will be your best defense outside of patching those attacks themselves.</p>
+<p><code>build: .</code></p>
 
-<h4 id="brute-force">Brute Force</h4>
+<p>The build key tells docker-compose that it needs to build the image that will be used for the web service. The path supplied to the build parameter tells docker-compose where it should look for a Dockerfile from which to build the image. In this case, we are telling docker-compose that our Dockerfile is in the current directory.</p>
 
-<p>The last thing you want is an attacker to be able to be able to reconstruct one of these tokens, or infer how to alter one in such a way that they gain more privileged access. The recommendations on meaningless content and sufficient entropy guard against this attack.</p>
+<p><code>command: gulp</code></p>
 
-<h2 id="it-s-not-all-that-scary">It’s not all that scary</h2>
+<p>This will override the default CMD defined in the image’s Dockerfile. For our app we’re going to run gulp since we’ve built our gulpfile to handle the transpile functionality as well as get the server running.</p>
 
-<p>Depending on your language / framework of choice, there are lots of libraries that supposedly do session tokens right. But, ultimately it’s up to you as the developer to deliver an application that meets the security needs of the project you’re working on. Knowing the ins and outs of session tokens and the motivations behind their features will better help you assess and implement the best security for your application.</p>
+<p><code>ports:</code></p>
+
+<p>This is the mapping from the container’s internal port to the external port the consumer will be listening on. In our case, the server is using 8080 and the container is exposing 3000.</p>
+
+<p><code>depends_on:</code></p>
+
+<p>This is marking our posrgres service as a dependency for our web container.
+postgres:</p>
+
+<p>Here we’re defining our second service (container). You can name the service key whatever you want. In this case just make sure this name matches the name you’re using under depends_on.</p>
+
+<p><code>image:</code></p>
+
+<p>This is the image our service will use to create its container.</p>
+
+<p><strong>Note: One missing key here is volumes. Each service can define volumes to persist data within the compose container. Normally, for something like <code>postgres</code> we’d need to define a <code>volume</code> to handle persistence. For this example, we’re not going to define a volume for the DB; we’ll use the default configuration. The default configuration just uses the <a href="https://en.wikipedia.org/wiki/Copy-on-write">CoW</a> filesystem that ships with the container.</strong></p>
+
+<p>Now that we have our Compose file set up we can run the following: <code>docker-compose up</code>. Now our application is up and running!</p>
+
+<table>
+<thead>
+<tr>
+<th align="center"><img src="/images/blog/2017-12-29-docker-compose-and-typescript/docker-compose-running.png" alt="See if Docker is running." /></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">This will pull all the images we need and give us the container ID our application is running in (2f7b7a57d7c0 in this case).</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="final-thoughts">Final thoughts.</h2>
+
+<p>With Compose we can bundle together complex applications without worrying about versioning or configurations on the machine it’s running on. On top of that we can get applications with multiple Docker images up and running with a single command. It also gives us a way to package multiple containers together within one, very manageable, bundle. 🐙💾 💾 💾 🐙</p>
 
                     </article>
                 </div>
@@ -305,6 +342,7 @@
                     <li>
                         info@meshstudio.io
                     </li>
+
                 </ul>
             </div>
 
@@ -345,7 +383,11 @@
 
             
             <div class="col-12 col-md-4 offset-md-2  footer-list">
+                <h5>Latest Blog Post</h5>
                 
+                <a class="blog-title d-block" href="#">Mesh Open Source — Typescript React and Typescript Node Boilerplate</a>
+                <a class="blog-sub-title d-block pt-2" href="#">We start a lot of new software projects at Mesh. Whether we are kicking off a new project for a customer,
+                    or prototyping a new internal…</a>
             </div>
         </div>
     </div>
@@ -359,9 +401,22 @@
     crossorigin="anonymous"></script>
 
 
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
 <script src="/js/typeform.js"></script>
-<script src="/js/mailchimp.js"></script>
 
+
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script type='text/javascript'>
+    (function ($) {
+        window.fnames = new Array();
+        window.ftypes = new Array();
+        fnames[0] = 'EMAIL';
+        ftypes[0] = 'email';
+        fnames[1] = 'FNAME';
+        ftypes[1] = 'text';
+        fnames[2] = 'LNAME';
+        ftypes[2] = 'text';
+    }(jQuery));
+    var $mcj = jQuery.noConflict(true);
+</script>
 
 </html>

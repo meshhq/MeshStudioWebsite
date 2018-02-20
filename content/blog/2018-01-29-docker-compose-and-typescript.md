@@ -2,9 +2,9 @@
 title: Docker Compose and TypeScript
 sub_title: Setting up Docker Compose for your TypeScript application.
 tags: []
-date: 2018-02-13T13:48:41-08:00
-publishdate: 2018-02-13T13:48:41-08:00
-hero_image: /images/blog/2017-12-13-intro-to-docker-with-typescript/docker-typescript-hero.png
+date: 2018-01-29
+publishdate: 2018-01-29
+hero_image: /images/blog/2018-01-29-docker-compose-and-typescript/docker-compose-hero.png
 author:
   name: Reid Weber
   url: https://medium.com/@reidweber_34407
