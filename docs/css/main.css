@@ -68,7 +68,7 @@ h6 {
 
 :root {
     /* Colors */
-    /* Blacls */
+    /* Blacks */
     --mesh-black: #1A2233;
     /* Blues */
     --mesh-blue: #1B5FCC;
@@ -216,6 +216,11 @@ article a:hover {
     color: var(--mesh-blue);
 }
 
+article img,
+article table img {
+    max-width: 100%;
+}
+
 /* Block Quote Styling */
 
 article blockquote,
@@ -253,6 +258,14 @@ blockquote p cite a:hover {
     article h4,
     article h5 {
         margin-top: 2em;
+        margin-bottom: .5em;
+    }
+    article h1:first-child,
+    article h2:first-child,
+    article h3:first-child,
+    article h4:first-child,
+    article h5:first-child {
+        margin-top: 1em;
         margin-bottom: .5em;
     }
     article {
@@ -1814,7 +1827,7 @@ footer .nav-link {
 }
 
 .blog-post .primary-section .blog-meta-row {
-    margin-top: 14em;
+    margin-top: 10em;
 }
 
 .blog-post .primary-section .blog-content-row {
@@ -1866,6 +1879,23 @@ footer .nav-link {
     color: var(--mesh-dk-blue-light);
 }
 
+.blog-post table {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.blog-post table th {
+    text-align: center;
+}
+
+.blog-post table td {
+    color: #212529;
+    font-weight: 300;
+    font-size: 1.0em;
+    padding: 0px 30px 0px 30px;
+}
+
 @media (max-width: 768px) {
     .blog-post .hero-title-block {
         padding: 0em 1em;
@@ -1874,12 +1904,12 @@ footer .nav-link {
         height: auto;
     }
     .blog-post .primary-section .blog-meta-row {
-        margin-top: 6em;
+        margin-top: 10em;
     }
 }
 
 @media (max-width: 576px) {
     .blog-post .primary-section .blog-meta-row {
-        margin-top: 5em;
+        margin-top: 6em;
     }
 }

@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>https://meshstudio.io/blog/2017-12-20-how-to-explain-bitcoin-at-your-holiday-dinner/</loc>
+    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://meshstudio.io/blog/2017-11-06-serving-html-with-golang/</loc>
     <lastmod>2017-11-06T10:09:12-08:00</lastmod>
   </url>
@@ -72,6 +77,18 @@
   </url>
   
   <url>
+    <loc>https://meshstudio.io/tags/bitcoin/</loc>
+    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://meshstudio.io/tags/blockchain/</loc>
+    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://meshstudio.io/categories/</loc>
     <priority>0</priority>
   </url>
@@ -79,6 +96,24 @@
   <url>
     <loc>https://meshstudio.io/tags/continuous-integration/</loc>
     <lastmod>2018-01-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://meshstudio.io/tags/cryptocurrency/</loc>
+    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://meshstudio.io/tags/ethereum/</loc>
+    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://meshstudio.io/tags/fintech/</loc>
+    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
