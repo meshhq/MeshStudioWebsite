@@ -17,7 +17,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <form class="form-inline ml-auto my-2 my-lg-0">
                 <ul class="navbar-nav">
-                    {{$currentSectionName := .CurrentSection.Name}}
+                    {{$currentSectionName := .CurrentSection.Params.nav_title}}
                     {{ $url := .URL }} 
                     {{ range where .Site.Menus.main "Name" "!=" "Home" }}
                     <li class="nav-item{{ if eq $currentSectionName .Name }} active{{ end }}">

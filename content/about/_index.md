@@ -1,5 +1,6 @@
 ---
 title: About
+nav_title: About
 sub_title: We help amazing companies build software, faster
 intro_title: Who We Are
 intro_content: Mesh doesn’t just write software, we partner with our customers to understand the underlying business objectives that necessitate software development. We then design, architect and implement cloud software systems that help our customers meet those objectives.
@@ -26,7 +27,7 @@ founders_content:
     twitter: https://twitter.com/tayhalliday
   - name: Kevin Coleman
     description: Kevin lives in Seattle with his wife Lindsey and their dog Kameron. Outside of Mesh, Kevin is an avid saltwater fly fisherman and can be found exploring the local beaches of Puget sound in pursuit of Sea-run Cutthroat Trout.
-    image: https://avatars3.githubusercontent.com/u/1423931?v=4&s=400
+    image: https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAlEAAAAJGJkOTBkNzc1LTIwMTYtNDUxNi05OTkzLTA3NmY5NTYzNGUyNA.jpg
     twitter: https://twitter.com/KevFColeman
 ---
 

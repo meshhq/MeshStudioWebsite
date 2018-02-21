@@ -1,15 +1,15 @@
 ---
 title: Setting Up CircleCI
-sub_title: A deep-dive into what session tokens are, and what you need to be aware of when implementing them.
-tags: ["innovation", "security"]
+sub_title: How to setup a CirclCI Continuous Integration Environment in Github
+tags: ["Continuous Integration"]
 date: 2018-01-05
 publishdate: 2018-01-05
 hero_image: /images/blog/circle.png
 author:
-  name: Taylor Halliday
-  url: https://twitter.com/tayhalliday
-  mail: taylor@meshstudio.io
-  avatar: https://avatars2.githubusercontent.com/u/1266416?s=460&v=4
+  name: Kevin Coleman
+  url: https://twitter.com/kfccoleman1
+  mail: kevin@meshstudio.io
+  avatar: https://avatars2.githubusercontent.com/u/1423931?s=460&v=4
 ---
 
 # Contiuons Integration with Node.js and CircleCI

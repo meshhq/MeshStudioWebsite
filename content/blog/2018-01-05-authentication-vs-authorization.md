@@ -1,7 +1,7 @@
 ---
 title: Authentication vs. Authorization
 sub_title: A deep-dive into what session tokens are, and what you need to be aware of when implementing them.
-tags: ["innovation", "security"]
+tags: ["security"]
 date: 2018-01-05
 publishdate: 2018-01-05
 hero_image: /images/blog/authorized-hero.png

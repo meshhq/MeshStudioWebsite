@@ -12,7 +12,7 @@
         <div class="button-container d-flex justify-content-center">
             <button type="button" href={{.Site.Params.typeformLink}} class="btn get-in-touch-btn typeform-share">get in touch</button>
         </div>
-        <div class="container">
+        <div class="container case-study-container">
             <!-- CASE STUDIES -->
             <div class="row casestudies-title mb-5">
                 {{ range where .Site.Menus.main "Name" "==" "Work" }}
@@ -34,9 +34,8 @@
 
             {{partial "contentSections/capabilities"  (dict "context" . "show_subtitle" false )}}
             <!-- TESTIMONIAL -->
-            <div class="row testimonial">
-                <a class="section-link mb-4">what our clients are saying</a>
-                <p class="testimonial-quote">{{.Params.testimonial}}</p>
+            <div class="row testimonial d-flex justify-content-center">
+                <p class="testimonial-quote">"{{.Params.testimonial}}"</p>
                 <a class="testimonial-attr" href="{{ .Params.testimonial_attr_link }}">{{.Params.testimonial_attr}}</a>
             </div>
         </div>

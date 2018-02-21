@@ -5,7 +5,7 @@ tags: ["Node", "API", "Integrations"]
 date: 2018-02-01T15:35:36-08:00
 publishdate: 2018-02-01T15:35:36-08:00
 logo: /images/caseStudies/lively-vector.svg
-logo_max_height: 40
+logo_max_height: 30
 hero_image: /images/caseStudies/lively-hero.png
 ---
 
