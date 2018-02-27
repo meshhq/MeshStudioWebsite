@@ -1749,16 +1749,42 @@ footer .nav-link {
     box-shadow: none;
 }
 
+.blog .primary-section .blog-info-column #mc_embed_signup_scroll .signup-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.blog .primary-section .blog-info-column #mc_embed_signup_scroll .signup-input input {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: 0px;
+    width: 80%;
+}
+
+.blog .primary-section .blog-info-column #mc_embed_signup_scroll .signup-input button {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 .blog .primary-section .blog-info-column #mc_embed_signup_scroll #mce-EMAIL {
     color: var(--mesh-dk-blue);
 }
 
-.blog .primary-section .blog-info-column #mc_embed_signup_scroll .mce_inline_error {
+.blog .primary-section .blog-info-column #mc_embed_signup_scroll input.mce_inline_error {
+    border-color: #F64C4C;
+}
+
+.blog .primary-section .blog-info-column #mc_embed_signup_scroll .signup-input + .mce_inline_error {
     background-color: none;
     background: none;
     text-align: left;
-    color: #F64C4C;
     padding-left: 0px;
+    color: #F64C4C;
 }
 
 .blog .primary-section .blog-info-column #mc_embed_signup_scroll #mce-error-response a {
