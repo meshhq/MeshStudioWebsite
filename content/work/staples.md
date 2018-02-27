@@ -4,9 +4,9 @@ sub_title: Staples asked Mesh to help them deliver the connected Easy Button.
 tags: ["iot", "innovation", "security"]
 date: 2017-03-23
 publishdate: 2017-03-23
-logo: /images/caseStudies/staples-vector.svg
+logo: /images/caseStudies/staples/staples-vector.svg
 logo_max_height: 22
-hero_image: /images/caseStudies/staples-hero.png
+hero_image: /images/caseStudies/staples/staples-hero.png
 ---
 [Staples](https://www.staples.com/) is known as the office supply superstore, with retail locations throughout North America. Founded in 1986, Staples has grown from its humble beginnings to to over 1,500 stores. The company is publicly listed and included in the [Fortune 500](http://fortune.com/fortune500/staples/). 
 

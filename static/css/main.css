@@ -196,8 +196,15 @@ article .highlight pre {
 }
 
 article a {
-    text-decoration: underline;
     font-weight: 400;
+}
+
+article.post a {
+    text-decoration: underline;
+}
+
+article.post h4 a {
+    font-weight: 500;
 }
 
 article blockquote {
@@ -212,7 +219,7 @@ article ol {
     font-weight: 400;
 }
 
-article a:hover {
+article.post a:hover {
     color: var(--mesh-blue);
     text-decoration: underline;
 }

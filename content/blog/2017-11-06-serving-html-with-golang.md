@@ -4,7 +4,7 @@ sub_title: "How to write your next web app in Golang!"
 tags: ["Go", "WebApp", "Programming"]
 date: 2017-11-06T10:09:12-08:00
 publishdate: 2017-11-06T10:09:12-08:00
-hero_image: /images/blog/serving-html-with-go.jpg
+hero_image: /images/blog/2017-11-06-serving-html-with-golang/hero.jpg
 author:
   name: "John Daly"
   url: "http://johnmcdaly.com/"

@@ -4,7 +4,7 @@ sub_title: How to setup a CirclCI Continuous Integration Environment in Github
 tags: ["Continuous Integration"]
 date: 2018-01-05
 publishdate: 2018-01-05
-hero_image: /images/blog/circle.png
+hero_image: /images/blog/2018-01-20-setting-up-circle/hero.png
 author:
   name: Kevin Coleman
   url: https://twitter.com/kfccoleman1

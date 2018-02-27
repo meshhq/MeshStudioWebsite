@@ -4,7 +4,7 @@ sub_title: How Mesh Studio Brought Modern Containerization To The Enterprise Ins
 tags: ["Containers", "API", "Server"]
 date: 2018-03-01T10:36:46-08:00
 publishdate: 2019-03-01T10:36:46-08:00
-logo: /images/caseStudies/symetra-vector.png
+logo: /images/caseStudies/symetra/symetra-vector.png
 logo_max_height: 35
-hero_image: /images/caseStudies/symetra-hero.png
+hero_image: /images/caseStudies/symetra/symetra-hero.png
 ---

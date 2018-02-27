@@ -4,7 +4,7 @@ sub_title: A deep-dive into what session tokens are, and what you need to be awa
 tags: ["security"]
 date: 2018-01-05
 publishdate: 2018-01-05
-hero_image: /images/blog/authorized-hero.png
+hero_image: /images/blog/2018-01-05-authentication-vs-authorization/hero.png
 author:
   name: Taylor Halliday
   url: https://twitter.com/tayhalliday
