@@ -4,7 +4,7 @@ sub_title: Measure the similarity between two strings!
 tags: []
 date: 2017-11-03
 publishdate: 2017-11-03
-hero_image: /images/blog/2017-11-3-fun-with-levenshtein-distance/levenshtein-hero.png
+hero_image: /images/blog/2017-11-3-fun-with-levenshtein-distance/hero.png
 author:
   name: Reid Weber
   url: https://medium.com/@reidweber_34407
@@ -27,16 +27,16 @@ You compare the letters at each index and add 1 to its ‘score’ each time the
 In Javascript:
 
 ```javascript
-var word1 = 'mesh'
-var word2 = 'tests'
+const word1 = 'mesh'
+const word2 = 'tests'
 
 function levenshteinDistance (firstWord, secondWord) {
-	var firstArray = firstWord.split('')
-	var secondArray = secondWord.split('')
-	var score = 0
+	const firstArray = firstWord.split('')
+	const secondArray = secondWord.split('')
+	let score = 0
 
-	var firstLength = firstArray.length
-	var secondLength = secondArray.length
+	const firstLength = firstArray.length
+	const secondLength = secondArray.length
 
 	if (firstLength >= secondLength) {
 		score += (firstLength - secondLength)
@@ -44,11 +44,11 @@ function levenshteinDistance (firstWord, secondWord) {
 		score += (secondLength - firstLength)
 	}
 
-	var shorterWord = (firstLength >= secondLength) ? secondLength : firstLength
+	const shorterWord = (firstLength >= secondLength) ? secondLength : firstLength
 
-	for (var i = 0; i < shorterWord; i++) {
-		var firstChar
-		var secondChar
+	for (let i = 0; i < shorterWord; i++) {
+		let firstChar
+		let secondChar
 		if (firstLength >= secondLength) {
 			firstChar = firstArray[i]
 			secondChar = secondArray[i]
@@ -60,7 +60,7 @@ function levenshteinDistance (firstWord, secondWord) {
 			score++
 		}
 	}
-	console.log('Levensthien Distance: ', score)
+	console.log('Levenshtein Distance: ', score)
 }
 
 levenshteinDistance(word1, word2)

@@ -6,21 +6,31 @@
 
 <head>
     
-    <link rel="shortcut icon" href="https://meshstudio.io/images/site/favicon.png">
-    <link rel="apple-touch-icon" href="https://meshstudio.io/images/site/favicon.png" />
+    <link rel="shortcut icon" href="https://meshstudio.io/images/site/favicon/favicon.png">
+    <link rel="apple-touch-icon" href="https://meshstudio.io/images/site/favicon/favicon.png" />
 
     
     <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <meta property="og:title" content=" Docker Compose and TypeScript &middot;  Mesh Studio" />
-  <meta property="og:site_name" content="Mesh Studio" />
-  <meta property="og:url" content="https://meshstudio.io/blog/2018-01-29-docker-compose-and-typescript/" />
+<meta property="og:title" content=" Docker Compose and TypeScript &middot;  Mesh Studio" />
+<meta property="og:site_name" content="Mesh Studio" />
+<meta property="og:url" content="https://meshstudio.io/blog/2018-01-29-docker-compose-and-typescript/" />
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:domain" value="meshstudio.io" />
+<meta name="twitter:title" value="Mesh Studio" />
+<meta name="twitter:description" value="We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products." />
+<meta name="twitter:image" content="https://meshstudio.io/images/site/twitter_logo.jpg">
+<meta name="twitter:url" value="https://meshstudio.io/" />
+<meta name="twitter:label1" value="Cloud Development" />
+<meta name="twitter:label2" value="Application Development" />
 
 
   <meta property="og:type" content="article" />
 
-<meta property="og:article:published_time" content="2018-02-13T13:48:41-08:00" />
+<meta property="og:article:published_time" content="2018-01-29T00:00:00Z" />
 
 
 
@@ -57,7 +67,8 @@
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://meshstudio.io/css/main.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/qxb4anb.css">
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6268016/6917392/css/fonts.css" />
 
     
     
@@ -66,7 +77,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.36" />
+    <meta name="generator" content="Hugo 0.36.1" />
 
     <link rel="canonical" href="https://meshstudio.io/blog/2018-01-29-docker-compose-and-typescript/" />
 
@@ -124,7 +135,7 @@
                         <a class="nav-link" href="https://mesh.workable.com/">Join Us</a>
                     </li>
                     
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="/blog/">Blog</a>
                     </li>
                     
@@ -146,7 +157,6 @@
 <div class="blog-post">
     <div class="hero">
         <div class="container">
-            <p class="blog-header">Mesh Studio blog</p>
             <div class="row d-flex flex-row align-items-center justify-content-center">
                 <div class="row justify-content-center hero-title-block">
     <div class="col-12">
@@ -166,13 +176,13 @@
 
     <div class="primary-section">
         <div class="hero-container d-flex justify-content-center">
-            <img class="img-fluid" src="/images/blog/2017-12-13-intro-to-docker-with-typescript/docker-typescript-hero.png" />
+            <img class="img-fluid" src="/images/blog/2018-01-29-docker-compose-and-typescript/hero.png" />
         </div>
         
         <div class="container post-container">
                     
             <div class="row blog-meta-row">
-                <div class="col-12 col-md-8 offset-md-2">
+                <div class="col-12 col-sm-12 col-lg-8 offset-lg-2">
                     <header class="meta-header d-flex flex-row align-items-center">
                         <div class="author-picture mr-3">
                             <a class="founder-twitter ml-2 mb-5" href="https://medium.com/@reidweber_34407">
@@ -181,14 +191,14 @@
                         </div>
                         <div class="author-meta">
                             <p class="post-meta author-name">Reid Weber</p>
-                            <p class="post-meta post-date">Feb 13 | 4 min read</p>
+                            <p class="post-meta post-date">Jan 29 | 4 min read</p>
                             <p class="post-meta post-words">900 Words</p>
                         </div>
                     </header>
                 </div>
             </div>
             <div class="row blog-content-row">
-                <div class="col-12 col-md-8 offset-md-2">
+                <div class="col-12 col-sm-12 col-lg-8 offset-lg-2">
                     <article class="post">
                         
 
@@ -209,20 +219,17 @@
 <p>We’ve built a starter app with Node, Express, and Typescript. You can go ahead and clone it here (note that this project already has a <code>Dockerfile</code> set up).</p>
 
 <p>Create the <code>docker-compose.yml</code> file by running <code>touch docker-compose.yml</code>. Open it up and copy the following:</p>
-
-<pre><code class="language-YAML">version: &quot;3&quot;
-services:
-  web:
-    build: .
-    command: gulp
-    ports:
-      - &quot;8080:3000&quot;
-    depends_on:
-      - postgres
-  postgres:
-    image: postgres:9.6.2-alpine
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-YAML" data-lang="YAML">version<span class="p">:</span><span class="w"> </span><span class="s2">&#34;3&#34;</span><span class="w">
+</span><span class="w"></span>services<span class="p">:</span><span class="w">
+</span><span class="w">  </span>web<span class="p">:</span><span class="w">
+</span><span class="w">    </span>build<span class="p">:</span><span class="w"> </span>.<span class="w">
+</span><span class="w">    </span>command<span class="p">:</span><span class="w"> </span>gulp<span class="w">
+</span><span class="w">    </span>ports<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span><span class="s2">&#34;8080:3000&#34;</span><span class="w">
+</span><span class="w">    </span>depends_on<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>postgres<span class="w">
+</span><span class="w">  </span>postgres<span class="p">:</span><span class="w">
+</span><span class="w">    </span>image<span class="p">:</span><span class="w"> </span>postgres<span class="p">:</span><span class="m">9.6</span>.<span class="m">2</span>-alpine</code></pre></div>
 <p>The most important function of the <code>docker-compose.yml</code> is to define what the compose application is going to look like. Think of it like a blueprint not only for each container, but for a complete application as well. The two main actions we’ll take with Compose file in this tutorial are:</p>
 
 <ul>
@@ -232,38 +239,54 @@ services:
 
 <p>Below we’ll go line by line and explain the reason for each key-value pairing.</p>
 
+<blockquote>
 <p><code>version: &quot;3&quot;</code></p>
+</blockquote>
 
 <p>This line defines which version of Compose we want to use. &ldquo;3&rdquo; is the most recent release so we’ll be using that.</p>
 
+<blockquote>
 <p><code>services:</code></p>
+</blockquote>
 
 <p>This line is the key for the “array” that will hold all of the different docker images we’re including in the final application. Each of these services will end up being its own running container inside our application. We’re using the web key for the container that will be running our server. After the web: key you can add any amount of other services you want. In this example we only have one other service — postgres.</p>
 
+<blockquote>
 <p><code>web:</code></p>
+</blockquote>
 
 <p>This defines all the details for our main web application (in this case it’s just a Node server). In here we’ll define the build directory, an entry point run command, the ports we’re mapping from the container to the local machine, the other containers we’re listing as dependencies, and any ENV variables we want to set. We’ll go into greater detail for each of these below.</p>
 
+<blockquote>
 <p><code>build: .</code></p>
+</blockquote>
 
 <p>The build key tells docker-compose that it needs to build the image that will be used for the web service. The path supplied to the build parameter tells docker-compose where it should look for a Dockerfile from which to build the image. In this case, we are telling docker-compose that our Dockerfile is in the current directory.</p>
 
+<blockquote>
 <p><code>command: gulp</code></p>
+</blockquote>
 
 <p>This will override the default CMD defined in the image’s Dockerfile. For our app we’re going to run gulp since we’ve built our gulpfile to handle the transpile functionality as well as get the server running.</p>
 
+<blockquote>
 <p><code>ports:</code></p>
+</blockquote>
 
 <p>This is the mapping from the container’s internal port to the external port the consumer will be listening on. In our case, the server is using 8080 and the container is exposing 3000.</p>
 
+<blockquote>
 <p><code>depends_on:</code></p>
+</blockquote>
 
-<p>This is marking our posrgres service as a dependency for our web container.
+<p>This is marking our postgres service as a dependency for our web container.
 postgres:</p>
 
 <p>Here we’re defining our second service (container). You can name the service key whatever you want. In this case just make sure this name matches the name you’re using under depends_on.</p>
 
+<blockquote>
 <p><code>image:</code></p>
+</blockquote>
 
 <p>This is the image our service will use to create its container.</p>
 
@@ -274,7 +297,7 @@ postgres:</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img src="/images/blog/2017-12-29-docker-compose-and-typescript/docker-compose-running.png" alt="See if Docker is running." /></th>
+<th align="center"><img src="/images/blog/2018-01-29-docker-compose-and-typescript/docker-compose-running.png" alt="See if Docker is running." /></th>
 </tr>
 </thead>
 
@@ -342,7 +365,6 @@ postgres:</p>
                     <li>
                         info@meshstudio.io
                     </li>
-
                 </ul>
             </div>
 
@@ -383,11 +405,7 @@ postgres:</p>
 
             
             <div class="col-12 col-md-4 offset-md-2  footer-list">
-                <h5>Latest Blog Post</h5>
                 
-                <a class="blog-title d-block" href="#">Mesh Open Source — Typescript React and Typescript Node Boilerplate</a>
-                <a class="blog-sub-title d-block pt-2" href="#">We start a lot of new software projects at Mesh. Whether we are kicking off a new project for a customer,
-                    or prototyping a new internal…</a>
             </div>
         </div>
     </div>
@@ -401,22 +419,9 @@ postgres:</p>
     crossorigin="anonymous"></script>
 
 
-<script src="/js/typeform.js"></script>
-
-
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-<script type='text/javascript'>
-    (function ($) {
-        window.fnames = new Array();
-        window.ftypes = new Array();
-        fnames[0] = 'EMAIL';
-        ftypes[0] = 'email';
-        fnames[1] = 'FNAME';
-        ftypes[1] = 'text';
-        fnames[2] = 'LNAME';
-        ftypes[2] = 'text';
-    }(jQuery));
-    var $mcj = jQuery.noConflict(true);
-</script>
+<script src="/js/typeform.js"></script>
+<script src="/js/mailchimp.js"></script>
+
 
 </html>

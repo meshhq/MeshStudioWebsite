@@ -4,7 +4,7 @@ sub_title: Using the tools in Xcode to debug retain cycles in an ARC project.
 tags: []
 date: 2017-10-13
 publishdate: 2017-10-13
-hero_image: /images/blog/2017-10-13-avoiding-retain-cycles-in-iOS/retain-cycle-hero.png
+hero_image: /images/blog/2017-10-13-avoiding-retain-cycles-in-iOS/hero.png
 author:
   name: Reid Weber
   url: https://medium.com/@reidweber_34407
@@ -27,12 +27,12 @@ To access instruments, go Product→Profile (or hit ⌘+i). When Xcode is finish
 
 In my example, I’m creating a retain cycle by having the parent view controller hold a strong reference to its child view controller. The child is also holding a strong reference to the parent. When the view controller’s UINavigationController’s stock ‘back’ button is pressed, it’s presented view controller is removed from the super view and should be deallocated. Since the root view controller is still hanging on to the strong reference to the child, the instance of `SecondViewController` will still be retained until the parent’s reference is removed.
 
-```objective-c
+```Objective-C
 SecondViewController *viewController = (SecondViewController *)segue.destinationViewController;
 viewController.retainedParent = self;
 self.retainedChild = viewController;
 ```
-(Here is the simple storyboard we’re using for this example.)
+Here is the simple storyboard we’re using for this example:
 
 | ![Storyboard](/images/blog/2017-10-13-avoiding-retain-cycles-in-iOS/storyboard.png) |
 |:--:|
@@ -58,7 +58,7 @@ Keeping an eye on references is especially important when using the common `dele
 
 The other most common way to create a retain cycle in iOS is referencing `self` from within an anonymous function (‘block’). You commonly see these mistakes while using GCD, or one of the common callbacks in AFNetworking. You always need create a `__weak` reference before using `self` in a block that is owned by that same object. The code below will create a retain cycle.
 
-```
+```Objective-C
 // Will create retain cycle.
   
 dispatch_async(dispatch_get_main_queue(), ^{

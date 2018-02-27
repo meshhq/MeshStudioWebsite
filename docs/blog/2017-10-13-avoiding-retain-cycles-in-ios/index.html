@@ -6,21 +6,31 @@
 
 <head>
     
-    <link rel="shortcut icon" href="https://meshstudio.io/images/site/favicon.png">
-    <link rel="apple-touch-icon" href="https://meshstudio.io/images/site/favicon.png" />
+    <link rel="shortcut icon" href="https://meshstudio.io/images/site/favicon/favicon.png">
+    <link rel="apple-touch-icon" href="https://meshstudio.io/images/site/favicon/favicon.png" />
 
     
     <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <meta property="og:title" content=" Avoiding Retain Cycles in iOS &middot;  Mesh Studio" />
-  <meta property="og:site_name" content="Mesh Studio" />
-  <meta property="og:url" content="https://meshstudio.io/blog/2017-10-13-avoiding-retain-cycles-in-ios/" />
+<meta property="og:title" content=" Avoiding Retain Cycles in iOS &middot;  Mesh Studio" />
+<meta property="og:site_name" content="Mesh Studio" />
+<meta property="og:url" content="https://meshstudio.io/blog/2017-10-13-avoiding-retain-cycles-in-ios/" />
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:domain" value="meshstudio.io" />
+<meta name="twitter:title" value="Mesh Studio" />
+<meta name="twitter:description" value="We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products." />
+<meta name="twitter:image" content="https://meshstudio.io/images/site/twitter_logo.jpg">
+<meta name="twitter:url" value="https://meshstudio.io/" />
+<meta name="twitter:label1" value="Cloud Development" />
+<meta name="twitter:label2" value="Application Development" />
 
 
   <meta property="og:type" content="article" />
 
-<meta property="og:article:published_time" content="2018-02-13T13:45:00-08:00" />
+<meta property="og:article:published_time" content="2017-10-13T00:00:00Z" />
 
 
 
@@ -57,7 +67,8 @@
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://meshstudio.io/css/main.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/qxb4anb.css">
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6268016/6917392/css/fonts.css" />
 
     
     
@@ -66,7 +77,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.36" />
+    <meta name="generator" content="Hugo 0.36.1" />
 
     <link rel="canonical" href="https://meshstudio.io/blog/2017-10-13-avoiding-retain-cycles-in-ios/" />
 
@@ -124,7 +135,7 @@
                         <a class="nav-link" href="https://mesh.workable.com/">Join Us</a>
                     </li>
                     
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="/blog/">Blog</a>
                     </li>
                     
@@ -146,7 +157,6 @@
 <div class="blog-post">
     <div class="hero">
         <div class="container">
-            <p class="blog-header">Mesh Studio blog</p>
             <div class="row d-flex flex-row align-items-center justify-content-center">
                 <div class="row justify-content-center hero-title-block">
     <div class="col-12">
@@ -166,13 +176,13 @@
 
     <div class="primary-section">
         <div class="hero-container d-flex justify-content-center">
-            <img class="img-fluid" src="/images/blog/2017-10-13-avoiding-retain-cycles-in-iOS/retain-cycle-hero.png" />
+            <img class="img-fluid" src="/images/blog/2017-10-13-avoiding-retain-cycles-in-iOS/hero.png" />
         </div>
         
         <div class="container post-container">
                     
             <div class="row blog-meta-row">
-                <div class="col-12 col-md-8 offset-md-2">
+                <div class="col-12 col-sm-12 col-lg-8 offset-lg-2">
                     <header class="meta-header d-flex flex-row align-items-center">
                         <div class="author-picture mr-3">
                             <a class="founder-twitter ml-2 mb-5" href="https://medium.com/@reidweber_34407">
@@ -181,14 +191,14 @@
                         </div>
                         <div class="author-meta">
                             <p class="post-meta author-name">Reid Weber</p>
-                            <p class="post-meta post-date">Feb 13 | 4 min read</p>
+                            <p class="post-meta post-date">Oct 13 | 4 min read</p>
                             <p class="post-meta post-words">700 Words</p>
                         </div>
                     </header>
                 </div>
             </div>
             <div class="row blog-content-row">
-                <div class="col-12 col-md-8 offset-md-2">
+                <div class="col-12 col-sm-12 col-lg-8 offset-lg-2">
                     <article class="post">
                         <p>Retain cycles can be easily overlooked in the post ARC (automatic reference counting) world of iOS. They can quickly balloon out of control and crash your app with very cryptic crash logs if you don’t know how to catch them.</p>
 
@@ -202,7 +212,7 @@ The allocations tool is the one I’ve found most useful in the past for spottin
 <table>
 <thead>
 <tr>
-<th align="center"><img src="/images/blog/2017-10-13-avioding-retain-cycles-in-iOS/allocation-tool.png" alt="Allocations tool." /></th>
+<th align="center"><img src="/images/blog/2017-10-13-avoiding-retain-cycles-in-iOS/allocation-tool.png" alt="Allocations tool." /></th>
 </tr>
 </thead>
 
@@ -214,18 +224,15 @@ The allocations tool is the one I’ve found most useful in the past for spottin
 </table>
 
 <p>In my example, I’m creating a retain cycle by having the parent view controller hold a strong reference to its child view controller. The child is also holding a strong reference to the parent. When the view controller’s UINavigationController’s stock ‘back’ button is pressed, it’s presented view controller is removed from the super view and should be deallocated. Since the root view controller is still hanging on to the strong reference to the child, the instance of <code>SecondViewController</code> will still be retained until the parent’s reference is removed.</p>
-
-<pre><code class="language-objective-c">SecondViewController *viewController = (SecondViewController *)segue.destinationViewController;
-viewController.retainedParent = self;
-self.retainedChild = viewController;
-</code></pre>
-
-<p>(Here is the simple storyboard we’re using for this example.)</p>
+<div class="highlight"><pre class="chroma"><code class="language-Objective-C" data-lang="Objective-C"><span class="n">SecondViewController</span> <span class="o">*</span><span class="n">viewController</span> <span class="o">=</span> <span class="p">(</span><span class="n">SecondViewController</span> <span class="o">*</span><span class="p">)</span><span class="n">segue</span><span class="p">.</span><span class="n">destinationViewController</span><span class="p">;</span>
+<span class="n">viewController</span><span class="p">.</span><span class="n">retainedParent</span> <span class="o">=</span> <span class="nb">self</span><span class="p">;</span>
+<span class="nb">self</span><span class="p">.</span><span class="n">retainedChild</span> <span class="o">=</span> <span class="n">viewController</span><span class="p">;</span></code></pre></div>
+<p>Here is the simple storyboard we’re using for this example:</p>
 
 <table>
 <thead>
 <tr>
-<th align="center"><img src="/images/blog/2017-10-13-avioding-retain-cycles-in-iOS/storyboard.png" alt="Storyboard" /></th>
+<th align="center"><img src="/images/blog/2017-10-13-avoiding-retain-cycles-in-iOS/storyboard.png" alt="Storyboard" /></th>
 </tr>
 </thead>
 
@@ -241,7 +248,7 @@ self.retainedChild = viewController;
 <table>
 <thead>
 <tr>
-<th align="center"><img src="/images/blog/2017-10-13-avioding-retain-cycles-in-iOS/vc-allocation.png" alt="SecondViewController allocation" /></th>
+<th align="center"><img src="/images/blog/2017-10-13-avoiding-retain-cycles-in-iOS/vc-allocation.png" alt="SecondViewController allocation" /></th>
 </tr>
 </thead>
 
@@ -257,7 +264,7 @@ self.retainedChild = viewController;
 <table>
 <thead>
 <tr>
-<th align="center"><img src="/images/blog/2017-10-13-avioding-retain-cycles-in-iOS/stack-trace.png" alt="Stack Trace" /></th>
+<th align="center"><img src="/images/blog/2017-10-13-avoiding-retain-cycles-in-iOS/stack-trace.png" alt="Stack Trace" /></th>
 </tr>
 </thead>
 
@@ -275,21 +282,18 @@ self.retainedChild = viewController;
 <p>Keeping an eye on references is especially important when using the common <code>delegate</code> pattern in iOS. Delegates should always be accessed through a weak reference.</p>
 
 <p>The other most common way to create a retain cycle in iOS is referencing <code>self</code> from within an anonymous function (‘block’). You commonly see these mistakes while using GCD, or one of the common callbacks in AFNetworking. You always need create a <code>__weak</code> reference before using <code>self</code> in a block that is owned by that same object. The code below will create a retain cycle.</p>
-
-<pre><code>// Will create retain cycle.
+<div class="highlight"><pre class="chroma"><code class="language-Objective-C" data-lang="Objective-C"><span class="c1">// Will create retain cycle.
+</span><span class="c1"></span>  
+<span class="n">dispatch_async</span><span class="p">(</span><span class="n">dispatch_get_main_queue</span><span class="p">(),</span> <span class="o">^</span><span class="p">{</span>
+    <span class="p">[</span><span class="nb">self</span> <span class="n">performAnAction</span><span class="p">];</span>
+<span class="p">});</span>
   
-dispatch_async(dispatch_get_main_queue(), ^{
-    [self performAnAction];
-});
-  
-// Will NOT create retain cycle.
-
-__weak ViewController *weakSelf = self;
-dispatch_async(dispatch_get_main_queue(), ^{
-    [weakSelf performAnAction];
-});
-</code></pre>
-
+<span class="c1">// Will NOT create retain cycle.
+</span><span class="c1"></span>
+<span class="k">__weak</span> <span class="n">ViewController</span> <span class="o">*</span><span class="n">weakSelf</span> <span class="o">=</span> <span class="nb">self</span><span class="p">;</span>
+<span class="n">dispatch_async</span><span class="p">(</span><span class="n">dispatch_get_main_queue</span><span class="p">(),</span> <span class="o">^</span><span class="p">{</span>
+    <span class="p">[</span><span class="n">weakSelf</span> <span class="n">performAnAction</span><span class="p">];</span>
+<span class="p">});</span></code></pre></div>
 <p>Sometimes things aren’t always so straightforward though. That’s why becoming familiar with the allocations tool can be a real lifesaver for debugging retain cycles.</p>
 
                     </article>
@@ -345,7 +349,6 @@ dispatch_async(dispatch_get_main_queue(), ^{
                     <li>
                         info@meshstudio.io
                     </li>
-
                 </ul>
             </div>
 
@@ -386,11 +389,7 @@ dispatch_async(dispatch_get_main_queue(), ^{
 
             
             <div class="col-12 col-md-4 offset-md-2  footer-list">
-                <h5>Latest Blog Post</h5>
                 
-                <a class="blog-title d-block" href="#">Mesh Open Source — Typescript React and Typescript Node Boilerplate</a>
-                <a class="blog-sub-title d-block pt-2" href="#">We start a lot of new software projects at Mesh. Whether we are kicking off a new project for a customer,
-                    or prototyping a new internal…</a>
             </div>
         </div>
     </div>
@@ -404,22 +403,9 @@ dispatch_async(dispatch_get_main_queue(), ^{
     crossorigin="anonymous"></script>
 
 
-<script src="/js/typeform.js"></script>
-
-
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-<script type='text/javascript'>
-    (function ($) {
-        window.fnames = new Array();
-        window.ftypes = new Array();
-        fnames[0] = 'EMAIL';
-        ftypes[0] = 'email';
-        fnames[1] = 'FNAME';
-        ftypes[1] = 'text';
-        fnames[2] = 'LNAME';
-        ftypes[2] = 'text';
-    }(jQuery));
-    var $mcj = jQuery.noConflict(true);
-</script>
+<script src="/js/typeform.js"></script>
+<script src="/js/mailchimp.js"></script>
+
 
 </html>

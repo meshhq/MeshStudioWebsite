@@ -4,7 +4,7 @@ sub_title: Setting up Docker Compose for your TypeScript application.
 tags: []
 date: 2018-01-29
 publishdate: 2018-01-29
-hero_image: /images/blog/2018-01-29-docker-compose-and-typescript/docker-compose-hero.png
+hero_image: /images/blog/2018-01-29-docker-compose-and-typescript/hero.png
 author:
   name: Reid Weber
   url: https://medium.com/@reidweber_34407
@@ -51,38 +51,38 @@ The most important function of the `docker-compose.yml` is to define what the co
 
 Below we’ll go line by line and explain the reason for each key-value pairing.
 
-`version: "3"`
+> `version: "3"`
 
 This line defines which version of Compose we want to use. "3" is the most recent release so we’ll be using that.
 
-`services:`
+> `services:`
 
 This line is the key for the “array” that will hold all of the different docker images we’re including in the final application. Each of these services will end up being its own running container inside our application. We’re using the web key for the container that will be running our server. After the web: key you can add any amount of other services you want. In this example we only have one other service — postgres.
 
-`web:`
+> `web:`
 
 This defines all the details for our main web application (in this case it’s just a Node server). In here we’ll define the build directory, an entry point run command, the ports we’re mapping from the container to the local machine, the other containers we’re listing as dependencies, and any ENV variables we want to set. We’ll go into greater detail for each of these below.
 
-`build: .`
+> `build: .`
 
 The build key tells docker-compose that it needs to build the image that will be used for the web service. The path supplied to the build parameter tells docker-compose where it should look for a Dockerfile from which to build the image. In this case, we are telling docker-compose that our Dockerfile is in the current directory.
 
-`command: gulp`
+> `command: gulp`
 
 This will override the default CMD defined in the image’s Dockerfile. For our app we’re going to run gulp since we’ve built our gulpfile to handle the transpile functionality as well as get the server running.
 
-`ports:`
+> `ports:`
 
 This is the mapping from the container’s internal port to the external port the consumer will be listening on. In our case, the server is using 8080 and the container is exposing 3000.
 
-`depends_on:`
+> `depends_on:`
 
-This is marking our posrgres service as a dependency for our web container.
+This is marking our postgres service as a dependency for our web container.
 postgres:
 
 Here we’re defining our second service (container). You can name the service key whatever you want. In this case just make sure this name matches the name you’re using under depends_on.
 
-`image:`
+> `image:`
 
 This is the image our service will use to create its container.
 

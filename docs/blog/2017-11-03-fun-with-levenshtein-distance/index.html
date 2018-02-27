@@ -13,9 +13,9 @@
     <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<meta property="og:title" content=" Leveling Up Health Savings Accounts &middot;  Mesh Studio" />
+<meta property="og:title" content=" Fun with Levenshtein Distance &middot;  Mesh Studio" />
 <meta property="og:site_name" content="Mesh Studio" />
-<meta property="og:url" content="https://meshstudio.io/work/lively/" />
+<meta property="og:url" content="https://meshstudio.io/blog/2017-11-03-fun-with-levenshtein-distance/" />
 
 
 <meta name="twitter:card" content="summary_large_image">
@@ -30,19 +30,13 @@
 
   <meta property="og:type" content="article" />
 
-<meta property="og:article:published_time" content="2018-02-01T15:35:36-08:00" />
+<meta property="og:article:published_time" content="2017-11-03T00:00:00Z" />
 
-
-<meta property="og:article:tag" content="Node" />
-
-<meta property="og:article:tag" content="API" />
-
-<meta property="og:article:tag" content="Integrations" />
 
 
 
 <title>
- Leveling Up Health Savings Accounts &middot;  Mesh Studio
+ Fun with Levenshtein Distance &middot;  Mesh Studio
 </title>
 
 <meta name="description" content="We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products." />
@@ -85,7 +79,7 @@
     
     <meta name="generator" content="Hugo 0.36.1" />
 
-    <link rel="canonical" href="https://meshstudio.io/work/lively/" />
+    <link rel="canonical" href="https://meshstudio.io/blog/2017-11-03-fun-with-levenshtein-distance/" />
 
     
     <script>
@@ -125,7 +119,7 @@
                     
                      
                     
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="/work/">Work</a>
                     </li>
                     
@@ -141,7 +135,7 @@
                         <a class="nav-link" href="https://mesh.workable.com/">Join Us</a>
                     </li>
                     
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="/blog/">Blog</a>
                     </li>
                     
@@ -159,58 +153,118 @@
     <main id="content" class="content" role="main">
 
         
-<div class="case-study">
+
+<div class="blog-post">
     <div class="hero">
         <div class="container">
-            <div class="col-12 col-md-8 offset-md-2">
-                <p class="case-study-header">Case Study</p>
-                <p class="case-study-title">Leveling Up Health Savings Accounts</p>
-                <p class="case-study-sub-title">How Mesh Studios Helped Lively Build A New Integration To Their HSA Platform</p>
+            <div class="row d-flex flex-row align-items-center justify-content-center">
+                <div class="row justify-content-center hero-title-block">
+    <div class="col-12">
+        <div class="d-flex justify-content-center">
+            <h2>Fun with Levenshtein Distance</h2>
+        </div>
+    </div>
+    <div class="col-12 mt-2">
+        <div class="d-flex justify-content-center">
+            <h3>Measure the similarity between two strings!</h3>
+        </div>
+    </div>
+</div>
             </div>
         </div>
     </div>
 
     <div class="primary-section">
         <div class="hero-container d-flex justify-content-center">
-            <div class="hero-wrapper">
-                <img class="img-fluid" src="/images/caseStudies/lively/lively-hero.png" />
-            </div>
+            <img class="img-fluid" src="/images/blog/2017-11-3-fun-with-levenshtein-distance/hero.png" />
         </div>
-
+        
         <div class="container post-container">
-            
-            <div class="row case-study-content-row">
-                <div class="col-12 col-md-8 offset-md-2">
+                    
+            <div class="row blog-meta-row">
+                <div class="col-12 col-sm-12 col-lg-8 offset-lg-2">
+                    <header class="meta-header d-flex flex-row align-items-center">
+                        <div class="author-picture mr-3">
+                            <a class="founder-twitter ml-2 mb-5" href="https://medium.com/@reidweber_34407">
+                                <img class="img-fluid author-pic rounded-circle" src="https://avatars2.githubusercontent.com/u/8824846?s=460&amp;v=4" />
+                            </a>
+                        </div>
+                        <div class="author-meta">
+                            <p class="post-meta author-name">Reid Weber</p>
+                            <p class="post-meta post-date">Nov 3 | 2 min read</p>
+                            <p class="post-meta post-words">400 Words</p>
+                        </div>
+                    </header>
+                </div>
+            </div>
+            <div class="row blog-content-row">
+                <div class="col-12 col-sm-12 col-lg-8 offset-lg-2">
                     <article class="post">
                         
 
-<p>Lively is a software company that helps employers offer a modern Health Savings Account (HSA) to their employees. Their product streamlines the process of setting-up an HSA and offers a convenient dashboard to manage and administer the benefit. Lively also helps employees take full advantage of their HSA by allowing them to invest the money that they contribute into the account.</p>
+<h2 id="fun-with-levenshtein-distance">Fun with Levenshtein Distance</h2>
 
-<p>“Our goal is to facilitate and optimize how individuals save for healthcare expenses.”</p>
+<p>The <a href="https://people.cs.pitt.edu/~kirk/cs1501/Pruhs/Spring2006/assignments/editdistance/Levenshtein%20Distance.htm">Levenshtein Distance</a> is a clever way to calculate how similar two strings are to each other. Every character that differs between two words will count against the two words’ ‘score’. The lower that ‘score’ the more similar the two words are to each other. So comparing a word to itself will yield a ‘score’ of 0, while two four letter words that have no common characters will yield a ‘score’ of 4.</p>
 
-<p>The company was founded in the summer of 2016 by Shobin Uralil and Alex Cyriac. They have raised $4.2MM in venture funding and participated in the Winter 2017 class of YCombinator.</p>
+<p>An easy way to visualize Levenshtein Distance is to build a matrix comparing the two words.</p>
 
-<h2 id="problem">Problem</h2>
+<table>
+<thead>
+<tr>
+<th align="center"><img src="/images/blog/2017-11-3-fun-with-levenshtein-distance/string-example.png" alt="Example comparing 'Mesh' and 'Tests'" /></th>
+</tr>
+</thead>
 
-<p>Lively is able to grow its customer base and improve its product through strategic partnerships. These partnerships will often require complex integrations between Lively’s platform and their partner’s business systems.</p>
+<tbody>
+<tr>
+<td align="center">First word ‘Mesh’. Second word ‘Tests’. The &lsquo;Distance&rsquo; between the words is 3.</td>
+</tr>
+</tbody>
+</table>
 
-<p>One particular partner integration in the fall of 2017 had a tight timeline for implementation. Internal engineering resources were scarce, as Lively&rsquo;s engineering team focused on building features and functionality for their core product.</p>
+<p>You compare the letters at each index and add 1 to its ‘score’ each time the characters don’t match. Anytime one of the words is longer than the other, another point is added (for example Mesh vs. Testing would have a score of 5 instead of 3).</p>
 
-<p>It was important to get the integration done in time for open enrollment (which is typically a very busy time in the industry).</p>
+<p>In Javascript:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">word1</span> <span class="o">=</span> <span class="s1">&#39;mesh&#39;</span>
+<span class="k">const</span> <span class="nx">word2</span> <span class="o">=</span> <span class="s1">&#39;tests&#39;</span>
 
-<h2 id="solution">Solution</h2>
+<span class="kd">function</span> <span class="nx">levenshteinDistance</span> <span class="p">(</span><span class="nx">firstWord</span><span class="p">,</span> <span class="nx">secondWord</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">const</span> <span class="nx">firstArray</span> <span class="o">=</span> <span class="nx">firstWord</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+	<span class="k">const</span> <span class="nx">secondArray</span> <span class="o">=</span> <span class="nx">secondWord</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+	<span class="kd">let</span> <span class="nx">score</span> <span class="o">=</span> <span class="mi">0</span>
 
-<p>The Lively leadership team decided to look for external help to develop the cloud integration. This development partner would need to get up to speed on Lively&rsquo;s code base quickly, understand the business requirements, and deliver on a deadline. Mesh was asked to architect and implement the cloud integration on behalf of Lively.</p>
+	<span class="k">const</span> <span class="nx">firstLength</span> <span class="o">=</span> <span class="nx">firstArray</span><span class="p">.</span><span class="nx">length</span>
+	<span class="k">const</span> <span class="nx">secondLength</span> <span class="o">=</span> <span class="nx">secondArray</span><span class="p">.</span><span class="nx">length</span>
 
-<h2 id="execution">Execution</h2>
+	<span class="k">if</span> <span class="p">(</span><span class="nx">firstLength</span> <span class="o">&gt;=</span> <span class="nx">secondLength</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">score</span> <span class="o">+=</span> <span class="p">(</span><span class="nx">firstLength</span> <span class="o">-</span> <span class="nx">secondLength</span><span class="p">)</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		<span class="nx">score</span> <span class="o">+=</span> <span class="p">(</span><span class="nx">secondLength</span> <span class="o">-</span> <span class="nx">firstLength</span><span class="p">)</span>
+	<span class="p">}</span>
 
-<p>We began the engagement by working directly with Lively’s CTO, Chris Mather, to get up to speed on Lively’s existing application and business logic. We then worked closely with the Lively engineering team and their partner to architect the integration. After several planning sessions, we determined the appropriate implementation approach and were ready to start writing software.</p>
+	<span class="k">const</span> <span class="nx">shorterWord</span> <span class="o">=</span> <span class="p">(</span><span class="nx">firstLength</span> <span class="o">&gt;=</span> <span class="nx">secondLength</span><span class="p">)</span> <span class="o">?</span> <span class="nx">secondLength</span> <span class="o">:</span> <span class="nx">firstLength</span>
 
-<p>Over the course of 6 weeks, we built several software components needed to complete the integration. This included a HTTP client that could pull data from the partners API, and persistence logic that allows the Lively application to store partner data. We also developed a comprehensive automated test suite to validate the new functionality.</p>
+	<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">shorterWord</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="kd">let</span> <span class="nx">firstChar</span>
+		<span class="kd">let</span> <span class="nx">secondChar</span>
+		<span class="k">if</span> <span class="p">(</span><span class="nx">firstLength</span> <span class="o">&gt;=</span> <span class="nx">secondLength</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">firstChar</span> <span class="o">=</span> <span class="nx">firstArray</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+			<span class="nx">secondChar</span> <span class="o">=</span> <span class="nx">secondArray</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+			<span class="nx">firstChar</span> <span class="o">=</span> <span class="nx">secondArray</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+			<span class="nx">secondChar</span> <span class="o">=</span> <span class="nx">firstArray</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+		<span class="p">}</span>
+		<span class="k">if</span> <span class="p">(</span><span class="nx">firstChar</span> <span class="o">!=</span> <span class="nx">secondChar</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">score</span><span class="o">++</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Levenshtein Distance: &#39;</span><span class="p">,</span> <span class="nx">score</span><span class="p">)</span>
+<span class="p">}</span>
 
-<h2 id="results">Results</h2>
+<span class="nx">levenshteinDistance</span><span class="p">(</span><span class="nx">word1</span><span class="p">,</span> <span class="nx">word2</span><span class="p">)</span></code></pre></div>
+<p>So now you’re asking, “When would I use this?”. First, there’s almost certainly some sort of derivative of a Levenshtein counter in every autocorrect tool ever made. Aside from that, use your imagination to think of ways it could be used in trivia games, text adventures, language/speech recognition, and even AI. Being able to account for human error in typing and speaking can create a much more fluid and immersive UX.</p>
 
-<p>The project was delivered on time and on budget. Lively enabled the partner integration for their customers in time for the end of the year which was a significant milestone. Lively’s core engineers were able to stay focused on building their product, while Mesh was able to complete the integration on their behalf.</p>
+<p>The function above can get far more complex depending on how ‘smart’ you want you system to be. You can start comparing adjacent characters, syllables, parts of speech, and working point values into each of them depending on what your system values. Go wild with Levenshtein 🚀🙌</p>
 
                     </article>
                 </div>
