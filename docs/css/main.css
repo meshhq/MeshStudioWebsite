@@ -152,7 +152,7 @@ a:hover {
 
 /* Article (Blog/CaseStudy) Font */
 
-/* HelveticaNueue way easier to read in paragraphs (print) */
+/* Helvetica Neue way easier to read in paragraphs (print) */
 
 article {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -196,14 +196,21 @@ article .highlight pre {
 }
 
 article a {
-    color: #666;
     font-weight: 400;
+}
+
+article.post a {
+    text-decoration: underline;
+}
+
+article.post h4 a {
+    font-weight: 500;
 }
 
 article blockquote {
     font-style: italic;
-    padding: 0em 1.5em;
-    border-left: 1px solid #ccc;
+    padding: 0em 0.75em;
+    border-left: 3px solid rgba(0,0,0,.84);
     font-size: 18px;
 }
 
@@ -212,8 +219,9 @@ article ol {
     font-weight: 400;
 }
 
-article a:hover {
+article.post a:hover {
     color: var(--mesh-blue);
+    text-decoration: underline;
 }
 
 article img,
@@ -225,7 +233,7 @@ article table img {
 
 article blockquote,
 article p {
-    font-size: 21px;
+    font-size: 18px;
 }
 
 blockquote {
@@ -1282,7 +1290,7 @@ footer .nav-link {
 
 .work .primary-section .products .case-study-card,
 .work .primary-section .products .product-shot {
-    marign: 0;
+    margin: 0;
     width: 100%;
 }
 
@@ -1292,7 +1300,6 @@ footer .nav-link {
 
 .work .primary-section .product-shot img {
     box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
-    ;
 }
 
 .work .products .row {
@@ -1742,16 +1749,42 @@ footer .nav-link {
     box-shadow: none;
 }
 
+.blog .primary-section .blog-info-column #mc_embed_signup_scroll .signup-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.blog .primary-section .blog-info-column #mc_embed_signup_scroll .signup-input input {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: 0px;
+    width: 80%;
+}
+
+.blog .primary-section .blog-info-column #mc_embed_signup_scroll .signup-input button {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 .blog .primary-section .blog-info-column #mc_embed_signup_scroll #mce-EMAIL {
     color: var(--mesh-dk-blue);
 }
 
-.blog .primary-section .blog-info-column #mc_embed_signup_scroll .mce_inline_error {
+.blog .primary-section .blog-info-column #mc_embed_signup_scroll input.mce_inline_error {
+    border-color: #F64C4C;
+}
+
+.blog .primary-section .blog-info-column #mc_embed_signup_scroll .signup-input + .mce_inline_error {
     background-color: none;
     background: none;
     text-align: left;
-    color: #F64C4C;
     padding-left: 0px;
+    color: #F64C4C;
 }
 
 .blog .primary-section .blog-info-column #mc_embed_signup_scroll #mce-error-response a {
@@ -1887,9 +1920,11 @@ footer .nav-link {
 
 .blog-post table th {
     text-align: center;
+    align-content: center;
 }
 
 .blog-post table td {
+    align-content: center;
     color: #212529;
     font-weight: 300;
     font-size: 1.0em;

@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://meshstudio.io/blog/2018-01-29-docker-compose-and-typescript/</loc>
+    <lastmod>2018-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://meshstudio.io/blog/2018-01-15-spectre/</loc>
     <lastmod>2018-01-29T00:00:00+00:00</lastmod>
   </url>
@@ -38,8 +43,23 @@
   </url>
   
   <url>
+    <loc>https://meshstudio.io/blog/2017-12-13-intro-to-docker-with-typescript/</loc>
+    <lastmod>2017-12-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://meshstudio.io/blog/2017-11-06-serving-html-with-golang/</loc>
     <lastmod>2017-11-06T10:09:12-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://meshstudio.io/blog/2017-11-03-fun-with-levenshtein-distance/</loc>
+    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://meshstudio.io/blog/2017-10-13-avoiding-retain-cycles-in-ios/</loc>
+    <lastmod>2017-10-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -94,6 +114,12 @@
   </url>
   
   <url>
+    <loc>https://meshstudio.io/tags/cloud-service/</loc>
+    <lastmod>2017-12-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://meshstudio.io/tags/continuous-integration/</loc>
     <lastmod>2018-01-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -102,6 +128,12 @@
   <url>
     <loc>https://meshstudio.io/tags/cryptocurrency/</loc>
     <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://meshstudio.io/tags/docker/</loc>
+    <lastmod>2017-12-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -188,6 +220,12 @@
   </url>
   
   <url>
+    <loc>https://meshstudio.io/tags/servers/</loc>
+    <lastmod>2017-12-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://meshstudio.io/services/</loc>
   </url>
   
@@ -199,6 +237,18 @@
   <url>
     <loc>https://meshstudio.io/tags/</loc>
     <lastmod>2018-02-01T15:35:36-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://meshstudio.io/tags/tutorial/</loc>
+    <lastmod>2017-12-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://meshstudio.io/tags/typescript/</loc>
+    <lastmod>2017-12-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -33,6 +33,15 @@ Problem August’s connected products are controlled with a smartphone through a
     </item>
     
     <item>
+      <title>Docker Compose and TypeScript</title>
+      <link>https://meshstudio.io/blog/2018-01-29-docker-compose-and-typescript/</link>
+      <pubDate>Mon, 29 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-01-29-docker-compose-and-typescript/</guid>
+      <description>Docker Compose and Typescript These days, it’s easy for web applications to quickly balloon with dependencies and third party libraries. Managing your applications within a team can be a real headache when you start running into versioning issues, db configuration issues, local machine compatibility issues, etc&amp;hellip; Docker Compose can help a lot with these issues — along with giving you a much cleaner way to get your app up and running.</description>
+    </item>
+    
+    <item>
       <title>Spectre Explained</title>
       <link>https://meshstudio.io/blog/2018-01-15-spectre/</link>
       <pubDate>Mon, 29 Jan 2018 00:00:00 +0000</pubDate>
@@ -82,12 +91,41 @@ The above proved to be true for me when I first learned about Continuous Integra
     </item>
     
     <item>
+      <title>Intro to Docker with TypeScript</title>
+      <link>https://meshstudio.io/blog/2017-12-13-intro-to-docker-with-typescript/</link>
+      <pubDate>Wed, 13 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2017-12-13-intro-to-docker-with-typescript/</guid>
+      <description>Intro to Docker with TypeScript Over the past few years Docker has emerged as one of the most efficient ways to manage and deploy cloud-based web applications☁️ 💻 . While containers have been around since 2008, Docker helped them go mainstream, fueling the Virtual Machine vs. Container argument.
+What are Docker Containers? (and why should I care?) In short, a container is an operating system agnostic environment that hosts a fully functional application.</description>
+    </item>
+    
+    <item>
       <title>Serving HTML with Golang</title>
       <link>https://meshstudio.io/blog/2017-11-06-serving-html-with-golang/</link>
       <pubDate>Mon, 06 Nov 2017 10:09:12 -0800</pubDate>
       
       <guid>https://meshstudio.io/blog/2017-11-06-serving-html-with-golang/</guid>
       <description>Building your next web app with Go! Here at Mesh, we like to keep up-to-date with the latest trends in software development; often trying out various programming languages and frameworks. One of the languages that we like to use is Go. We appreciate that Go is strongly-typed, is opinionated about formatting, and is strict about keeping the structure of programs simple. It is also quite a versatile language, so in this post we will explore how it can be used to create an HTML server using gorilla/mux, jteeuwen/go-bindata, and html/template.</description>
+    </item>
+    
+    <item>
+      <title>Fun with Levenshtein Distance</title>
+      <link>https://meshstudio.io/blog/2017-11-03-fun-with-levenshtein-distance/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2017-11-03-fun-with-levenshtein-distance/</guid>
+      <description>Fun with Levenshtein Distance The Levenshtein Distance is a clever way to calculate how similar two strings are to each other. Every character that differs between two words will count against the two words’ ‘score’. The lower that ‘score’ the more similar the two words are to each other. So comparing a word to itself will yield a ‘score’ of 0, while two four letter words that have no common characters will yield a ‘score’ of 4.</description>
+    </item>
+    
+    <item>
+      <title>Avoiding Retain Cycles in iOS</title>
+      <link>https://meshstudio.io/blog/2017-10-13-avoiding-retain-cycles-in-ios/</link>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2017-10-13-avoiding-retain-cycles-in-ios/</guid>
+      <description>Retain cycles can be easily overlooked in the post ARC (automatic reference counting) world of iOS. They can quickly balloon out of control and crash your app with very cryptic crash logs if you don’t know how to catch them.
+For those who may not be familiar, retain cycles are when two objects hold strong references to each other. Objects are only deallocated when they are not being held by strong references, so two objects that are referencing each other will never be deallocated.</description>
     </item>
     
     <item>
