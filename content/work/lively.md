@@ -4,9 +4,9 @@ sub_title: How Mesh Studios Helped Lively Build A New Integration To Their HSA P
 tags: ["Node", "API", "Integrations"]
 date: 2018-02-01T15:35:36-08:00
 publishdate: 2018-02-01T15:35:36-08:00
-logo: /images/caseStudies/lively-vector.svg
+logo: /images/caseStudies/lively/lively-vector.svg
 logo_max_height: 30
-hero_image: /images/caseStudies/lively-hero.png
+hero_image: /images/caseStudies/lively/lively-hero.png
 ---
 
 Lively is a software company that helps employers offer a modern Health Savings Account (HSA) to their employees. Their product streamlines the process of setting-up an HSA and offers a convenient dashboard to manage and administer the benefit. Lively also helps employees take full advantage of their HSA by allowing them to invest the money that they contribute into the account. 

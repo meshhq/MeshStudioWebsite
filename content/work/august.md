@@ -4,9 +4,9 @@ sub_title: August had perfected access to their hardware, but it was time to ope
 tags: ["Mobile", "SDK", "Integrations"]
 date: 2018-02-01T12:21:35-08:00
 publishdate: 2018-02-01T12:21:35-08:00
-logo: /images/caseStudies/august-vector.svg
+logo: /images/caseStudies/august/august-vector.svg
 logo_max_height: 35
-hero_image: /images/caseStudies/august-hero.png
+hero_image: /images/caseStudies/august/august-hero.png
 ---
 
 [August Home](http://august.com/) is the brainchild of famed industrial designer [Yves Behar](https://twitter.com/yvesbehar) and [Jason Johnson](https://twitter.com/jcjohnson). Founded in 2013, the company designs and manufactures beautiful, connected home security products. August’s product lineup has grown to include connected locks, doorbells, and cameras.

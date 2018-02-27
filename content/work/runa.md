@@ -4,7 +4,7 @@ sub_title: Mesh Helped Runa Bring Modern Payroll To Latin America
 tags: ["React", "web development"]
 date: 2018-01-01
 publishdate: 2019-01-01
-logo: /images/caseStudies/runa-vector.svg
+logo: /images/caseStudies/runa/runa-vector.svg
 logo_max_height: 45
 hero_image: /images/caseStudies/staples-hero.png
 ---

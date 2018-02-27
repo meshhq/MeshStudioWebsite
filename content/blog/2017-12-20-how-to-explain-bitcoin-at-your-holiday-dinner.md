@@ -4,7 +4,7 @@ sub_title: "Making sense of Bitcoin and the blockchain"
 tags: ["Bitcoin", "Cryptocurrency", "Blockchain", "Ethereum", "Fintech"]
 date: 2017-12-20
 publishdate: 2017-12-20
-hero_image: /images/blog/2017-12-20-how-to-explain-bitcoin-at-your-holiday-dinner/bitcoin-hero.jpg
+hero_image: /images/blog/2017-12-20-how-to-explain-bitcoin-at-your-holiday-dinner/hero.jpg
 author:
   name: "John Daly"
   url: "http://johnmcdaly.com/"

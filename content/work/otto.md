@@ -4,9 +4,9 @@ sub_title: Mesh helped Otto modernize its cloud infrastructure and security.
 tags: ["AWS", "Infrastructure", "Security"]
 date: 2017-04-23
 publishdate: 2017-04-23
-logo: /images/caseStudies/otto-vector.svg
+logo: /images/caseStudies/otto/otto-vector.svg
 logo_max_height: 30
-hero_image: /images/caseStudies/otto-hero.png
+hero_image: /images/caseStudies/otto/otto-hero.png
 ---
 
 Founded in 2014 by serial entrepreneur [Sam Jadallah](https://www.linkedin.com/in/samjadallah/), [Otto](https://meetotto.com/) manufactures the future of ‘smart locks.’ Sam saw an opportunity to redefine home access and build a category-defining product. He felt that “a digital locking system was necessary to replace the antiquated and shockingly insecure physical key system of today.” 

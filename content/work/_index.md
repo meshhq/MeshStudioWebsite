@@ -15,18 +15,18 @@ products:
     - title: Standup
       product_color: 4A90E2
       sub_title: Automated and painless standup reports for your whole team.
-      product_image: /images/products/standupShot.png
-      logo: /images/products/standup-vector.svg
+      product_image: /images/products/standup/standupShot.png
+      logo: /images/products/standup/standup-vector.svg
       logo_max_height: 35
-      tags: ["innovation", "security"]
+      tags: ["productivity"]
       link: https://getstandup.com
     - title: Grokk
       product_color: 347AB7
       sub_title: User testing for developer products
-      product_image: /images/products/grokkShot.png
-      logo: /images/products/grokk-vector.svg
+      product_image: /images/products/grokk/grokkShot.png
+      logo: /images/products/grokk/grokk-vector.svg
       logo_max_height: 35
-      tags: ["innovation", "security"]
+      tags: ["user testing", "documentation"]
       link: https://grokk.io
 ---
 
