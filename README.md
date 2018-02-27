@@ -25,7 +25,7 @@ The resulting site will be located at `http://localhost:1313`. Hugo server comes
 
 ## Deployment
 
-We use Github Pages to host the site, with Cloudfare handling the reverse proxy responsibilities.
+We use Github Pages to host the site, with Cloudflare handling the reverse proxy responsibilities.
 
 ### Building the site prior to pushing
 For your changes to be reflected, you need to rebuild the site prior to pushing up your changes. To rebuild the production site, run:
@@ -44,13 +44,13 @@ There should never be any content embedded directly in the HTML. All content for
 
 ### Site Pages
 
-A site page is considered one of the main naviagatable pages (e.g. `/blog` or `/services`). The content for these pages is derrived from the `_index.md` file in the respective folder in the `/content` directory.
+A site page is considered one of the main navigable pages (e.g. `/blog` or `/services`). The content for these pages is derived from the `_index.md` file in the respective folder in the `/content` directory.
 
 For example, the `/services` page's content can be found in `/content/services/_index.md`
 
 ### Case Studies
 
-A case study is an overview of our engagment with a client. The content for these pages is sourced from the name of the casestudy (e.g. `staples.md`), which can be found in the  `/content/work` directory.
+A case study is an overview of our engagement with a client. The content for these pages is sourced from the name of the case study (e.g. `staples.md`), which can be found in the  `/content/work` directory.
 
 #### How to create a new case study
 

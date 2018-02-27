@@ -152,7 +152,7 @@ a:hover {
 
 /* Article (Blog/CaseStudy) Font */
 
-/* HelveticaNueue way easier to read in paragraphs (print) */
+/* Helvetica Neue way easier to read in paragraphs (print) */
 
 article {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -196,7 +196,7 @@ article .highlight pre {
 }
 
 article a {
-    color: #666;
+    text-decoration: underline;
     font-weight: 400;
 }
 
@@ -214,6 +214,7 @@ article ol {
 
 article a:hover {
     color: var(--mesh-blue);
+    text-decoration: underline;
 }
 
 article img,
@@ -1282,7 +1283,7 @@ footer .nav-link {
 
 .work .primary-section .products .case-study-card,
 .work .primary-section .products .product-shot {
-    marign: 0;
+    margin: 0;
     width: 100%;
 }
 
@@ -1292,7 +1293,6 @@ footer .nav-link {
 
 .work .primary-section .product-shot img {
     box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
-    ;
 }
 
 .work .products .row {
