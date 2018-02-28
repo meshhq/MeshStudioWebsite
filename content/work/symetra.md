@@ -10,7 +10,7 @@ hero_image: /images/caseStudies/symetra/symetra-hero.png
 ---
 Founded in 1957 as a subsidiary of [Safeco Insurance](https://www.safeco.com), [Symetra Financial Corporation](https://www.symetra.com/) offers a suite of insurance, benefit, and retirement products to consumers in the United States. Through a nationwide network of financial institutions, broker-dealers, independent agents, advisors, and benefits consultants, the company serves over 2 million customers and has over $42 billion in assets under management.
 
-As of 2/2016 Symetra is wholly owned subsidiary of [Sumitomo Life](https://en.wikipedia.org/wiki/Sumitomo_Life) in Japan and is headquartered in [Bellevue, Washington](https://en.wikipedia.org/wiki/Bellevue,_Washington).
+As of February 2016 Symetra is wholly owned subsidiary of [Sumitomo Life](https://en.wikipedia.org/wiki/Sumitomo_Life) in Japan and is headquartered in [Bellevue, Washington](https://en.wikipedia.org/wiki/Bellevue,_Washington).
 
 ## The Problem
 
