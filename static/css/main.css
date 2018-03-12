@@ -287,6 +287,11 @@ blockquote p cite a:hover {
     }
 }
 
+/* List Styling */
+article ol {
+    font-size: 18px;
+}
+
 /* Code Highlighting Theme */
 
 /* Background */
