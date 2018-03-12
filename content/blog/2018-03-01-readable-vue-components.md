@@ -1,10 +1,10 @@
 ---
-title: "Readable Components in Vue.js"
-sub_title: ""
+title: "Writing Better Components in Vue.js"
+sub_title: "Scalable, readable, and maintainable"
 tags: ["JavaScript", "WebApp", "Vue"]
 date: 2018-03-01T12:56:33-08:00
 publishdate: 2018-03-01T12:56:33-08:00
-hero_image: ""
+hero_image: "/images/blog/2018-03-01-readable-vue-components/hero.png"
 author:
   name: "John Daly"
   url: "http://johnmcdaly.com/"
@@ -12,7 +12,7 @@ author:
   avatar: "https://avatars2.githubusercontent.com/u/1719443?s=460&v=4"
 ---
 
-## Building easy to maintain Vue Components!
+## Pros and Cons of Vue.js
 
 When starting a new project, you want to get things up and running as quickly as possible. While modern JavaScript advancements have made things a lot easier on developers, they have also increased the complexity of getting things going. Every developer who has worked with Webpack knows what I am talking about; Webpack is a great example of a very powerful tool that has an incredibly steep learning curve, even for doing basic things. Fortunately there is a solution for those who want to go fast: `Vue` and `vue-cli`.
 
