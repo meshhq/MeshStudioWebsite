@@ -14,9 +14,9 @@ author:
 
 ## Pros and Cons of Vue.js
 
-When starting a new project, you want to get things up and running as quickly as possible. While modern JavaScript advancements have made things a lot easier on developers, they have also increased the complexity of getting things going. Every developer who has worked with Webpack knows what I am talking about; Webpack is a great example of a very powerful tool that has an incredibly steep learning curve, even for doing basic things. Fortunately there is a solution for those who want to go fast: `Vue` and `vue-cli`.
+When starting a new project, you want to get things up and running as quickly as possible. While modern JavaScript advancements have made things a lot easier on developers, they have also increased the complexity of getting things going. Every developer who has worked with Webpack knows what I am talking about; Webpack is a great example of a very powerful tool that has an incredibly steep learning curve, even for doing basic things. Fortunately there is a solution for those who want to go fast: [Vue](https://vuejs.org) and [vue-cli](https://github.com/vuejs/vue-cli).
 
-I don't think I have come across a solution that so easily gets you up and on your way to developing a modern JavaScript web application. The `vue-cli` frees you from the tedious initial Webpack configuration, and allows you to start writing application code right away. While this is great, I have found there to be some shortcomings to Vue itself; mainly that Vue code can be very messy and cluttered. Here is what the standard format for a .vue file looks like:
+I don't think I have come across a solution that so easily gets you up and on your way to developing a modern JavaScript web application. The `vue-cli` frees you from the tedious initial Webpack configuration, and allows you to start writing application code right away. While this is great, I have found there to be some shortcomings to Vue itself; mainly that Vue code can be very messy and cluttered. Here is what the standard format for a `.vue` file looks like:
 
 ```html
 <template>
@@ -34,18 +34,18 @@ I don't think I have come across a solution that so easily gets you up and on yo
 
 The HTML, JavaScript code, and CSS are all located in one single file. While this is okay for small components, and you could argue that it promotes keeping things simple and breaking big components into many smaller components, I find that it can easily result in monolithic files which are hard to read and difficult for others to maintain.
 
-The official Vue documentation promotes this style as the way to write Vue code. Honestly, I think that this would prove to be a potential deal breaker for me if I was deciding between using React or Vue for a larger web app. Fortunately though, there is a way to separate the three pieces of the .vue file into their own files, leading to code that is easier to read and maintain.
+I find that this style is the most commonly used way to write Vue code, being used in official examples and in most Vue projects I have come across. Honestly, I think that this would prove to be a potential deal breaker for me if I was deciding between using React or Vue for a larger web app. Fortunately though, there is a way to separate the three pieces of the .vue file into their own files, leading to code that is easier to read and maintain.
 
 ## Lets Build a Vue App
 
 To see how easy `vue-cli` makes things for us, lets start from scratch:
 
-1. Download the `vue-cli`
+### 1. Download the `vue-cli`
 ```
 npm install -g @vue/cli
 ```
 
-2. Create your project with `vue-cli`
+### 2. Create your project with `vue-cli`
 ```
 vue init webpack <project-name-here>
 ```
@@ -53,7 +53,7 @@ This command will lead you through a step-by-step process to configure your proj
 ```
 ? Project name readable-vue-components
 ? Project description A Vue.js project
-? Author John Daly <john@meshstudio.io>
+? Author John Daly <my email here>
 ? Vue build standalone
 ? Install vue-router? Yes
 ? Use ESLint to lint your code? Yes
@@ -64,14 +64,14 @@ This command will lead you through a step-by-step process to configure your proj
 ? Should we run `npm install` for you after the project has been created? (recommended) npm
 ```
 
-Congratulations, you have successfully set up your project! One last thing before we start building components, we are going to install Buefy, a great UI package for Vue:
+Congratulations, you have successfully set up your project! One last thing before we start building components, we are going to install [Buefy](https://buefy.github.io/), a great UI package for Vue:
 
-3. Install Buefy
+### 3. Install Buefy
 ```
 npm install --save-dev buefy
 ```
 
-4. Adding Buefy to the Project
+### 4. Adding Buefy to the Project
 
 Go into `src/main.js` and add the following imports:
 
@@ -110,6 +110,30 @@ new Vue({
 })
 ```
 
+### 5. Update the Router
+
+Go into `src/router/index.js` and update it to look as follows:
+
+```javascript
+import Vue from 'vue'
+import Router from 'vue-router'
+import CheckList from '@/components/Checklist/Checklist'
+
+Vue.use(Router)
+
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'Checklist',
+      component: Checklist
+    }
+  ]
+})
+```
+
+We are now ready to start building the `Checklist` and `ChecklistItem` components!
+
 ## Building the Components
 
 We will be building a simple todo list app, which will have the following functionality:
@@ -119,16 +143,16 @@ We will be building a simple todo list app, which will have the following functi
 3. Edit items on the list
 4. Check off items on the list
 
-### CheckList Component
+### Checklist Component
 
-Let's start by adding a new folder to hold our components. Create a folder called `CheckList` in `src/components` and put the following files inside of it:
+Let's start by adding a new folder to hold our components. Create a folder called `Checklist` in `src/components` and put the following files inside of it:
 
-1. CheckList.vue
+1. Checklist.vue
 2. template.html
 3. script.js
 4. style.css
 
-Next, we will hook up the `template`, `script`, and `style` files in the `CheckList` file:
+Next, we will hook up the `template`, `script`, and `style` files in the `Checklist` file:
 
 ```html
 <template src='./template.html'/>
@@ -149,6 +173,73 @@ Here is what we are going to want our Checklist to look like:
 <--  Checklist Items  -->
 ```
 
+We can quickly tackle these piece by piece:
+
+##### Header
+
+This will be simple, just a standard `<h1>` title:
+
+```html
+<h1>Checklist</h1>
+```
+
+##### New Item Input
+
+Next we want a text input, with a button to confirm the value:
+
+```html
+<b-field>
+  <b-input
+    v-model='newItem'
+    expanded
+    @keyup.native.enter='addItem'
+  />
+  <p class='control'>
+    <button
+      class='button is-primary'
+      @click='addItem'
+    >
+      Add
+    </button>
+  </p>
+</b-field>
+
+<!-- We want a divider to be rendered if we have any items in the Checklist -->
+<hr v-show='checklistItems.length > 0'/>
+```
+
+##### Checklist Items
+
+Finally, we want the Checklist to be filled with ChecklistItem components.
+We will be building this component later, but we will add this here now.
+
+```html
+<ChecklistItem 
+  v-for='item in checklistItems' 
+  :key='item.key'
+  :itemTitle='item.title'
+  :indexKey='item.key'
+/>
+```
+
+##### Finished Template
+
+To wrap up this template, we will put each of those pieces in the following set of divs:
+
+```html
+<div class='container is-fluid'>
+  <div class='section'>
+    <div class='checklist-box'>
+      <!-- Header -->
+      <!-- New Item Input -->
+      <!-- Checklist Items -->
+    </div>
+  </div>
+</div>
+```
+
+Your template file should now look like this:
+
 ```html
 <div class='container is-fluid'>
   <div class='section'>
@@ -164,7 +255,10 @@ Here is what we are going to want our Checklist to look like:
           @keyup.native.enter='addItem'
         />
         <p class='control'>
-          <button class='button is-primary' @click='addItem'>
+          <button
+            class='button is-primary'
+            @click='addItem'
+          >
             Add
           </button>
         </p>
@@ -184,17 +278,123 @@ Here is what we are going to want our Checklist to look like:
 </div>
 ```
 
-We will be adding the `ChecklistItem` component later, so don't worry about it for now.
-
 #### Writing the Script
 
+##### Name
+The name of the component will be `Checklist`:
+
 ```javascript
-import CheckListItem from './CheckListItem/CheckListItem'
+const name = 'Checklist'
+```
+
+##### Components
+The `Checklist` component is going to render many `ChecklistItem` components as new items are added.
+We need to import the `ChecklistItem` component and register it as a component of `Checklist`:
+
+```javascript
+// Put this at top of file
+import ChecklistItem from './ChecklistItem/ChecklistItem'
+
+const components = {
+  ChecklistItem
+}
+```
+
+##### Props
+We won't need any props for this component
+
+##### Data
+According to our template, we will only need two properties in our data object:
+- The description of a new item to add (newItem)
+- A list, holding properties of the ChecklistItem components that will be in the Checklist
+
+```javascript
+const data = function () {
+  return {
+    checklistItems: [],
+    newItem: ''
+  }
+}
+```
+
+##### Methods
+The methods we will need for this component are simple add/deleteItem operations
+
+###### addItem
+addItem will create a new object, which holds information that will be used by the `ChecklistItem`
+component, and push it into the `checklistItems` list.
+
+```javascript
+const addItem = function () {
+  let key = 0
+  const numItems = this.checklistItems.length
+  if (numItems !== 0) {
+    // In an effort to keep the key of an item unique in the 
+    // set we will set the new item's key to be equal to the 
+    // latest item's key, plus 1
+    key = this.checklistItems[numItems - 1].key + 1
+  }
+
+  // Add the newItem information to the checklistItems list
+  this.checklistItems.push({ key, title: this.newItem })
+
+  // Reset the newItem value
+  this.newItem = ''
+}
+```
+
+###### deleteItem
+deleteItem will take a `key`, and will remove the entry from `checklistItems` that has that key.
+
+```javascript
+const deleteItem = function (indexKey) {
+  // Loop through the checklistItems list
+  for (let i = 0; i < this.checklistItems.length; i++) {
+    // Check the current element to see if we have a key match
+    if (this.checklistItems[i].key === indexKey) {
+      // Splice the matching element out of the
+      // list and break from the loop
+      this.checklistItems.splice(i, 1)
+      break
+    }
+  }
+}
+```
+
+##### Exporting the script
+With the script logic written, we need to export it in the same way you export in a standard Vue file:
+
+```javascript
+export default {
+  name,
+  components,
+  props: {},
+  data,
+  computed: {},
+  methods: {
+    addItem,
+    deleteItem
+  }
+}
+```
+
+##### Finishing the Script
+Here is what the finished script file should look like:
+
+```javascript
+import ChecklistItem from './ChecklistItem/ChecklistItem'
 
 // ==================
 // NAME
 // ==================
 const name = 'Checklist'
+
+// ==================
+// Components
+// ==================
+const components = {
+  ChecklistItem
+}
 
 // ==================
 // PROPS
@@ -246,9 +446,7 @@ const deleteItem = function (indexKey) {
 
 export default {
   name,
-  components: {
-    'ChecklistItem': CheckListItem
-  },
+  components,
   props: {},
   data,
   computed: {},
@@ -260,6 +458,8 @@ export default {
 ```
 
 #### Writing the CSS
+Our styling for this component is going to be simple, we want it to be held in a div
+that is centered, has a rounded border, a bit of box-shadow, and some padding:
 
 ```css
 .checklist-box {
@@ -273,16 +473,16 @@ export default {
 }
 ```
 
-### CheckListItem Component
+### ChecklistItem Component
 
-The CheckListItem component will be the individual listings that appear within the CheckList. We will start by creating a new folder `CheckListItem` within our existing `CheckList` folder. As before, we will add the following 4 files:
+The ChecklistItem component will be the individual listings that appear within the Checklist. We will start by creating a new folder `ChecklistItem` within our existing `Checklist` folder. As before, we will add the following 4 files:
 
 1. CheckListItem.vue
 2. template.html
 3. script.js
 4. style.css
 
-Matching the way we made the `CheckList` component, the `CheckListItem.vue` file will look like this:
+Matching the way we made the `Checklist` component, the `ChecklistItem.vue` file will look like this:
 
 ```html
 <template src='./template.html'/>
@@ -304,8 +504,72 @@ Here is a breakdown of what makes up this component:
 
 - A) Checkbox to mark an item as being finished
 - B) Text field that includes a description of the item, it will be possible for user's to edit this field
-- C) Button to remove the item from the CheckList
+- C) Button to remove the item from the Checklist
 
+##### Item Finished Checkbox
+We just need a simple checkbox that is bound to a data value of the component:
+
+```html
+<b-checkbox v-model='itemChecked'/>
+```
+
+##### Item Description Text
+This will be a text span that will hold the description of the item:
+
+```html
+<span
+  class='item-static'
+  :class="{'item-checked': itemChecked}"
+  v-show='!editingItem'
+  @dblclick='editItem'
+>
+  {{itemTitleDone}}
+</span>
+```
+
+A few things to take note of here:
+
+- We are conditionally adding a class called 'item-checked' if the value of `itemChecked` is true
+- We are only rendering this text span if `editingItem` is false; aka don't show this text if the item is being edited
+- When the text span is double clicked, we are calling the `editItem` function
+
+##### Edit Item Description Input
+We will need a way to allow for an item's text to be edited, for that we will add a text input field:
+
+```html
+<!-- Edit Item Description Input -->
+<b-input
+  v-model='itemTitleEdit'
+  v-show='editingItem'
+  :disabled='itemChecked'
+  @blur='doneEdit'
+  @keyup.native.enter='doneEdit'
+  @keyup.native.esc='cancelEdit'
+  expanded
+/>
+```
+
+Things to note:
+
+- We only show this field when `editingItem` is true. In tandem with the logic of the text span, the input will seamlessly appear when the user double-clicks the text field
+- The input is disabled if `itemChecked` is true
+- The input will call `doneEdit` if the user presses enter, or clicks somewhere outside of the input
+- The input will call `cancelEdit` if the user presses esc
+
+##### Delete Item Button
+The last thing we will need for this template is a button to remove the item from the `Checklist`
+
+```html
+<!-- Delete Item Button -->
+<p class='control'>
+  <button class='button is-danger' @click='deleteItem'>
+    <b-icon icon='close'/>
+  </button>
+</p>
+```
+
+##### Finalizing
+To finish the template, we will wrap all those pieces into a `<b-field>` tag
 
 ```html
 <b-field>
@@ -330,7 +594,8 @@ Here is a breakdown of what makes up this component:
     @blur="doneEdit"
     @keyup.native.enter="doneEdit"
     @keyup.native.esc="cancelEdit"
-    expanded/>
+    expanded
+  />
 
   <!-- Delete Item Button -->
   <p class='control'>
@@ -342,6 +607,112 @@ Here is a breakdown of what makes up this component:
 ```
 
 #### Writing the Script
+
+##### Name
+The name of the component will be `Checklist`:
+
+```javascript
+const name = 'ChecklistItem'
+```
+
+##### Components
+We don't have any components to register for this component.
+
+##### Props
+The `ChecklistItem` component requires two props, which we get from the `checklistItems` list in the `Checklist` component.
+
+```javascript
+const props = {
+  indexKey: { type: Number, required: true },
+  itemTitle: { type: String, required: true }
+}
+```
+
+##### Data
+According to our template, we will need four properties in our data object:
+- Whether or not the current item is checked
+- Whether or not the current item is being edited
+- The description of an item to show in the text span
+- The description of an item to show in the edit item input field
+
+```javascript
+const data = function () {
+  return {
+    itemChecked: false,
+    editingItem: false,
+    itemTitleDone: this.itemTitle,
+    itemTitleEdit: this.itemTitle
+  }
+}
+```
+
+##### Methods
+The methods we will need for this component are operations to edit item, confirm edit, cancel edit, and delete item.
+
+###### editItem
+editItem will set the value of `editingItem` to true if the item hasn't already been checked.
+
+```javascript
+const editItem = function () {
+  if (!this.itemChecked) {
+    this.editingItem = true
+  }
+}
+```
+
+##### cancelItem
+cancelItem will revert the item back to its previous description and hides the editing input field.
+
+```javascript
+const cancelEdit = function () {
+  this.editingItem = false
+  this.itemTitleEdit = this.itemTitleDone
+}
+```
+
+##### doneEdit
+doneEdit will confirm the edited changes, and will set the text value of the span to be equal to those
+changes. If the value that is entered is blank, then the item will be deleted.
+
+```javascript
+const doneEdit = function () {
+  this.itemTitleDone = this.itemTitleEdit
+  this.editingItem = false
+  if (this.itemTitleDone === '') {
+    this.deleteItem()
+  }
+}
+```
+
+##### deleteItem
+deleteItem will delete the item from the parent `Checklist` component.
+
+```javascript
+const deleteItem = function () {
+  this.$parent.deleteItem(this.indexKey)
+}
+```
+
+##### Exporting the script
+With the script logic written, we need to export it in the same way you export in a standard Vue file:
+
+```javascript
+export default {
+  name,
+  components: {},
+  props,
+  data,
+  computed: {},
+  methods: {
+    editItem,
+    cancelEdit,
+    doneEdit,
+    deleteItem
+  }
+}
+```
+
+##### Finishing the Script
 
 ```javascript
 // ==================
@@ -410,7 +781,7 @@ const doneEdit = function () {
 }
 
 /**
- * Deletes the item from the parent CheckList component
+ * Deletes the item from the parent Checklist component
  */
 const deleteItem = function () {
   this.$parent.deleteItem(this.indexKey)
@@ -432,6 +803,9 @@ export default {
 ```
 
 #### Writing the CSS
+Like the `Checklist` component, we will be keeping the styling simple here. We want the text span of the item to expand to fill the empty space within its container, and we want to give it a border to make the transition between editing and non-editing modes more seamless.
+
+We also want to create a rule for the `item-checked` class, to put a line through the text of the completed item in the `Checklist`
 
 ```css
 .item-static {
@@ -452,7 +826,9 @@ export default {
 
 ## Lets Compare
 
-This is what the `CheckList.vue` file would look like if you
+Alright, our components are in place and 
+
+This is what the `Checklist.vue` file would look like if you
 followed the format specified in the official Vue documentation.
 
 ```html
@@ -492,11 +868,11 @@ followed the format specified in the official Vue documentation.
 </template>
 
 <script>
-import CheckListItem from '@/components/CheckList/CheckListItem/CheckListItem'
+import ChecklistItem from '@/components/Checklist/ChecklistItem/ChecklistItem'
 export default {
-  name: 'CheckList',
+  name: 'Checklist',
   components: {
-    'CheckListItem': CheckListItem
+    'ChecklistItem': ChecklistItem
   },
   props: {},
   data () {
@@ -540,7 +916,7 @@ export default {
 </style>
 ```
 
-and here is the `CheckListItem.vue` file with the same standard format:
+and here is the `ChecklistItem.vue` file with the same standard format:
 
 ```html
 <template>
@@ -573,7 +949,7 @@ and here is the `CheckListItem.vue` file with the same standard format:
 
 <script>
 export default {
-  name: 'CheckListItem',
+  name: 'ChecklistItem',
   props: {
     indexKey: { type: Number, required: true },
     itemTitle: { type: String, required: true}
