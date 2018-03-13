@@ -390,7 +390,7 @@ import ChecklistItem from './ChecklistItem/ChecklistItem'
 const name = 'Checklist'
 
 // ==================
-// Components
+// COMPONENTS
 // ==================
 const components = {
   ChecklistItem
@@ -399,6 +399,7 @@ const components = {
 // ==================
 // PROPS
 // ==================
+const props = {}
 
 // ================
 // DATA
@@ -413,14 +414,15 @@ const data = function () {
 // ================
 // COMPUTED
 // ================
+const computed = {}
 
 // =================
 // METHODS
 // =================
 
 /**
- * Creates a new item from the form values, and pushes 
- * it into the checklistItems list
+ * Creates a new item from the value of newItem
+ * and pushes it into the checklistItems list
  */
 const addItem = function () {
   let key = 0
@@ -447,9 +449,9 @@ const deleteItem = function (indexKey) {
 export default {
   name,
   components,
-  props: {},
+  props,
   data,
-  computed: {},
+  computed,
   methods: {
     addItem,
     deleteItem
@@ -477,7 +479,7 @@ that is centered, has a rounded border, a bit of box-shadow, and some padding:
 
 The ChecklistItem component will be the individual listings that appear within the Checklist. We will start by creating a new folder `ChecklistItem` within our existing `Checklist` folder. As before, we will add the following 4 files:
 
-1. CheckListItem.vue
+1. ChecklistItem.vue
 2. template.html
 3. script.js
 4. style.css
@@ -721,6 +723,11 @@ export default {
 const name = 'ChecklistItem'
 
 // ==================
+// COMPONENTS
+// ==================
+const components = {}
+
+// ==================
 // PROPS
 // ==================
 const props = {
@@ -743,6 +750,7 @@ const data = function () {
 // ================
 // COMPUTED
 // ================
+const computed = {}
 
 // =================
 // METHODS
@@ -789,9 +797,10 @@ const deleteItem = function () {
 
 export default {
   name,
+  components,
   props,
   data,
-  computed: {},
+  computed,
   methods: {
     editItem,
     cancelEdit,
@@ -799,7 +808,6 @@ export default {
     deleteItem
   }
 }
-
 ```
 
 #### Writing the CSS
