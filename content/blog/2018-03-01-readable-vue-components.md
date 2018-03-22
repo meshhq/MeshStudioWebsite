@@ -32,9 +32,9 @@ I don't think I have come across a solution that so easily gets you up and on yo
 </style>
 ```
 
-The HTML, JavaScript code, and CSS are all located in one single file. While this is okay for small components, and you could argue that it promotes keeping things simple and breaking big components into many smaller components, I find that it can easily result in monolithic files which are hard to read and difficult for others to maintain.
+The HTML, JavaScript, and CSS are all located in one single file. While this is okay for small components, and you could argue that it promotes keeping things simple and breaking big components into many smaller components, I find that it can easily result in monolithic files which are hard to read and difficult for others to maintain.
 
-I find that this style is the most commonly used way to write Vue code, being used in official examples and in most Vue projects I have come across. Honestly, I think that this would prove to be a potential deal breaker for me if I was deciding between using React or Vue for a larger web app. Fortunately though, there is a way to separate the three pieces of the .vue file into their own files, leading to code that is easier to read and maintain.
+I also find that this style is the most commonly used way to write Vue code, being used in official examples and in most Vue projects I have come across. Honestly, this would prove to be a potential deal breaker for me if I was deciding between using React or Vue for a larger web app. Fortunately though, there is a way to separate the three pieces of the .vue file into their own files, leading to code that is easier to read and maintain.
 
 ## Lets Build a Vue App
 
@@ -163,6 +163,7 @@ Next, we will hook up the `template`, `script`, and `style` files in the `Checkl
 Now we can focus on the individual pieces that make up the `.vue` file, rather than having them all crammed in the same file!
 
 #### Building the Template
+Lets open up our `src/components/Checklist/template.html` file and get started.
 
 Here is what we are going to want our Checklist to look like:
 
@@ -279,6 +280,7 @@ Your template file should now look like this:
 ```
 
 #### Writing the Script
+Next, we will open up our JavaScript file at `src/components/Checklist/script.js`.
 
 ##### Name
 The name of the component will be `Checklist`:
@@ -460,6 +462,8 @@ export default {
 ```
 
 #### Writing the CSS
+Finally we will add some styling for our component with the `src/components/Checklist/style.css` file.
+
 Our styling for this component is going to be simple, we want it to be held in a div
 that is centered, has a rounded border, a bit of box-shadow, and some padding:
 
@@ -493,6 +497,7 @@ Matching the way we made the `Checklist` component, the `ChecklistItem.vue` file
 ```
 
 #### Building the Template
+First, open the template file located at `src/components/Checklist/ChecklistItem/template.html`.
 
 For our template, we want an item to look like this:
 ```
@@ -609,6 +614,7 @@ To finish the template, we will wrap all those pieces into a `<b-field>` tag
 ```
 
 #### Writing the Script
+Next, we will work on the JavaScript file located at `src/components/Checklist/ChecklistItem/script.js`.
 
 ##### Name
 The name of the component will be `Checklist`:
@@ -811,6 +817,8 @@ export default {
 ```
 
 #### Writing the CSS
+Finally, we will add a bit of styling in the `src/components/Checklist/ChecklistItem/style.css` file.
+
 Like the `Checklist` component, we will be keeping the styling simple here. We want the text span of the item to expand to fill the empty space within its container, and we want to give it a border to make the transition between editing and non-editing modes more seamless.
 
 We also want to create a rule for the `item-checked` class, to put a line through the text of the completed item in the `Checklist`
