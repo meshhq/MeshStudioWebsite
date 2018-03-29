@@ -14,13 +14,11 @@ author:
 
 ## Lock Down Your AWS Security With 5 Easy Steps
 
-For the practically paranoid, improving the security of your AWS infrastructure be an ever-changing goal to strive towards. Large organizations understand this reality. That’s why they employ entire teams that are dedicated to continually reviewing and auditing their cloud security infrastructure.
+For the practically paranoid, improving the security of your AWS infrastructure should be an ever-changing goal to strive towards. Large organizations understand this reality. That’s why they employ entire teams that are dedicated to continually reviewing and auditing their cloud security infrastructure.
 
-For us startups, however, we’re focused on trying to run our company and this security stuff is just another thing to think about. That said, there are some quick and easy improvements we implement for all our customers that dramatically improve their hosting security.
+For us startups, however, we’re focused on trying to run our company; this security stuff is just another thing to think about. That said, there are some quick and easy improvements we implement for all our customers that dramatically improve their hosting security.
 
-In this post, I’ll provide 5 quick and easy steps that any company hosted on AWS should take to improve the security of their infrastructure. 
-
-If you have an AWS account
+In this post, I’ll provide 5 quick and easy steps that any company hosted on AWS should take to improve the security of their infrastructure.
 
 ### 1. Properly Configure IAM
 [IAM](https://aws.amazon.com/iam/) is a beast with many facets, which is probably why many shy away from getting deep into it. You don’t need to though, adhering to the following will get you 99% of the way there:
@@ -36,7 +34,7 @@ Even though this may seem obvious to some, I have to call it out because we see 
 
 Treat this new account like it is your primary account, and get in the habit of creating new accounts for your employees, contractors, friends, butler, etc. in this manner. IAM allows you to effectively manage access from a bird's-eye view for all of your critical resources. 
 
->Tip: Never, ever, assign someone's account more permissions than they need. This makes your life easier when you know who explicitly has access to what.
+>Tip: Never, ever, assign someone's account more permissions than they need. It will make your life easier when you know who explicitly has access to what.
 
 Disclaimer: Policies can be a bit of a pain. Here's a [good link](https://start.jcolemorrison.com/aws-iam-policies-in-a-nutshell/) for some help.
 
@@ -60,7 +58,7 @@ When you hand out those new IAM Access/Secret Keys we created in step #1, you ho
 AWS-Vault helps by forcing a user to enter credentials only once, but enables you to use them whenever needed. It has great support for 2FA and makes rotation a breeze. It really makes life easier on everyone.
 
 ### 4. Turn on Cloud Trail
-This is a simple thing to do that will keep a record of all access to your AWS instances. It takes next to no time and will be vital in the event of a breach. Easy guide can be [found here](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-a-trail-using-the-console-first-time.html)
+This is a simple thing to do that will keep a record of all access to your AWS instances. It takes next to no time and will be vital in the event of a breach. A quick start guide can be found [here](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-a-trail-using-the-console-first-time.html)
 
 Once enabled, Cloud Watch will record all incoming requests into your account and deliver them within 15 minutes to an S3 bucket. It will also include API calls made by other high-level services (CloudFormation, OpsWorks, Beanstalk) into your resources. 
 
@@ -78,7 +76,7 @@ Since every EC2 instance you launch has SSH enabled out of the box, restricting 
 
 Once you have SSH'd into the bastion host, you can SSH directly into other instances using their private IP addresses. Other than SSH'ing, you may want to inspect a database or [Redis](https://redis.io/) from the command line. Setting up a bastion host just gives you a safer place to do these things rather than exposing multiple EC2 instances, or even worse, exposing services like RDS to the broader internet. 
 
-If you want to go the extra mile, use [public and private subnets](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html) to restrict which resources can even be allowed to access the internet. Leveraging private subnets will help you determine which resources exposed to being accessed.
+If you want to go the extra mile, use [public and private subnets](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html) to restrict which resources can even be allowed to access the internet.
 
 ### Anything else?
 
@@ -87,4 +85,4 @@ If you want to go the extra mile, use [public and private subnets](https://docs.
 
 - [Security Monkey](https://github.com/Netflix/security_monkey) is a really great and interesting project by Netflix. It can attach to your AWS or GCP instance to give you feedback on your current cloud security picture and track it with ongoing monitoring. Another really cool feature they rolled out is a GitHub integration that monitors your organization.
 
-- Export your security settings with [this script](https://www.slideshare.net/AmazonWebServices/intrusion-detection-in-the-cloud-sec402-aws-reinvent-2013). There is the [great talk in 2013](https://www.slideshare.net/AmazonWebServices/intrusion-detection-in-the-cloud-sec402-aws-reinvent-2013) on intrusion detection. It covers some of the points in this post, but also some great insight on how to protect against and detect intrusion.
+- Export your security settings with [this script](https://www.slideshare.net/AmazonWebServices/intrusion-detection-in-the-cloud-sec402-aws-reinvent-2013). There is a [great talk from AWS re:Invent 2013](https://www.slideshare.net/AmazonWebServices/intrusion-detection-in-the-cloud-sec402-aws-reinvent-2013) on intrusion detection. It covers some of the points in this post, but also some great insight on how to protect against and detect intrusion.
