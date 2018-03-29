@@ -6,10 +6,19 @@
     <description>Recent content in Webapp on Mesh Studio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Nov 2017 10:09:12 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 01 Mar 2018 12:56:33 -0800</lastBuildDate>
     
 	<atom:link href="https://meshstudio.io/tags/webapp/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Writing Better Components in Vue.js</title>
+      <link>https://meshstudio.io/blog/2018-03-01-readable-vue-components/</link>
+      <pubDate>Thu, 01 Mar 2018 12:56:33 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-03-01-readable-vue-components/</guid>
+      <description>Pros and Cons of Vue.js When starting a new project, you want to get things up and running as quickly as possible. While modern JavaScript advancements have made things a lot easier on developers, they have also increased the complexity of getting things going. Every developer who has worked with Webpack knows what I am talking about; Webpack is a great example of a very powerful tool that has an incredibly steep learning curve, even for doing basic things.</description>
+    </item>
     
     <item>
       <title>Serving HTML with Golang</title>

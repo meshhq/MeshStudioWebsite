@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Speed on Mesh Studio</title>
+    <link>https://meshstudio.io/tags/speed/</link>
+    <description>Recent content in Speed on Mesh Studio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://meshstudio.io/tags/speed/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>5 Practical Steps to Shipping Better Software, Faster</title>
+      <link>https://meshstudio.io/blog/2018-03-22-five-practical-tips-for-shipping-software-faster/</link>
+      <pubDate>Thu, 22 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-03-22-five-practical-tips-for-shipping-software-faster/</guid>
+      <description>5 Practical Steps to Shipping Better Software, Faster All software development teams are unique. They are made up of developers, project managers, quality assurance testers, and designers of vary skill sets and seniority levels.
+Despite the differences in their makeup, all of these teams share a common objective: to ship high-quality software products, fast.
+In reality, the overwhelming majority of software development teams are not able to perform at this high of a level.</description>
+    </item>
+    
+  </channel>
+</rss>
