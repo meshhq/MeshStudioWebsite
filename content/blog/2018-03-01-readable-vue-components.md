@@ -36,6 +36,8 @@ The HTML, JavaScript, and CSS are all located in one single file. While this is 
 
 I also find that this style is the most commonly used way to write Vue code, being used in official examples and in most Vue projects I have come across. Honestly, this would prove to be a potential deal breaker for me if I was deciding between using React or Vue for a larger web app. Fortunately though, there is a way to separate the three pieces of the .vue file into their own files, leading to code that is easier to read and maintain.
 
+The source code for this project can be found [here](https://github.com/meshhq/readable-vue-components).
+
 ## Lets Build a Vue App
 
 To see how easy `vue-cli` makes things for us, lets start from scratch:
