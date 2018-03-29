@@ -6,10 +6,30 @@
     <description>Recent content in Ship Better Software, Faster on Mesh Studio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://meshstudio.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>5 Practical Steps to Shipping Better Software, Faster</title>
+      <link>https://meshstudio.io/blog/2018-03-22-five-practical-tips-for-shipping-software-faster/</link>
+      <pubDate>Thu, 22 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-03-22-five-practical-tips-for-shipping-software-faster/</guid>
+      <description>5 Practical Steps to Shipping Better Software, Faster All software development teams are unique. They are made up of developers, project managers, quality assurance testers, and designers of vary skill sets and seniority levels.
+Despite the differences in their makeup, all of these teams share a common objective: to ship high-quality software products, fast.
+In reality, the overwhelming majority of software development teams are not able to perform at this high of a level.</description>
+    </item>
+    
+    <item>
+      <title>Writing Better Components in Vue.js</title>
+      <link>https://meshstudio.io/blog/2018-03-01-readable-vue-components/</link>
+      <pubDate>Thu, 01 Mar 2018 12:56:33 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-03-01-readable-vue-components/</guid>
+      <description>Pros and Cons of Vue.js When starting a new project, you want to get things up and running as quickly as possible. While modern JavaScript advancements have made things a lot easier on developers, they have also increased the complexity of getting things going. Every developer who has worked with Webpack knows what I am talking about; Webpack is a great example of a very powerful tool that has an incredibly steep learning curve, even for doing basic things.</description>
+    </item>
     
     <item>
       <title>API Strategy for an Insurance Giant</title>
