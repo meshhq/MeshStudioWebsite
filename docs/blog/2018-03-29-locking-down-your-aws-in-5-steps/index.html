@@ -13,9 +13,9 @@
     <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<meta property="og:title" content=" Session Tokens &middot;  Mesh Studio" />
+<meta property="og:title" content=" Lock Down Your AWS Security With 5 Easy Steps &middot;  Mesh Studio" />
 <meta property="og:site_name" content="Mesh Studio" />
-<meta property="og:url" content="https://meshstudio.io/blog/2018-01-10-session-tokens/" />
+<meta property="og:url" content="https://meshstudio.io/blog/2018-03-29-locking-down-your-aws-in-5-steps/" />
 
 
 <meta name="twitter:card" content="summary_large_image">
@@ -30,15 +30,19 @@
 
   <meta property="og:type" content="article" />
 
-<meta property="og:article:published_time" content="2018-01-24T00:00:00Z" />
+<meta property="og:article:published_time" content="2018-03-29T00:00:00Z" />
 
 
-<meta property="og:article:tag" content="security" />
+<meta property="og:article:tag" content="cloud" />
+
+<meta property="og:article:tag" content="aws" />
+
+<meta property="og:article:tag" content="infrastructure" />
 
 
 
 <title>
- Session Tokens &middot;  Mesh Studio
+ Lock Down Your AWS Security With 5 Easy Steps &middot;  Mesh Studio
 </title>
 
 <meta name="description" content="We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products." />
@@ -81,7 +85,7 @@
     
     <meta name="generator" content="Hugo 0.37.1" />
 
-    <link rel="canonical" href="https://meshstudio.io/blog/2018-01-10-session-tokens/" />
+    <link rel="canonical" href="https://meshstudio.io/blog/2018-03-29-locking-down-your-aws-in-5-steps/" />
 
 </head>
 <body class="nav-closed">
@@ -150,12 +154,12 @@
                 <div class="row justify-content-center hero-title-block">
     <div class="col-12">
         <div class="d-flex justify-content-center">
-            <h2>Session Tokens</h2>
+            <h2>Lock Down Your AWS Security With 5 Easy Steps</h2>
         </div>
     </div>
     <div class="col-12 mt-2">
         <div class="d-flex justify-content-center">
-            <h3>A deep-dive into what session tokens are, and what you need to be aware of when implementing them.</h3>
+            <h3>AWS security doesn&#39;t have to be hard.</h3>
         </div>
     </div>
 </div>
@@ -165,7 +169,7 @@
 
     <div class="primary-section">
         <div class="hero-container d-flex justify-content-center">
-            <img class="img-fluid" src="/images/blog/2018-01-10-session-tokens/hero.png" />
+            <img class="img-fluid" src="/images/blog/2018-03-29-locking-down-your-aws-in-5-steps/hero.jpg" />
         </div>
         
         <div class="container post-container">
@@ -180,8 +184,8 @@
                         </div>
                         <div class="author-meta">
                             <p class="post-meta author-name">Taylor Halliday</p>
-                            <p class="post-meta post-date">Jan 24 | 5 min read</p>
-                            <p class="post-meta post-words">900 Words</p>
+                            <p class="post-meta post-date">Mar 29 | 7 min read</p>
+                            <p class="post-meta post-words">1400 Words</p>
                         </div>
                     </header>
                 </div>
@@ -191,53 +195,111 @@
                     <article class="post">
                         
 
-<h3 id="session-tokens">Session Tokens</h3>
+<h2 id="lock-down-your-aws-security-with-5-easy-steps">Lock Down Your AWS Security With 5 Easy Steps</h2>
 
-<p>Authentication and session management are two areas almost all developers have to deal with repeatedly throughout their career. It’s common for us to reach for a well tested open-source library to bolt onto our app, and that’s a good thing since security logic is one of those things you want a lot of eyes on. But as everything in programming, it helps to know the underlying logic behind the tools we use.</p>
+<p>For the practically paranoid, improving the security of your AWS infrastructure be an ever-changing goal to strive towards. Large organizations understand this reality. That’s why they employ entire teams that are dedicated to continually reviewing and auditing their cloud security infrastructure.</p>
 
-<p>Authentication is the process of verifying you are who you say you are. When you enter a username/password to Facebook/bank/etc, you attempt to validate your identity - that process is called authentication. All you’re doing here is (attempting) to prove you are the same person who signed up for XYZ service in the first place. There’s plenty of articles on authentication methods (username/password, OAuth, social logins, etc), so we’re going to look at what happens after you’ve accomplished the authentication step - Session Management.</p>
+<p>For us startups, however, we’re focused on trying to run our company and this security stuff is just another thing to think about. That said, there are some quick and easy improvements we implement for all our customers that dramatically improve their hosting security.</p>
 
-<p>Session management is the process of keeping track of who you are after you’ve authenticated. For security and practical considerations, it’s generally not a good idea to hand over your authentication credentials every time you wish to access a protected resource.</p>
+<p>In this post, I’ll provide 5 quick and easy steps that any company hosted on AWS should take to improve the security of their infrastructure.</p>
 
-<p>By way of example, I had the opportunity to visit the pentagon a few years back. When I arrived, the front desk spent 30+ min validating (authenticating) that I was a US citizen and was scheduled to be on a tour. After that process they gave me a badge (session token), which was continuously checked by security guards as I moved to different places in the building. Same practice holds true for most secure buildings - hospitals, exclusive events, overly concerned corporate offices, etc.</p>
+<p>If you have an AWS account</p>
 
-<p>This is also the same song/dance that all websites, apps, and servers follow, but, what makes a good session token and why does it matter? Session tokens need to follow a few principles to be considered secure. Let’s look at the major pieces:</p>
+<h3 id="1-properly-configure-iam">1. Properly Configure IAM</h3>
 
-<h4 id="meaningless-content">Meaningless Content</h4>
+<p><a href="https://aws.amazon.com/iam/">IAM</a> is a beast with many facets, which is probably why many shy away from getting deep into it. You don’t need to though, adhering to the following will get you 99% of the way there:</p>
 
-<p>Session tokens should NEVER contain any identifiable information about the user outside of the token itself. You gain nothing from this practice, and at a minimum expose breadcrumbs for an attack to recreate your token. Never do this.</p>
+<h4 id="enforce-mfa">Enforce MFA</h4>
 
-<h4 id="entropy-and-id-length">Entropy and ID Length</h4>
+<p>Short of memorizing and rotating long passwords with heavy <a href="http://whatis.techtarget.com/definition/password-entropy">entropy</a> (randomness), Multi-Factor Authentication (MFA) is simply the best tool people have come up with for assisting systems to verify authentication. Anyone can do this, all you need is a <a href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8">free</a> <a href="https://itunes.apple.com/us/app/authy/id494168017?mt=8">2FA</a> <a href="https://duo.com/product/trusted-users/two-factor-authentication/duo-mobile">App</a>, and to enforce 2FA with IAM. Here&rsquo;s a <a href="https://www.youtube.com/watch?time_continue=1&amp;v=MWJtuthUs0w">great, short video</a> that can walk you through it.</p>
 
-<p>Entropy is just a fancy way of saying that the token needs to be random…. Like really random. When you get into security, there’s differing levels of <a href="https://www.owasp.org/index.php/Insecure_Randomness">randomness</a>. The point is that session tokens can’t relate to any information about the user and need to be near impossible to guess. On top of randomness, keeping these strings sufficiently long with a large character set will make it robust.</p>
+<h5 id="gif-here-of-setting-up-mfa">Gif here of setting up mfa</h5>
 
-<h4 id="key-obscurity">Key Obscurity</h4>
+<h4 id="don-t-login-as-root-use-iam-accounts">Don’t login as root! Use IAM Accounts!</h4>
 
-<p>When we’re storing these tokens in a browser, or header, there’s no point in calling out what it’s there for. Don’t use keys that are obvious, such as “SESSION_TOKEN”, opt for something that doesn’t imply to an attacker that this is where they should be concentrating their efforts.</p>
+<p>Even though this may seem obvious to some, I have to call it out because we see it in the wild so much. If you haven&rsquo;t done so already, go to IAM and create an IAM user account to login with. You can assign full privileges if you like, but at least restricting logging in via an IAM profile will accomplish the following:</p>
 
-<h4 id="ephemerality-and-rotation">Ephemerality and Rotation</h4>
+<ul>
+<li>Allow you to <em>more</em> easily deal with canceling those credentials if they get compromised</li>
+<li>Restrict access to certain parts of AWS you don&rsquo;t need to use on a daily basis.</li>
+</ul>
 
-<p>If you’ve adhered to the points above, then your session tokens are truly meaningless outside of the association you make behind the scenes with the user profile. These tokens should be expired and recreated on a regular basis. Your app may have different needs, but 1-2 weeks is generally a good lifetime for a session token.</p>
+<p>Treat this new account like it is your primary account, and get in the habit of creating new accounts for your employees, contractors, friends, butler, etc. in this manner. IAM allows you to effectively manage access from a bird&rsquo;s-eye view for all of your critical resources.</p>
 
-<h3 id="common-attacks">Common Attacks</h3>
+<blockquote>
+<p>Tip: Never, ever, assign someone&rsquo;s account more permissions than they need. This makes your life easier when you know who explicitly has access to what.</p>
+</blockquote>
 
-<p>If you don’t implement sessions properly, you leave your app open to a few common attacks. It’s worth going through some to help reinforce the lessons from above:</p>
+<p>Disclaimer: Policies can be a bit of a pain. Here&rsquo;s a <a href="https://start.jcolemorrison.com/aws-iam-policies-in-a-nutshell/">good link</a> for some help.</p>
 
-<h4 id="man-in-the-middle-mim-https-www-owasp-org-index-php-man-in-the-middle-attack">Man in the Middle <a href="https://www.owasp.org/index.php/Man-in-the-middle_attack">MIM</a></h4>
+<h5 id="gif-here-of-setting-up-non-root-access">Gif here of setting up non-root access</h5>
 
-<p>A man in the middle attack is when the attacker has found some way to place themselves between your users and your app. The strongest way to prevent this is to require a recent version of TLS to be enforced for all communication, but they still can happen for various reasons. If you have a user who’s fallen victim to this attack, their session token will be leaked. Aggressive rotation of your session tokens will be the best defense outside of patching the MIM vulnerability itself.</p>
+<h4 id="use-iam-roles-for-resource-access-ec2">Use IAM Roles for Resource Access (EC2)</h4>
 
-<h4 id="cross-site-request-forgery-csrf-https-www-owasp-org-index-php-cross-site-request-forgery-csrf-and-cross-site-scripting-xss-https-www-owasp-org-index-php-cross-site-scripting-xss">Cross Site Request Forgery <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)">CSRF</a> and Cross Site Scripting <a href="https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)">XSS</a></h4>
+<p>If you have thing X in AWS that needs to talk to thing Y, do NOT issue them a new set of IAM credentials, and don’t ever use an existing access key / secret combo. Use [IAM roles]()! Assigning a specific IAM role for your resource alleviates the burden that comes with having to handle access keys securely. I promise this makes life easier. Here&rsquo;s an <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html">article</a> to help you get there.</p>
 
-<p>Like the MIM attack, CSRF allow an attacker to pose as one of your users and make ‘authenticated’ requests. XSS attacks involve running malicious javascript in the browser, which can lead to leaked client-side keys as well. Again, rotation of session tokens will be your best defense outside of patching those attacks themselves.</p>
+<h3 id="2-inspect-your-security-groups">2. Inspect Your Security Groups</h3>
 
-<h4 id="brute-force">Brute Force</h4>
+<p>Security groups are the best tool for defining access permissions in the cloud. They allow you to restrict access at the port level for every AWS resource through defining allowed ingress (incoming packets) and egress (outgoing packets). Security groups are basically easy to configure firewalls for your entire AWS setup.</p>
 
-<p>The last thing you want is an attacker to be able to be able to reconstruct one of these tokens, or infer how to alter one in such a way that they gain more privileged access. The recommendations on meaningless content and sufficient entropy guard against this attack.</p>
+<p>Like stale credentials through, security groups can fall victim to neglect. Despite best intentions, developers often leave gaping holes in the security groups due to:</p>
 
-<h2 id="it-s-not-all-that-scary">It’s not all that scary</h2>
+<ul>
+<li>Misconfiguration / misunderstanding of how they work</li>
+<li>Forgetting they &lsquo;temporarily&rsquo; altered one during the course of a setup or debug session</li>
+<li>Not targeting other security groups for ingress/egress</li>
+</ul>
 
-<p>Depending on your language / framework of choice, there are lots of libraries that supposedly do session tokens right. But, ultimately it’s up to you as the developer to deliver an application that meets the security needs of the project you’re working on. Knowing the ins and outs of session tokens and the motivations behind their features will better help you assess and implement the best security for your application.</p>
+<p>Luckily there are some cool tools out there to help you identify gaps in your setup. One of our favorite ones is <a href="https://github.com/nccgroup/Scout2">Scout2</a>. It&rsquo;s made by NCC group and does a good job of helping you understand the exposed ingress and egress in your setup.</p>
+
+<h5 id="gif-here-of-setting-up-scout2">Gif here of setting up Scout2</h5>
+
+<h3 id="3-aws-vault">3. AWS-Vault</h3>
+
+<p>When you hand out those new IAM Access/Secret Keys we created in step #1, you hope/pray/doubt that they are handled in a secure fashion. Make it easy on the recipients of those credentials and get them set up on <a href="https://github.com/99designs/aws-vault">AWS-Vault</a> from the folks at <a href="https://99designs.com/">99 Designs</a>.</p>
+
+<p>AWS-Vault helps by forcing a user to enter credentials only once, but enables you to use them whenever needed. It has great support for 2FA and makes rotation a breeze. It really makes life easier on everyone.</p>
+
+<h5 id="gif-here-of-setting-up-aws-vault">Gif here of setting up aws-vault</h5>
+
+<h3 id="4-turn-on-cloud-trail">4. Turn on Cloud Trail</h3>
+
+<p>This is a simple thing to do that will keep a record of all access to your AWS instances. It takes next to no time and will be vital in the event of a breach. Easy guide can be <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-a-trail-using-the-console-first-time.html">found here</a></p>
+
+<h5 id="gif-here-of-turning-on-cloud-watch">Gif here of turning on cloud watch</h5>
+
+<p>Once enabled, Cloud Watch will record all incoming requests into your account and deliver them within 15 minutes to an S3 bucket. It will also include API calls made by other high-level services (CloudFormation, OpsWorks, Beanstalk) into your resources.</p>
+
+<p>When you get &lsquo;hacked&rsquo;, the first thing your triage team will do is look for logs and pray you have extensive ones set up. Enabling this provides:
+- Who made the API call
+- When it was made
+- What was the API call
+- What resources were acted upon
+- Where it was made from</p>
+
+<h3 id="5-set-up-a-bastion-host">5. Set up a bastion host</h3>
+
+<p>Having all of your public facing instances accept SSH makes it harder to effectively manage access to your resources. Public facing instances also make it more difficult to retroactively understand how some malicious access came through. A bastion host is a funny term that basically means there is one point of access into your firewall/cloud/DMZ/AWS.</p>
+
+<p>Since every EC2 instance you launch has SSH enabled out of the box, restricting access to one really helps you identify the point of access into your cloud. Your bastion host can just be a normal EC2 instance, but the caveat is that it needs to be the only one that can accept an incoming SSH connection. You can achieve this via security groups (only allowing the bastion host to receive incoming requests on port 22).</p>
+
+<h5 id="gif-here-of-turning-on-port-22">Gif here of turning on port 22</h5>
+
+<p>Once you have SSH&rsquo;d into the bastion host, you can SSH directly into other instances using their private IP addresses. Other than SSH&rsquo;ing, you may want to inspect a database or <a href="https://redis.io/">Redis</a> from the command line. Setting up a bastion host just gives you a safer place to do these things rather than exposing multiple EC2 instances, or even worse, exposing services like RDS to the broader internet.</p>
+
+<p>If you want to go the extra mile, use <a href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html">public and private subnets</a> to restrict which resources can even be allowed to access the internet. Leveraging private subnets will help you determine which resources exposed to being accessed.</p>
+
+<h3 id="anything-else">Anything else?</h3>
+
+<h4 id="there-are-some-other-cool-things-you-can-do-to-beef-up-your-security-picture">There are some other cool things you can do to beef up your security picture</h4>
+
+<ul>
+<li><p><a href="https://github.com/awslabs/git-secrets">GitSecrets</a> is a really cool tool for helping you monitor and guard against sensitive passwords being checked into your repos. It&rsquo;s primarily used as a <a href="https://en.wikipedia.org/wiki/Continuous_integration">CI</a> tool, but is great to even run once on your repo to make sure no one has checked any secrets in to the git history by accident&hellip; which you know someone probably has ;)</p></li>
+
+<li><p><a href="https://github.com/Netflix/security_monkey">Security Monkey</a> is a really great and interesting project by Netflix. It can attach to your AWS or GCP instance to give you feedback on your current cloud security picture and track it with ongoing monitoring. Another really cool feature they rolled out is a GitHub integration that monitors your organization.</p></li>
+
+<li><p>Export your security settings with <a href="https://www.slideshare.net/AmazonWebServices/intrusion-detection-in-the-cloud-sec402-aws-reinvent-2013">this script</a>. There is the <a href="https://www.slideshare.net/AmazonWebServices/intrusion-detection-in-the-cloud-sec402-aws-reinvent-2013">great talk in 2013</a> on intrusion detection. It covers some of the points in this post, but also some great insight on how to protect against and detect intrusion.</p></li>
+</ul>
 
                     </article>
                 </div>
