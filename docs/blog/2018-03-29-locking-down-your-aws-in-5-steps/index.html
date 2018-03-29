@@ -185,7 +185,7 @@
                         <div class="author-meta">
                             <p class="post-meta author-name">Taylor Halliday</p>
                             <p class="post-meta post-date">Mar 29 | 7 min read</p>
-                            <p class="post-meta post-words">1400 Words</p>
+                            <p class="post-meta post-words">1300 Words</p>
                         </div>
                     </header>
                 </div>
@@ -213,8 +213,6 @@
 
 <p>Short of memorizing and rotating long passwords with heavy <a href="http://whatis.techtarget.com/definition/password-entropy">entropy</a> (randomness), Multi-Factor Authentication (MFA) is simply the best tool people have come up with for assisting systems to verify authentication. Anyone can do this, all you need is a <a href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8">free</a> <a href="https://itunes.apple.com/us/app/authy/id494168017?mt=8">2FA</a> <a href="https://duo.com/product/trusted-users/two-factor-authentication/duo-mobile">App</a>, and to enforce 2FA with IAM. Here&rsquo;s a <a href="https://www.youtube.com/watch?time_continue=1&amp;v=MWJtuthUs0w">great, short video</a> that can walk you through it.</p>
 
-<h5 id="gif-here-of-setting-up-mfa">Gif here of setting up mfa</h5>
-
 <h4 id="don-t-login-as-root-use-iam-accounts">Don’t login as root! Use IAM Accounts!</h4>
 
 <p>Even though this may seem obvious to some, I have to call it out because we see it in the wild so much. If you haven&rsquo;t done so already, go to IAM and create an IAM user account to login with. You can assign full privileges if you like, but at least restricting logging in via an IAM profile will accomplish the following:</p>
@@ -231,8 +229,6 @@
 </blockquote>
 
 <p>Disclaimer: Policies can be a bit of a pain. Here&rsquo;s a <a href="https://start.jcolemorrison.com/aws-iam-policies-in-a-nutshell/">good link</a> for some help.</p>
-
-<h5 id="gif-here-of-setting-up-non-root-access">Gif here of setting up non-root access</h5>
 
 <h4 id="use-iam-roles-for-resource-access-ec2">Use IAM Roles for Resource Access (EC2)</h4>
 
@@ -252,21 +248,15 @@
 
 <p>Luckily there are some cool tools out there to help you identify gaps in your setup. One of our favorite ones is <a href="https://github.com/nccgroup/Scout2">Scout2</a>. It&rsquo;s made by NCC group and does a good job of helping you understand the exposed ingress and egress in your setup.</p>
 
-<h5 id="gif-here-of-setting-up-scout2">Gif here of setting up Scout2</h5>
-
 <h3 id="3-aws-vault">3. AWS-Vault</h3>
 
 <p>When you hand out those new IAM Access/Secret Keys we created in step #1, you hope/pray/doubt that they are handled in a secure fashion. Make it easy on the recipients of those credentials and get them set up on <a href="https://github.com/99designs/aws-vault">AWS-Vault</a> from the folks at <a href="https://99designs.com/">99 Designs</a>.</p>
 
 <p>AWS-Vault helps by forcing a user to enter credentials only once, but enables you to use them whenever needed. It has great support for 2FA and makes rotation a breeze. It really makes life easier on everyone.</p>
 
-<h5 id="gif-here-of-setting-up-aws-vault">Gif here of setting up aws-vault</h5>
-
 <h3 id="4-turn-on-cloud-trail">4. Turn on Cloud Trail</h3>
 
 <p>This is a simple thing to do that will keep a record of all access to your AWS instances. It takes next to no time and will be vital in the event of a breach. Easy guide can be <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-a-trail-using-the-console-first-time.html">found here</a></p>
-
-<h5 id="gif-here-of-turning-on-cloud-watch">Gif here of turning on cloud watch</h5>
 
 <p>Once enabled, Cloud Watch will record all incoming requests into your account and deliver them within 15 minutes to an S3 bucket. It will also include API calls made by other high-level services (CloudFormation, OpsWorks, Beanstalk) into your resources.</p>
 
@@ -282,8 +272,6 @@
 <p>Having all of your public facing instances accept SSH makes it harder to effectively manage access to your resources. Public facing instances also make it more difficult to retroactively understand how some malicious access came through. A bastion host is a funny term that basically means there is one point of access into your firewall/cloud/DMZ/AWS.</p>
 
 <p>Since every EC2 instance you launch has SSH enabled out of the box, restricting access to one really helps you identify the point of access into your cloud. Your bastion host can just be a normal EC2 instance, but the caveat is that it needs to be the only one that can accept an incoming SSH connection. You can achieve this via security groups (only allowing the bastion host to receive incoming requests on port 22).</p>
-
-<h5 id="gif-here-of-turning-on-port-22">Gif here of turning on port 22</h5>
 
 <p>Once you have SSH&rsquo;d into the bastion host, you can SSH directly into other instances using their private IP addresses. Other than SSH&rsquo;ing, you may want to inspect a database or <a href="https://redis.io/">Redis</a> from the command line. Setting up a bastion host just gives you a safer place to do these things rather than exposing multiple EC2 instances, or even worse, exposing services like RDS to the broader internet.</p>
 
