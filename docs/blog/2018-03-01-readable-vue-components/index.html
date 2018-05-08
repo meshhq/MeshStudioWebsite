@@ -87,7 +87,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.37.1" />
+    <meta name="generator" content="Hugo 0.36" />
 
     <link rel="canonical" href="https://meshstudio.io/blog/2018-03-01-readable-vue-components/" />
 
@@ -204,20 +204,25 @@
 <p>When starting a new project, you want to get things up and running as quickly as possible. While modern JavaScript advancements have made things a lot easier on developers, they have also increased the complexity of getting things going. Every developer who has worked with Webpack knows what I am talking about; Webpack is a great example of a very powerful tool that has an incredibly steep learning curve, even for doing basic things. Fortunately there is a solution for those who want to go fast: <a href="https://vuejs.org">Vue</a> and <a href="https://github.com/vuejs/vue-cli">vue-cli</a>.</p>
 
 <p>I don&rsquo;t think I have come across a solution that so easily gets you up and on your way to developing a modern JavaScript web application. The <code>vue-cli</code> frees you from the tedious initial Webpack configuration, and allows you to start writing application code right away. While this is great, I have found there to be some shortcomings to Vue itself; mainly that Vue code can be very messy and cluttered. Here is what the standard format for a <code>.vue</code> file looks like:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">template</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="c">&lt;!-- HTML goes here --&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">script</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="c1">// JavaScript goes here
-</span><span class="c1"></span><span class="p">&lt;</span><span class="p">/</span><span class="nt">script</span><span class="p">&gt;</span>
+<pre><code class="language-html">&lt;template&gt;
+    &lt;!-- HTML goes here --&gt;
+&lt;/template&gt;
 
-<span class="p">&lt;</span><span class="nt">style</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="c">/* CSS goes Here */</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">style</span><span class="p">&gt;</span></code></pre></div>
+&lt;script&gt;
+    // JavaScript goes here
+&lt;/script&gt;
+
+&lt;style&gt;
+    /* CSS goes Here */
+&lt;/style&gt;
+</code></pre>
+
 <p>The HTML, JavaScript, and CSS are all located in one single file. While this is okay for small components, and you could argue that it promotes keeping things simple and breaking big components into many smaller components, I find that it can easily result in monolithic files which are hard to read and difficult for others to maintain.</p>
 
 <p>I also find that this style is the most commonly used way to write Vue code, being used in official examples and in most Vue projects I have come across. Honestly, this would prove to be a potential deal breaker for me if I was deciding between using React or Vue for a larger web app. Fortunately though, there is a way to separate the three pieces of the .vue file into their own files, leading to code that is easier to read and maintain.</p>
+
+<p>The source code for this project can be found <a href="https://github.com/meshhq/readable-vue-components">here</a>.</p>
 
 <h2 id="lets-build-a-vue-app">Lets Build a Vue App</h2>
 
@@ -258,52 +263,60 @@
 <h3 id="4-adding-buefy-to-the-project">4. Adding Buefy to the Project</h3>
 
 <p>Go into <code>src/main.js</code> and add the following imports:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="nx">Buefy</span> <span class="nx">from</span> <span class="s1">&#39;buefy&#39;</span>
-<span class="k">import</span> <span class="s1">&#39;buefy/lib/buefy.css&#39;</span>
-</code></pre></div>
+
+<pre><code class="language-javascript">import Buefy from 'buefy'
+import 'buefy/lib/buefy.css'
+</code></pre>
+
 <p>Next configure Vue to use Buefy:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Buefy</span><span class="p">)</span>
-</code></pre></div>
+
+<pre><code class="language-javascript">Vue.use(Buefy)
+</code></pre>
+
 <p>Your <code>main.js</code> file should now look like this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// The Vue build version to load with the `import` command
-</span><span class="c1">// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-</span><span class="c1"></span><span class="k">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
-<span class="k">import</span> <span class="nx">Buefy</span> <span class="nx">from</span> <span class="s1">&#39;buefy&#39;</span>
-<span class="k">import</span> <span class="nx">App</span> <span class="nx">from</span> <span class="s1">&#39;./App&#39;</span>
-<span class="k">import</span> <span class="nx">router</span> <span class="nx">from</span> <span class="s1">&#39;./router&#39;</span>
-<span class="k">import</span> <span class="s1">&#39;buefy/lib/buefy.css&#39;</span>
 
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Buefy</span><span class="p">)</span>
+<pre><code class="language-javascript">// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue'
+import Buefy from 'buefy'
+import App from './App'
+import router from './router'
+import 'buefy/lib/buefy.css'
 
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">productionTip</span> <span class="o">=</span> <span class="kc">false</span>
+Vue.use(Buefy)
 
-<span class="cm">/* eslint-disable no-new */</span>
-<span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
-  <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#app&#39;</span><span class="p">,</span>
-  <span class="nx">router</span><span class="p">,</span>
-  <span class="nx">components</span><span class="o">:</span> <span class="p">{</span> <span class="nx">App</span> <span class="p">},</span>
-  <span class="nx">template</span><span class="o">:</span> <span class="s1">&#39;&lt;App/&gt;&#39;</span>
-<span class="p">})</span>
-</code></pre></div>
+Vue.config.productionTip = false
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  components: { App },
+  template: '&lt;App/&gt;'
+})
+</code></pre>
+
 <h3 id="5-update-the-router">5. Update the Router</h3>
 
 <p>Go into <code>src/router/index.js</code> and update it to look as follows:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
-<span class="k">import</span> <span class="nx">Router</span> <span class="nx">from</span> <span class="s1">&#39;vue-router&#39;</span>
-<span class="k">import</span> <span class="nx">CheckList</span> <span class="nx">from</span> <span class="s1">&#39;@/components/Checklist/Checklist&#39;</span>
 
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Router</span><span class="p">)</span>
+<pre><code class="language-javascript">import Vue from 'vue'
+import Router from 'vue-router'
+import CheckList from '@/components/Checklist/Checklist'
 
-<span class="k">export</span> <span class="k">default</span> <span class="k">new</span> <span class="nx">Router</span><span class="p">({</span>
-  <span class="nx">routes</span><span class="o">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span>
-      <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Checklist&#39;</span><span class="p">,</span>
-      <span class="nx">component</span><span class="o">:</span> <span class="nx">Checklist</span>
-    <span class="p">}</span>
-  <span class="p">]</span>
-<span class="p">})</span>
-</code></pre></div>
+Vue.use(Router)
+
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'Checklist',
+      component: Checklist
+    }
+  ]
+})
+</code></pre>
+
 <p>We are now ready to start building the <code>Checklist</code> and <code>ChecklistItem</code> components!</p>
 
 <h2 id="building-the-components">Building the Components</h2>
@@ -329,9 +342,12 @@
 </ol>
 
 <p>Next, we will hook up the <code>template</code>, <code>script</code>, and <code>style</code> files in the <code>Checklist</code> file:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">template</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;./template.html&#39;</span><span class="p">/</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;./script.js&#39;</span><span class="p">/</span><span class="p">&gt;</span><span class="err">
-</span><span class="err">&lt;style src=&#39;./style.css&#39;/&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;template src='./template.html'/&gt;
+&lt;script src='./script.js'/&gt;
+&lt;style src='./style.css'/&gt;
+</code></pre>
+
 <p>Now we can focus on the individual pieces that make up the <code>.vue</code> file, rather than having them all crammed in the same file!</p>
 
 <h4 id="building-the-template">Building the Template</h4>
@@ -351,86 +367,101 @@
 <h5 id="header">Header</h5>
 
 <p>This will be simple, just a standard <code>&lt;h1&gt;</code> title:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h1</span><span class="p"></span><span class="p">&gt;</span>Checklist<span class="p">&lt;</span><span class="p">/</span><span class="nt">h1</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;h1&gt;Checklist&lt;/h1&gt;
+</code></pre>
+
 <h5 id="new-item-input">New Item Input</h5>
 
 <p>Next we want a text input, with a button to confirm the value:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">b-field</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">b-input</span>
-    <span class="na">v-model</span><span class="o">=</span><span class="s">&#39;newItem&#39;</span>
-    <span class="na">expanded</span>
-    <span class="err">@</span><span class="na">keyup</span><span class="err">.</span><span class="na">native</span><span class="err">.</span><span class="na">enter</span><span class="o">=</span><span class="s">&#39;addItem&#39;</span>
-  <span class="p">/</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;control&#39;</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span>
-      <span class="na">class</span><span class="o">=</span><span class="s">&#39;button is-primary&#39;</span>
-      <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&#39;addItem&#39;</span>
-    <span class="p"></span><span class="p">&gt;</span>
-      Add
-    <span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">b-field</span><span class="p">&gt;</span>
 
-<span class="c">&lt;!-- We want a divider to be rendered if we have any items in the Checklist --&gt;</span>
-<span class="p">&lt;</span><span class="nt">hr</span> <span class="na">v-show</span><span class="o">=</span><span class="s">&#39;checklistItems.length &gt; 0&#39;</span><span class="p">/</span><span class="p">&gt;</span></code></pre></div>
+<pre><code class="language-html">&lt;b-field&gt;
+  &lt;b-input
+    v-model='newItem'
+    expanded
+    @keyup.native.enter='addItem'
+  /&gt;
+  &lt;p class='control'&gt;
+    &lt;button
+      class='button is-primary'
+      @click='addItem'
+    &gt;
+      Add
+    &lt;/button&gt;
+  &lt;/p&gt;
+&lt;/b-field&gt;
+
+&lt;!-- We want a divider to be rendered if we have any items in the Checklist --&gt;
+&lt;hr v-show='checklistItems.length &gt; 0'/&gt;
+</code></pre>
+
 <h5 id="checklist-items">Checklist Items</h5>
 
 <p>Finally, we want the Checklist to be filled with ChecklistItem components.
 We will be building this component later, but we will add this here now.</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ChecklistItem</span> 
-  <span class="na">v-for</span><span class="o">=</span><span class="s">&#39;item in checklistItems&#39;</span> 
-  <span class="na">:key</span><span class="o">=</span><span class="s">&#39;item.key&#39;</span>
-  <span class="na">:itemTitle</span><span class="o">=</span><span class="s">&#39;item.title&#39;</span>
-  <span class="na">:indexKey</span><span class="o">=</span><span class="s">&#39;item.key&#39;</span>
-<span class="p">/</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;ChecklistItem 
+  v-for='item in checklistItems' 
+  :key='item.key'
+  :itemTitle='item.title'
+  :indexKey='item.key'
+/&gt;
+</code></pre>
+
 <h5 id="finished-template">Finished Template</h5>
 
 <p>To wrap up this template, we will put each of those pieces in the following set of divs:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;container is-fluid&#39;</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;section&#39;</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;checklist-box&#39;</span><span class="p"></span><span class="p">&gt;</span>
-      <span class="c">&lt;!-- Header --&gt;</span>
-      <span class="c">&lt;!-- New Item Input --&gt;</span>
-      <span class="c">&lt;!-- Checklist Items --&gt;</span>
-    <span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;div class='container is-fluid'&gt;
+  &lt;div class='section'&gt;
+    &lt;div class='checklist-box'&gt;
+      &lt;!-- Header --&gt;
+      &lt;!-- New Item Input --&gt;
+      &lt;!-- Checklist Items --&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
 <p>Your template file should now look like this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;container is-fluid&#39;</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;section&#39;</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;checklist-box&#39;</span><span class="p"></span><span class="p">&gt;</span>
-      <span class="c">&lt;!-- Header --&gt;</span>
-      <span class="p">&lt;</span><span class="nt">h1</span><span class="p"></span><span class="p">&gt;</span>Checklist<span class="p">&lt;</span><span class="p">/</span><span class="nt">h1</span><span class="p">&gt;</span>
 
-      <span class="c">&lt;!-- New Item Input --&gt;</span>
-      <span class="p">&lt;</span><span class="nt">b-field</span><span class="p"></span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">b-input</span>
-          <span class="na">v-model</span><span class="o">=</span><span class="s">&#39;newItem&#39;</span>
-          <span class="na">expanded</span>
-          <span class="err">@</span><span class="na">keyup</span><span class="err">.</span><span class="na">native</span><span class="err">.</span><span class="na">enter</span><span class="o">=</span><span class="s">&#39;addItem&#39;</span>
-        <span class="p">/</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;control&#39;</span><span class="p"></span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">button</span>
-            <span class="na">class</span><span class="o">=</span><span class="s">&#39;button is-primary&#39;</span>
-            <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&#39;addItem&#39;</span>
-          <span class="p"></span><span class="p">&gt;</span>
+<pre><code class="language-html">&lt;div class='container is-fluid'&gt;
+  &lt;div class='section'&gt;
+    &lt;div class='checklist-box'&gt;
+      &lt;!-- Header --&gt;
+      &lt;h1&gt;Checklist&lt;/h1&gt;
+
+      &lt;!-- New Item Input --&gt;
+      &lt;b-field&gt;
+        &lt;b-input
+          v-model='newItem'
+          expanded
+          @keyup.native.enter='addItem'
+        /&gt;
+        &lt;p class='control'&gt;
+          &lt;button
+            class='button is-primary'
+            @click='addItem'
+          &gt;
             Add
-          <span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="p">/</span><span class="nt">b-field</span><span class="p">&gt;</span>
+          &lt;/button&gt;
+        &lt;/p&gt;
+      &lt;/b-field&gt;
 
-      <span class="p">&lt;</span><span class="nt">hr</span> <span class="na">v-show</span><span class="o">=</span><span class="s">&#39;checklistItems.length &gt; 0&#39;</span><span class="p">/</span><span class="p">&gt;</span>
+      &lt;hr v-show='checklistItems.length &gt; 0'/&gt;
 
-      <span class="c">&lt;!-- Checklist Items --&gt;</span>
-      <span class="p">&lt;</span><span class="nt">ChecklistItem</span> 
-        <span class="na">v-for</span><span class="o">=</span><span class="s">&#39;item in checklistItems&#39;</span> 
-        <span class="na">:key</span><span class="o">=</span><span class="s">&#39;item.key&#39;</span>
-        <span class="na">:itemTitle</span><span class="o">=</span><span class="s">&#39;item.title&#39;</span>
-        <span class="na">:indexKey</span><span class="o">=</span><span class="s">&#39;item.key&#39;</span>
-      <span class="p">/</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+      &lt;!-- Checklist Items --&gt;
+      &lt;ChecklistItem 
+        v-for='item in checklistItems' 
+        :key='item.key'
+        :itemTitle='item.title'
+        :indexKey='item.key'
+      /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
 <h4 id="writing-the-script">Writing the Script</h4>
 
 <p>Next, we will open up our JavaScript file at <code>src/components/Checklist/script.js</code>.</p>
@@ -438,19 +469,23 @@ We will be building this component later, but we will add this here now.</p>
 <h5 id="name">Name</h5>
 
 <p>The name of the component will be <code>Checklist</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Checklist&#39;</span>
-</code></pre></div>
+
+<pre><code class="language-javascript">const name = 'Checklist'
+</code></pre>
+
 <h5 id="components">Components</h5>
 
 <p>The <code>Checklist</code> component is going to render many <code>ChecklistItem</code> components as new items are added.
 We need to import the <code>ChecklistItem</code> component and register it as a component of <code>Checklist</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Put this at top of file
-</span><span class="c1"></span><span class="k">import</span> <span class="nx">ChecklistItem</span> <span class="nx">from</span> <span class="s1">&#39;./ChecklistItem/ChecklistItem&#39;</span>
 
-<span class="k">const</span> <span class="nx">components</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">ChecklistItem</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-javascript">// Put this at top of file
+import ChecklistItem from './ChecklistItem/ChecklistItem'
+
+const components = {
+  ChecklistItem
+}
+</code></pre>
+
 <h5 id="props">Props</h5>
 
 <p>We won&rsquo;t need any props for this component</p>
@@ -460,13 +495,15 @@ We need to import the <code>ChecklistItem</code> component and register it as a 
 <p>According to our template, we will only need two properties in our data object:
 - The description of a new item to add (newItem)
 - A list, holding properties of the ChecklistItem components that will be in the Checklist</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">{</span>
-    <span class="nx">checklistItems</span><span class="o">:</span> <span class="p">[],</span>
-    <span class="nx">newItem</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+
+<pre><code class="language-javascript">const data = function () {
+  return {
+    checklistItems: [],
+    newItem: ''
+  }
+}
+</code></pre>
+
 <h5 id="methods">Methods</h5>
 
 <p>The methods we will need for this component are simple add/deleteItem operations</p>
@@ -475,148 +512,159 @@ We need to import the <code>ChecklistItem</code> component and register it as a 
 
 <p>addItem will create a new object, which holds information that will be used by the <code>ChecklistItem</code>
 component, and push it into the <code>checklistItems</code> list.</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">addItem</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">key</span> <span class="o">=</span> <span class="mi">0</span>
-  <span class="k">const</span> <span class="nx">numItems</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">.</span><span class="nx">length</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">numItems</span> <span class="o">!==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// In an effort to keep the key of an item unique in the 
-</span><span class="c1"></span>    <span class="c1">// set we will set the new item&#39;s key to be equal to the 
-</span><span class="c1"></span>    <span class="c1">// latest item&#39;s key, plus 1
-</span><span class="c1"></span>    <span class="nx">key</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">[</span><span class="nx">numItems</span> <span class="o">-</span> <span class="mi">1</span><span class="p">].</span><span class="nx">key</span> <span class="o">+</span> <span class="mi">1</span>
-  <span class="p">}</span>
 
-  <span class="c1">// Add the newItem information to the checklistItems list
-</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">title</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">newItem</span> <span class="p">})</span>
+<pre><code class="language-javascript">const addItem = function () {
+  let key = 0
+  const numItems = this.checklistItems.length
+  if (numItems !== 0) {
+    // In an effort to keep the key of an item unique in the 
+    // set we will set the new item's key to be equal to the 
+    // latest item's key, plus 1
+    key = this.checklistItems[numItems - 1].key + 1
+  }
 
-  <span class="c1">// Reset the newItem value
-</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">newItem</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="p">}</span>
-</code></pre></div>
+  // Add the newItem information to the checklistItems list
+  this.checklistItems.push({ key, title: this.newItem })
+
+  // Reset the newItem value
+  this.newItem = ''
+}
+</code></pre>
+
 <h6 id="deleteitem">deleteItem</h6>
 
 <p>deleteItem will take a <code>key</code>, and will remove the entry from <code>checklistItems</code> that has that key.</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">deleteItem</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">indexKey</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1">// Loop through the checklistItems list
-</span><span class="c1"></span>  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Check the current element to see if we have a key match
-</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">key</span> <span class="o">===</span> <span class="nx">indexKey</span><span class="p">)</span> <span class="p">{</span>
-      <span class="c1">// Splice the matching element out of the
-</span><span class="c1"></span>      <span class="c1">// list and break from the loop
-</span><span class="c1"></span>      <span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-      <span class="k">break</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+
+<pre><code class="language-javascript">const deleteItem = function (indexKey) {
+  // Loop through the checklistItems list
+  for (let i = 0; i &lt; this.checklistItems.length; i++) {
+    // Check the current element to see if we have a key match
+    if (this.checklistItems[i].key === indexKey) {
+      // Splice the matching element out of the
+      // list and break from the loop
+      this.checklistItems.splice(i, 1)
+      break
+    }
+  }
+}
+</code></pre>
+
 <h5 id="exporting-the-script">Exporting the script</h5>
 
 <p>With the script logic written, we need to export it in the same way you export in a standard Vue file:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="p">,</span>
-  <span class="nx">components</span><span class="p">,</span>
-  <span class="nx">props</span><span class="o">:</span> <span class="p">{},</span>
-  <span class="nx">data</span><span class="p">,</span>
-  <span class="nx">computed</span><span class="o">:</span> <span class="p">{},</span>
-  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">addItem</span><span class="p">,</span>
-    <span class="nx">deleteItem</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+
+<pre><code class="language-javascript">export default {
+  name,
+  components,
+  props: {},
+  data,
+  computed: {},
+  methods: {
+    addItem,
+    deleteItem
+  }
+}
+</code></pre>
+
 <h5 id="finishing-the-script">Finishing the Script</h5>
 
 <p>Here is what the finished script file should look like:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="nx">ChecklistItem</span> <span class="nx">from</span> <span class="s1">&#39;./ChecklistItem/ChecklistItem&#39;</span>
 
-<span class="c1">// ==================
-</span><span class="c1">// NAME
-</span><span class="c1">// ==================
-</span><span class="c1"></span><span class="k">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Checklist&#39;</span>
+<pre><code class="language-javascript">import ChecklistItem from './ChecklistItem/ChecklistItem'
 
-<span class="c1">// ==================
-</span><span class="c1">// COMPONENTS
-</span><span class="c1">// ==================
-</span><span class="c1"></span><span class="k">const</span> <span class="nx">components</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">ChecklistItem</span>
-<span class="p">}</span>
+// ==================
+// NAME
+// ==================
+const name = 'Checklist'
 
-<span class="c1">// ==================
-</span><span class="c1">// PROPS
-</span><span class="c1">// ==================
-</span><span class="c1"></span><span class="k">const</span> <span class="nx">props</span> <span class="o">=</span> <span class="p">{}</span>
+// ==================
+// COMPONENTS
+// ==================
+const components = {
+  ChecklistItem
+}
 
-<span class="c1">// ================
-</span><span class="c1">// DATA
-</span><span class="c1">// ================
-</span><span class="c1"></span><span class="k">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">{</span>
-    <span class="nx">checklistItems</span><span class="o">:</span> <span class="p">[],</span>
-    <span class="nx">newItem</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+// ==================
+// PROPS
+// ==================
+const props = {}
 
-<span class="c1">// ================
-</span><span class="c1">// COMPUTED
-</span><span class="c1">// ================
-</span><span class="c1"></span><span class="k">const</span> <span class="nx">computed</span> <span class="o">=</span> <span class="p">{}</span>
+// ================
+// DATA
+// ================
+const data = function () {
+  return {
+    checklistItems: [],
+    newItem: ''
+  }
+}
 
-<span class="c1">// =================
-</span><span class="c1">// METHODS
-</span><span class="c1">// =================
-</span><span class="c1"></span>
-<span class="cm">/**
-</span><span class="cm"> * Creates a new item from the value of newItem
-</span><span class="cm"> * and pushes it into the checklistItems list
-</span><span class="cm"> */</span>
-<span class="k">const</span> <span class="nx">addItem</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">key</span> <span class="o">=</span> <span class="mi">0</span>
-  <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">.</span><span class="nx">length</span> <span class="o">!==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">key</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">].</span><span class="nx">key</span> <span class="o">+</span> <span class="mi">1</span>
-  <span class="p">}</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">title</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">newItem</span> <span class="p">})</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">newItem</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="p">}</span>
+// ================
+// COMPUTED
+// ================
+const computed = {}
 
-<span class="cm">/**
-</span><span class="cm"> * Removes the item with the given indexKey from the checklistItems list
-</span><span class="cm"> * @param indexKey Number the key of the item to remove
-</span><span class="cm"> */</span>
-<span class="k">const</span> <span class="nx">deleteItem</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">indexKey</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">key</span> <span class="o">===</span> <span class="nx">indexKey</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-      <span class="k">break</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+// =================
+// METHODS
+// =================
 
-<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="p">,</span>
-  <span class="nx">components</span><span class="p">,</span>
-  <span class="nx">props</span><span class="p">,</span>
-  <span class="nx">data</span><span class="p">,</span>
-  <span class="nx">computed</span><span class="p">,</span>
-  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">addItem</span><span class="p">,</span>
-    <span class="nx">deleteItem</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+/**
+ * Creates a new item from the value of newItem
+ * and pushes it into the checklistItems list
+ */
+const addItem = function () {
+  let key = 0
+  if (this.checklistItems.length !== 0) {
+    key = this.checklistItems[this.checklistItems.length - 1].key + 1
+  }
+  this.checklistItems.push({ key, title: this.newItem })
+  this.newItem = ''
+}
+
+/**
+ * Removes the item with the given indexKey from the checklistItems list
+ * @param indexKey Number the key of the item to remove
+ */
+const deleteItem = function (indexKey) {
+  for (let i = 0; i &lt; this.checklistItems.length; i++) {
+    if (this.checklistItems[i].key === indexKey) {
+      this.checklistItems.splice(i, 1)
+      break
+    }
+  }
+}
+
+export default {
+  name,
+  components,
+  props,
+  data,
+  computed,
+  methods: {
+    addItem,
+    deleteItem
+  }
+}
+</code></pre>
+
 <h4 id="writing-the-css">Writing the CSS</h4>
 
 <p>Finally we will add some styling for our component with the <code>src/components/Checklist/style.css</code> file.</p>
 
 <p>Our styling for this component is going to be simple, we want it to be held in a div
 that is centered, has a rounded border, a bit of box-shadow, and some padding:</p>
-<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">checklist-box</span> <span class="p">{</span>
-  <span class="k">margin-left</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
-  <span class="k">margin-right</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
-  <span class="k">width</span><span class="p">:</span> <span class="mi">85</span><span class="kt">%</span><span class="p">;</span>
-  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#E7EAEC</span><span class="p">;</span>
-  <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">4</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">134</span><span class="p">,</span> <span class="mi">134</span><span class="p">,</span> <span class="mi">134</span><span class="p">,</span> <span class="mf">0.21</span><span class="p">);</span>
-  <span class="k">padding</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+
+<pre><code class="language-css">.checklist-box {
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  border-radius: 5px;
+  border: 1px solid #E7EAEC;
+  box-shadow: 0px 0px 4px rgba(134, 134, 134, 0.21);
+  padding: 15px 15px 15px 15px;
+}
+</code></pre>
+
 <h3 id="checklistitem-component">ChecklistItem Component</h3>
 
 <p>The ChecklistItem component will be the individual listings that appear within the Checklist. We will start by creating a new folder <code>ChecklistItem</code> within our existing <code>Checklist</code> folder. As before, we will add the following 4 files:</p>
@@ -629,9 +677,12 @@ that is centered, has a rounded border, a bit of box-shadow, and some padding:</
 </ol>
 
 <p>Matching the way we made the <code>Checklist</code> component, the <code>ChecklistItem.vue</code> file will look like this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">template</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;./template.html&#39;</span><span class="p">/</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;./script.js&#39;</span><span class="p">/</span><span class="p">&gt;</span><span class="err">
-</span><span class="err">&lt;style src=&#39;./style.css&#39;/&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;template src='./template.html'/&gt;
+&lt;script src='./script.js'/&gt;
+&lt;style src='./style.css'/&gt;
+</code></pre>
+
 <h4 id="building-the-template-1">Building the Template</h4>
 
 <p>First, open the template file located at <code>src/components/Checklist/ChecklistItem/template.html</code>.</p>
@@ -655,18 +706,24 @@ that is centered, has a rounded border, a bit of box-shadow, and some padding:</
 <h5 id="item-finished-checkbox">Item Finished Checkbox</h5>
 
 <p>We just need a simple checkbox that is bound to a data value of the component:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">b-checkbox</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&#39;itemChecked&#39;</span><span class="p">/</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;b-checkbox v-model='itemChecked'/&gt;
+</code></pre>
+
 <h5 id="item-description-text">Item Description Text</h5>
 
 <p>This will be a text span that will hold the description of the item:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">span</span>
-  <span class="na">class</span><span class="o">=</span><span class="s">&#39;item-static&#39;</span>
-  <span class="na">:class</span><span class="o">=</span><span class="s">&#34;{&#39;item-checked&#39;: itemChecked}&#34;</span>
-  <span class="na">v-show</span><span class="o">=</span><span class="s">&#39;!editingItem&#39;</span>
-  <span class="err">@</span><span class="na">dblclick</span><span class="o">=</span><span class="s">&#39;editItem&#39;</span>
-<span class="p"></span><span class="p">&gt;</span>
+
+<pre><code class="language-html">&lt;span
+  class='item-static'
+  :class=&quot;{'item-checked': itemChecked}&quot;
+  v-show='!editingItem'
+  @dblclick='editItem'
+&gt;
   {{itemTitleDone}}
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">span</span><span class="p">&gt;</span></code></pre></div>
+&lt;/span&gt;
+</code></pre>
+
 <p>A few things to take note of here:</p>
 
 <ul>
@@ -678,16 +735,19 @@ that is centered, has a rounded border, a bit of box-shadow, and some padding:</
 <h5 id="edit-item-description-input">Edit Item Description Input</h5>
 
 <p>We will need a way to allow for an item&rsquo;s text to be edited, for that we will add a text input field:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Edit Item Description Input --&gt;</span>
-<span class="p">&lt;</span><span class="nt">b-input</span>
-  <span class="na">v-model</span><span class="o">=</span><span class="s">&#39;itemTitleEdit&#39;</span>
-  <span class="na">v-show</span><span class="o">=</span><span class="s">&#39;editingItem&#39;</span>
-  <span class="na">:disabled</span><span class="o">=</span><span class="s">&#39;itemChecked&#39;</span>
-  <span class="err">@</span><span class="na">blur</span><span class="o">=</span><span class="s">&#39;doneEdit&#39;</span>
-  <span class="err">@</span><span class="na">keyup</span><span class="err">.</span><span class="na">native</span><span class="err">.</span><span class="na">enter</span><span class="o">=</span><span class="s">&#39;doneEdit&#39;</span>
-  <span class="err">@</span><span class="na">keyup</span><span class="err">.</span><span class="na">native</span><span class="err">.</span><span class="na">esc</span><span class="o">=</span><span class="s">&#39;cancelEdit&#39;</span>
-  <span class="na">expanded</span>
-<span class="p">/</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;!-- Edit Item Description Input --&gt;
+&lt;b-input
+  v-model='itemTitleEdit'
+  v-show='editingItem'
+  :disabled='itemChecked'
+  @blur='doneEdit'
+  @keyup.native.enter='doneEdit'
+  @keyup.native.esc='cancelEdit'
+  expanded
+/&gt;
+</code></pre>
+
 <p>Things to note:</p>
 
 <ul>
@@ -700,47 +760,53 @@ that is centered, has a rounded border, a bit of box-shadow, and some padding:</
 <h5 id="delete-item-button">Delete Item Button</h5>
 
 <p>The last thing we will need for this template is a button to remove the item from the <code>Checklist</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Delete Item Button --&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;control&#39;</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;button is-danger&#39;</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&#39;deleteItem&#39;</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">b-icon</span> <span class="na">icon</span><span class="o">=</span><span class="s">&#39;close&#39;</span><span class="p">/</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;!-- Delete Item Button --&gt;
+&lt;p class='control'&gt;
+  &lt;button class='button is-danger' @click='deleteItem'&gt;
+    &lt;b-icon icon='close'/&gt;
+  &lt;/button&gt;
+&lt;/p&gt;
+</code></pre>
+
 <h5 id="finalizing">Finalizing</h5>
 
 <p>To finish the template, we will wrap all those pieces into a <code>&lt;b-field&gt;</code> tag</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">b-field</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="c">&lt;!-- Item Finished Checkbox --&gt;</span>
-  <span class="p">&lt;</span><span class="nt">b-checkbox</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&#39;itemChecked&#39;</span><span class="p">/</span><span class="p">&gt;</span>
 
-  <span class="c">&lt;!-- Item Description Text --&gt;</span>
-  <span class="p">&lt;</span><span class="nt">span</span>
-    <span class="na">class</span><span class="o">=</span><span class="s">&#39;item-static&#39;</span>
-    <span class="na">:class</span><span class="o">=</span><span class="s">&#34;{&#39;item-checked&#39;: itemChecked}&#34;</span>
-    <span class="na">v-show</span><span class="o">=</span><span class="s">&#39;!editingItem&#39;</span>
-    <span class="err">@</span><span class="na">dblclick</span><span class="o">=</span><span class="s">&#39;editItem&#39;</span>
-  <span class="p"></span><span class="p">&gt;</span>
+<pre><code class="language-html">&lt;b-field&gt;
+  &lt;!-- Item Finished Checkbox --&gt;
+  &lt;b-checkbox v-model='itemChecked'/&gt;
+
+  &lt;!-- Item Description Text --&gt;
+  &lt;span
+    class='item-static'
+    :class=&quot;{'item-checked': itemChecked}&quot;
+    v-show='!editingItem'
+    @dblclick='editItem'
+  &gt;
     {{itemTitleDone}}
-  <span class="p">&lt;</span><span class="p">/</span><span class="nt">span</span><span class="p">&gt;</span>
+  &lt;/span&gt;
 
-  <span class="c">&lt;!-- Edit Item Description Input --&gt;</span>
-  <span class="p">&lt;</span><span class="nt">b-input</span> 
-    <span class="na">v-model</span><span class="o">=</span><span class="s">&#39;itemTitleEdit&#39;</span>
-    <span class="na">v-show</span><span class="o">=</span><span class="s">&#39;editingItem&#39;</span>
-    <span class="na">:disabled</span><span class="o">=</span><span class="s">&#39;itemChecked&#39;</span>
-    <span class="err">@</span><span class="na">blur</span><span class="o">=</span><span class="s">&#34;doneEdit&#34;</span>
-    <span class="err">@</span><span class="na">keyup</span><span class="err">.</span><span class="na">native</span><span class="err">.</span><span class="na">enter</span><span class="o">=</span><span class="s">&#34;doneEdit&#34;</span>
-    <span class="err">@</span><span class="na">keyup</span><span class="err">.</span><span class="na">native</span><span class="err">.</span><span class="na">esc</span><span class="o">=</span><span class="s">&#34;cancelEdit&#34;</span>
-    <span class="na">expanded</span>
-  <span class="p">/</span><span class="p">&gt;</span>
+  &lt;!-- Edit Item Description Input --&gt;
+  &lt;b-input 
+    v-model='itemTitleEdit'
+    v-show='editingItem'
+    :disabled='itemChecked'
+    @blur=&quot;doneEdit&quot;
+    @keyup.native.enter=&quot;doneEdit&quot;
+    @keyup.native.esc=&quot;cancelEdit&quot;
+    expanded
+  /&gt;
 
-  <span class="c">&lt;!-- Delete Item Button --&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;control&#39;</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;button is-danger&#39;</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&#39;deleteItem&#39;</span><span class="p"></span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">b-icon</span> <span class="na">icon</span><span class="o">=</span><span class="s">&#39;close&#39;</span><span class="p">/</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">b-field</span><span class="p">&gt;</span></code></pre></div>
+  &lt;!-- Delete Item Button --&gt;
+  &lt;p class='control'&gt;
+    &lt;button class='button is-danger' @click='deleteItem'&gt;
+      &lt;b-icon icon='close'/&gt;
+    &lt;/button&gt;
+  &lt;/p&gt;
+&lt;/b-field&gt;
+</code></pre>
+
 <h4 id="writing-the-script-1">Writing the Script</h4>
 
 <p>Next, we will work on the JavaScript file located at <code>src/components/Checklist/ChecklistItem/script.js</code>.</p>
@@ -748,8 +814,10 @@ that is centered, has a rounded border, a bit of box-shadow, and some padding:</
 <h5 id="name-1">Name</h5>
 
 <p>The name of the component will be <code>Checklist</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;ChecklistItem&#39;</span>
-</code></pre></div>
+
+<pre><code class="language-javascript">const name = 'ChecklistItem'
+</code></pre>
+
 <h5 id="components-1">Components</h5>
 
 <p>We don&rsquo;t have any components to register for this component.</p>
@@ -757,11 +825,13 @@ that is centered, has a rounded border, a bit of box-shadow, and some padding:</
 <h5 id="props-1">Props</h5>
 
 <p>The <code>ChecklistItem</code> component requires two props, which we get from the <code>checklistItems</code> list in the <code>Checklist</code> component.</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">props</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">indexKey</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="nx">required</span><span class="o">:</span> <span class="kc">true</span> <span class="p">},</span>
-  <span class="nx">itemTitle</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">required</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+
+<pre><code class="language-javascript">const props = {
+  indexKey: { type: Number, required: true },
+  itemTitle: { type: String, required: true }
+}
+</code></pre>
+
 <h5 id="data-1">Data</h5>
 
 <p>According to our template, we will need four properties in our data object:
@@ -769,15 +839,17 @@ that is centered, has a rounded border, a bit of box-shadow, and some padding:</
 - Whether or not the current item is being edited
 - The description of an item to show in the text span
 - The description of an item to show in the edit item input field</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">{</span>
-    <span class="nx">itemChecked</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="nx">editingItem</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="nx">itemTitleDone</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">itemTitle</span><span class="p">,</span>
-    <span class="nx">itemTitleEdit</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">itemTitle</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+
+<pre><code class="language-javascript">const data = function () {
+  return {
+    itemChecked: false,
+    editingItem: false,
+    itemTitleDone: this.itemTitle,
+    itemTitleEdit: this.itemTitle
+  }
+}
+</code></pre>
+
 <h5 id="methods-1">Methods</h5>
 
 <p>The methods we will need for this component are operations to edit item, confirm edit, cancel edit, and delete item.</p>
@@ -785,149 +857,161 @@ that is centered, has a rounded border, a bit of box-shadow, and some padding:</
 <h6 id="edititem">editItem</h6>
 
 <p>editItem will set the value of <code>editingItem</code> to true if the item hasn&rsquo;t already been checked.</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">editItem</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">itemChecked</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">editingItem</span> <span class="o">=</span> <span class="kc">true</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+
+<pre><code class="language-javascript">const editItem = function () {
+  if (!this.itemChecked) {
+    this.editingItem = true
+  }
+}
+</code></pre>
+
 <h5 id="cancelitem">cancelItem</h5>
 
 <p>cancelItem will revert the item back to its previous description and hides the editing input field.</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">cancelEdit</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">editingItem</span> <span class="o">=</span> <span class="kc">false</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">itemTitleEdit</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">itemTitleDone</span>
-<span class="p">}</span>
-</code></pre></div>
+
+<pre><code class="language-javascript">const cancelEdit = function () {
+  this.editingItem = false
+  this.itemTitleEdit = this.itemTitleDone
+}
+</code></pre>
+
 <h5 id="doneedit">doneEdit</h5>
 
 <p>doneEdit will confirm the edited changes, and will set the text value of the span to be equal to those
 changes. If the value that is entered is blank, then the item will be deleted.</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">doneEdit</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">itemTitleDone</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">itemTitleEdit</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">editingItem</span> <span class="o">=</span> <span class="kc">false</span>
-  <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">itemTitleDone</span> <span class="o">===</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">deleteItem</span><span class="p">()</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+
+<pre><code class="language-javascript">const doneEdit = function () {
+  this.itemTitleDone = this.itemTitleEdit
+  this.editingItem = false
+  if (this.itemTitleDone === '') {
+    this.deleteItem()
+  }
+}
+</code></pre>
+
 <h5 id="deleteitem-1">deleteItem</h5>
 
 <p>deleteItem will delete the item from the parent <code>Checklist</code> component.</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">deleteItem</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">$parent</span><span class="p">.</span><span class="nx">deleteItem</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">indexKey</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div>
+
+<pre><code class="language-javascript">const deleteItem = function () {
+  this.$parent.deleteItem(this.indexKey)
+}
+</code></pre>
+
 <h5 id="exporting-the-script-1">Exporting the script</h5>
 
 <p>With the script logic written, we need to export it in the same way you export in a standard Vue file:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="p">,</span>
-  <span class="nx">components</span><span class="o">:</span> <span class="p">{},</span>
-  <span class="nx">props</span><span class="p">,</span>
-  <span class="nx">data</span><span class="p">,</span>
-  <span class="nx">computed</span><span class="o">:</span> <span class="p">{},</span>
-  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">editItem</span><span class="p">,</span>
-    <span class="nx">cancelEdit</span><span class="p">,</span>
-    <span class="nx">doneEdit</span><span class="p">,</span>
-    <span class="nx">deleteItem</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+
+<pre><code class="language-javascript">export default {
+  name,
+  components: {},
+  props,
+  data,
+  computed: {},
+  methods: {
+    editItem,
+    cancelEdit,
+    doneEdit,
+    deleteItem
+  }
+}
+</code></pre>
+
 <h5 id="finishing-the-script-1">Finishing the Script</h5>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// ==================
-</span><span class="c1">// NAME
-</span><span class="c1">// ==================
-</span><span class="c1"></span><span class="k">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;ChecklistItem&#39;</span>
 
-<span class="c1">// ==================
-</span><span class="c1">// COMPONENTS
-</span><span class="c1">// ==================
-</span><span class="c1"></span><span class="k">const</span> <span class="nx">components</span> <span class="o">=</span> <span class="p">{}</span>
+<pre><code class="language-javascript">// ==================
+// NAME
+// ==================
+const name = 'ChecklistItem'
 
-<span class="c1">// ==================
-</span><span class="c1">// PROPS
-</span><span class="c1">// ==================
-</span><span class="c1"></span><span class="k">const</span> <span class="nx">props</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">indexKey</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="nx">required</span><span class="o">:</span> <span class="kc">true</span> <span class="p">},</span>
-  <span class="nx">itemTitle</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">required</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}</span>
-<span class="p">}</span>
+// ==================
+// COMPONENTS
+// ==================
+const components = {}
 
-<span class="c1">// ================
-</span><span class="c1">// DATA
-</span><span class="c1">// ================
-</span><span class="c1"></span><span class="k">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">{</span>
-    <span class="nx">itemChecked</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="nx">editingItem</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="nx">itemTitleDone</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">itemTitle</span><span class="p">,</span>
-    <span class="nx">itemTitleEdit</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">itemTitle</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+// ==================
+// PROPS
+// ==================
+const props = {
+  indexKey: { type: Number, required: true },
+  itemTitle: { type: String, required: true }
+}
 
-<span class="c1">// ================
-</span><span class="c1">// COMPUTED
-</span><span class="c1">// ================
-</span><span class="c1"></span><span class="k">const</span> <span class="nx">computed</span> <span class="o">=</span> <span class="p">{}</span>
+// ================
+// DATA
+// ================
+const data = function () {
+  return {
+    itemChecked: false,
+    editingItem: false,
+    itemTitleDone: this.itemTitle,
+    itemTitleEdit: this.itemTitle
+  }
+}
 
-<span class="c1">// =================
-</span><span class="c1">// METHODS
-</span><span class="c1">// =================
-</span><span class="c1"></span>
-<span class="cm">/**
-</span><span class="cm"> * Sets the value of &#39;editingItem&#39; to true if the item
-</span><span class="cm"> * hasn&#39;t already been checked off as completed
-</span><span class="cm"> */</span>
-<span class="k">const</span> <span class="nx">editItem</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">itemChecked</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">editingItem</span> <span class="o">=</span> <span class="kc">true</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+// ================
+// COMPUTED
+// ================
+const computed = {}
 
-<span class="cm">/**
-</span><span class="cm"> * Reverts the item back to its previous description
-</span><span class="cm"> * and hides the editing input field
-</span><span class="cm"> */</span>
-<span class="k">const</span> <span class="nx">cancelEdit</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">editingItem</span> <span class="o">=</span> <span class="kc">false</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">itemTitleEdit</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">itemTitleDone</span>
-<span class="p">}</span>
+// =================
+// METHODS
+// =================
 
-<span class="cm">/**
-</span><span class="cm"> * Sets the description of the item to the value of the
-</span><span class="cm"> * input field that is used to edit the description. If the user
-</span><span class="cm"> * has entered a blank value, the item is deleted
-</span><span class="cm"> */</span>
-<span class="k">const</span> <span class="nx">doneEdit</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">itemTitleDone</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">itemTitleEdit</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">editingItem</span> <span class="o">=</span> <span class="kc">false</span>
-  <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">itemTitleDone</span> <span class="o">===</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">deleteItem</span><span class="p">()</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+/**
+ * Sets the value of 'editingItem' to true if the item
+ * hasn't already been checked off as completed
+ */
+const editItem = function () {
+  if (!this.itemChecked) {
+    this.editingItem = true
+  }
+}
 
-<span class="cm">/**
-</span><span class="cm"> * Deletes the item from the parent Checklist component
-</span><span class="cm"> */</span>
-<span class="k">const</span> <span class="nx">deleteItem</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">$parent</span><span class="p">.</span><span class="nx">deleteItem</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">indexKey</span><span class="p">)</span>
-<span class="p">}</span>
+/**
+ * Reverts the item back to its previous description
+ * and hides the editing input field
+ */
+const cancelEdit = function () {
+  this.editingItem = false
+  this.itemTitleEdit = this.itemTitleDone
+}
 
-<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="p">,</span>
-  <span class="nx">components</span><span class="p">,</span>
-  <span class="nx">props</span><span class="p">,</span>
-  <span class="nx">data</span><span class="p">,</span>
-  <span class="nx">computed</span><span class="p">,</span>
-  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">editItem</span><span class="p">,</span>
-    <span class="nx">cancelEdit</span><span class="p">,</span>
-    <span class="nx">doneEdit</span><span class="p">,</span>
-    <span class="nx">deleteItem</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+/**
+ * Sets the description of the item to the value of the
+ * input field that is used to edit the description. If the user
+ * has entered a blank value, the item is deleted
+ */
+const doneEdit = function () {
+  this.itemTitleDone = this.itemTitleEdit
+  this.editingItem = false
+  if (this.itemTitleDone === '') {
+    this.deleteItem()
+  }
+}
+
+/**
+ * Deletes the item from the parent Checklist component
+ */
+const deleteItem = function () {
+  this.$parent.deleteItem(this.indexKey)
+}
+
+export default {
+  name,
+  components,
+  props,
+  data,
+  computed,
+  methods: {
+    editItem,
+    cancelEdit,
+    doneEdit,
+    deleteItem
+  }
+}
+</code></pre>
+
 <h4 id="writing-the-css-1">Writing the CSS</h4>
 
 <p>Finally, we will add a bit of styling in the <code>src/components/Checklist/ChecklistItem/style.css</code> file.</p>
@@ -935,193 +1019,202 @@ changes. If the value that is entered is blank, then the item will be deleted.</
 <p>Like the <code>Checklist</code> component, we will be keeping the styling simple here. We want the text span of the item to expand to fill the empty space within its container, and we want to give it a border to make the transition between editing and non-editing modes more seamless.</p>
 
 <p>We also want to create a rule for the <code>item-checked</code> class, to put a line through the text of the completed item in the <code>Checklist</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">item-static</span> <span class="p">{</span>
-  <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-  <span class="k">width</span><span class="p">:</span> <span class="kp">-moz-</span><span class="n">available</span><span class="p">;</span>
-  <span class="k">width</span><span class="p">:</span> <span class="kp">-webkit-</span><span class="kc">fill</span><span class="o">-</span><span class="n">available</span><span class="p">;</span>
-  <span class="k">width</span><span class="p">:</span> <span class="kc">fill</span><span class="o">-</span><span class="n">available</span><span class="p">;</span>
-  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
-  <span class="k">align-items</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
-  <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="mh">#dbdbdb</span> <span class="kc">solid</span><span class="p">;</span>
-  <span class="k">padding-left</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
-<span class="p">}</span>
 
-<span class="p">.</span><span class="nc">item-checked</span> <span class="p">{</span>
-  <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">line-through</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+<pre><code class="language-css">.item-static {
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+  display: flex;
+  align-items: center;
+  border: 1px #dbdbdb solid;
+  padding-left: 10px;
+}
+
+.item-checked {
+  text-decoration: line-through;
+}
+</code></pre>
+
 <h2 id="lets-compare">Lets Compare</h2>
 
 <p>Alright, our components are in place and</p>
 
 <p>This is what the <code>Checklist.vue</code> file would look like if you
 followed the format specified in the official Vue documentation.</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">template</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;container is-fluid&#39;</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;section&#39;</span><span class="p"></span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;checklist-box&#39;</span><span class="p"></span><span class="p">&gt;</span>
-        <span class="c">&lt;!-- Header --&gt;</span>
-        <span class="p">&lt;</span><span class="nt">h1</span><span class="p"></span><span class="p">&gt;</span>Checklist<span class="p">&lt;</span><span class="p">/</span><span class="nt">h1</span><span class="p">&gt;</span>
 
-        <span class="c">&lt;!-- New Item Input --&gt;</span>
-        <span class="p">&lt;</span><span class="nt">b-field</span><span class="p"></span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">b-input</span>
-            <span class="na">v-model</span><span class="o">=</span><span class="s">&#39;newItem&#39;</span>
-            <span class="na">expanded</span>
-            <span class="err">@</span><span class="na">keyup</span><span class="err">.</span><span class="na">native</span><span class="err">.</span><span class="na">enter</span><span class="o">=</span><span class="s">&#39;addItem&#39;</span>
-          <span class="p">/</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;control&#39;</span><span class="p"></span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;button is-primary&#39;</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&#39;addItem&#39;</span><span class="p"></span><span class="p">&gt;</span>
+<pre><code class="language-html">&lt;template&gt;
+  &lt;div class='container is-fluid'&gt;
+    &lt;div class='section'&gt;
+      &lt;div class='checklist-box'&gt;
+        &lt;!-- Header --&gt;
+        &lt;h1&gt;Checklist&lt;/h1&gt;
+
+        &lt;!-- New Item Input --&gt;
+        &lt;b-field&gt;
+          &lt;b-input
+            v-model='newItem'
+            expanded
+            @keyup.native.enter='addItem'
+          /&gt;
+          &lt;p class='control'&gt;
+            &lt;button class='button is-primary' @click='addItem'&gt;
                 Add
-            <span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="p">/</span><span class="nt">b-field</span><span class="p">&gt;</span>
+            &lt;/button&gt;
+          &lt;/p&gt;
+        &lt;/b-field&gt;
 
-        <span class="p">&lt;</span><span class="nt">hr</span> <span class="na">v-show</span><span class="o">=</span><span class="s">&#39;checklistItems.length &gt; 0&#39;</span><span class="p">/</span><span class="p">&gt;</span>
+        &lt;hr v-show='checklistItems.length &gt; 0'/&gt;
 
-        <span class="c">&lt;!-- Checklist Items --&gt;</span>
-        <span class="p">&lt;</span><span class="nt">ChecklistItem</span> 
-          <span class="na">v-for</span><span class="o">=</span><span class="s">&#39;item in checklistItems&#39;</span> 
-          <span class="na">:key</span><span class="o">=</span><span class="s">&#39;item.key&#39;</span>
-          <span class="na">:itemTitle</span><span class="o">=</span><span class="s">&#39;item.title&#39;</span>
-          <span class="na">:indexKey</span><span class="o">=</span><span class="s">&#39;item.key&#39;</span>
-        <span class="p">/</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">template</span><span class="p">&gt;</span>
+        &lt;!-- Checklist Items --&gt;
+        &lt;ChecklistItem 
+          v-for='item in checklistItems' 
+          :key='item.key'
+          :itemTitle='item.title'
+          :indexKey='item.key'
+        /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
 
-<span class="p">&lt;</span><span class="nt">script</span><span class="p"></span><span class="p">&gt;</span>
-<span class="k">import</span> <span class="nx">ChecklistItem</span> <span class="nx">from</span> <span class="s1">&#39;@/components/Checklist/ChecklistItem/ChecklistItem&#39;</span>
-<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Checklist&#39;</span><span class="p">,</span>
-  <span class="nx">components</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s1">&#39;ChecklistItem&#39;</span><span class="o">:</span> <span class="nx">ChecklistItem</span>
-  <span class="p">},</span>
-  <span class="nx">props</span><span class="o">:</span> <span class="p">{},</span>
-  <span class="nx">data</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">{</span>
-      <span class="nx">checklistItems</span><span class="o">:</span> <span class="p">[],</span>
-      <span class="nx">newItem</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="nx">computed</span><span class="o">:</span> <span class="p">{},</span>
-  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">addItem</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-      <span class="kd">let</span> <span class="nx">key</span> <span class="o">=</span> <span class="mi">0</span>
-      <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">.</span><span class="nx">length</span> <span class="o">!==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">key</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">].</span><span class="nx">key</span> <span class="o">+</span> <span class="mi">1</span>
-      <span class="p">}</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">title</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">newItem</span> <span class="p">})</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">newItem</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="p">},</span>
-    <span class="nx">deleteItem</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">indexKey</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">key</span> <span class="o">===</span> <span class="nx">indexKey</span><span class="p">)</span> <span class="p">{</span>
-          <span class="k">this</span><span class="p">.</span><span class="nx">checklistItems</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-          <span class="k">break</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">script</span><span class="p">&gt;</span>
+&lt;script&gt;
+import ChecklistItem from '@/components/Checklist/ChecklistItem/ChecklistItem'
+export default {
+  name: 'Checklist',
+  components: {
+    'ChecklistItem': ChecklistItem
+  },
+  props: {},
+  data () {
+    return {
+      checklistItems: [],
+      newItem: ''
+    }
+  },
+  computed: {},
+  methods: {
+    addItem: function () {
+      let key = 0
+      if (this.checklistItems.length !== 0) {
+        key = this.checklistItems[this.checklistItems.length - 1].key + 1
+      }
+      this.checklistItems.push({ key, title: this.newItem })
+      this.newItem = ''
+    },
+    deleteItem: function (indexKey) {
+      for (let i = 0; i &lt; this.checklistItems.length; i++) {
+        if (this.checklistItems[i].key === indexKey) {
+          this.checklistItems.splice(i, 1)
+          break
+        }
+      }
+    }
+  }
+}
+&lt;/script&gt;
 
-<span class="p">&lt;</span><span class="nt">style</span><span class="p"></span><span class="p">&gt;</span>
-<span class="p">.</span><span class="nc">checklist-box</span> <span class="p">{</span>
-  <span class="k">margin-left</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
-  <span class="k">margin-right</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
-  <span class="k">width</span><span class="p">:</span> <span class="mi">85</span><span class="kt">%</span><span class="p">;</span>
-  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#E7EAEC</span><span class="p">;</span>
-  <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">4</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">134</span><span class="p">,</span> <span class="mi">134</span><span class="p">,</span> <span class="mi">134</span><span class="p">,</span> <span class="mf">0.21</span><span class="p">);</span>
-  <span class="k">padding</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">style</span><span class="p">&gt;</span></code></pre></div>
+&lt;style&gt;
+.checklist-box {
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  border-radius: 5px;
+  border: 1px solid #E7EAEC;
+  box-shadow: 0px 0px 4px rgba(134, 134, 134, 0.21);
+  padding: 15px 15px 15px 15px;
+}
+&lt;/style&gt;
+</code></pre>
+
 <p>and here is the <code>ChecklistItem.vue</code> file with the same standard format:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">template</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">b-field</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">b-checkbox</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&#39;itemChecked&#39;</span><span class="p">/</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">span</span>
-      <span class="na">class</span><span class="o">=</span><span class="s">&#39;item-static&#39;</span>
-      <span class="na">:class</span><span class="o">=</span><span class="s">&#34;{&#39;item-checked&#39;: itemChecked}&#34;</span>
-      <span class="na">v-show</span><span class="o">=</span><span class="s">&#39;!editingItem&#39;</span>
-      <span class="err">@</span><span class="na">dblclick</span><span class="o">=</span><span class="s">&#39;editItem&#39;</span>
-    <span class="p"></span><span class="p">&gt;</span>
+
+<pre><code class="language-html">&lt;template&gt;
+  &lt;b-field&gt;
+    &lt;b-checkbox v-model='itemChecked'/&gt;
+    &lt;span
+      class='item-static'
+      :class=&quot;{'item-checked': itemChecked}&quot;
+      v-show='!editingItem'
+      @dblclick='editItem'
+    &gt;
       {{itemTitleDone}}
-    <span class="p">&lt;</span><span class="p">/</span><span class="nt">span</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">b-input</span> 
-      <span class="na">v-model</span><span class="o">=</span><span class="s">&#39;itemTitleEdit&#39;</span>
-      <span class="na">v-show</span><span class="o">=</span><span class="s">&#39;editingItem&#39;</span>
-      <span class="na">:disabled</span><span class="o">=</span><span class="s">&#39;itemChecked&#39;</span>
-      <span class="err">@</span><span class="na">blur</span><span class="o">=</span><span class="s">&#34;doneEdit&#34;</span>
-      <span class="err">@</span><span class="na">keyup</span><span class="err">.</span><span class="na">native</span><span class="err">.</span><span class="na">enter</span><span class="o">=</span><span class="s">&#34;doneEdit&#34;</span>
-      <span class="err">@</span><span class="na">keyup</span><span class="err">.</span><span class="na">native</span><span class="err">.</span><span class="na">esc</span><span class="o">=</span><span class="s">&#34;cancelEdit&#34;</span>
-      <span class="na">expanded</span>
-    <span class="p">/</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;control&#39;</span><span class="p"></span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;button is-danger&#39;</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&#39;deleteItem&#39;</span><span class="p"></span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">b-icon</span> <span class="na">icon</span><span class="o">=</span><span class="s">&#39;close&#39;</span><span class="p">/</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="p">/</span><span class="nt">button</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="p">/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="p">/</span><span class="nt">b-field</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">template</span><span class="p">&gt;</span>
+    &lt;/span&gt;
+    &lt;b-input 
+      v-model='itemTitleEdit'
+      v-show='editingItem'
+      :disabled='itemChecked'
+      @blur=&quot;doneEdit&quot;
+      @keyup.native.enter=&quot;doneEdit&quot;
+      @keyup.native.esc=&quot;cancelEdit&quot;
+      expanded
+    /&gt;
+    &lt;p class='control'&gt;
+      &lt;button class='button is-danger' @click='deleteItem'&gt;
+      &lt;b-icon icon='close'/&gt;
+      &lt;/button&gt;
+    &lt;/p&gt;
+  &lt;/b-field&gt;
+&lt;/template&gt;
 
-<span class="p">&lt;</span><span class="nt">script</span><span class="p"></span><span class="p">&gt;</span>
-<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;ChecklistItem&#39;</span><span class="p">,</span>
-  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">indexKey</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="nx">required</span><span class="o">:</span> <span class="kc">true</span> <span class="p">},</span>
-    <span class="nx">itemTitle</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">required</span><span class="o">:</span> <span class="kc">true</span><span class="p">}</span>
-  <span class="p">},</span>
-  <span class="nx">data</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">{</span>
-      <span class="nx">itemChecked</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="nx">editingItem</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="nx">itemTitleDone</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">itemTitle</span><span class="p">,</span>
-      <span class="nx">itemTitleEdit</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">itemTitle</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="nx">computed</span><span class="o">:</span> <span class="p">{},</span>
-  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">editItem</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">itemChecked</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">editingItem</span> <span class="o">=</span> <span class="kc">true</span>
-      <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nx">cancelEdit</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">editingItem</span> <span class="o">=</span> <span class="kc">false</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">itemTitleEdit</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">itemTitleDone</span>
-    <span class="p">},</span>
-    <span class="nx">doneEdit</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">itemTitleDone</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">itemTitleEdit</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">editingItem</span> <span class="o">=</span> <span class="kc">false</span>
-      <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">itemTitleDone</span> <span class="o">===</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">deleteItem</span><span class="p">()</span>
-      <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nx">deleteItem</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">$parent</span><span class="p">.</span><span class="nx">deleteItem</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">indexKey</span><span class="p">)</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">script</span><span class="p">&gt;</span>
+&lt;script&gt;
+export default {
+  name: 'ChecklistItem',
+  props: {
+    indexKey: { type: Number, required: true },
+    itemTitle: { type: String, required: true}
+  },
+  data () {
+    return {
+      itemChecked: false,
+      editingItem: false,
+      itemTitleDone: this.itemTitle,
+      itemTitleEdit: this.itemTitle
+    }
+  },
+  computed: {},
+  methods: {
+    editItem: function () {
+      if (!this.itemChecked) {
+        this.editingItem = true
+      }
+    },
+    cancelEdit: function () {
+      this.editingItem = false
+      this.itemTitleEdit = this.itemTitleDone
+    },
+    doneEdit: function () {
+      this.itemTitleDone = this.itemTitleEdit
+      this.editingItem = false
+      if (this.itemTitleDone === '') {
+        this.deleteItem()
+      }
+    },
+    deleteItem: function () {
+      this.$parent.deleteItem(this.indexKey)
+    }
+  }
+}
+&lt;/script&gt;
 
-<span class="p">&lt;</span><span class="nt">style</span><span class="p"></span><span class="p">&gt;</span>
-<span class="p">.</span><span class="nc">item-static</span> <span class="p">{</span>
-  <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-  <span class="k">width</span><span class="p">:</span> <span class="kp">-moz-</span><span class="n">available</span><span class="p">;</span>
-  <span class="k">width</span><span class="p">:</span> <span class="kp">-webkit-</span><span class="kc">fill</span><span class="o">-</span><span class="n">available</span><span class="p">;</span>
-  <span class="k">width</span><span class="p">:</span> <span class="kc">fill</span><span class="o">-</span><span class="n">available</span><span class="p">;</span>
-  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
-  <span class="k">align-items</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
-  <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="mh">#dbdbdb</span> <span class="kc">solid</span><span class="p">;</span>
-  <span class="k">padding-left</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
-<span class="p">}</span>
+&lt;style&gt;
+.item-static {
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+  display: flex;
+  align-items: center;
+  border: 1px #dbdbdb solid;
+  padding-left: 10px;
+}
 
-<span class="p">.</span><span class="nc">item-checked</span> <span class="p">{</span>
-  <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">line-through</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">style</span><span class="p">&gt;</span></code></pre></div>
+.item-checked {
+  text-decoration: line-through;
+}
+&lt;/style&gt;
+</code></pre>
+
 <p>While both of these examples are <em>manageable</em>, they are certainly becoming quite long files. These are fairly simple components as well; so trying to build something more involved simply will not scale well. Also notice that none of the functions have any comments or documentation. I find that the structure of the <code>&lt;script/&gt;</code> tag makes the code difficult to read to begin with, as it forces you to compress everything into a small space. Notice how the methods begin with three levels of indentation; this is horizontal space that would be nice to have back, especially for writing comments or longer statements. Separating the JavaScript into its own file allows you to make everything more readable, and gives you more space to work.</p>
 
 <p>Splitting the CSS file out of the <code>.vue</code> file can also be very helpful, especially if you use classes that are repeated in many different component templates.</p>

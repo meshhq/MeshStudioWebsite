@@ -87,7 +87,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.37.1" />
+    <meta name="generator" content="Hugo 0.36" />
 
     <link rel="canonical" href="https://meshstudio.io/blog/2018-03-29-locking-down-your-aws-in-5-steps/" />
 
@@ -188,7 +188,7 @@
                         </div>
                         <div class="author-meta">
                             <p class="post-meta author-name">Taylor Halliday</p>
-                            <p class="post-meta post-date">Mar 29 | 7 min read</p>
+                            <p class="post-meta post-date">Mar 29 | 6 min read</p>
                             <p class="post-meta post-words">1300 Words</p>
                         </div>
                     </header>
@@ -201,13 +201,11 @@
 
 <h2 id="lock-down-your-aws-security-with-5-easy-steps">Lock Down Your AWS Security With 5 Easy Steps</h2>
 
-<p>For the practically paranoid, improving the security of your AWS infrastructure be an ever-changing goal to strive towards. Large organizations understand this reality. That’s why they employ entire teams that are dedicated to continually reviewing and auditing their cloud security infrastructure.</p>
+<p>For the practically paranoid, improving the security of your AWS infrastructure should be an ever-changing goal to strive towards. Large organizations understand this reality. That’s why they employ entire teams that are dedicated to continually reviewing and auditing their cloud security infrastructure.</p>
 
-<p>For us startups, however, we’re focused on trying to run our company and this security stuff is just another thing to think about. That said, there are some quick and easy improvements we implement for all our customers that dramatically improve their hosting security.</p>
+<p>For us startups, however, we’re focused on trying to run our company; this security stuff is just another thing to think about. That said, there are some quick and easy improvements we implement for all our customers that dramatically improve their hosting security.</p>
 
 <p>In this post, I’ll provide 5 quick and easy steps that any company hosted on AWS should take to improve the security of their infrastructure.</p>
-
-<p>If you have an AWS account</p>
 
 <h3 id="1-properly-configure-iam">1. Properly Configure IAM</h3>
 
@@ -229,7 +227,7 @@
 <p>Treat this new account like it is your primary account, and get in the habit of creating new accounts for your employees, contractors, friends, butler, etc. in this manner. IAM allows you to effectively manage access from a bird&rsquo;s-eye view for all of your critical resources.</p>
 
 <blockquote>
-<p>Tip: Never, ever, assign someone&rsquo;s account more permissions than they need. This makes your life easier when you know who explicitly has access to what.</p>
+<p>Tip: Never, ever, assign someone&rsquo;s account more permissions than they need. It will make your life easier when you know who explicitly has access to what.</p>
 </blockquote>
 
 <p>Disclaimer: Policies can be a bit of a pain. Here&rsquo;s a <a href="https://start.jcolemorrison.com/aws-iam-policies-in-a-nutshell/">good link</a> for some help.</p>
@@ -260,7 +258,7 @@
 
 <h3 id="4-turn-on-cloud-trail">4. Turn on Cloud Trail</h3>
 
-<p>This is a simple thing to do that will keep a record of all access to your AWS instances. It takes next to no time and will be vital in the event of a breach. Easy guide can be <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-a-trail-using-the-console-first-time.html">found here</a></p>
+<p>This is a simple thing to do that will keep a record of all access to your AWS instances. It takes next to no time and will be vital in the event of a breach. A quick start guide can be found <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-a-trail-using-the-console-first-time.html">here</a></p>
 
 <p>Once enabled, Cloud Watch will record all incoming requests into your account and deliver them within 15 minutes to an S3 bucket. It will also include API calls made by other high-level services (CloudFormation, OpsWorks, Beanstalk) into your resources.</p>
 
@@ -279,7 +277,7 @@
 
 <p>Once you have SSH&rsquo;d into the bastion host, you can SSH directly into other instances using their private IP addresses. Other than SSH&rsquo;ing, you may want to inspect a database or <a href="https://redis.io/">Redis</a> from the command line. Setting up a bastion host just gives you a safer place to do these things rather than exposing multiple EC2 instances, or even worse, exposing services like RDS to the broader internet.</p>
 
-<p>If you want to go the extra mile, use <a href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html">public and private subnets</a> to restrict which resources can even be allowed to access the internet. Leveraging private subnets will help you determine which resources exposed to being accessed.</p>
+<p>If you want to go the extra mile, use <a href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html">public and private subnets</a> to restrict which resources can even be allowed to access the internet.</p>
 
 <h3 id="anything-else">Anything else?</h3>
 
@@ -290,7 +288,7 @@
 
 <li><p><a href="https://github.com/Netflix/security_monkey">Security Monkey</a> is a really great and interesting project by Netflix. It can attach to your AWS or GCP instance to give you feedback on your current cloud security picture and track it with ongoing monitoring. Another really cool feature they rolled out is a GitHub integration that monitors your organization.</p></li>
 
-<li><p>Export your security settings with <a href="https://www.slideshare.net/AmazonWebServices/intrusion-detection-in-the-cloud-sec402-aws-reinvent-2013">this script</a>. There is the <a href="https://www.slideshare.net/AmazonWebServices/intrusion-detection-in-the-cloud-sec402-aws-reinvent-2013">great talk in 2013</a> on intrusion detection. It covers some of the points in this post, but also some great insight on how to protect against and detect intrusion.</p></li>
+<li><p>Export your security settings with <a href="https://www.slideshare.net/AmazonWebServices/intrusion-detection-in-the-cloud-sec402-aws-reinvent-2013">this script</a>. There is a <a href="https://www.slideshare.net/AmazonWebServices/intrusion-detection-in-the-cloud-sec402-aws-reinvent-2013">great talk from AWS re:Invent 2013</a> on intrusion detection. It covers some of the points in this post, but also some great insight on how to protect against and detect intrusion.</p></li>
 </ul>
 
                     </article>

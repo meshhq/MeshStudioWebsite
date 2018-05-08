@@ -91,7 +91,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.37.1" />
+    <meta name="generator" content="Hugo 0.36" />
 
     <link rel="canonical" href="https://meshstudio.io/blog/2017-12-13-intro-to-docker-with-typescript/" />
 
@@ -276,23 +276,26 @@ For more examples and ideas, visit:
 <p><strong>Note: We’re going to use a bare-bones TypeScript server that you can access <a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">here</a>. Clone it to your local machine with: <code>git clone git@github.com:Reidweb1/TypeScriptStarter.git</code> or download the zip.</strong></p>
 
 <p>Navigate into your application’s directory and run <code>touch Dockerfile</code>. Then go ahead copy the code below into your <code>Dockerfile</code>. We’ll walk through each line below.</p>
-<div class="highlight"><pre class="chroma"><code class="language-Dockerfile" data-lang="Dockerfile"><span class="c"># Docker Parent Image with Node and Typescript</span><span class="err">
-</span><span class="err"></span><span class="k">FROM</span><span class="s"> reidweb1/node-typescript:1.0.0</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># Create Directory for the Container</span><span class="err">
-</span><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /app</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># Copy the files we need to our new Directory</span><span class="err">
-</span><span class="err"></span><span class="k">ADD</span><span class="s"> . /app</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># Expose the port outside of the container</span><span class="err">
-</span><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 3000</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># Grab dependencies and transpile src directory to dist</span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> npm install <span class="o">&amp;&amp;</span> tsc<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># Start the server</span><span class="err">
-</span><span class="err"></span><span class="k">ENTRYPOINT</span><span class="s"> [&#34;node&#34;, &#34;dist/&#34;]</span></code></pre></div>
+
+<pre><code class="language-Dockerfile"># Docker Parent Image with Node and Typescript
+FROM reidweb1/node-typescript:1.0.0
+
+# Create Directory for the Container
+WORKDIR /app
+
+# Copy the files we need to our new Directory
+ADD . /app
+
+# Expose the port outside of the container
+EXPOSE 3000
+
+# Grab dependencies and transpile src directory to dist
+RUN npm install &amp;&amp; tsc
+
+# Start the server
+ENTRYPOINT [&quot;node&quot;, &quot;dist/&quot;]
+</code></pre>
+
 <p><strong>Note: Your local Dockerfile should NOT have a .txt extension. Your Dockerfile should have a blank file extension (gist doesn’t allow null file extensions so this one has a .txt).</strong></p>
 
 <p>Below is a brief explanation of each consequential line in this file.</p>
