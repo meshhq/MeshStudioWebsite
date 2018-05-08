@@ -14,7 +14,7 @@ author:
 
 # Three Reasons You Should Be Using React Native
 
-We are constantly evaluating new technologies and frameworks at Mesh. We do this to ensure that we make the right technology choices for our customers. We do after all, get paid to make these technology choices, so we have an obligation to our customers to make sure our choices are correct.
+sdfsWe are constantly evaluating new technologies and frameworks at Mesh. We do this to ensure that we make the right technology choices for our customers. We do after all, get paid to make these technology choices, so we have an obligation to our customers to make sure our choices are correct.
 
 One of the frameworks that we’ve had our eye on for a while, but hadn’t pulled the trigger with is [React Native](https://facebook.github.io/react-native/). We build applications across a numbers of different platforms including web, mobile, server, and IoT. Needless to say, the promise of cross-platform development is very appealing.. 
 
