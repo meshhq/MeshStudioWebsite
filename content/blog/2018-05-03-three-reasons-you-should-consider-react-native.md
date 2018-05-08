@@ -2,9 +2,9 @@
 title: 3 Reasons You Should Consider React Native
 sub_title: React Native is a fantastic option for building mobile applications. 
 tags: [software, react, mobile, react-native]
-date: 2018-05-08
-publishdate: 2018-05-08
-hero_image: /images/blog/2018-05-08-three-reasons-you-should-consider-react-native/hero.png
+date: 2018-05-03
+publishdate: 2018-05-03
+hero_image: /images/blog/2018-05-03-three-reasons-you-should-consider-react-native/hero.png
 author:
   name: Kevin Coleman
   url: https://twitter.com/KevFColeman
@@ -16,7 +16,7 @@ author:
 
 We are constantly evaluating new technologies and frameworks at Mesh. We do this to ensure that we make the right technology choices for our customers. We do after all, get paid to make these technology choices, so we have an obligation to our customers to make sure our choices are correct.
 
-One of the frameworks that we’ve had our eye on for a while, but hadn’t pulled the trigger with is [React Native](https://facebook.github.io/react-native/). We build applications across a numbers of different platforms including web, mobile, server, and IoT, so the promise of cross-platform development is very appealing. 
+One of the frameworks that we’ve had our eye on for a while, but hadn’t pulled the trigger with is [React Native](https://facebook.github.io/react-native/). We build applications across a numbers of different platforms including web, mobile, server, and IoT. Needless to say, the promise of cross-platform development is very appealing.. 
 
 My partner Taylor and I are both longtime native developers and were skeptical of the React Native’s claims however. Despite our skepticism, we decided to start actively investigating the platform late last year. And we are extremely happy we did as most of our  new mobile development is now being done in React Native.
 
