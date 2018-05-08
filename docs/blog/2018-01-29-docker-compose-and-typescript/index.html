@@ -81,7 +81,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.37.1" />
+    <meta name="generator" content="Hugo 0.36" />
 
     <link rel="canonical" href="https://meshstudio.io/blog/2018-01-29-docker-compose-and-typescript/" />
 
@@ -210,17 +210,20 @@
 <p>We’ve built a starter app with Node, Express, and Typescript. You can go ahead and clone it here (note that this project already has a <code>Dockerfile</code> set up).</p>
 
 <p>Create the <code>docker-compose.yml</code> file by running <code>touch docker-compose.yml</code>. Open it up and copy the following:</p>
-<div class="highlight"><pre class="chroma"><code class="language-YAML" data-lang="YAML">version<span class="p">:</span><span class="w"> </span><span class="s2">&#34;3&#34;</span><span class="w">
-</span><span class="w"></span>services<span class="p">:</span><span class="w">
-</span><span class="w">  </span>web<span class="p">:</span><span class="w">
-</span><span class="w">    </span>build<span class="p">:</span><span class="w"> </span>.<span class="w">
-</span><span class="w">    </span>command<span class="p">:</span><span class="w"> </span>gulp<span class="w">
-</span><span class="w">    </span>ports<span class="p">:</span><span class="w">
-</span><span class="w">      </span>-<span class="w"> </span><span class="s2">&#34;8080:3000&#34;</span><span class="w">
-</span><span class="w">    </span>depends_on<span class="p">:</span><span class="w">
-</span><span class="w">      </span>-<span class="w"> </span>postgres<span class="w">
-</span><span class="w">  </span>postgres<span class="p">:</span><span class="w">
-</span><span class="w">    </span>image<span class="p">:</span><span class="w"> </span>postgres<span class="p">:</span><span class="m">9.6</span>.<span class="m">2</span>-alpine</code></pre></div>
+
+<pre><code class="language-YAML">version: &quot;3&quot;
+services:
+  web:
+    build: .
+    command: gulp
+    ports:
+      - &quot;8080:3000&quot;
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:9.6.2-alpine
+</code></pre>
+
 <p>The most important function of the <code>docker-compose.yml</code> is to define what the compose application is going to look like. Think of it like a blueprint not only for each container, but for a complete application as well. The two main actions we’ll take with Compose file in this tutorial are:</p>
 
 <ul>

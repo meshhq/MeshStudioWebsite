@@ -81,7 +81,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.37.1" />
+    <meta name="generator" content="Hugo 0.36" />
 
     <link rel="canonical" href="https://meshstudio.io/blog/2017-11-03-fun-with-levenshtein-distance/" />
 
@@ -216,44 +216,46 @@
 <p>You compare the letters at each index and add 1 to its ‘score’ each time the characters don’t match. Anytime one of the words is longer than the other, another point is added (for example Mesh vs. Testing would have a score of 5 instead of 3).</p>
 
 <p>In Javascript:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">word1</span> <span class="o">=</span> <span class="s1">&#39;mesh&#39;</span>
-<span class="k">const</span> <span class="nx">word2</span> <span class="o">=</span> <span class="s1">&#39;tests&#39;</span>
 
-<span class="kd">function</span> <span class="nx">levenshteinDistance</span> <span class="p">(</span><span class="nx">firstWord</span><span class="p">,</span> <span class="nx">secondWord</span><span class="p">)</span> <span class="p">{</span>
-	<span class="k">const</span> <span class="nx">firstArray</span> <span class="o">=</span> <span class="nx">firstWord</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-	<span class="k">const</span> <span class="nx">secondArray</span> <span class="o">=</span> <span class="nx">secondWord</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-	<span class="kd">let</span> <span class="nx">score</span> <span class="o">=</span> <span class="mi">0</span>
+<pre><code class="language-javascript">const word1 = 'mesh'
+const word2 = 'tests'
 
-	<span class="k">const</span> <span class="nx">firstLength</span> <span class="o">=</span> <span class="nx">firstArray</span><span class="p">.</span><span class="nx">length</span>
-	<span class="k">const</span> <span class="nx">secondLength</span> <span class="o">=</span> <span class="nx">secondArray</span><span class="p">.</span><span class="nx">length</span>
+function levenshteinDistance (firstWord, secondWord) {
+	const firstArray = firstWord.split('')
+	const secondArray = secondWord.split('')
+	let score = 0
 
-	<span class="k">if</span> <span class="p">(</span><span class="nx">firstLength</span> <span class="o">&gt;=</span> <span class="nx">secondLength</span><span class="p">)</span> <span class="p">{</span>
-		<span class="nx">score</span> <span class="o">+=</span> <span class="p">(</span><span class="nx">firstLength</span> <span class="o">-</span> <span class="nx">secondLength</span><span class="p">)</span>
-	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-		<span class="nx">score</span> <span class="o">+=</span> <span class="p">(</span><span class="nx">secondLength</span> <span class="o">-</span> <span class="nx">firstLength</span><span class="p">)</span>
-	<span class="p">}</span>
+	const firstLength = firstArray.length
+	const secondLength = secondArray.length
 
-	<span class="k">const</span> <span class="nx">shorterWord</span> <span class="o">=</span> <span class="p">(</span><span class="nx">firstLength</span> <span class="o">&gt;=</span> <span class="nx">secondLength</span><span class="p">)</span> <span class="o">?</span> <span class="nx">secondLength</span> <span class="o">:</span> <span class="nx">firstLength</span>
+	if (firstLength &gt;= secondLength) {
+		score += (firstLength - secondLength)
+	} else {
+		score += (secondLength - firstLength)
+	}
 
-	<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">shorterWord</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-		<span class="kd">let</span> <span class="nx">firstChar</span>
-		<span class="kd">let</span> <span class="nx">secondChar</span>
-		<span class="k">if</span> <span class="p">(</span><span class="nx">firstLength</span> <span class="o">&gt;=</span> <span class="nx">secondLength</span><span class="p">)</span> <span class="p">{</span>
-			<span class="nx">firstChar</span> <span class="o">=</span> <span class="nx">firstArray</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
-			<span class="nx">secondChar</span> <span class="o">=</span> <span class="nx">secondArray</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
-		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-			<span class="nx">firstChar</span> <span class="o">=</span> <span class="nx">secondArray</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
-			<span class="nx">secondChar</span> <span class="o">=</span> <span class="nx">firstArray</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
-		<span class="p">}</span>
-		<span class="k">if</span> <span class="p">(</span><span class="nx">firstChar</span> <span class="o">!=</span> <span class="nx">secondChar</span><span class="p">)</span> <span class="p">{</span>
-			<span class="nx">score</span><span class="o">++</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Levenshtein Distance: &#39;</span><span class="p">,</span> <span class="nx">score</span><span class="p">)</span>
-<span class="p">}</span>
+	const shorterWord = (firstLength &gt;= secondLength) ? secondLength : firstLength
 
-<span class="nx">levenshteinDistance</span><span class="p">(</span><span class="nx">word1</span><span class="p">,</span> <span class="nx">word2</span><span class="p">)</span>
-</code></pre></div>
+	for (let i = 0; i &lt; shorterWord; i++) {
+		let firstChar
+		let secondChar
+		if (firstLength &gt;= secondLength) {
+			firstChar = firstArray[i]
+			secondChar = secondArray[i]
+		} else {
+			firstChar = secondArray[i]
+			secondChar = firstArray[i]
+		}
+		if (firstChar != secondChar) {
+			score++
+		}
+	}
+	console.log('Levenshtein Distance: ', score)
+}
+
+levenshteinDistance(word1, word2)
+</code></pre>
+
 <p>So now you’re asking, “When would I use this?”. First, there’s almost certainly some sort of derivative of a Levenshtein counter in every autocorrect tool ever made. Aside from that, use your imagination to think of ways it could be used in trivia games, text adventures, language/speech recognition, and even AI. Being able to account for human error in typing and speaking can create a much more fluid and immersive UX.</p>
 
 <p>The function above can get far more complex depending on how ‘smart’ you want you system to be. You can start comparing adjacent characters, syllables, parts of speech, and working point values into each of them depending on what your system values. Go wild with Levenshtein 🚀🙌</p>

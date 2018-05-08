@@ -6,10 +6,19 @@
     <description>Recent content in Javascript on Mesh Studio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Mar 2018 12:56:33 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 08 May 2018 11:59:08 -0700</lastBuildDate>
     
 	<atom:link href="https://meshstudio.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>React Native Navigation</title>
+      <link>https://meshstudio.io/blog/2018-05-08-react-native-navigation/</link>
+      <pubDate>Tue, 08 May 2018 11:59:08 -0700</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-05-08-react-native-navigation/</guid>
+      <description>React Native Navigation From Native to Cross-Platform Coming from a native iOS background the way React Navigation is set up seemed a little bizarre. I was so used to sub-classing Navigation Controllers, that scaffolding my app’s navigation stack via a constructor seemed a little odd (it still seems a little odd). It was also a little frustrating when the docs don’t really take you past the ‘Hello World’ set up.</description>
+    </item>
     
     <item>
       <title>Writing Better Components in Vue.js</title>
