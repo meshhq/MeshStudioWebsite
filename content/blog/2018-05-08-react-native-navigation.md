@@ -16,11 +16,19 @@ author:
 
 ### From Native to Cross-Platform
 
-Coming from a native iOS background the way React Navigation is set up seemed a little bizarre. I was so used to sub-classing Navigation Controllers, that scaffolding my app’s navigation stack via a constructor seemed a little odd (it still seems a little odd). It was also a little frustrating when the docs don’t really take you past the ‘Hello World’ set up. So, with this post, I aim to build a clear guide to setting up a `TabNavigator` based application with `StackNavigator`’s embedded in each tab. I’ll also cover some tips on UI customization and passing props between navigators.
+React Native navigation code can seem very odd to developers coming from Objective C or Swift. Whereas native code asks that developers sub class Navigation and Tab Bar controllers, React Native demands that app navigation must be scaffolded in a single constructor.
 
-### Project Setup
+This seemed more than a little odd when I first started doing React Native development. I was also frustrated to find that React Native's documentation doesn't really provide much guidance beyond the ‘Hello World’ set up.
 
-For this project, we’ll be using [`create-react-native-app`](https://github.com/react-community/create-react-native-app) (CRNA) to get started. This cli uses the [Expo](https://expo.io/) app to build and run React Native applications. In this tutorial, we’ll only be running the app on the iOS simulator (you’ll need to [download Xcode](https://developer.apple.com/xcode/) if you don’t already have it). If you want to run your app on an actual device you’ll need to download the Expo app from the iOS App Store or Google Play, and follow the instructions displayed in you terminal after running `npm start`.
+With this post, I aim to provide a clear guide to setting up your navigation logic in a React Native application. We will be using the awesome [react-navigation](https://reactnavigation.org/) framework to do so. This framework allows you to build a tab based application by using a `TabNavigator` object with `StackNavigator`’s embedded in each tab. I’ll also cover some tips on UI customization and passing props between navigators.
+
+For those unfamiliar, a `TabNavigator` is a container component that provides navigation to your app via buttons on a static bar at the top or bottom of the screen (Instagram, Twitter and Facebook all use this style of navigation on mobile). A `StackNavigator` is a container component that allows you to 'push' new components onto the screen or 'pop' the current component off the screen. These two components serve as a sort of router for a mobile app.
+
+### Setup
+
+For this post, we’ll be using [`create-react-native-app`](https://github.com/react-community/create-react-native-app) (CRNA) to get started. This cli uses the [Expo](https://expo.io/) framework to build and run React Native applications.
+
+We’ll also be running the app on the iOS simulator so you’ll need to [download Xcode](https://developer.apple.com/xcode/) if you don’t already have it. If you want to run your app on an actual device, you'll need to download the Expo app from the iOS App Store or Google Play, and follow the instructions displayed in you terminal after running `npm start`.
 
 First off, download the CRNA cli by running:
 
@@ -40,25 +48,67 @@ Now `cd` into that directory and install `react-navigation`.
 npm install react-navigation 
 ```
 
-You can run your project on an iOS simulator by running the following.
+Lets go ahead an fire up your application at this point to make sure everything is working correctly. You can run your project on an iOS simulator by running the following.
 
 ```
 npm run ios
 ```
 
-You’ll note that the home screen has a couple default labels. These are created in `App.js`. (Note: running on a Android simulator is a little more involved so we aren’t going to cover it in this post. Read more [here](https://developers.arcgis.com/android/10-2/sample-code/emulator/).)
+Notice that the home screen has a couple default labels. These are created in `App.js`. (Note: running on a Android simulator is a little more involved so we aren’t going to cover it in this post. Read more [here](https://developers.arcgis.com/android/10-2/sample-code/emulator/).)
 
-### Setting Up The Tab Navigator
+### Setting Up A Tab Navigator
 
-Unlike a traditional React Component, the `react-navigation` components aren’t implemented as a Component subclass; they’re created via a custom constructor function that can take in a number of different options.
+Unlike a traditional React components, `react-navigation` components aren’t implemented as a Component subclass; they’re created via a custom constructor function that can take in a number of different options.
 
-Let’s start by opening up the `App.js` file and removing the `<View />` component and the three `<Text />` components in `render()`. Now add the import statement at the top of the file.
+Let’s start by opening up our `App.js` file and removing the `<View />` component and the three `<Text />` components in `render()`. Now add the import statement at the top of the file.
 
 ```
 import { createBottomTabNavigator } from 'react-navigation'
 ```
 
 In order to create a `TabNavigator` component, that we can return from the `render()` method, we’ll need to call the `createBottomTabNavigator` constructor and set it to a variable. Here’s our new `App.js` file:
+
+```
+import React from 'react'
+import { createBottomTabNavigator } from 'react-navigation'
+import { StackOne } from './stacks/StackOne'
+import { StackTwo } from './stacks/StackTwo'
+import TabIcon from './TabIcon'
+import { Text, Platform, StyleSheet } from 'react-native'
+
+export default class App extends React.Component {
+  
+  render() {
+    return (
+      <HomeNavigation />
+    )
+  }
+
+}
+
+const HomeNavigation = createBottomTabNavigator(
+  {
+    TabOne: {
+      screen: StackOne,
+      navigationOptions: ({ navigation }) => ({
+      tabBarIcon: ({ focused, tintColor }) => {
+        return <TabIcon index={ 0 }
+                        isFocused={ focused }/>
+        }
+      })
+    },
+    TabTwo: {
+      screen: StackTwo,
+      navigationOptions: ({ navigation }) => ({
+      tabBarIcon: ({ focused, tintColor }) => {
+        return <TabIcon index={ 1 }
+                        isFocused={ focused }/>
+        }
+      })
+    }
+  }
+)
+```
 
 You’ll see how navigation components are a little different in how they’re created. Instead of sub-classing the `React.Component` class, we’re calling the exported constructor function `createBottomTabNavigator` and passing through options that will define what the `TabNavigator` will display.
 
@@ -181,7 +231,7 @@ const styles = StyleSheet.create({
 
 The string passed into the `this.props.navigator.navigate()` has to match the key we originally set in `createStackNavigator()`. For this tutorial, it’s 'Detail'. The object passed into the `this.props.navigator.navigate()` is used to pass props between components via the `navigator`. You can then access this data when the detail view mounts. See the code below in `StackOneDetail.js` to see how this data is pulled out with `this.props.navigation.state.params`.
 
-Everything in this file is pretty simple. The one ‘gotcha’ in here is the navigate function needs to be in the ES7 ‘arrow-function’ style. This style will auto-bind the component instance to the function so we are able to access `navigation` using `this.props`. If you don’t do it this way the ‘this’ accessed when the function is called will be the instance of `TouchableOpacity` it was passed through too.
+Everything in this file is pretty simple. The one ‘gotcha’ in here is the 'navigation' function needs to be in the ES7 ‘arrow-function’ style. This style will auto-bind the component instance to the function so we are able to access `navigation` using `this.props`. If you don’t do it this way the ‘this’ accessed when the function is called will be the instance of `TouchableOpacity` it was passed through too.
 
 `StackOneDetail.js`
 
