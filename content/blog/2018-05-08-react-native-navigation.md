@@ -16,7 +16,7 @@ author:
 
 ### From Native to Cross-Platform
 
-React Native navigation code can seem very odd to developers coming from Objective C or Swift. Whereas native code asks that developers sub class Navigation and Tab Bar controllers, React Native demands that app navigation must be scaffolded in a single constructor.
+React Native navigation code can seem very odd to developers coming from Objective C or Swift. Whereas native code asks that developers subclass Navigation and Tab Bar controllers, React Native demands that app navigation must be scaffolded in a single constructor.
 
 This seemed more than a little odd when I first started doing React Native development. I was also frustrated to find that React Native's documentation doesn't really provide much guidance beyond the ‘Hello World’ set up.
 
@@ -58,7 +58,7 @@ Notice that the home screen has a couple default labels. These are created in `A
 
 ### Setting Up A Tab Navigator
 
-Unlike a traditional React components, `react-navigation` components aren’t implemented as a Component subclass; they’re created via a custom constructor function that can take in a number of different options.
+Unlike a traditional React component, `react-navigation` components aren’t implemented as a Component subclass; they’re created via a custom constructor function that can take in a number of different options.
 
 Let’s start by opening up our `App.js` file and removing the `<View />` component and the three `<Text />` components in `render()`. Now add the import statement at the top of the file.
 
@@ -110,7 +110,7 @@ const HomeNavigation = createBottomTabNavigator(
 )
 ```
 
-You’ll see how navigation components are a little different in how they’re created. Instead of sub-classing the `React.Component` class, we’re calling the exported constructor function `createBottomTabNavigator` and passing through options that will define what the `TabNavigator` will display.
+You’ll see how navigation components are a little different in how they’re created. Instead of subclassing the `React.Component` class, we’re calling the exported constructor function `createBottomTabNavigator` and passing through options that will define what the `TabNavigator` will display.
 
 (Note: When naming components that are set to variables, be sure to begin the name with a capital letter. JSX will interpret a lowercase tag name to be an HTML tag. `<tabNavigator />` will compile to `React.createElement('tabNavigator')` where `<TabNavigator />` will compile to 
 `React.createElement(TabNavigator)` — we require the latter.) 
@@ -416,4 +416,4 @@ It’s important to note that we’re using the `focused` param sent through the
 
 ## Conclusion
 
-Now your tab-based application won’t be stuck with static screens! While `react-navigation` may not be the most intuitive thing (especially for people used to sub-classing everything), it offers a lot of room for customization that has, historically, been a pain when it comes to native mobile UI. For a list of everything you can do with `navigationOptions` check out the docs [here](https://reactnavigation.org/docs/en/tab-navigator.html). If you can, check out the [repository](https://github.com/Reidweb1/RNTabBarDemo) we built in this tutorial here.
+Now your tab-based application won’t be stuck with static screens! While `react-navigation` may not be the most intuitive thing (especially for people used to subclassing everything), it offers a lot of room for customization that has, historically, been a pain when it comes to native mobile UI. For a list of everything you can do with `navigationOptions` check out the docs [here](https://reactnavigation.org/docs/en/tab-navigator.html). If you can, check out the [repository](https://github.com/Reidweb1/RNTabBarDemo) we built in this tutorial here.
