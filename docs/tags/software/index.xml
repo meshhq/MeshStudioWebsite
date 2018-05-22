@@ -6,10 +6,20 @@
     <description>Recent content in Software on Mesh Studio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://meshstudio.io/tags/software/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The 6 IoT Technology Choices</title>
+      <link>https://meshstudio.io/blog/2018-05-22-six-iot-technology-choices/</link>
+      <pubDate>Sun, 20 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-05-22-six-iot-technology-choices/</guid>
+      <description>6 Technology Choices To Consider When Shipping IoT Products Over the past year, we&amp;rsquo;ve worked on several high profiles IoT projects. Throughout this process, we have become acutely aware of the technical challenges that software teams will face when it comes to the shipping production grade connected devices.
+Regardless of form factor, most IoT products will share a standard set of fundamental technical requirements. In this post, we enumerate several of these requirements and frame them as questions that technical leaders should be asking themselves at the onset of any IoT project.</description>
+    </item>
     
     <item>
       <title>3 Reasons You Should Consider React Native</title>
