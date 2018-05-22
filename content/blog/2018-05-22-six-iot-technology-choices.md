@@ -1,15 +1,15 @@
 ---
 title: The 6 IoT Technology Choices
-sub_title: Depending on the needs of your IoT project, you'll need to choose wisely
+sub_title: Depending on the needs of your IoT project, you'll need to choose wisely.
 tags: ["IoT", "Cloud", "Software"]
-date: 2018-05-20T10:46:54-07:00
-publishdate: 2018-05-20T10:46:54-07:00
-hero_image: ""
+date: 2018-05-20
+publishdate: 2018-05-20
+hero_image: /images/blog/2018-05-22-six-iot-technology-choices/hero.jpg
 author:
-  name: ""
-  url: ""
-  mail: ""
-  avatar: ""
+  name: Taylor Halliday
+  url: https://twitter.com/tayhalliday
+  mail: taylor@meshstudio.io
+  avatar: https://avatars2.githubusercontent.com/u/1266416?s=460&v=4
 ---
 
 # 6 Technology Choices To Consider When Shipping IoT Products
