@@ -47,7 +47,7 @@
                 </div>
                 <div class="col-12 col-md-8 md-offset-1 order-md-1 blog-index-column">
                     <div class="row">
-                        {{ range first 10 (where .Data.Pages "Section" "blog").ByDate.Reverse }}
+                        {{ range first 100 (where .Data.Pages "Section" "blog").ByDate.Reverse }}
                         <div class="col-12">
                             {{ partial "blogCard.html" .}}
                         </div>
@@ -57,7 +57,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 {{ end }}
