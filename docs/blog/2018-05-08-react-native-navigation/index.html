@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    
+    <link rel="shortcut icon" href="https://meshstudio.io/images/site/favicon/favicon.png">
+    <link rel="apple-touch-icon" href="https://meshstudio.io/images/site/favicon/favicon.png" />
+
+    
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta property="og:title" content=" React Native Navigation &middot;  Mesh Studio" />
+<meta property="og:site_name" content="Mesh Studio" />
+<meta property="og:url" content="https://meshstudio.io/blog/2018-05-08-react-native-navigation/" />
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:domain" value="meshstudio.io" />
+<meta name="twitter:title" value="Mesh Studio" />
+<meta name="twitter:description" value="We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products." />
+<meta name="twitter:image" content="https://meshstudio.io/images/site/twitter_logo.jpg">
+<meta name="twitter:url" value="https://meshstudio.io/" />
+<meta name="twitter:label1" value="Cloud Development" />
+<meta name="twitter:label2" value="Application Development" />
+
+
+  <meta property="og:type" content="article" />
+
+<meta property="og:article:published_time" content="2018-05-08T11:59:08-07:00" />
+
+
+<meta property="og:article:tag" content="React Native" />
+
+<meta property="og:article:tag" content="Mobile" />
+
+<meta property="og:article:tag" content="JavaScript" />
+
+
+
+
+  <meta property="og:image" content="/images/blog/2018-05-08-react-native-navigation/hero.png" />
+
+
+<title>
+ React Native Navigation &middot;  Mesh Studio
+</title>
+
+<meta name="description" content="We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products." />
+
+<meta name="HandheldFriendly" content="True" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/site/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/site/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/site/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/site/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/site/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/site/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/site/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/site/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/site/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/site/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/site/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/site/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/site/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/site/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://meshstudio.io/css/main.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/qxb4anb.css">
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6268016/6917392/css/fonts.css" />
+
+    
+    
+      
+          <link href="https://meshstudio.io/index.xml" rel="alternate" type="application/rss+xml" title="Mesh Studio" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.35" />
+
+    <link rel="canonical" href="https://meshstudio.io/blog/2018-05-08-react-native-navigation/" />
+
+</head>
+<body class="nav-closed">
+
+  <div class="container" id="container">
+    <nav class="navbar navbar-expand-md navbar-light mt-5">
+
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        
+        <a class="navbar-brand" href="https://meshstudio.io/">
+            <img class="img-fluid main-logo" src="/images/site/meshlogo-black-vector.svg" alt="Home" />
+        </a>
+
+        
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <form class="form-inline ml-auto my-2 my-lg-0">
+                <ul class="navbar-nav">
+                    
+                     
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/work/">Work</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/services/">Services</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about/">About</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://mesh.workable.com/">Join Us</a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/blog/">Blog</a>
+                    </li>
+                    
+                </ul>
+            </form>
+        </div>
+
+    </nav>
+</div>
+
+
+
+<body class="nav-closed">
+    <img class="seattle-rain" src="/images/site/rain.svg" alt="Home" />
+    <main id="content" class="content" role="main">
+
+        
+
+<div class="blog-post">
+    <div class="hero">
+        <div class="container">
+            <div class="row d-flex flex-row align-items-center justify-content-center">
+                <div class="row justify-content-center hero-title-block">
+    <div class="col-12">
+        <div class="d-flex justify-content-center">
+            <h2>React Native Navigation</h2>
+        </div>
+    </div>
+    <div class="col-12 mt-2">
+        <div class="d-flex justify-content-center">
+            <h3>Stacks on Tabs</h3>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="primary-section">
+        <div class="hero-container d-flex justify-content-center">
+            <img class="img-fluid" src="/images/blog/2018-05-08-react-native-navigation/hero.png" />
+        </div>
+        
+        <div class="container post-container">
+                    
+            <div class="row blog-meta-row">
+                <div class="col-12 col-sm-12 col-lg-8 offset-lg-2">
+                    <header class="meta-header d-flex flex-row align-items-center">
+                        <div class="author-picture mr-3">
+                            <a class="founder-twitter ml-2 mb-5" href="https://medium.com/@reidweber_34407">
+                                <img class="img-fluid author-pic rounded-circle" src="https://avatars2.githubusercontent.com/u/8824846?s=460&amp;v=4" />
+                            </a>
+                        </div>
+                        <div class="author-meta">
+                            <p class="post-meta author-name">Reid Weber</p>
+                            <p class="post-meta post-date">May 8 | 10 min read</p>
+                            <p class="post-meta post-words">2100 Words</p>
+                        </div>
+                    </header>
+                </div>
+            </div>
+            <div class="row blog-content-row">
+                <div class="col-12 col-sm-12 col-lg-8 offset-lg-2">
+                    <article class="post">
+                        
+
+<h2 id="react-native-navigation">React Native Navigation</h2>
+
+<h3 id="from-native-to-cross-platform">From Native to Cross-Platform</h3>
+
+<p>React Native navigation code can seem very odd to developers coming from Objective C or Swift. Whereas native code asks that developers subclass Navigation and Tab Bar controllers, React Native demands that app navigation must be scaffolded in a single constructor.</p>
+
+<p>This seemed more than a little odd when I first started doing React Native development. I was also frustrated to find that React Native&rsquo;s documentation doesn&rsquo;t really provide much guidance beyond the ‘Hello World’ set up.</p>
+
+<p>With this post, I aim to provide a clear guide to setting up your navigation logic in a React Native application. We will be using the awesome <a href="https://reactnavigation.org/">react-navigation</a> framework to do so. This framework allows you to build a tab based application by using a <code>TabNavigator</code> object with <code>StackNavigator</code>’s embedded in each tab. I’ll also cover some tips on UI customization and passing props between navigators.</p>
+
+<p>For those unfamiliar, a <code>TabNavigator</code> is a container component that provides navigation to your app via buttons on a static bar at the top or bottom of the screen (Instagram, Twitter and Facebook all use this style of navigation on mobile). A <code>StackNavigator</code> is a container component that allows you to &lsquo;push&rsquo; new components onto the screen or &lsquo;pop&rsquo; the current component off the screen. These two components serve as a sort of router for a mobile app.</p>
+
+<h3 id="setup">Setup</h3>
+
+<p>For this post, we’ll be using <a href="https://github.com/react-community/create-react-native-app"><code>create-react-native-app</code></a> (CRNA) to get started. This cli uses the <a href="https://expo.io/">Expo</a> framework to build and run React Native applications.</p>
+
+<p>We’ll also be running the app on the iOS simulator so you’ll need to <a href="https://developer.apple.com/xcode/">download Xcode</a> if you don’t already have it. If you want to run your app on an actual device, you&rsquo;ll need to download the Expo app from the iOS App Store or Google Play, and follow the instructions displayed in you terminal after running <code>npm start</code>.</p>
+
+<p>First off, download the CRNA cli by running:</p>
+
+<pre><code>npm install -g create-react-native-app
+</code></pre>
+
+<p>Next, you can create a clean project by running:</p>
+
+<pre><code>create-react-native-app MyApplication
+</code></pre>
+
+<p>Now <code>cd</code> into that directory and install <code>react-navigation</code>.</p>
+
+<pre><code>npm install react-navigation 
+</code></pre>
+
+<p>Lets go ahead an fire up your application at this point to make sure everything is working correctly. You can run your project on an iOS simulator by running the following.</p>
+
+<pre><code>npm run ios
+</code></pre>
+
+<p>Notice that the home screen has a couple default labels. These are created in <code>App.js</code>. (Note: running on a Android simulator is a little more involved so we aren’t going to cover it in this post. Read more <a href="https://developers.arcgis.com/android/10-2/sample-code/emulator/">here</a>.)</p>
+
+<h3 id="setting-up-a-tab-navigator">Setting Up A Tab Navigator</h3>
+
+<p>Unlike a traditional React component, <code>react-navigation</code> components aren’t implemented as a Component subclass; they’re created via a custom constructor function that can take in a number of different options.</p>
+
+<p>Let’s start by opening up our <code>App.js</code> file and removing the <code>&lt;View /&gt;</code> component and the three <code>&lt;Text /&gt;</code> components in <code>render()</code>. Now add the import statement at the top of the file.</p>
+
+<pre><code>import { createBottomTabNavigator } from 'react-navigation'
+</code></pre>
+
+<p>In order to create a <code>TabNavigator</code> component, that we can return from the <code>render()</code> method, we’ll need to call the <code>createBottomTabNavigator</code> constructor and set it to a variable. Here’s our new <code>App.js</code> file:</p>
+
+<pre><code>import React from 'react'
+import { createBottomTabNavigator } from 'react-navigation'
+import { StackOne } from './stacks/StackOne'
+import { StackTwo } from './stacks/StackTwo'
+import TabIcon from './TabIcon'
+import { Text, Platform, StyleSheet } from 'react-native'
+
+export default class App extends React.Component {
+  
+  render() {
+    return (
+      &lt;HomeNavigation /&gt;
+    )
+  }
+
+}
+
+const HomeNavigation = createBottomTabNavigator(
+  {
+    TabOne: {
+      screen: StackOne,
+      navigationOptions: ({ navigation }) =&gt; ({
+      tabBarIcon: ({ focused, tintColor }) =&gt; {
+        return &lt;TabIcon index={ 0 }
+                        isFocused={ focused }/&gt;
+        }
+      })
+    },
+    TabTwo: {
+      screen: StackTwo,
+      navigationOptions: ({ navigation }) =&gt; ({
+      tabBarIcon: ({ focused, tintColor }) =&gt; {
+        return &lt;TabIcon index={ 1 }
+                        isFocused={ focused }/&gt;
+        }
+      })
+    }
+  }
+)
+</code></pre>
+
+<p>You’ll see how navigation components are a little different in how they’re created. Instead of subclassing the <code>React.Component</code> class, we’re calling the exported constructor function <code>createBottomTabNavigator</code> and passing through options that will define what the <code>TabNavigator</code> will display.</p>
+
+<p>(Note: When naming components that are set to variables, be sure to begin the name with a capital letter. JSX will interpret a lowercase tag name to be an HTML tag. <code>&lt;tabNavigator /&gt;</code> will compile to <code>React.createElement('tabNavigator')</code> where <code>&lt;TabNavigator /&gt;</code> will compile to
+<code>React.createElement(TabNavigator)</code> — we require the latter.)</p>
+
+<p>We aren’t able to run this yet since we haven’t created <code>StackOne</code> and <code>StackTwo</code>. But that’s the next step!</p>
+
+<h3 id="setting-up-the-stack-navigators">Setting Up The Stack Navigators</h3>
+
+<p>Start by running the following commands to create all the other files we’ll need for this project.</p>
+
+<pre><code>touch StackOne.js StackOneMain.js StackOneDetail.js StackTwo.js StackTwoMain.js StackTwoDetail.js
+</code></pre>
+
+<p>We’ll start with <code>StackOne.js</code> and <code>StackTwo.js</code> and create our <code>StackNavigators</code>.</p>
+
+<p>Creating a <code>StackNavigator</code> is pretty similar to the <code>TabNavigator</code> in the sense that we’ll call a <code>react-navigation</code> function, pass through some options, and export the variable we set it to.</p>
+
+<p>Here is <code>StackOne.js</code>:</p>
+
+<pre><code>import { createStackNavigator } from 'react-navigation'
+import StackOneMain from './StackTwoMain'
+import StackOneDetail from './StackTwoDetail'
+
+const StackOne = createStackNavigator({
+  Main: {
+    screen: StackOneMain
+  },
+  Detail: {
+    screen: StackOneDetail
+  }
+})
+
+export {
+  StackOne
+}
+</code></pre>
+
+<p>Here is <code>StackTwo.js</code>:</p>
+
+<pre><code>import { createStackNavigator } from 'react-navigation'
+import StackTwoMain from './StackTwoMain'
+import StackTwoDetail from './StackTwoDetail'
+
+const StackTwo = createStackNavigator({
+  Main: {
+    screen: StackTwoMain
+  },
+  Detail: {
+    screen: StackTwoDetail
+  }
+})
+
+export {
+  StackTwo
+}
+</code></pre>
+
+<p>This is pretty straightforward; the <code>createStackNavigator()</code> function takes in two components that it will navigate back and forth between.</p>
+
+<p>Under the hood, <code>react-navigation</code> will add a <code>navigator</code> to the <code>props</code> of the component passed through in this function. Every time we create an instance of either <code>StackMain</code> or <code>StackDetail</code> we’ll be able to use <code>this.props.navigation</code> to reference the <code>StackNavigator</code>’s we created in the files above.</p>
+
+<p>(Note: The keys used in the constructor will be used later on to navigate to the screen we want. <code>Main</code> and <code>Detail</code> can be substituted for any name you want — just keep track of them!)</p>
+
+<p>We still aren’t able to properly run this until we have some child components defined for our <code>StackNavigator</code>&rsquo;s. Let get to that now.</p>
+
+<h3 id="creating-stack-child-components">Creating Stack Child Components</h3>
+
+<p>For this tutorial we’re going to use very simple components for our StackNavigator&rsquo;s. Each <code>Main</code> component will have a button in the middle that performs the navigation (we don’t need anything but a label on the detail screen since we get the back button for free).</p>
+
+<p>Here are the component files:</p>
+
+<p><code>StackOneMain.js</code></p>
+
+<pre><code>import React from 'react'
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity
+} from 'react-native'
+
+export default class StackOneMain extends React.Component {
+
+  render() {
+    return (
+      &lt;View style={ styles.container }&gt;
+        &lt;TouchableOpacity onPress={ this.navigation }&gt;
+          &lt;Text style={ styles.text }&gt;Navigate&lt;/Text&gt;
+        &lt;/TouchableOpacity&gt;
+      &lt;/View&gt;
+    )
+  }
+
+  navigation = () =&gt; {
+    this.props.navigation.navigate('Detail')
+  }
+
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  text: {
+    fontSize: 24,
+    color: '#2662c1'
+  }
+})
+</code></pre>
+
+<p>(Note: <code>StackTwoMain.js</code> is identical except the class name)</p>
+
+<p>The string passed into the <code>this.props.navigator.navigate()</code> has to match the key we originally set in <code>createStackNavigator()</code>. For this tutorial, it’s &lsquo;Detail&rsquo;. The object passed into the <code>this.props.navigator.navigate()</code> is used to pass props between components via the <code>navigator</code>. You can then access this data when the detail view mounts. See the code below in <code>StackOneDetail.js</code> to see how this data is pulled out with <code>this.props.navigation.state.params</code>.</p>
+
+<p>Everything in this file is pretty simple. The one ‘gotcha’ in here is the &lsquo;navigation&rsquo; function needs to be in the ES7 ‘arrow-function’ style. This style will auto-bind the component instance to the function so we are able to access <code>navigation</code> using <code>this.props</code>. If you don’t do it this way the ‘this’ accessed when the function is called will be the instance of <code>TouchableOpacity</code> it was passed through too.</p>
+
+<p><code>StackOneDetail.js</code></p>
+
+<pre><code>import React from 'react'
+import {
+  View,
+  Text,
+  StyleSheet
+} from 'react-native'
+
+export default class StackOneDetail extends React.Component {
+
+  componentWillMount() {
+    const navigationParams = this.props.navigation.state.params
+    const navigationProp = navigationParams.navigationProp
+    console.log('props ', navigationProp)
+  }
+	
+  render() {
+    return (
+      &lt;View style={ styles.container }&gt;
+        &lt;Text style={ styles.text }&gt;Detail!&lt;/Text&gt;
+      &lt;/View&gt;
+    )
+  }
+
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+		justifyContent: 'center'
+  },
+  text: {
+    fontSize: 24,
+    color: '#2662c1'
+  }
+})
+</code></pre>
+
+<p>(Note: <code>StackTwoDetail.js</code> is identical except the class name)</p>
+
+<p>Another important note is that it is typically considered a best practice to decouple your <code>StyleSheets</code> from the Component files. We’re going to keep them in the Component file for simplicity’s sake in this tutorial.</p>
+
+<p>We can now see our Navigators in action. Run the app on the iOS simulator again with:</p>
+
+<pre><code>npm run ios
+</code></pre>
+
+<p>You’ll see that the Navigate button will push the detail view onto the screen.</p>
+
+<h3 id="customization">Customization</h3>
+
+<p>You may have noticed that our tabs currently don’t have an icons on them. The <code>react-navigation</code> docs offer a <a href="https://reactnavigation.org/docs/en/tab-based-navigation.html#customizing-the-appearance">simple way</a> to do this using <code>react-native-vector-icons</code> but we’re going to take it one step further and create a custom icon component that will offer us more flexibility.</p>
+
+<p>We’re going to create a custom <code>TabIcon</code> component. Let’s start by entering the following:</p>
+
+<pre><code>touch TabIcon.js
+</code></pre>
+
+<p>This component will take in two props that will help us display the UI correctly.</p>
+
+<p>First, we’ll need pass through an <code>index</code> that we’ll use to display the correct image. Second, we’ll need an <code>isFocused</code> prop that will let us know if the given tab is currently selected.</p>
+
+<p>Here is our new <code>TabIcon.js</code> file:</p>
+
+<pre><code>import React from 'react'
+import {
+  View,
+  Text,
+  Image,
+  Platform,
+  StyleSheet
+} from 'react-native'
+
+export default class TabIcon extends React.Component {
+
+  render() {
+    let image
+    switch(this.props.index) {
+      case 0:
+        if (this.props.isFocused) {
+          image = require('./resources/selected_event_tab.png')
+        } else {
+          image = require('./resources/event_tab.png')
+        }
+        break
+      case 1:
+      default:
+        if (this.props.isFocused) {
+          image = require('./resources/selected_profile_tab.png')
+        } else {
+          image = require('./resources/profile_tab.png')
+        }
+    }
+    if (this.props.isFocused) {
+      return (
+        &lt;View style={ style.container }&gt;
+          &lt;Image style={ style.image } source={ image } /&gt;
+        &lt;/View&gt;
+      )
+    } else {
+      return (
+        &lt;View style={ style.container }&gt;
+          &lt;Image style={ style.image } source={ image } /&gt;
+        &lt;/View&gt;
+      )
+    }
+  }
+
+}
+
+const style = StyleSheet.create({
+	container: {
+		flex: 1,
+		alignItems: 'center',
+    justifyContent: 'center'
+	},
+	image: {
+		height: 18,
+		width: 22,
+		resizeMode: 'contain'
+	}
+})
+</code></pre>
+
+<p>(Note: I created a directory called <code>resources</code> and added four images to it. A ‘selected’ and ‘normal’ version of each icon. You can get these icons from the finished <a href="https://github.com/Reidweb1/RNTabBarDemo">repository</a>.)</p>
+
+<p>You’ll see that we’re using the props passed through to determine which image will be shown. We’re switching on the <code>index</code> provided, and checking whether or not the component is the tab that <code>isFocused</code>.</p>
+
+<p>Let’s return to our <code>App.js</code> file where the <code>TabNavigator</code> is created. We’re going to import our new <code>TabIcon</code> and pass it into the <code>createBottomTabNavigator()</code> via the <code>navigationOptions</code>.</p>
+
+<p>Here is what our <code>App.js</code> file looks like now:</p>
+
+<pre><code>import React from 'react'
+import { createBottomTabNavigator } from 'react-navigation'
+import { StackOne } from './stacks/StackOne'
+import { StackTwo } from './stacks/StackTwo'
+import TabIcon from './TabIcon'
+import { Text, Platform, StyleSheet } from 'react-native'
+
+export default class App extends React.Component {
+  
+  render() {
+    return (
+      &lt;HomeNavigation /&gt;
+    )
+  }
+
+}
+
+const HomeNavigation = createBottomTabNavigator(
+  {
+    TabOne: {
+      screen: StackOne,
+      navigationOptions: ({ navigation }) =&gt; ({
+	      tabBarIcon: ({ focused, tintColor }) =&gt; {
+		      return &lt;TabIcon index={ 0 } isFocused={ focused }/&gt;
+        }
+      })
+    },
+    TabTwo: {
+      screen: StackTwo,
+      navigationOptions: ({ navigation }) =&gt; ({
+	      tabBarIcon: ({ focused, tintColor }) =&gt; {
+		      return &lt;TabIcon index={ 1 } isFocused={ focused }/&gt;
+        }
+      })
+    }
+  }
+)
+</code></pre>
+
+<p>It’s important to note that we’re using the <code>focused</code> param sent through the <code>tabBarIcon</code> function, which is embedded in the <code>navigatorOptions</code> function. Note that the <code>navigation</code> object is passed through at the top level of the <code>navigatorOptions</code> — we don’t need this at the moment, but it becomes very useful if you want custom components that are also able to navigate.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Now your tab-based application won’t be stuck with static screens! While <code>react-navigation</code> may not be the most intuitive thing (especially for people used to subclassing everything), it offers a lot of room for customization that has, historically, been a pain when it comes to native mobile UI. For a list of everything you can do with <code>navigationOptions</code> check out the docs <a href="https://reactnavigation.org/docs/en/tab-navigator.html">here</a>. If you can, check out the <a href="https://github.com/Reidweb1/RNTabBarDemo">repository</a> we built in this tutorial here.</p>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+    </main>
+
+</body>
+
+<footer>
+    
+    <div class="get-in-touch-container">
+    <div class="container">
+        <div class="row get-in-touch">
+            <div class="col-12 col-md-6 content-col d-flex flex-column justify-content-start align-items-center">
+                <p class="get-in-touch-header mb-0">Ready to get started</p>
+                <p class="get-in-touch-content">Let&#39;s talk about your project</p>
+            </div>
+            <div class="col-12 col-md-6 btn-col d-flex align-items-center">
+                <button type="button" href="https://taylorhalliday.typeform.com/to/ji75xl" class="btn get-in-touch-btn typeform-share">get in touch</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container footer-container py-5" id="container">
+        <div class="row">
+            
+            <div class="col">
+                <a class="navbar-brand mb-5 mt-2" href="https://meshstudio.io/">
+                    <img class="img-fluid main-logo" src="/images/site/meshlogo-white-vector.svg" alt="Home" />
+                </a>
+            </div>
+        </div>
+        <div class="row">
+
+            
+            <div class="col-6 col-md-3 footer-list">
+                <h5>Contact</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        3621 Stone Way N Suite G
+                    </li>
+                    <li>
+                        Seattle, WA 98103
+                    </li>
+                    <li>
+                        info@meshstudio.io
+                    </li>
+                </ul>
+            </div>
+
+            
+            <div class="col-6 col-md-3 footer-list nav-list">
+                <h5>Pages</h5>
+                <ul class="list-unstyled text-small">
+
+                    <ul class="footer-nav">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/">Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/work/">Work</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/services/">Services</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/about/">About</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="https://mesh.workable.com/">Join Us</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/blog/">Blog</a>
+                        </li>
+                        
+                    </ul>
+                </ul>
+            </div>
+
+            
+            <div class="col-12 col-md-4 offset-md-2  footer-list">
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script src="/js/googleAnalytics.js"></script>
+<script src="/js/typeform.js"></script>
+<script src="/js/mailchimp.js"></script>
+
+
+</html>
