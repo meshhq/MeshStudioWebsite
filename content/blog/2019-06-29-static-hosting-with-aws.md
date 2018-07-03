@@ -4,7 +4,7 @@ sub_title: AWS is Mesh's preferred platform for quickly and securely hosting sta
 tags: ["AWS", "Cloud", "Web"]
 date: 2018-06-29
 publishdate: 2018-06-29
-hero_image: /images/blog/2018-06-29-static-hosting-with-aws/hero.jpg
+hero_image: /images/blog/2018-06-29-static-hosting-with-aws/hero.png
 author:
   name: Kevin Coleman
   url: https://twitter.com/kcoleman731
