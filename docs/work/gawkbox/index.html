@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    
+    <link rel="shortcut icon" href="https://meshstudio.io/images/site/favicon/favicon.png">
+    <link rel="apple-touch-icon" href="https://meshstudio.io/images/site/favicon/favicon.png" />
+
+    
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta property="og:title" content=" Streaming with GawkBox &middot;  Mesh Studio" />
+<meta property="og:site_name" content="Mesh Studio" />
+<meta property="og:url" content="https://meshstudio.io/work/gawkbox/" />
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:domain" value="meshstudio.io" />
+<meta name="twitter:title" value="Mesh Studio" />
+<meta name="twitter:description" value="We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products." />
+<meta name="twitter:image" content="https://meshstudio.io/images/site/twitter_logo.jpg">
+<meta name="twitter:url" value="https://meshstudio.io/" />
+<meta name="twitter:label1" value="Cloud Development" />
+<meta name="twitter:label2" value="Application Development" />
+
+
+  <meta property="og:type" content="article" />
+
+<meta property="og:article:published_time" content="2018-06-28T15:35:36-08:00" />
+
+
+<meta property="og:article:tag" content="Go" />
+
+<meta property="og:article:tag" content="Vue.js" />
+
+<meta property="og:article:tag" content="Web" />
+
+
+
+
+  <meta property="og:image" content="/images/caseStudies/gawkbox/gawkbox-hero.png" />
+
+
+<title>
+ Streaming with GawkBox &middot;  Mesh Studio
+</title>
+
+<meta name="description" content="We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products." />
+
+<meta name="HandheldFriendly" content="True" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/site/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/site/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/site/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/site/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/site/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/site/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/site/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/site/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/site/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/site/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/site/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/site/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/site/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/site/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://meshstudio.io/css/main.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/qxb4anb.css">
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6268016/6917392/css/fonts.css" />
+
+    
+    
+      
+          <link href="https://meshstudio.io/index.xml" rel="alternate" type="application/rss+xml" title="Mesh Studio" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.35" />
+
+    <link rel="canonical" href="https://meshstudio.io/work/gawkbox/" />
+
+</head>
+<body class="nav-closed">
+
+  <div class="container" id="container">
+    <nav class="navbar navbar-expand-md navbar-light mt-5">
+
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        
+        <a class="navbar-brand" href="https://meshstudio.io/">
+            <img class="img-fluid main-logo" src="/images/site/meshlogo-black-vector.svg" alt="Home" />
+        </a>
+
+        
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <form class="form-inline ml-auto my-2 my-lg-0">
+                <ul class="navbar-nav">
+                    
+                     
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/work/">Work</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/services/">Services</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about/">About</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://mesh.workable.com/">Join Us</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog/">Blog</a>
+                    </li>
+                    
+                </ul>
+            </form>
+        </div>
+
+    </nav>
+</div>
+
+
+
+<body class="nav-closed">
+    <img class="seattle-rain" src="/images/site/rain.svg" alt="Home" />
+    <main id="content" class="content" role="main">
+
+        
+<div class="case-study">
+    <div class="hero">
+        <div class="container">
+            <div class="col-12 col-md-8 offset-md-2">
+                <p class="case-study-header">Case Study</p>
+                <p class="case-study-title">Streaming with GawkBox</p>
+                <p class="case-study-sub-title">Mesh helped GawkBox build a suite of internal tools.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="primary-section">
+        <div class="hero-container d-flex justify-content-center">
+            <div class="hero-wrapper">
+                <img class="img-fluid" src="/images/caseStudies/gawkbox/gawkbox-hero.png" />
+            </div>
+        </div>
+
+        <div class="container post-container">
+            
+            <div class="row case-study-content-row">
+                <div class="col-12 col-md-8 offset-md-2">
+                    <article class="post">
+                        
+
+<p>GawkBox is an engagement and monetization platform for streamers on Twitch, YouTube, and Mixer. Their innovative product helps streaming content creators make money by providing tools for their fans to tip them.</p>
+
+<p>The company was founded by Chris Brownridge, Tony Chong, and Andrew Allison in the summer of 2016. GawkBox has raised north of $4mm from top-tier venture investors, including  Madrona Venture Group.</p>
+
+<h2 id="the-work">The Work</h2>
+
+<p>The GawkBox team approached Mesh Studio in January of 2018 to help them build a suite of internal tools. By partnering with Mesh, the GawkBox leadership team was able to keep their engineers focused on developing their core product, while Mesh engineers focused on building tools that would help power the business.</p>
+
+<h3 id="streamfinder">StreamFinder</h3>
+
+<p>StreamFinder is a tool that helps the GawkBox community team identify new leads for the GawkBox platform. It offers an intuitive query interface that allows community members to search for streamers based on a set of criteria.</p>
+
+<p>For instance, a community member could use the tool to “Find all streamers that have over 10,000 followers and have streamed in the past 30 days”. Once the streamers have been identified, they can be injected into Salesforce as Leads via a direct StreamFinder integration with the Salesforce API.</p>
+
+<p>While the front-end interface for StreamFinder is simple and intuitive, the back-end logic needed to synchronize data from the streaming platform APIs, is sophisticated. The StreamFinder service is essentially a giant synchronization pipeline. It is continuously pulling streaming information from the Twitch, Mixer, and YouTube APIs, and saving that information as time series data.</p>
+
+<p>We leveraged the Vue.js framework to build the front-end application for StreamFinder, and a combination of Go, Postgres, and Redis for the back-end service. The service is hosted as a docker container via Kubernetes on AWS.</p>
+
+<h3 id="cecil">Cecil</h3>
+
+<p>Cecil is a purpose-built tool that helps inject information from GawkBox’s internal databases, into Salesforce. Cecil has two primary functions:</p>
+
+<p>Enrichment - The enrichment process updates all Salesforce opportunities with data from GawkBox platform on a daily basis.
+Conversion - The conversion process looks at the activity each opportunity record may have taken within the GawkBox platform over the past 30 days. It then will convert opportunities between stages based on that activity.</p>
+
+<h2 id="results">Results</h2>
+
+<p>When the GawkBox team initially engaged Mesh, they only planned to have us work on StreamFinder. We were able to deliver StreamFinder ahead of schedule, however, which left time for us to tackle Cecil.</p>
+
+<p>Both StreamFinder and Cecil are live and in production today.  The community team is using StreamFinder on a weekly basis to identify creators that they would like to target for GawkBox. They are then able to pipe those leads into Salesforce where Cecil can enrich and convert opportunities as needed.</p>
+
+<p>We had a fantastic time working with Tony, Chris and the rest of he GawkBox team. The passion for their problem space is undeniable, and we look forward to watching their continued growth and success over the coming years.</p>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+    </main>
+
+</body>
+
+<footer>
+    
+    <div class="get-in-touch-container">
+    <div class="container">
+        <div class="row get-in-touch">
+            <div class="col-12 col-md-6 content-col d-flex flex-column justify-content-start align-items-center">
+                <p class="get-in-touch-header mb-0">Ready to get started</p>
+                <p class="get-in-touch-content">Let&#39;s talk about your project</p>
+            </div>
+            <div class="col-12 col-md-6 btn-col d-flex align-items-center">
+                <button type="button" href="https://taylorhalliday.typeform.com/to/ji75xl" class="btn get-in-touch-btn typeform-share">get in touch</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container footer-container py-5" id="container">
+        <div class="row">
+            
+            <div class="col">
+                <a class="navbar-brand mb-5 mt-2" href="https://meshstudio.io/">
+                    <img class="img-fluid main-logo" src="/images/site/meshlogo-white-vector.svg" alt="Home" />
+                </a>
+            </div>
+        </div>
+        <div class="row">
+
+            
+            <div class="col-6 col-md-3 footer-list">
+                <h5>Contact</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        3621 Stone Way N Suite G
+                    </li>
+                    <li>
+                        Seattle, WA 98103
+                    </li>
+                    <li>
+                        info@meshstudio.io
+                    </li>
+                </ul>
+            </div>
+
+            
+            <div class="col-6 col-md-3 footer-list nav-list">
+                <h5>Pages</h5>
+                <ul class="list-unstyled text-small">
+
+                    <ul class="footer-nav">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/">Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/work/">Work</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/services/">Services</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/about/">About</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="https://mesh.workable.com/">Join Us</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/blog/">Blog</a>
+                        </li>
+                        
+                    </ul>
+                </ul>
+            </div>
+
+            
+            <div class="col-12 col-md-4 offset-md-2  footer-list">
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script src="/js/googleAnalytics.js"></script>
+<script src="/js/typeform.js"></script>
+<script src="/js/mailchimp.js"></script>
+
+
+</html>

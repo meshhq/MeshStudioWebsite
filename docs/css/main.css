@@ -34,6 +34,7 @@
    3e - Services (What Mesh Can Do)
    3f - Blog Index (All of our Blog Posts)
    3g - Blog Post (Single)
+   3h - Hugo Fixture Shortcode customization
 
    ========================================================================== */
 
@@ -1952,4 +1953,20 @@ footer .nav-link {
     .blog-post .primary-section .blog-meta-row {
         margin-top: 6em;
     }
+}
+
+/* ==========================================================================
+   3h. Hugo Shortcode Custom CSS
+   ========================================================================== */
+
+figure p {
+    text-align: center;
+    align-content: center;
+    font-size: 0.8em !important;
+}
+
+figure img {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    box-shadow: 5px 2px 20px #E2E2E2;
 }
