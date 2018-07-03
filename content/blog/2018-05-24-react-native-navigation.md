@@ -2,9 +2,9 @@
 title: "React Native Navigation"
 sub_title: "Stacks on Tabs"
 tags: ["React Native", "Mobile", "JavaScript"]
-date: 2018-05-08T11:59:08-07:00
-publishdate: 2018-05-08T11:59:08-07:00
-hero_image: "/images/blog/2018-05-08-react-native-navigation/hero.png"
+date: 2018-05-24T11:59:08-07:00
+publishdate: 2018-05-24T11:59:08-07:00
+hero_image: "/images/blog/2018-05-24-react-native-navigation/hero.png"
 author:
   name: "Reid Weber"
   url: https://medium.com/@reidweber_34407
