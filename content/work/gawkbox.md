@@ -9,7 +9,7 @@ logo_max_height: 30
 hero_image: /images/caseStudies/gawkbox/gawkbox-hero.png
 ---   
 
-GawkBox is an engagement and monetization platform for streamers on Twitch, YouTube, and Mixer. Their innovative product helps streaming content creators make money by providing tools for their fans to tip them. 
+GawkBox is building an app that allows fans to acquire subscriptions on Twitch and Mixer for free. Subscriptions on Twitch and Mixer are one of the key points of engagement between creators and their communities, enabling fans to interact more closely with their favourite creators. Instead of paying between $5 and $25 per month for subscriptions, GawkBox allows users to pay for them by downloading and playing free games.
 
 The company was founded by Chris Brownridge, Tony Chong, and Andrew Allison in the summer of 2016. GawkBox has raised north of $4mm from top-tier venture investors, including  Madrona Venture Group. 
 
@@ -19,9 +19,9 @@ The GawkBox team approached Mesh Studio in January of 2018 to help them build a 
 
 ### StreamFinder
 
-StreamFinder is a tool that helps the GawkBox community team identify new leads for the GawkBox platform. It offers an intuitive query interface that allows community members to search for streamers based on a set of criteria. 
+StreamFinder is a tool that helps the GawkBox community team identify new creators for the GawkBox platform. It offers an intuitive query interface that allows community members to search for creators based on a set of criteria. 
 
-For instance, a community member could use the tool to “Find all streamers that have over 10,000 followers and have streamed in the past 30 days”. Once the streamers have been identified, they can be injected into Salesforce as Leads via a direct StreamFinder integration with the Salesforce API. 
+For instance, a community member could use the tool to “Find all creators that have over 10,000 followers and have streamed in the past 30 days”. Once the creators have been identified, they can be injected into Salesforce as Leads via a direct StreamFinder integration with the Salesforce API. 
 
 While the front-end interface for StreamFinder is simple and intuitive, the back-end logic needed to synchronize data from the streaming platform APIs, is sophisticated. The StreamFinder service is essentially a giant synchronization pipeline. It is continuously pulling streaming information from the Twitch, Mixer, and YouTube APIs, and saving that information as time series data. 
 
@@ -40,6 +40,4 @@ When the GawkBox team initially engaged Mesh, they only planned to have us work 
 
 Both StreamFinder and Cecil are live and in production today.  The community team is using StreamFinder on a weekly basis to identify creators that they would like to target for GawkBox. They are then able to pipe those leads into Salesforce where Cecil can enrich and convert opportunities as needed.
 
-We had a fantastic time working with Tony, Chris and the rest of he GawkBox team. The passion for their problem space is undeniable, and we look forward to watching their continued growth and success over the coming years. 
-
-
+We had a fantastic time working with Tony, Chris and the rest of the GawkBox team. The passion for their problem space is undeniable, and we look forward to watching their continued growth and success over the coming years. 
