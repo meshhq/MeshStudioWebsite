@@ -1,0 +1,39 @@
+{{ define "main" }}
+hello
+<div class="careers">
+    
+    <div class="hero">
+        <div class="container">
+            {{partial "heroTitleBlock" .Params}}
+        </div>
+    </div>
+
+    <div class="primary-section">
+        <div class="container">
+            <!-- TITLE / SUBTITLE -->
+            <div class="row section-headers flex-column">
+                <p class="title">{{.Params.team_photos_title}}</p>
+                <p class="content">{{.Params.team_photos_sub_title}}</p>
+            </div>
+
+            <!-- TEAM PHOTOS -->
+            <div class="teamphotos col-12">
+                {{partial "teamPhotos"}}
+            </div>
+
+            <!-- PRODUCTS -->
+            <div class="row section-headers flex-column">
+                <p class="title">{{.Params.product_section_title}}</p>
+                <p class="content">{{.Params.product_section_sub_title}}</p>
+            </div>    
+            <div class="row products">
+                {{ range .Params.products }}
+                    {{partial "contentSections/productCard" (dict "title" .title "sub_title" .sub_title "base_url" .base_url "product_image" .product_image "logo" .logo "logo_max_height" .logo_max_height "tags" .tags "product_color" .product_color "link" .link)}}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{{ end }}

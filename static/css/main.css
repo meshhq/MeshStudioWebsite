@@ -32,9 +32,11 @@
    3c - Work Single (Case Study)
    3d - About (Story of Mesh / Founders)
    3e - Services (What Mesh Can Do)
-   3f - Blog Index (All of our Blog Posts)
-   3g - Blog Post (Single)
-   3h - Hugo Fixture Shortcode customization
+   3f - Careers 
+   3g - Careers - Job detail page
+   3h - Blog Index (All of our Blog Posts)
+   3i - Blog Post (Single)
+   3j - Hugo Fixture Shortcode customization
 
    ========================================================================== */
 
@@ -1569,7 +1571,103 @@ footer .nav-link {
 }
 
 /* ==========================================================================
-   3f. Blog Index - All of our Blog Posts
+   3f. Careers
+   ========================================================================== */
+.careers .primary-section {
+    background: var(--mesh-dk-blue-bg);
+    border: var(--mesh-dk-blue-bg-border) 1px solid;
+}
+
+.careers .primary-section .section-headers {
+    letter-spacing: 2px;
+    margin-top: 4em;
+}
+
+.careers .primary-section .photo-mosaic {
+    height: 350px;
+    margin-bottom: 15px;
+}
+
+.careers .primary-section .photo-mosaic .pic-large {
+    background: green;
+    height: 100%;
+    overflow: hidden;
+}
+
+.careers .primary-section .photo-mosaic .pic-large img {
+    height: 100%;
+}
+
+.careers .primary-section .photo-mosaic .pic-container .row {
+    overflow: hidden;
+    height: 100%;
+}
+
+.careers .primary-section .photo-mosaic .pic-container .photo {
+    height: 50%;
+}
+
+.careers .primary-section .photo-mosaic .pic-container .landscape-photo {
+    height: 50%;
+    overflow: hidden;
+    margin-bottom: 7px;
+}
+
+.careers .primary-section .photo-mosaic .pic-container .row > div:nth-child(2) {
+    padding-left: 15px;
+    padding-right: 7px;
+    overflow: hidden;
+}
+
+.careers .primary-section .photo-mosaic .pic-container .row > div:nth-child(3) {
+    padding-left: 7px;
+    padding-right: 15px;
+    overflow: hidden;
+}
+
+.careers .primary-section .photo-mosaic .pic-container .portrait-photo {
+    height: 50%;
+    overflow: hidden;
+    margin-top: 7px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.careers .primary-section .photo-mosaic .pic-container .landscape-photo img {
+    width: 100%;
+}
+
+.careers .primary-section .photo-mosaic .pic-container .portrait-photo img {
+    width: 100%;
+    height: auto;
+}
+
+.careers .primary-section .photo-lineup .portrait-photo {
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.careers .primary-section .photo-lineup div {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.careers .primary-section .photo-lineup img {
+    display:block;
+    margin:auto;
+}
+
+.careers .primary-section .photo-lineup > div:first-child {
+    padding-left: 0px;
+}
+
+/* ==========================================================================
+   3g. Careers - Job Detail Page
+   ========================================================================== */
+
+
+/* ==========================================================================
+   3h. Blog Index - All of our Blog Posts
    ========================================================================== */
 
 .blog .hero {
@@ -1808,7 +1906,7 @@ footer .nav-link {
 }
 
 /* ==========================================================================
-   3g. Blog Post (Single) - Individual Blog Post
+   3i. Blog Post (Single) - Individual Blog Post
    ========================================================================== */
 
 .blog-post .hero {
