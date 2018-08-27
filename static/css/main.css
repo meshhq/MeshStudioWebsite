@@ -74,6 +74,7 @@ h6 {
     /* Blacks */
     --mesh-black: #1A2233;
     /* Blues */
+    --mesh-blue-light: #007AFF;
     --mesh-blue: #1B5FCC;
     --mesh-dk-blue: #1F2533;
     --mesh-dk-blue-light: rgba(31, 37, 50, 0.5);
@@ -1659,6 +1660,26 @@ footer .nav-link {
 
 .careers .primary-section .photo-lineup > div:first-child {
     padding-left: 0px;
+}
+
+.careers .primary-section .benefits .benefit-card .title {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.careers .primary-section .benefits .benefit-card .sub-title {
+    font-weight: 300;
+}
+
+.careers .primary-section .benefits .benefit-card .photo-col {
+    padding-left: 0px;
+    padding-right: 8px;
+}
+
+.careers .primary-section .benefits .benefit-card img {
+    max-width: 100%;
+    max-height: 30px;
+    color: var(--mesh-blue-light);
 }
 
 /* ==========================================================================
