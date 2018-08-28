@@ -22,13 +22,29 @@
 
             <!-- BENEFITS -->
             <div class="row section-headers flex-column">
-                <p class="title">{{.Params.team_photos_title}}</p>
-                <p class="content">{{.Params.team_photos_sub_title}}</p>
+                <p class="title">{{.Params.benefits_title}}</p>
+                <p class="content">{{.Params.benefits_sub_title}}</p>
             </div>
-            <div class="benefits col-12">
+            <div class="benefits col-12 mt-4">
                 {{partial "benefits" .}}
             </div>
-    
+
+            <!-- POSITIONS -->
+            <div class="row section-headers flex-column">
+                <p class="title">{{.Params.positions_title}}</p>
+                <p class="content">{{.Params.positions_sub_title}}</p>
+            </div>
+            <div class="positions col-12 mt-4 mb-4">
+                {{ range (where .Data.Pages "Section" "careers").ByWeight.Reverse }}
+                <div class="row position-row mb-3">
+                    <div class="col-12 col-md-10 offset-md-1">
+                        <a class="position-title" href="{{ .Title }}">{{ .Title }}</a>
+                        <p class="position-location" >{{ .Params.location }}</p>
+                        <p class="position-description mt-2">{{.Params.sub_title}}</p>
+                    </div>            
+                </div>
+                {{ end }}
+            </div>                
         </div>
     </div>
 
