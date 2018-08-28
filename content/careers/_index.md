@@ -7,7 +7,10 @@ team_photos_sub_title: We're a close group of co-workers, technologists, and fri
 benefits_title: Benefits
 benefits_sub_title: We are proud to provide the best for the best
 positions_title: Positions
-positions_sub_title: The roles that would best compliment the team
+positions_sub_title: The next hires at Mesh
+no_positions_title: Don't see a position?
+no_positions_sub_title: We're always looking for the best. Drop us a line if you think you would be a great fit!
+no_positions_get_in_touch: Let's talk
 benefits:
   - salary:
     title: Competitive Salary

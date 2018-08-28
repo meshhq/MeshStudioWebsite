@@ -159,7 +159,7 @@ a:hover {
 /* Helvetica Neue way easier to read in paragraphs (print) */
 
 article {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "acumin-pro", Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-size: 18px;
 }
@@ -173,6 +173,18 @@ article h5 {
     margin-bottom: 0.5em;
 }
 
+article h1 {
+    font-size: 1.4em;
+}
+
+article h2 {
+    font-size: 1.3em;
+}
+
+article h3 {
+    font-size: 1.2em;
+}
+
 /* Spacing */
 
 article blockquote p,
@@ -184,7 +196,7 @@ article li {
 
 .primary-section article p {
     font-size: 1.0em;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 article pre {
@@ -1574,6 +1586,13 @@ footer .nav-link {
 /* ==========================================================================
    3f. Careers
    ========================================================================== */
+
+
+.careers .hero {
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+   
 .careers .primary-section {
     background: var(--mesh-dk-blue-bg);
     border: var(--mesh-dk-blue-bg-border) 1px solid;
@@ -1581,7 +1600,7 @@ footer .nav-link {
 
 .careers .primary-section .section-headers {
     letter-spacing: 2px;
-    margin-top: 4em;
+    margin-top: 8em;
 }
 .careers .primary-section .section-headers .content {
     width: 100%;
@@ -1711,14 +1730,80 @@ footer .nav-link {
     }    
 }
 
-.careers .primary-section .positions .position-description {
+.careers .primary-section .no-position .no-position-title {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.35em;
+    margin-bottom: 4px;
+}
 
+.careers .primary-section .no-position .no-position-description {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.25em;
+}
+
+.careers .primary-section .no-position .no-position-link {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.3em;
+    padding-bottom: 10px;
+    color: var(--mesh-blue);
 }
 
 /* ==========================================================================
    3g. Careers - Job Detail Page
    ========================================================================== */
 
+.job-post .primary-section {
+    background: var(--mesh-dk-blue-bg);
+    border: var(--mesh-dk-blue-bg-border) 1px solid;
+}
+
+.job-post .primary-section .section-headers {
+    letter-spacing: 2px;
+    margin-top: 4em;
+}
+.job-post .primary-section .section-headers .content {
+    width: 100%;
+}
+
+.job-post .primary-section .content {
+    margin-top: 4em;
+    margin-bottom: 4em;
+    border: var(--mesh-dk-blue-dk-border) 1px solid;   
+    background: #fff;
+}
+
+.job-post .primary-section .content .title,
+.job-post .primary-section .content .date {
+    width: 100%;
+    text-align: center;
+}
+
+.job-post .primary-section .content .title {
+    font-size: 1.5em;
+    margin-bottom: 4px;
+}
+
+.job-post .primary-section .content .date {
+    font-size: 1.2em;
+    font-weight: 200;
+    color: var(--mesh-dk-blue-light);
+}
+
+.job-post .primary-section .content .post h2 {
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.job-post .primary-section .content .post p {
+    /* font-size: 1.0em;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 1.1; */
+}
 
 /* ==========================================================================
    3h. Blog Index - All of our Blog Posts
@@ -2006,6 +2091,12 @@ footer .nav-link {
     font-size: 2.5em;
 }
 
+.blog-post .post-container {
+    margin-top: 8em;
+    background: #fff;
+    margin-bottom: 4em;
+}
+
 .blog-post .primary-section .title {
     text-transform: uppercase;
     font-weight: 500;
@@ -2018,7 +2109,7 @@ footer .nav-link {
 }
 
 .blog-post .primary-section .blog-meta-row {
-    margin-top: 10em;
+    margin-top: 2em;
 }
 
 .blog-post .primary-section .blog-content-row {
@@ -2029,6 +2120,16 @@ footer .nav-link {
     font-weight: 500;
     font-size: 1.25em;
     margin-bottom: 0px;
+}
+
+.blog-post .primary-section .blog-title {
+    margin-top: .75em;
+    font-size: 1.5em;
+    margin-bottom: 0px;
+}
+
+.blog-post .primary-section .post-container {
+    border: var(--mesh-dk-blue-dk-border) 1px solid;   
 }
 
 .blog-post .primary-section .author-picture,
@@ -2042,25 +2143,26 @@ footer .nav-link {
 }
 
 .blog-post .primary-section .author-name {
-    font-weight: 400;
-    font-size: .9em;
-    color: black !important;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: var(--mesh-blue);
 }
 
 .blog-post .primary-section .post-date {
-    font-weight: 500;
-    font-size: .8em;
+    font-weight: 300;
+    font-size: 1.2em;
     color: var(--mesh-dk-blue-light)
 }
 
 .blog-post .primary-section .post-words {
     font-weight: 500;
-    font-size: .8em;
+    font-size: 1.0em;
+    text-align: center;
     color: var(--mesh-dk-blue-light)
 }
 
 .blog-post .primary-section .author-pic {
-    width: 60px;
+    width: 100px;
     height: auto;
     border: var(--mesh-dk-blue-light) 1px solid;
 }
@@ -2068,6 +2170,10 @@ footer .nav-link {
 .blog-post .primary-section .sub-title {
     font-size: 1.25em;
     color: var(--mesh-dk-blue-light);
+}
+
+.blog-post .primary-section .post {
+    margin-top: 2em;
 }
 
 .blog-post table {

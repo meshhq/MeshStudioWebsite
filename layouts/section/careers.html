@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="careers">
-    
+
     <div class="hero">
         <div class="container">
             {{partial "heroTitleBlock" .Params}}
@@ -34,17 +34,26 @@
                 <p class="title">{{.Params.positions_title}}</p>
                 <p class="content">{{.Params.positions_sub_title}}</p>
             </div>
-            <div class="positions col-12 mt-4 mb-4">
+            <div class="positions row mt-4 mb-5">
                 {{ range (where .Data.Pages "Section" "careers").ByWeight.Reverse }}
-                <div class="row position-row mb-3">
+                <div class="row position-row col-12 mb-3">
                     <div class="col-12 col-md-10 offset-md-1">
-                        <a class="position-title" href="{{ .Title }}">{{ .Title }}</a>
-                        <p class="position-location" >{{ .Params.location }}</p>
+                        <a class="position-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        <p class="position-location">{{ .Params.location }}</p>
                         <p class="position-description mt-2">{{.Params.sub_title}}</p>
-                    </div>            
+                    </div>
                 </div>
                 {{ end }}
-            </div>                
+            </div>
+            <div class="no-position row mb-5">
+                <div class="col-12 col-sm-6 offset-sm-3 d-flex flex-column">
+                    <p class="no-position-title">{{ .Params.no_positions_title }}</p>
+                    <p class="no-position-description">{{ .Params.no_positions_sub_title }}</p>
+                    <div class="d-flex justify-content-center">
+                        <a class="no-position-link" href="mailto:info@meshstudio.io">{{ .Params.no_positions_get_in_touch }}</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
