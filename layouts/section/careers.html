@@ -21,12 +21,16 @@
             </div>
 
             <!-- BENEFITS -->
-            <div class="row section-headers flex-column">
-                <p class="title">{{.Params.benefits_title}}</p>
-                <p class="content">{{.Params.benefits_sub_title}}</p>
-            </div>
-            <div class="benefits col-12 mt-4">
-                {{partial "benefits" .}}
+            <div class="benefits-wrapper">
+                <div class="bg"></div>
+                <div class="row section-headers flex-column">
+                    <p class="title">{{.Params.benefits_title}}</p>
+                    <p class="content">{{.Params.benefits_sub_title}}</p>
+                </div>
+                
+                <div class="benefits col-12 mt-4">        
+                    {{partial "benefits" .}}
+                </div>
             </div>
 
             <!-- POSITIONS -->

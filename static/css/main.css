@@ -1684,6 +1684,24 @@ footer .nav-link {
     padding-left: 0px;
 }
 
+.careers .primary-section .benefits-wrapper {
+    position: relative;
+}
+
+.careers .primary-section .benefits-wrapper .bg {
+    width: 1000%;
+    left: -25%;
+    position: absolute;
+    height: 120%;
+    top: -10%;
+    background: #fff;
+}
+
+.careers .primary-section .benefits-wrapper .section-headers {
+    position: relative;
+    z-index: 1000;
+}
+
 .careers .primary-section .benefits .benefit-card .title {
     font-size: 1.25rem;
     font-weight: 400;
