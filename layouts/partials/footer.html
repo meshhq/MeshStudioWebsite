@@ -45,10 +45,7 @@
 
             <!-- Latest Blog -->
             <div class="col-12 col-md-4 offset-md-2 footer-list">
-                {{ range first 1 (where .Data.Pages "Section" "blog") }}
-                    {{.}}
-                {{ end }}
-                {{ range first 1 (where .Data.Pages "Section" "blog").ByDate.Reverse }}
+                {{ range first 1 (.Site.GetPage "section" "blog").Pages.ByDate.Reverse }}
                     <h5>Latest Blog Post</h5>
                     <!-- Figure out how to put latest blog thing here -->
                     <a class="blog-title d-block" href="{{.URL}}">{{.Title}}</a>
