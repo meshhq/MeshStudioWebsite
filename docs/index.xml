@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ship Better Software, Faster on Mesh Studio</title>
+    <link>https://meshstudio.io/</link>
+    <description>Recent content in Ship Better Software, Faster on Mesh Studio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Sep 2018 10:09:12 -0800</lastBuildDate>
+    
+	<atom:link href="https://meshstudio.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Intern</title>
+      <link>https://meshstudio.io/careers/intern/</link>
+      <pubDate>Tue, 04 Sep 2018 10:09:12 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/careers/intern/</guid>
+      <description>At Mesh Studio, we help companies create incredible products. From design, to product management, to building and shipping the actual software, we work with our customer across all phases of product development. We are a group of talented and creative professionals that are passionate building world-class products. We have had success working with companies of all sizes - from startups, to members of the Fortune 500.
+When we’re not working with customers, we are building our own products.</description>
+    </item>
+    
+    <item>
+      <title>Senior Software Engineer</title>
+      <link>https://meshstudio.io/careers/senior-software-engineer/</link>
+      <pubDate>Tue, 04 Sep 2018 10:09:12 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/careers/senior-software-engineer/</guid>
+      <description>At Mesh Studio, we help companies create incredible products. From design, to product management, to building and shipping the actual software, we work with our customer across all phases of product development. We are a group of talented and creative professionals that are passionate building world-class products. We have had success working with companies of all sizes - from startups, to members of the Fortune 500.
+When we’re not working with customers, we are building our own products.</description>
+    </item>
+    
+    <item>
+      <title>Business Development Manager</title>
+      <link>https://meshstudio.io/careers/business-development-manager/</link>
+      <pubDate>Mon, 20 Aug 2018 10:09:12 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/careers/business-development-manager/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Senior Cloud Engineer</title>
+      <link>https://meshstudio.io/careers/senior-cloud-engineer-aws/</link>
+      <pubDate>Tue, 04 Sep 2018 10:09:12 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/careers/senior-cloud-engineer-aws/</guid>
+      <description>At Mesh Studio, we help companies create incredible products. From design, to product management, to building and shipping the actual software, we work with our customer across all phases of product development. We are a group of talented and creative professionals that are passionate building world-class products. We have had success working with companies of all sizes - from startups, to members of the Fortune 500.
+When we’re not working with customers, we are building our own products.</description>
+    </item>
+    
+    <item>
+      <title>Lead Software Engineer</title>
+      <link>https://meshstudio.io/careers/lead-software-engineer/</link>
+      <pubDate>Mon, 20 Aug 2018 10:09:12 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/careers/lead-software-engineer/</guid>
+      <description>At Mesh Studio, we help companies create incredible products. From design, to product management, to building and shipping the actual software, we work with our customer across all phases of product development. We are a group of talented and creative professionals that are passionate building world-class products. We have had success working with companies of all sizes - from startups, to members of the Fortune 500.
+When we’re not working with customers, we are building our own products.</description>
+    </item>
+    
+    <item>
+      <title>The Complete Guide to Static Hosting with AWS</title>
+      <link>https://meshstudio.io/blog/2019-06-29-static-hosting-with-aws/</link>
+      <pubDate>Fri, 29 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2019-06-29-static-hosting-with-aws/</guid>
+      <description>The Complete Guide to Static Hosting with AWS At Mesh, we host a large number of static websites for ourselves and our customers. As a result, we’ve experimented with a number of different hosting technologies and platforms over the years. We’ve found that static hosting with AWS Simple Storage Service (S3) turns out to be a fantastic option.
+In this guide, I’ll demonstrate how you can deploy a static site on AWS, complete with a custom domain, HTTPS, and lighting fast content delivery.</description>
+    </item>
+    
+    <item>
+      <title>Building Community at Drivers Club</title>
+      <link>https://meshstudio.io/work/drivers-club/</link>
+      <pubDate>Thu, 28 Jun 2018 15:35:36 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/work/drivers-club/</guid>
+      <description>Drivers Club is a passion project of Doug Perry’s. As a car enthusiasts, he envisioned a community of like-minded individuals where members are offered a full range of services including collection management, curated events, a private lounge and automobile storage — all in a modern, climate controlled, secure, and convenient location.
+The first location will be opening this summer in Redmond, WA and a reciprocal club in Scottsdale, AZ.</description>
+    </item>
+    
+    <item>
+      <title>Streaming with GawkBox</title>
+      <link>https://meshstudio.io/work/gawkbox/</link>
+      <pubDate>Thu, 28 Jun 2018 15:35:36 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/work/gawkbox/</guid>
+      <description>GawkBox is building an app that allows fans to acquire subscriptions on Twitch and Mixer for free. Subscriptions on Twitch and Mixer are one of the key points of engagement between creators and their communities, enabling fans to interact more closely with their favourite creators. Instead of paying between $5 and $25 per month for subscriptions, GawkBox allows users to pay for them by downloading and playing free games.</description>
+    </item>
+    
+    <item>
+      <title>The 6 IoT Technology Choices</title>
+      <link>https://meshstudio.io/blog/2018-05-22-six-iot-technology-choices/</link>
+      <pubDate>Sun, 20 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-05-22-six-iot-technology-choices/</guid>
+      <description>6 Technology Choices To Consider When Shipping IoT Products Over the past year, we&amp;rsquo;ve worked on several high profiles IoT projects. Throughout this process, we have become acutely aware of the technical challenges that software teams will face when it comes to the shipping production grade connected devices.
+Regardless of form factor, most IoT products will share a standard set of fundamental technical requirements. In this post, we enumerate several of these requirements and frame them as questions that technical leaders should be asking themselves at the onset of any IoT project.</description>
+    </item>
+    
+    <item>
+      <title>React Native Navigation</title>
+      <link>https://meshstudio.io/blog/2018-05-08-react-native-navigation/</link>
+      <pubDate>Tue, 08 May 2018 11:59:08 -0700</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-05-08-react-native-navigation/</guid>
+      <description>React Native Navigation From Native to Cross-Platform React Native navigation code can seem very odd to developers coming from Objective C or Swift. Whereas native code asks that developers subclass Navigation and Tab Bar controllers, React Native demands that app navigation must be scaffolded in a single constructor.
+This seemed more than a little odd when I first started doing React Native development. I was also frustrated to find that React Native&amp;rsquo;s documentation doesn&amp;rsquo;t really provide much guidance beyond the ‘Hello World’ set up.</description>
+    </item>
+    
+    <item>
+      <title>3 Reasons You Should Consider React Native</title>
+      <link>https://meshstudio.io/blog/2018-05-03-three-reasons-you-should-consider-react-native/</link>
+      <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-05-03-three-reasons-you-should-consider-react-native/</guid>
+      <description>We are constantly evaluating new technologies and frameworks at Mesh. We do this to ensure that we make the right technology choices for our customers. We do after all, get paid to make these technology choices, so we have an obligation to our customers to make sure our choices are correct.
+One of the frameworks that we’ve had our eye on for a while, but hadn’t pulled the trigger with is React Native.</description>
+    </item>
+    
+    <item>
+      <title>Lock Down Your AWS Security With 5 Easy Steps</title>
+      <link>https://meshstudio.io/blog/2018-03-29-locking-down-your-aws-in-5-steps/</link>
+      <pubDate>Thu, 29 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-03-29-locking-down-your-aws-in-5-steps/</guid>
+      <description>Lock Down Your AWS Security With 5 Easy Steps For the practically paranoid, improving the security of your AWS infrastructure should be an ever-changing goal to strive towards. Large organizations understand this reality. That’s why they employ entire teams that are dedicated to continually reviewing and auditing their cloud security infrastructure.
+For us startups, however, we’re focused on trying to run our company; this security stuff is just another thing to think about.</description>
+    </item>
+    
+    <item>
+      <title>5 Practical Steps to Shipping Better Software, Faster</title>
+      <link>https://meshstudio.io/blog/2018-03-22-five-practical-tips-for-shipping-software-faster/</link>
+      <pubDate>Thu, 22 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-03-22-five-practical-tips-for-shipping-software-faster/</guid>
+      <description>5 Practical Steps to Shipping Better Software, Faster All software development teams are unique. They are made up of developers, project managers, quality assurance testers, and designers of vary skill sets and seniority levels.
+Despite the differences in their makeup, all of these teams share a common objective: to ship high-quality software products, fast.
+In reality, the overwhelming majority of software development teams are not able to perform at this high of a level.</description>
+    </item>
+    
+    <item>
+      <title>Writing Better Components in Vue.js</title>
+      <link>https://meshstudio.io/blog/2018-03-01-readable-vue-components/</link>
+      <pubDate>Thu, 01 Mar 2018 12:56:33 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-03-01-readable-vue-components/</guid>
+      <description>Pros and Cons of Vue.js When starting a new project, you want to get things up and running as quickly as possible. While modern JavaScript advancements have made things a lot easier on developers, they have also increased the complexity of getting things going. Every developer who has worked with Webpack knows what I am talking about; Webpack is a great example of a very powerful tool that has an incredibly steep learning curve, even for doing basic things.</description>
+    </item>
+    
+    <item>
+      <title>API Strategy for an Insurance Giant</title>
+      <link>https://meshstudio.io/work/symetra/</link>
+      <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/work/symetra/</guid>
+      <description>Founded in 1957 as a subsidiary of Safeco Insurance, Symetra Financial Corporation offers a suite of insurance, benefit, and retirement products to consumers in the United States. Through a nationwide network of financial institutions, broker-dealers, independent agents, advisors, and benefits consultants, the company serves over 2 million customers and has over $42 billion in assets under management.
+As of February 2016 Symetra is wholly owned subsidiary of Sumitomo Life in Japan and is headquartered in Bellevue, Washington.</description>
+    </item>
+    
+    <item>
+      <title>Leveling Up Health Savings Accounts</title>
+      <link>https://meshstudio.io/work/lively/</link>
+      <pubDate>Thu, 01 Feb 2018 15:35:36 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/work/lively/</guid>
+      <description>Lively is a software company that helps employers offer a modern Health Savings Account (HSA) to their employees. Their product streamlines the process of setting-up an HSA and offers a convenient dashboard to manage and administer the benefit. Lively also helps employees take full advantage of their HSA by allowing them to invest the money that they contribute into the account.
+“Our goal is to facilitate and optimize how individuals save for healthcare expenses.</description>
+    </item>
+    
+    <item>
+      <title>August Mobile SDKs</title>
+      <link>https://meshstudio.io/work/august/</link>
+      <pubDate>Thu, 01 Feb 2018 12:21:35 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/work/august/</guid>
+      <description>August Home is the brainchild of famed industrial designer Yves Behar and Jason Johnson. Founded in 2013, the company designs and manufactures beautiful, connected home security products. August’s product lineup has grown to include connected locks, doorbells, and cameras.
+The company had raised over $70MM from-top tier venture capitalists like Maveron and Bessemer Venture Partners and was acquired by Assa Abloy in October of 2017.
+Problem August’s connected products are controlled with a smartphone through a mix of Bluetooth and WiFi.</description>
+    </item>
+    
+    <item>
+      <title>Docker Compose and TypeScript</title>
+      <link>https://meshstudio.io/blog/2018-01-29-docker-compose-and-typescript/</link>
+      <pubDate>Mon, 29 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-01-29-docker-compose-and-typescript/</guid>
+      <description>Docker Compose and Typescript These days, it’s easy for web applications to quickly balloon with dependencies and third party libraries. Managing your applications within a team can be a real headache when you start running into versioning issues, db configuration issues, local machine compatibility issues, etc&amp;hellip; Docker Compose can help a lot with these issues — along with giving you a much cleaner way to get your app up and running.</description>
+    </item>
+    
+    <item>
+      <title>Spectre Explained</title>
+      <link>https://meshstudio.io/blog/2018-01-15-spectre/</link>
+      <pubDate>Mon, 29 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-01-15-spectre/</guid>
+      <description>Spectre and Meltdown Pt 1: What you need to know This is a two-part series that covers both Spectre and Meltdown. In the following piece we will attempt to give an explanation of a recent security exploit known as Spectre
+In the news If you&amp;rsquo;ve been paying attention to tech chatter over the past week, you have probably heard about two catastrophic security flaws called Spectre and Meltdown. With so many security breaches in the news, it can be hard to discern which headlines you should be concerned with.</description>
+    </item>
+    
+    <item>
+      <title>Session Tokens</title>
+      <link>https://meshstudio.io/blog/2018-01-10-session-tokens/</link>
+      <pubDate>Wed, 24 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-01-10-session-tokens/</guid>
+      <description>Session Tokens Authentication and session management are two areas almost all developers have to deal with repeatedly throughout their career. It’s common for us to reach for a well tested open-source library to bolt onto our app, and that’s a good thing since security logic is one of those things you want a lot of eyes on. But as everything in programming, it helps to know the underlying logic behind the tools we use.</description>
+    </item>
+    
+    <item>
+      <title>Authentication vs. Authorization</title>
+      <link>https://meshstudio.io/blog/2018-01-05-authentication-vs-authorization/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-01-05-authentication-vs-authorization/</guid>
+      <description>You allowed in here? Lately I have noticed quite a few people mixing up the the concepts of Authentication and Authorization. This isn’t a big deal if you’re using them interchangeably when talking about most anything besides tech, but these concepts are quite different and worth explaining.
+So, What is the Difference Authentication is simply the notion of identity, but it’s a powerful concept. It’s proving to someone (your local TSA agent), or something (the IRS website) that you are who you say you are.</description>
+    </item>
+    
+    <item>
+      <title>Setting Up CircleCI</title>
+      <link>https://meshstudio.io/blog/2018-01-20-setting-up-circle/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-01-20-setting-up-circle/</guid>
+      <description>Contiuons Integration with Node.js and CircleCI Software developers tend to come up with complicated names for simple topics. Examples of this include Dependency Injection, Orthogonality, or [think of something]. While these terms sound impressive, they often produce an adverse side effect; novice developers assume the subjects they are describing are complicated and unapproachable.
+https://mobile.twitter.com/tenderlove/status/748579020703313920
+The above proved to be true for me when I first learned about Continuous Integration (CI).</description>
+    </item>
+    
+    <item>
+      <title>How to Explain Bitcoin at Your Holiday Dinner</title>
+      <link>https://meshstudio.io/blog/2017-12-20-how-to-explain-bitcoin-at-your-holiday-dinner/</link>
+      <pubDate>Wed, 20 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2017-12-20-how-to-explain-bitcoin-at-your-holiday-dinner/</guid>
+      <description>How to explain Bitcoin at your holiday dinner Bitcoin has become one of the biggest buzzwords of the year. From the mind-boggling growth, to the stories of people becoming billionaires seemingly overnight, it is a topic that is dominating headlines in both online circles and the mainstream media. While the hype and success stories are all fine and good, most people have no idea what Bitcoin is, let alone the blockchain technology that backs it.</description>
+    </item>
+    
+    <item>
+      <title>Intro to Docker with TypeScript</title>
+      <link>https://meshstudio.io/blog/2017-12-13-intro-to-docker-with-typescript/</link>
+      <pubDate>Wed, 13 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2017-12-13-intro-to-docker-with-typescript/</guid>
+      <description>Intro to Docker with TypeScript Over the past few years Docker has emerged as one of the most efficient ways to manage and deploy cloud-based web applications☁️ 💻 . While containers have been around since 2008, Docker helped them go mainstream, fueling the Virtual Machine vs. Container argument.
+What are Docker Containers? (and why should I care?) In short, a container is an operating system agnostic environment that hosts a fully functional application.</description>
+    </item>
+    
+    <item>
+      <title>Serving HTML with Golang</title>
+      <link>https://meshstudio.io/blog/2017-11-06-serving-html-with-golang/</link>
+      <pubDate>Mon, 06 Nov 2017 10:09:12 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2017-11-06-serving-html-with-golang/</guid>
+      <description>Building your next web app with Go! Here at Mesh, we like to keep up-to-date with the latest trends in software development; often trying out various programming languages and frameworks. One of the languages that we like to use is Go. We appreciate that Go is strongly-typed, is opinionated about formatting, and is strict about keeping the structure of programs simple. It is also quite a versatile language, so in this post we will explore how it can be used to create an HTML server using gorilla/mux, jteeuwen/go-bindata, and html/template.</description>
+    </item>
+    
+    <item>
+      <title>Fun with Levenshtein Distance</title>
+      <link>https://meshstudio.io/blog/2017-11-03-fun-with-levenshtein-distance/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2017-11-03-fun-with-levenshtein-distance/</guid>
+      <description>Fun with Levenshtein Distance The Levenshtein Distance is a clever way to calculate how similar two strings are to each other. Every character that differs between two words will count against the two words’ ‘score’. The lower that ‘score’ the more similar the two words are to each other. So comparing a word to itself will yield a ‘score’ of 0, while two four letter words that have no common characters will yield a ‘score’ of 4.</description>
+    </item>
+    
+    <item>
+      <title>Avoiding Retain Cycles in iOS</title>
+      <link>https://meshstudio.io/blog/2017-10-13-avoiding-retain-cycles-in-ios/</link>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2017-10-13-avoiding-retain-cycles-in-ios/</guid>
+      <description>Retain cycles can be easily overlooked in the post ARC (automatic reference counting) world of iOS. They can quickly balloon out of control and crash your app with very cryptic crash logs if you don’t know how to catch them.
+For those who may not be familiar, retain cycles are when two objects hold strong references to each other. Objects are only deallocated when they are not being held by strong references, so two objects that are referencing each other will never be deallocated.</description>
+    </item>
+    
+    <item>
+      <title>Avoiding Retain Cycles in iOS</title>
+      <link>https://meshstudio.io/jobs/2018-08-27-senior-engineer/</link>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/jobs/2018-08-27-senior-engineer/</guid>
+      <description>Retain cycles can be easily overlooked in the post ARC (automatic reference counting) world of iOS. They can quickly balloon out of control and crash your app with very cryptic crash logs if you don’t know how to catch them.</description>
+    </item>
+    
+    <item>
+      <title>Home Security, Cloud Delivered</title>
+      <link>https://meshstudio.io/work/otto/</link>
+      <pubDate>Sun, 23 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/work/otto/</guid>
+      <description>Founded in 2014 by serial entrepreneur Sam Jadallah, Otto manufactures the future of ‘smart locks.’ Sam saw an opportunity to redefine home access and build a category-defining product. He felt that “a digital locking system was necessary to replace the antiquated and shockingly insecure physical key system of today.”
+To power this smart lock, Otto needed to build multiple sophisticated cloud services. These services would be responsible for coordinating interactions between the locks, users, and their smartphones.</description>
+    </item>
+    
+    <item>
+      <title>Making Staples Easy Again</title>
+      <link>https://meshstudio.io/work/staples/</link>
+      <pubDate>Thu, 23 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/work/staples/</guid>
+      <description>Staples is known as the office supply superstore, with retail locations throughout North America. Founded in 1986, Staples has grown from its humble beginnings to to over 1,500 stores. The company is publicly listed and included in the Fortune 500.
+Despite being known for their extensive network of brick and mortar retail locations, over 60% of Staple’s annual revenue comes from its direct business-to-business (B2B) relationships.
+The Problem In the summer of 2016, these direct customer relationships were being threatened by digital native retailers, the biggest being Amazon.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://meshstudio.io/post/post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/post/post/</guid>
+      <description> Hi </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://meshstudio.io/services/services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/services/services/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

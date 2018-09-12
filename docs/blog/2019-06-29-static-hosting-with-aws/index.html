@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    
+    <link rel="shortcut icon" href="https://meshstudio.io/images/site/favicon/favicon.png">
+    <link rel="apple-touch-icon" href="https://meshstudio.io/images/site/favicon/favicon.png" />
+
+    
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta property="og:title" content=" The Complete Guide to Static Hosting with AWS &middot;  Mesh Studio" />
+<meta property="og:site_name" content="Mesh Studio" />
+<meta property="og:url" content="https://meshstudio.io/blog/2019-06-29-static-hosting-with-aws/" />
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:domain" value="meshstudio.io" />
+<meta name="twitter:title" value="Mesh Studio" />
+<meta name="twitter:description" value="We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products." />
+<meta name="twitter:image" content="https://meshstudio.io/images/site/twitter_logo.jpg">
+<meta name="twitter:url" value="https://meshstudio.io/" />
+<meta name="twitter:label1" value="Cloud Development" />
+<meta name="twitter:label2" value="Application Development" />
+
+
+  <meta property="og:type" content="article" />
+
+<meta property="og:article:published_time" content="2018-06-29T00:00:00Z" />
+
+
+<meta property="og:article:tag" content="AWS" />
+
+<meta property="og:article:tag" content="Cloud" />
+
+<meta property="og:article:tag" content="Web" />
+
+
+
+
+  <meta property="og:image" content="/images/blog/2018-06-29-static-hosting-with-aws/hero.png" />
+
+
+<title>
+ The Complete Guide to Static Hosting with AWS &middot;  Mesh Studio
+</title>
+
+<meta name="description" content="We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products." />
+
+<meta name="HandheldFriendly" content="True" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/site/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/site/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/site/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/site/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/site/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/site/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/site/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/site/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/site/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/site/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/site/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/site/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/site/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/site/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://meshstudio.io/css/main.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/qxb4anb.css">
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6268016/6917392/css/fonts.css" />
+
+    
+    
+      
+          <link href="https://meshstudio.io/index.xml" rel="alternate" type="application/rss+xml" title="Mesh Studio" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.37.1" />
+
+    <link rel="canonical" href="https://meshstudio.io/blog/2019-06-29-static-hosting-with-aws/" />
+
+</head>
+<body class="nav-closed">
+
+  <div class="container" id="container">
+    <nav class="navbar navbar-expand-md navbar-light mt-5">
+
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        
+        <a class="navbar-brand" href="https://meshstudio.io/">
+            <img class="img-fluid main-logo" src="/images/site/meshlogo-black-vector.svg" alt="Home" />
+        </a>
+
+        
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <form class="form-inline ml-auto my-2 my-lg-0">
+                <ul class="navbar-nav">
+                    
+                     
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/work/">Work</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/services/">Services</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about/">About</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/careers/">Join Us</a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/blog/">Blog</a>
+                    </li>
+                    
+                </ul>
+            </form>
+        </div>
+
+    </nav>
+</div>
+
+
+
+<body class="nav-closed">
+    <img class="seattle-rain" src="/images/site/rain.svg" alt="Home" />
+    <main id="content" class="content" role="main">
+
+        
+
+<div class="blog-post">
+    <div class="hero">
+        <div class="container">
+            <div class="row d-flex flex-row align-items-center justify-content-center">
+                <div class="row justify-content-center hero-title-block">
+    <div class="col-12">
+        <div class="d-flex justify-content-center">
+            <h2>The Complete Guide to Static Hosting with AWS</h2>
+        </div>
+    </div>
+    <div class="col-12 mt-2">
+        <div class="d-flex justify-content-center">
+            <h3>AWS is Mesh&#39;s preferred platform for quickly and securely hosting static websites.</h3>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="primary-section">
+        <div class="hero-container d-flex justify-content-center">
+            <img class="img-fluid" src="/images/blog/2018-06-29-static-hosting-with-aws/hero.png" />
+        </div>
+
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-10 offset-1 post-container">
+                    <div class="row blog-meta-row">
+                        <div class="col-10 offset-1">
+                            <header class="meta-header d-flex flex-column align-items-center">
+                                <div class="author-picture">
+                                    <a class="founder-twitter" href="https://twitter.com/kcoleman731">
+                                        <img class="img-fluid author-pic rounded-circle" src="https://pbs.twimg.com/profile_images/911288822217924608/Oq631azq_400x400.jpg" />
+                                    </a>
+                                </div>
+                                <div class="author-meta mt-2">
+                                    <span class="post-meta author-name">Kevin Coleman</span>
+                                    <span class="post-meta post-date">Posted On Jun 29, 2018</span>
+                                    <p class="post-meta post-words mt-1">7 min read | 1500 Words</p>
+                                </div>
+                            </header>
+                        </div>
+                    </div>
+                    <div class="row blog-content-row">
+                        <div class="col-10 offset-1">
+                            <article class="post">
+                                
+
+<h1 id="the-complete-guide-to-static-hosting-with-aws">The Complete Guide to Static Hosting with AWS</h1>
+
+<p>At Mesh, we host a large number of static websites for ourselves and our customers. As a result, we’ve experimented with a number of different hosting technologies and platforms over the years. We’ve found that static hosting with <a href="https://aws.amazon.com/s3/">AWS Simple Storage Service (S3)</a> turns out to be a fantastic option.</p>
+
+<p>In this guide, I’ll demonstrate how you can deploy a static site on AWS, complete with a custom domain, HTTPS, and lighting fast content delivery.</p>
+
+<p>Before we get going, I’m going to assume that you have the following:
+* <a href="https://aws.amazon.com/free/">An existing AWS Account</a>
+* <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html">The AWS CLI configured on your machine</a>
+* <a href="https://aws.amazon.com/route53/">A custom domain name, preferably registered with Route 53</a></p>
+
+<h2 id="create-an-s3-bucket">Create an S3 Bucket</h2>
+
+<p>S3 is a highly scalable object storage service, and is one of the fundamental products offered by AWS. For our purposes, S3 is going to store and host the actual content we want to serve for our website. This includes all of our HTML, CSS, JavaScript, and asset files.</p>
+
+<p>To create our bucket, we’ll need to head over to the <a href="https://s3.console.aws.amazon.com/s3/home?region=us-east-1">S3 dashboard</a> and click the blue <code>Create Bucket</code> button.</p>
+
+
+<figure>
+    
+        <img src="/images/blog/2018-06-29-static-hosting-with-aws/1.png" alt="Creating an S3 bucket." />
+    
+    
+    <figcaption>
+        <p>
+        Creating an S3 bucket.
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+
+
+<p>The name of our bucket is going to be very important. It must match the custom domain name that we are eventually going to use for our website.</p>
+
+<p>For the purposes of this tutorial, I am going to use the domain <code>static.meshstudio.io</code>. Our S3 bucket must match our custom domain name, except that we will need to replace the periods with dashes. So I will need to name our S3 bucket <code>static-meshstudio-io</code>. Also, make sure to select a region for your bucket.</p>
+
+
+<figure>
+    
+        <img src="/images/blog/2018-06-29-static-hosting-with-aws/2.png" alt="Naming our bucket and selecting a region." />
+    
+    
+    <figcaption>
+        <p>
+        Naming our bucket and selecting a region.
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+
+
+<p>That&rsquo;s all the configuration needed to create our bucket, so we can click “Next” through the next few screens and finally click “Create”.</p>
+
+<h2 id="upload-content">Upload Content</h2>
+
+<p>Now that we have our bucket configured, lets upload some website content. For this tutorial, I am going to use a dead simple website from <a href="https://github.com/meshhq/static-sample">the following repo</a>:</p>
+
+<p>Clone this repository to your local machine and CD into the directory.</p>
+
+<pre><code>git clone git@github.com:meshhq/static-sample.git &amp;&amp; cd static sample
+</code></pre>
+
+<p>This repository contains a Makefile that will help us automate our deploys to AWS. Open up the Makefile and replace <code>&lt;YOUR-BUCKET-NAME&gt;</code> with your actual bucket name.</p>
+
+<p>Save the Makefile and then run <code>make deploy</code>. This will deploy your website content to your S3 bucket.</p>
+
+<h2 id="configure-bucket-hosting">Configure Bucket Hosting</h2>
+
+<p>After we have created our bucket and uploaded some content, we need to configure it for static hosting. This tells AWS that we want to use this bucket to host a website.</p>
+
+<p>To do so, we must click on our newly created bucket, which will bring us to the Bucket Overview screen. Click on the “Properties” tab, and then the “Static website hosting” box.</p>
+
+
+<figure>
+    
+        <img src="/images/blog/2018-06-29-static-hosting-with-aws/3.png" alt="Drivers Club web event list." />
+    
+    
+    <figcaption>
+        <p>
+        Drivers Club web event list.
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+
+
+<p>This will display options for configuring our bucket to host a website. Select the “Use this bucket to host a website” option, and then enter <code>index.html</code> in the “Index Document” box. This tells AWS that we want it to serve our <code>index.html</code> document whenever someone visits our website.</p>
+
+
+<figure>
+    
+        <img src="/images/blog/2018-06-29-static-hosting-with-aws/4.png" alt="Drivers Club web event list." />
+    
+    
+    <figcaption>
+        <p>
+        Drivers Club web event list.
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+
+
+<p>Copy the “Endpoint” URL and paste it somewhere safe;we will use this URL later in the tutorial.</p>
+
+<p>Lastly, click <code>Save</code> to apply your changes.</p>
+
+<h2 id="bucket-permissions">Bucket Permissions</h2>
+
+<p>In order to serve your website to your users, your bucket will need to be publicly accessible to the Internet. We make this happen by applying a new IAM policy to your bucket.</p>
+
+<p>Click on the “Permissions” tab and then the “Bucket Policy” button. Copy and paste the following text into the “Bucket Policy” box. Note: make sure to update the “Resource” value to match your bucket name.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+    <span class="nt">&#34;Version&#34;</span><span class="p">:</span> <span class="s2">&#34;2012-10-17&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;Statement&#34;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&#34;Sid&#34;</span><span class="p">:</span> <span class="s2">&#34;PublicReadGetObject&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;Effect&#34;</span><span class="p">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;Principal&#34;</span><span class="p">:</span> <span class="s2">&#34;*&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;Action&#34;</span><span class="p">:</span> <span class="s2">&#34;s3:GetObject&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;Resource&#34;</span><span class="p">:</span> <span class="s2">&#34;&lt;RESOURCE_ARN&gt;&#34;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span></code></pre></div>
+
+
+<figure>
+    
+        <img src="/images/blog/2018-06-29-static-hosting-with-aws/5.png" alt="Drivers Club web event list." />
+    
+    
+    <figcaption>
+        <p>
+        Drivers Club web event list.
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+
+
+<p>Lastly, click save to apply your changes. Your bucket is now configured for static hosting!</p>
+
+<h2 id="test-it-out">Test it out</h2>
+
+<p>Copy and paste the endpoint URL, that we saved in the previous step, into your browser. You should see the static website content in the browser!</p>
+
+<h2 id="setting-up-ssl">Setting up SSL</h2>
+
+<p>Modern websites should always be served over HTTPS. In order to do this with AWS, we are going to need to request a new SSL certificate via <a href="https://aws.amazon.com/certificate-manager/">AWS Certificate Manager</a>.</p>
+
+<p>In order to request our certificate, navigate to the <a href="https://console.aws.amazon.com/acm/home?region=us-east-1#/">Certificate Manager dashboard</a> and click on the “Request Certificate” button. Select “Request a Public Certificate” and click the “Request a certificate” button in the bottom right corner.</p>
+
+
+<figure>
+    
+        <img src="/images/blog/2018-06-29-static-hosting-with-aws/6.png" alt="Drivers Club web event list." />
+    
+    
+    <figcaption>
+        <p>
+        Drivers Club web event list.
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+
+
+<p>Enter <code>*.your.domain</code> in the “Domains” box. This will ask AWS to request a certificate that will work with all subdomains associated with your domain. For our domain, we will enter <code>*.meshstudio.io</code> and click the “Next” button in the bottom right corner.</p>
+
+
+<figure>
+    
+        <img src="/images/blog/2018-06-29-static-hosting-with-aws/7.png" alt="Drivers Club web event list." />
+    
+    
+    <figcaption>
+        <p>
+        Drivers Club web event list.
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+
+
+<p>Certificate manager allows us to validate our domain ownership via DNS records. To do this, we will need to add a CNAME record to our domain’s DNS. The record values will be supplied in a subsequent step.</p>
+
+<p>Click the “DNS Validation” option and then the “Review” button in the bottom right corner.</p>
+
+
+<figure>
+    
+        <img src="/images/blog/2018-06-29-static-hosting-with-aws/8.png" alt="Drivers Club web event list." />
+    
+    
+    <figcaption>
+        <p>
+        Drivers Club web event list.
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+
+
+<p>Review your information to be sure it is correct and then click “Confirm and Request” in the bottom right corner.</p>
+
+
+<figure>
+    
+        <img src="/images/blog/2018-06-29-static-hosting-with-aws/9.png" alt="Drivers Club web event list." />
+    
+    
+    <figcaption>
+        <p>
+        Drivers Club web event list.
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+
+
+<p>The next screen will provide the information we need in order to validate our domain ownership via DNS. Click the dropdown arrow next to your domain to view the DNS information.</p>
+
+<p>If you are using Route 53 to manage your domain, you will see a button that says “Create Record in Route 53”. Click this button and the correct DNS record will be automatically added to Route 53.</p>
+
+
+<figure>
+    
+        <img src="/images/blog/2018-06-29-static-hosting-with-aws/10.png" alt="Drivers Club web event list." />
+    
+    
+    <figcaption>
+        <p>
+        Drivers Club web event list.
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+
+
+<p>If you are not using Route 53 to manage your domain, add the supplied CNAME record to your DNS in your provider’s dashboard.</p>
+
+<p>Wait for a few minutes to allow the DNS record to propagate. Once your domain is validated, the Certificate Manager dashboard will show your certificate state as ISSUED.</p>
+
+
+<figure>
+    
+        <img src="/images/blog/2018-06-29-static-hosting-with-aws/11.png" alt="Drivers Club web event list." />
+    
+    
+    <figcaption>
+        <p>
+        Drivers Club web event list.
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+
+
+<h2 id="setting-up-your-cdn-with-cloudfront">Setting up your CDN with CloudFront</h2>
+
+<p>Content Delivery Networks (CDNs) help speed up your website’s load time and deliver your content in a secure manner. AWS has a CDN product called <a href="https://aws.amazon.com/cloudfront/">CloudFront</a>.</p>
+
+<p>In order to deliver our website via a CloudFront, we need to create what is called a CloudFront Distribution. Navigate to the <a href="https://console.aws.amazon.com/cloudfront/home?region=us-east-1">CloudFront dashboard</a> in AWS and click “Create Distribution”.</p>
+
+
+<figure>
+    
+        <img src="/images/blog/2018-06-29-static-hosting-with-aws/12.png" alt="Create a CloudFront distribution." />
+    
+    
+    <figcaption>
+        <p>
+        Create a CloudFront distribution.
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+
+
+<p>Under the “Web” section, click “Get Started”.</p>
+
+
+<figure>
+    
+        <img src="/images/blog/2018-06-29-static-hosting-with-aws/13.png" alt="Drivers Club web event list." />
+    
+    
+    <figcaption>
+        <p>
+        Drivers Club web event list.
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+
+
+<p>The “Create Distribution” page allows us to configure our distribution’s settings. In the “Origin Settings” section, we will paste the bucket URL that we copied earlier in the tutorial into the “Origin Domain Name” box. We will leave off the <code>https://</code> however.</p>
+
+<p>Press the “Tab” key and the <code>Origin ID</code> box will autofill, which is what we want.</p>
+
+<p>Scroll down to the “Default Cache Behavior Settings” section and click the “Redirect HTTP to HTTPS” radio button. This tells CloudFront to force all HTTP requests to use HTTPS.</p>
+
+
+<figure>
+    
+        <img src="/images/blog/2018-06-29-static-hosting-with-aws/14.png" alt="Drivers Club web event list." />
+    
+    
+    <figcaption>
+        <p>
+        Drivers Club web event list.
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+
+
+<p>Lastly, scroll down to the “Distribution Settings” section. In the “Alternate Domain Names” box, add your custom domain. In our case, this is going to be <code>static.meshstudio.io</code>.</p>
+
+
+<figure>
+    
+        <img src="/images/blog/2018-06-29-static-hosting-with-aws/15.png" alt="Drivers Club web event list." />
+    
+    
+    <figcaption>
+        <p>
+        Drivers Club web event list.
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+
+
+<p>That&rsquo;s it! Scroll down and click “Create Distribution” in the bottom right hand corner.</p>
+
+<h2 id="point-your-domain-at-cloudfront">Point your domain at CloudFront</h2>
+
+<p>The last step is to add a DNS record that tells the internet to direct traffic for our domain to our CloudFront distribution. We do this by copying the Domain Name for our new CloudFront distribution.</p>
+
+<p>We then need to a new DNS record which tells our domain to route traffic to our CloudFront distribution. If you are using <a href="https://aws.amazon.com/route53/">Route 53</a>, click on your domain’s hosted zone and click “Create Record Set”</p>
+
+<p>Select an “A” record, and click the radio box next to “Alias”. Paste the CloudFront distribution URL into the “Alias Target” box. Lastly, click “Save Record Set”</p>
+
+
+<figure>
+    
+        <img src="/images/blog/2018-06-29-static-hosting-with-aws/17.png" alt="Drivers Club web event list." />
+    
+    
+    <figcaption>
+        <p>
+        Drivers Club web event list.
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+
+
+<p>If you are not using Route 53, add an alias record through your DNS provider’s tools.</p>
+
+<p>That&rsquo;s it! Give your DNS service a few minutes to propagate. Eventually, you will be able to visit your custom domain and view the sample Mesh static website!</p>
+
+<h3 id="next-steps">Next Steps</h3>
+
+<p>At this point, your static website is completely configured with a custom domain, SSL, and a CDN for lightning fast content delivery.</p>
+
+<p>You are free to swap out the sample static website, for any website that your heart desires. All your need to do is swap out the index.html in your S3 bucket for your new website’s index.html, and be sure to upload any other files needed to serve your site.</p>
+
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+    </main>
+
+</body>
+
+<footer>
+    
+    <div class="get-in-touch-container">
+    <div class="container">
+        <div class="row get-in-touch">
+            <div class="col-12 col-md-6 content-col d-flex flex-column justify-content-start align-items-center">
+                <p class="get-in-touch-header mb-0">Ready to get started</p>
+                <p class="get-in-touch-content">Let&#39;s talk about your project</p>
+            </div>
+            <div class="col-12 col-md-6 btn-col d-flex align-items-center">
+                <button type="button" href="https://taylorhalliday.typeform.com/to/ji75xl" class="btn get-in-touch-btn typeform-share">get in touch</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container footer-container py-5" id="container">
+        <div class="row">
+            
+            <div class="col">
+                <a class="navbar-brand mb-5 mt-2" href="https://meshstudio.io/">
+                    <img class="img-fluid main-logo" src="/images/site/meshlogo-white-vector.svg" alt="Home" />
+                </a>
+            </div>
+        </div>
+        <div class="row">
+
+            
+            <div class="col-6 col-md-3 footer-list">
+                <h5>Contact</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        3621 Stone Way N Suite G
+                    </li>
+                    <li>
+                        Seattle, WA 98103
+                    </li>
+                    <li>
+                        info@meshstudio.io
+                    </li>
+                </ul>
+            </div>
+
+            
+            <div class="col-6 col-md-3 footer-list nav-list">
+                <h5>Pages</h5>
+                <ul class="list-unstyled text-small">
+
+                    <ul class="footer-nav">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/">Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/work/">Work</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/services/">Services</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/about/">About</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/careers/">Join Us</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/blog/">Blog</a>
+                        </li>
+                        
+                    </ul>
+                </ul>
+            </div>
+
+            
+            <div class="col-12 col-md-4 offset-md-2 footer-list">
+                
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script src="/js/googleAnalytics.js"></script>
+<script src="/js/typeform.js"></script>
+<script src="/js/mailchimp.js"></script>
+
+
+</html>

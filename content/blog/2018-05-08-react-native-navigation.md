@@ -12,10 +12,6 @@ author:
   avatar: "https://avatars2.githubusercontent.com/u/8824846?s=460&v=4"
 ---
 
-## React Native Navigation
-
-### From Native to Cross-Platform
-
 React Native navigation code can seem very odd to developers coming from Objective C or Swift. Whereas native code asks that developers subclass Navigation and Tab Bar controllers, React Native demands that app navigation must be scaffolded in a single constructor.
 
 This seemed more than a little odd when I first started doing React Native development. I was also frustrated to find that React Native's documentation doesn't really provide much guidance beyond the ‘Hello World’ set up.

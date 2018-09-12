@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Careers on Mesh Studio</title>
+    <link>https://meshstudio.io/careers/</link>
+    <description>Recent content in Careers on Mesh Studio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Sep 2018 10:09:12 -0800</lastBuildDate>
+    
+	<atom:link href="https://meshstudio.io/careers/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Intern</title>
+      <link>https://meshstudio.io/careers/intern/</link>
+      <pubDate>Tue, 04 Sep 2018 10:09:12 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/careers/intern/</guid>
+      <description>At Mesh Studio, we help companies create incredible products. From design, to product management, to building and shipping the actual software, we work with our customer across all phases of product development. We are a group of talented and creative professionals that are passionate building world-class products. We have had success working with companies of all sizes - from startups, to members of the Fortune 500.
+When we’re not working with customers, we are building our own products.</description>
+    </item>
+    
+    <item>
+      <title>Senior Software Engineer</title>
+      <link>https://meshstudio.io/careers/senior-software-engineer/</link>
+      <pubDate>Tue, 04 Sep 2018 10:09:12 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/careers/senior-software-engineer/</guid>
+      <description>At Mesh Studio, we help companies create incredible products. From design, to product management, to building and shipping the actual software, we work with our customer across all phases of product development. We are a group of talented and creative professionals that are passionate building world-class products. We have had success working with companies of all sizes - from startups, to members of the Fortune 500.
+When we’re not working with customers, we are building our own products.</description>
+    </item>
+    
+    <item>
+      <title>Business Development Manager</title>
+      <link>https://meshstudio.io/careers/business-development-manager/</link>
+      <pubDate>Mon, 20 Aug 2018 10:09:12 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/careers/business-development-manager/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Senior Cloud Engineer</title>
+      <link>https://meshstudio.io/careers/senior-cloud-engineer-aws/</link>
+      <pubDate>Tue, 04 Sep 2018 10:09:12 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/careers/senior-cloud-engineer-aws/</guid>
+      <description>At Mesh Studio, we help companies create incredible products. From design, to product management, to building and shipping the actual software, we work with our customer across all phases of product development. We are a group of talented and creative professionals that are passionate building world-class products. We have had success working with companies of all sizes - from startups, to members of the Fortune 500.
+When we’re not working with customers, we are building our own products.</description>
+    </item>
+    
+    <item>
+      <title>Lead Software Engineer</title>
+      <link>https://meshstudio.io/careers/lead-software-engineer/</link>
+      <pubDate>Mon, 20 Aug 2018 10:09:12 -0800</pubDate>
+      
+      <guid>https://meshstudio.io/careers/lead-software-engineer/</guid>
+      <description>At Mesh Studio, we help companies create incredible products. From design, to product management, to building and shipping the actual software, we work with our customer across all phases of product development. We are a group of talented and creative professionals that are passionate building world-class products. We have had success working with companies of all sizes - from startups, to members of the Fortune 500.
+When we’re not working with customers, we are building our own products.</description>
+    </item>
+    
+  </channel>
+</rss>

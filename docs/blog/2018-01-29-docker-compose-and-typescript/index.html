@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    
+    <link rel="shortcut icon" href="https://meshstudio.io/images/site/favicon/favicon.png">
+    <link rel="apple-touch-icon" href="https://meshstudio.io/images/site/favicon/favicon.png" />
+
+    
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta property="og:title" content=" Docker Compose and TypeScript &middot;  Mesh Studio" />
+<meta property="og:site_name" content="Mesh Studio" />
+<meta property="og:url" content="https://meshstudio.io/blog/2018-01-29-docker-compose-and-typescript/" />
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:domain" value="meshstudio.io" />
+<meta name="twitter:title" value="Mesh Studio" />
+<meta name="twitter:description" value="We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products." />
+<meta name="twitter:image" content="https://meshstudio.io/images/site/twitter_logo.jpg">
+<meta name="twitter:url" value="https://meshstudio.io/" />
+<meta name="twitter:label1" value="Cloud Development" />
+<meta name="twitter:label2" value="Application Development" />
+
+
+  <meta property="og:type" content="article" />
+
+<meta property="og:article:published_time" content="2018-01-29T00:00:00Z" />
+
+
+
+
+
+  <meta property="og:image" content="/images/blog/2018-01-29-docker-compose-and-typescript/hero.png" />
+
+
+<title>
+ Docker Compose and TypeScript &middot;  Mesh Studio
+</title>
+
+<meta name="description" content="We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products." />
+
+<meta name="HandheldFriendly" content="True" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/site/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/site/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/site/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/site/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/site/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/site/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/site/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/site/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/site/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/site/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/site/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/site/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/site/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/site/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://meshstudio.io/css/main.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/qxb4anb.css">
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6268016/6917392/css/fonts.css" />
+
+    
+    
+      
+          <link href="https://meshstudio.io/index.xml" rel="alternate" type="application/rss+xml" title="Mesh Studio" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.37.1" />
+
+    <link rel="canonical" href="https://meshstudio.io/blog/2018-01-29-docker-compose-and-typescript/" />
+
+</head>
+<body class="nav-closed">
+
+  <div class="container" id="container">
+    <nav class="navbar navbar-expand-md navbar-light mt-5">
+
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        
+        <a class="navbar-brand" href="https://meshstudio.io/">
+            <img class="img-fluid main-logo" src="/images/site/meshlogo-black-vector.svg" alt="Home" />
+        </a>
+
+        
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <form class="form-inline ml-auto my-2 my-lg-0">
+                <ul class="navbar-nav">
+                    
+                     
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/work/">Work</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/services/">Services</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about/">About</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/careers/">Join Us</a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/blog/">Blog</a>
+                    </li>
+                    
+                </ul>
+            </form>
+        </div>
+
+    </nav>
+</div>
+
+
+
+<body class="nav-closed">
+    <img class="seattle-rain" src="/images/site/rain.svg" alt="Home" />
+    <main id="content" class="content" role="main">
+
+        
+
+<div class="blog-post">
+    <div class="hero">
+        <div class="container">
+            <div class="row d-flex flex-row align-items-center justify-content-center">
+                <div class="row justify-content-center hero-title-block">
+    <div class="col-12">
+        <div class="d-flex justify-content-center">
+            <h2>Docker Compose and TypeScript</h2>
+        </div>
+    </div>
+    <div class="col-12 mt-2">
+        <div class="d-flex justify-content-center">
+            <h3>Setting up Docker Compose for your TypeScript application.</h3>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="primary-section">
+        <div class="hero-container d-flex justify-content-center">
+            <img class="img-fluid" src="/images/blog/2018-01-29-docker-compose-and-typescript/hero.png" />
+        </div>
+
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-10 offset-1 post-container">
+                    <div class="row blog-meta-row">
+                        <div class="col-10 offset-1">
+                            <header class="meta-header d-flex flex-column align-items-center">
+                                <div class="author-picture">
+                                    <a class="founder-twitter" href="https://medium.com/@reidweber_34407">
+                                        <img class="img-fluid author-pic rounded-circle" src="https://avatars2.githubusercontent.com/u/8824846?s=460&amp;v=4" />
+                                    </a>
+                                </div>
+                                <div class="author-meta mt-2">
+                                    <span class="post-meta author-name">Reid Weber</span>
+                                    <span class="post-meta post-date">Posted On Jan 29, 2018</span>
+                                    <p class="post-meta post-words mt-1">4 min read | 900 Words</p>
+                                </div>
+                            </header>
+                        </div>
+                    </div>
+                    <div class="row blog-content-row">
+                        <div class="col-10 offset-1">
+                            <article class="post">
+                                
+
+<h1 id="docker-compose-and-typescript">Docker Compose and Typescript</h1>
+
+<p>These days, it’s easy for web applications to quickly balloon with dependencies and third party libraries. Managing your applications within a team can be a real headache when you start running into versioning issues, db configuration issues, local machine compatibility issues, etc&hellip; Docker Compose can help a lot with these issues — along with giving you a much cleaner way to get your app up and running.</p>
+
+<p><strong>If you want an intro to using Docker with Node and Typescript go <a href="https://blog.meshstudio.io/intro-to-docker-with-typescript-21b89d8f8470">here</a>.</strong></p>
+
+<h2 id="what-is-docker-compose">What is Docker Compose?</h2>
+
+<p>Docker Compose allows you to package multiple Docker images into a single application. Each image is still going to run in it’s own container but it allows you to get complex applications up and running with a single command.</p>
+
+<p>This is achieved with the <code>docker-compose.yml</code> file (more info on <a href="http://www.yaml.org/spec/1.2/spec.html">YAML</a>). The Docker Compose file defines all of the services (individual Docker images) provided in your application. In this post, we’re going to have a simple Typescript server that will ship with a <a href="https://www.postgresql.org/docs/9.1/static/tutorial-advanced-intro.html">PostgreSQL</a> image that will serve as the DB.</p>
+
+<h2 id="the-docker-compose-yml-file">The docker-compose.yml file</h2>
+
+<p>We’ve built a starter app with Node, Express, and Typescript. You can go ahead and clone it here (note that this project already has a <code>Dockerfile</code> set up).</p>
+
+<p>Create the <code>docker-compose.yml</code> file by running <code>touch docker-compose.yml</code>. Open it up and copy the following:</p>
+<div class="highlight"><pre class="chroma"><code class="language-YAML" data-lang="YAML">version<span class="p">:</span><span class="w"> </span><span class="s2">&#34;3&#34;</span><span class="w">
+</span><span class="w"></span>services<span class="p">:</span><span class="w">
+</span><span class="w">  </span>web<span class="p">:</span><span class="w">
+</span><span class="w">    </span>build<span class="p">:</span><span class="w"> </span>.<span class="w">
+</span><span class="w">    </span>command<span class="p">:</span><span class="w"> </span>gulp<span class="w">
+</span><span class="w">    </span>ports<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span><span class="s2">&#34;8080:3000&#34;</span><span class="w">
+</span><span class="w">    </span>depends_on<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>postgres<span class="w">
+</span><span class="w">  </span>postgres<span class="p">:</span><span class="w">
+</span><span class="w">    </span>image<span class="p">:</span><span class="w"> </span>postgres<span class="p">:</span><span class="m">9.6</span>.<span class="m">2</span>-alpine</code></pre></div>
+<p>The most important function of the <code>docker-compose.yml</code> is to define what the compose application is going to look like. Think of it like a blueprint not only for each container, but for a complete application as well. The two main actions we’ll take with Compose file in this tutorial are:</p>
+
+<ul>
+<li>Define the different services (containers).</li>
+<li>Link them to each other (using <code>depends on</code>).</li>
+</ul>
+
+<p>Below we’ll go line by line and explain the reason for each key-value pairing.</p>
+
+<blockquote>
+<p><code>version: &quot;3&quot;</code></p>
+</blockquote>
+
+<p>This line defines which version of Compose we want to use. &ldquo;3&rdquo; is the most recent release so we’ll be using that.</p>
+
+<blockquote>
+<p><code>services:</code></p>
+</blockquote>
+
+<p>This line is the key for the “array” that will hold all of the different docker images we’re including in the final application. Each of these services will end up being its own running container inside our application. We’re using the web key for the container that will be running our server. After the web: key you can add any amount of other services you want. In this example we only have one other service — postgres.</p>
+
+<blockquote>
+<p><code>web:</code></p>
+</blockquote>
+
+<p>This defines all the details for our main web application (in this case it’s just a Node server). In here we’ll define the build directory, an entry point run command, the ports we’re mapping from the container to the local machine, the other containers we’re listing as dependencies, and any ENV variables we want to set. We’ll go into greater detail for each of these below.</p>
+
+<blockquote>
+<p><code>build: .</code></p>
+</blockquote>
+
+<p>The build key tells docker-compose that it needs to build the image that will be used for the web service. The path supplied to the build parameter tells docker-compose where it should look for a Dockerfile from which to build the image. In this case, we are telling docker-compose that our Dockerfile is in the current directory.</p>
+
+<blockquote>
+<p><code>command: gulp</code></p>
+</blockquote>
+
+<p>This will override the default CMD defined in the image’s Dockerfile. For our app we’re going to run gulp since we’ve built our gulpfile to handle the transpile functionality as well as get the server running.</p>
+
+<blockquote>
+<p><code>ports:</code></p>
+</blockquote>
+
+<p>This is the mapping from the container’s internal port to the external port the consumer will be listening on. In our case, the server is using 8080 and the container is exposing 3000.</p>
+
+<blockquote>
+<p><code>depends_on:</code></p>
+</blockquote>
+
+<p>This is marking our postgres service as a dependency for our web container.
+postgres:</p>
+
+<p>Here we’re defining our second service (container). You can name the service key whatever you want. In this case just make sure this name matches the name you’re using under depends_on.</p>
+
+<blockquote>
+<p><code>image:</code></p>
+</blockquote>
+
+<p>This is the image our service will use to create its container.</p>
+
+<p><strong>Note: One missing key here is volumes. Each service can define volumes to persist data within the compose container. Normally, for something like <code>postgres</code> we’d need to define a <code>volume</code> to handle persistence. For this example, we’re not going to define a volume for the DB; we’ll use the default configuration. The default configuration just uses the <a href="https://en.wikipedia.org/wiki/Copy-on-write">CoW</a> filesystem that ships with the container.</strong></p>
+
+<p>Now that we have our Compose file set up we can run the following: <code>docker-compose up</code>. Now our application is up and running!</p>
+
+<table>
+<thead>
+<tr>
+<th align="center"><img src="/images/blog/2018-01-29-docker-compose-and-typescript/docker-compose-running.png" alt="See if Docker is running." /></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">This will pull all the images we need and give us the container ID our application is running in (2f7b7a57d7c0 in this case).</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="final-thoughts">Final thoughts.</h2>
+
+<p>With Compose we can bundle together complex applications without worrying about versioning or configurations on the machine it’s running on. On top of that we can get applications with multiple Docker images up and running with a single command. It also gives us a way to package multiple containers together within one, very manageable, bundle. 🐙💾 💾 💾 🐙</p>
+
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+    </main>
+
+</body>
+
+<footer>
+    
+    <div class="get-in-touch-container">
+    <div class="container">
+        <div class="row get-in-touch">
+            <div class="col-12 col-md-6 content-col d-flex flex-column justify-content-start align-items-center">
+                <p class="get-in-touch-header mb-0">Ready to get started</p>
+                <p class="get-in-touch-content">Let&#39;s talk about your project</p>
+            </div>
+            <div class="col-12 col-md-6 btn-col d-flex align-items-center">
+                <button type="button" href="https://taylorhalliday.typeform.com/to/ji75xl" class="btn get-in-touch-btn typeform-share">get in touch</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container footer-container py-5" id="container">
+        <div class="row">
+            
+            <div class="col">
+                <a class="navbar-brand mb-5 mt-2" href="https://meshstudio.io/">
+                    <img class="img-fluid main-logo" src="/images/site/meshlogo-white-vector.svg" alt="Home" />
+                </a>
+            </div>
+        </div>
+        <div class="row">
+
+            
+            <div class="col-6 col-md-3 footer-list">
+                <h5>Contact</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        3621 Stone Way N Suite G
+                    </li>
+                    <li>
+                        Seattle, WA 98103
+                    </li>
+                    <li>
+                        info@meshstudio.io
+                    </li>
+                </ul>
+            </div>
+
+            
+            <div class="col-6 col-md-3 footer-list nav-list">
+                <h5>Pages</h5>
+                <ul class="list-unstyled text-small">
+
+                    <ul class="footer-nav">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/">Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/work/">Work</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/services/">Services</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/about/">About</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/careers/">Join Us</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/blog/">Blog</a>
+                        </li>
+                        
+                    </ul>
+                </ul>
+            </div>
+
+            
+            <div class="col-12 col-md-4 offset-md-2 footer-list">
+                
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script src="/js/googleAnalytics.js"></script>
+<script src="/js/typeform.js"></script>
+<script src="/js/mailchimp.js"></script>
+
+
+</html>

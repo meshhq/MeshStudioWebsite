@@ -12,8 +12,6 @@ author:
   avatar: https://pbs.twimg.com/profile_images/911288822217924608/Oq631azq_400x400.jpg
 ---
 
-# The Complete Guide to Static Hosting with AWS 
-
 At Mesh, we host a large number of static websites for ourselves and our customers. As a result, we’ve experimented with a number of different hosting technologies and platforms over the years. We’ve found that static hosting with [AWS Simple Storage Service (S3)](https://aws.amazon.com/s3/) turns out to be a fantastic option. 
 
 In this guide, I’ll demonstrate how you can deploy a static site on AWS, complete with a custom domain, HTTPS, and lighting fast content delivery. 

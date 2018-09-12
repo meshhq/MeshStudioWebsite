@@ -12,8 +12,6 @@ author:
   avatar: "https://avatars2.githubusercontent.com/u/8824846?s=460&v=4"
 ---
 
-## Fun with Levenshtein Distance
-
 The [Levenshtein Distance](https://people.cs.pitt.edu/~kirk/cs1501/Pruhs/Spring2006/assignments/editdistance/Levenshtein%20Distance.htm) is a clever way to calculate how similar two strings are to each other. Every character that differs between two words will count against the two words’ ‘score’. The lower that ‘score’ the more similar the two words are to each other. So comparing a word to itself will yield a ‘score’ of 0, while two four letter words that have no common characters will yield a ‘score’ of 4.
 
 An easy way to visualize Levenshtein Distance is to build a matrix comparing the two words.

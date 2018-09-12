@@ -41,10 +41,9 @@
             <div class="positions row mt-4 mb-5">
                 {{ range (where .Data.Pages "Section" "careers").ByWeight.Reverse }}
                 <div class="row position-row col-12 mb-3">
-                    <div class="col-12 col-md-10 offset-md-1">
+                    <div class="col-12 ">
                         <a class="position-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
                         <p class="position-location">{{ .Params.location }}</p>
-                        <p class="position-description mt-2">{{.Params.sub_title}}</p>
                     </div>
                 </div>
                 {{ end }}

@@ -160,7 +160,7 @@ a:hover {
 
 article {
     font-family: "acumin-pro", Helvetica, Arial, sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 18px;
 }
 
@@ -169,7 +169,7 @@ article h2,
 article h3,
 article h4,
 article h5 {
-    margin-top: 1.0em;
+    margin-top: 1.5em;
     margin-bottom: 0.5em;
 }
 
@@ -301,6 +301,22 @@ blockquote p cite a:hover {
     article blockquote {
         font-size: 16px;
     }
+}
+
+article figure {
+    margin-bottom: 3em;
+}
+
+article figure p {
+    text-align: center;
+    align-content: center;
+    font-size: 0.8em !important;
+}
+
+article figure img {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    box-shadow: 5px 2px 20px #E2E2E2;
 }
 
 /* List Styling */
@@ -1666,7 +1682,7 @@ footer .nav-link {
 }
 
 .careers .primary-section .photo-lineup .portrait-photo {
-    max-height: 250px;
+    max-height: 230px;
     overflow: hidden;
 }
 
@@ -1690,11 +1706,12 @@ footer .nav-link {
 
 .careers .primary-section .benefits-wrapper .bg {
     width: 1000%;
-    left: -25%;
+    left: -250%;
     position: absolute;
     height: 120%;
     top: -10%;
     background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .careers .primary-section .benefits-wrapper .section-headers {
@@ -1773,6 +1790,12 @@ footer .nav-link {
    3g. Careers - Job Detail Page
    ========================================================================== */
 
+
+.job-post .hero {
+    margin-top: 4em;
+    margin-bottom: 2em;
+}
+
 .job-post .primary-section {
     background: var(--mesh-dk-blue-bg);
     border: var(--mesh-dk-blue-bg-border) 1px solid;
@@ -1808,6 +1831,11 @@ footer .nav-link {
     font-size: 1.2em;
     font-weight: 200;
     color: var(--mesh-dk-blue-light);
+}
+
+.job-post .primary-section .content .post {
+    margin-top: 1em;
+    margin-bottom: 4em;
 }
 
 .job-post .primary-section .content .post h2 {
@@ -2229,20 +2257,4 @@ footer .nav-link {
     .blog-post .primary-section .blog-meta-row {
         margin-top: 6em;
     }
-}
-
-/* ==========================================================================
-   3h. Hugo Shortcode Custom CSS
-   ========================================================================== */
-
-figure p {
-    text-align: center;
-    align-content: center;
-    font-size: 0.8em !important;
-}
-
-figure img {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    box-shadow: 5px 2px 20px #E2E2E2;
 }

@@ -12,8 +12,6 @@ author:
   avatar: "https://avatars2.githubusercontent.com/u/1719443?s=460&v=4"
 ---
 
-## Pros and Cons of Vue.js
-
 When starting a new project, you want to get things up and running as quickly as possible. While modern JavaScript advancements have made things a lot easier on developers, they have also increased the complexity of getting things going. Every developer who has worked with Webpack knows what I am talking about; Webpack is a great example of a very powerful tool that has an incredibly steep learning curve, even for doing basic things. Fortunately there is a solution for those who want to go fast: [Vue](https://vuejs.org) and [vue-cli](https://github.com/vuejs/vue-cli).
 
 I don't think I have come across a solution that so easily gets you up and on your way to developing a modern JavaScript web application. The `vue-cli` frees you from the tedious initial Webpack configuration, and allows you to start writing application code right away. While this is great, I have found there to be some shortcomings to Vue itself; mainly that Vue code can be very messy and cluttered. Here is what the standard format for a `.vue` file looks like:

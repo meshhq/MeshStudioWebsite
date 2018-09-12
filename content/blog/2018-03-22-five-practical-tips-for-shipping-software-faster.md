@@ -12,8 +12,6 @@ author:
   avatar: "https://pbs.twimg.com/profile_images/911288822217924608/Oq631azq_400x400.jpg"
 ---
 
-# 5 Practical Steps to Shipping Better Software, Faster
-
 All software development teams are unique. They are made up of developers, project managers, quality assurance testers, and designers of vary skill sets and seniority levels. 
 
 Despite the differences in their makeup, all of these teams share a common objective: *to ship high-quality software products, fast*. 
