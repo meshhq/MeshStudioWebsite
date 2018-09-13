@@ -1701,7 +1701,8 @@ footer .nav-link {
 }
 
 .careers .carousel {
-    height: 200px;
+    max-height: 200px;
+    margin-bottom: 6em;
 }
 
 .careers .primary-section .photo-mosaic {
@@ -1710,7 +1711,6 @@ footer .nav-link {
 }
 
 .careers .primary-section .photo-mosaic .pic-large {
-    background: green;
     height: 100%;
     overflow: hidden;
 }
