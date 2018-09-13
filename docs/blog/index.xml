@@ -17,7 +17,7 @@
       <pubDate>Fri, 29 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2019-06-29-static-hosting-with-aws/</guid>
-      <description>The Complete Guide to Static Hosting with AWS At Mesh, we host a large number of static websites for ourselves and our customers. As a result, we’ve experimented with a number of different hosting technologies and platforms over the years. We’ve found that static hosting with AWS Simple Storage Service (S3) turns out to be a fantastic option.
+      <description>At Mesh, we host a large number of static websites for ourselves and our customers. As a result, we’ve experimented with a number of different hosting technologies and platforms over the years. We’ve found that static hosting with AWS Simple Storage Service (S3) turns out to be a fantastic option.
 In this guide, I’ll demonstrate how you can deploy a static site on AWS, complete with a custom domain, HTTPS, and lighting fast content delivery.</description>
     </item>
     
@@ -27,7 +27,7 @@ In this guide, I’ll demonstrate how you can deploy a static site on AWS, compl
       <pubDate>Sun, 20 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2018-05-22-six-iot-technology-choices/</guid>
-      <description>6 Technology Choices To Consider When Shipping IoT Products Over the past year, we&amp;rsquo;ve worked on several high profiles IoT projects. Throughout this process, we have become acutely aware of the technical challenges that software teams will face when it comes to the shipping production grade connected devices.
+      <description>Over the past year, we&amp;rsquo;ve worked on several high profiles IoT projects. Throughout this process, we have become acutely aware of the technical challenges that software teams will face when it comes to the shipping production grade connected devices.
 Regardless of form factor, most IoT products will share a standard set of fundamental technical requirements. In this post, we enumerate several of these requirements and frame them as questions that technical leaders should be asking themselves at the onset of any IoT project.</description>
     </item>
     
@@ -37,7 +37,7 @@ Regardless of form factor, most IoT products will share a standard set of fundam
       <pubDate>Tue, 08 May 2018 11:59:08 -0700</pubDate>
       
       <guid>https://meshstudio.io/blog/2018-05-08-react-native-navigation/</guid>
-      <description>React Native Navigation From Native to Cross-Platform React Native navigation code can seem very odd to developers coming from Objective C or Swift. Whereas native code asks that developers subclass Navigation and Tab Bar controllers, React Native demands that app navigation must be scaffolded in a single constructor.
+      <description>React Native navigation code can seem very odd to developers coming from Objective C or Swift. Whereas native code asks that developers subclass Navigation and Tab Bar controllers, React Native demands that app navigation must be scaffolded in a single constructor.
 This seemed more than a little odd when I first started doing React Native development. I was also frustrated to find that React Native&amp;rsquo;s documentation doesn&amp;rsquo;t really provide much guidance beyond the ‘Hello World’ set up.</description>
     </item>
     
@@ -57,8 +57,8 @@ One of the frameworks that we’ve had our eye on for a while, but hadn’t pull
       <pubDate>Thu, 29 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2018-03-29-locking-down-your-aws-in-5-steps/</guid>
-      <description>Lock Down Your AWS Security With 5 Easy Steps For the practically paranoid, improving the security of your AWS infrastructure should be an ever-changing goal to strive towards. Large organizations understand this reality. That’s why they employ entire teams that are dedicated to continually reviewing and auditing their cloud security infrastructure.
-For us startups, however, we’re focused on trying to run our company; this security stuff is just another thing to think about.</description>
+      <description>For the practically paranoid, improving the security of your AWS infrastructure should be an ever-changing goal to strive towards. Large organizations understand this reality. That’s why they employ entire teams that are dedicated to continually reviewing and auditing their cloud security infrastructure.
+For us startups, however, we’re focused on trying to run our company; this security stuff is just another thing to think about. That said, there are some quick and easy improvements we implement for all our customers that dramatically improve their hosting security.</description>
     </item>
     
     <item>
@@ -67,9 +67,9 @@ For us startups, however, we’re focused on trying to run our company; this sec
       <pubDate>Thu, 22 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2018-03-22-five-practical-tips-for-shipping-software-faster/</guid>
-      <description>5 Practical Steps to Shipping Better Software, Faster All software development teams are unique. They are made up of developers, project managers, quality assurance testers, and designers of vary skill sets and seniority levels.
+      <description>All software development teams are unique. They are made up of developers, project managers, quality assurance testers, and designers of vary skill sets and seniority levels.
 Despite the differences in their makeup, all of these teams share a common objective: to ship high-quality software products, fast.
-In reality, the overwhelming majority of software development teams are not able to perform at this high of a level.</description>
+In reality, the overwhelming majority of software development teams are not able to perform at this high of a level. Under-performance in development teams isn&amp;rsquo;t typically due to a lack of skill or desire, but rather flaws in the team&amp;rsquo;s software development process.</description>
     </item>
     
     <item>
@@ -78,7 +78,7 @@ In reality, the overwhelming majority of software development teams are not able
       <pubDate>Thu, 01 Mar 2018 12:56:33 -0800</pubDate>
       
       <guid>https://meshstudio.io/blog/2018-03-01-readable-vue-components/</guid>
-      <description>Pros and Cons of Vue.js When starting a new project, you want to get things up and running as quickly as possible. While modern JavaScript advancements have made things a lot easier on developers, they have also increased the complexity of getting things going. Every developer who has worked with Webpack knows what I am talking about; Webpack is a great example of a very powerful tool that has an incredibly steep learning curve, even for doing basic things.</description>
+      <description>When starting a new project, you want to get things up and running as quickly as possible. While modern JavaScript advancements have made things a lot easier on developers, they have also increased the complexity of getting things going. Every developer who has worked with Webpack knows what I am talking about; Webpack is a great example of a very powerful tool that has an incredibly steep learning curve, even for doing basic things.</description>
     </item>
     
     <item>
@@ -87,7 +87,8 @@ In reality, the overwhelming majority of software development teams are not able
       <pubDate>Mon, 29 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2018-01-29-docker-compose-and-typescript/</guid>
-      <description>Docker Compose and Typescript These days, it’s easy for web applications to quickly balloon with dependencies and third party libraries. Managing your applications within a team can be a real headache when you start running into versioning issues, db configuration issues, local machine compatibility issues, etc&amp;hellip; Docker Compose can help a lot with these issues — along with giving you a much cleaner way to get your app up and running.</description>
+      <description>These days, it’s easy for web applications to quickly balloon with dependencies and third party libraries. Managing your applications within a team can be a real headache when you start running into versioning issues, db configuration issues, local machine compatibility issues, etc&amp;hellip; Docker Compose can help a lot with these issues — along with giving you a much cleaner way to get your app up and running.
+If you want an intro to using Docker with Node and Typescript go here.</description>
     </item>
     
     <item>
@@ -96,7 +97,7 @@ In reality, the overwhelming majority of software development teams are not able
       <pubDate>Mon, 29 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2018-01-15-spectre/</guid>
-      <description>Spectre and Meltdown Pt 1: What you need to know This is a two-part series that covers both Spectre and Meltdown. In the following piece we will attempt to give an explanation of a recent security exploit known as Spectre
+      <description>This is a two-part series that covers both Spectre and Meltdown. In the following piece we will attempt to give an explanation of a recent security exploit known as Spectre
 In the news If you&amp;rsquo;ve been paying attention to tech chatter over the past week, you have probably heard about two catastrophic security flaws called Spectre and Meltdown. With so many security breaches in the news, it can be hard to discern which headlines you should be concerned with.</description>
     </item>
     
@@ -106,7 +107,7 @@ In the news If you&amp;rsquo;ve been paying attention to tech chatter over the p
       <pubDate>Wed, 24 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2018-01-10-session-tokens/</guid>
-      <description>Session Tokens Authentication and session management are two areas almost all developers have to deal with repeatedly throughout their career. It’s common for us to reach for a well tested open-source library to bolt onto our app, and that’s a good thing since security logic is one of those things you want a lot of eyes on. But as everything in programming, it helps to know the underlying logic behind the tools we use.</description>
+      <description>Authentication and session management are two areas almost all developers have to deal with repeatedly throughout their career. It’s common for us to reach for a well tested open-source library to bolt onto our app, and that’s a good thing since security logic is one of those things you want a lot of eyes on. But as everything in programming, it helps to know the underlying logic behind the tools we use.</description>
     </item>
     
     <item>
@@ -115,7 +116,7 @@ In the news If you&amp;rsquo;ve been paying attention to tech chatter over the p
       <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2018-01-05-authentication-vs-authorization/</guid>
-      <description>You allowed in here? Lately I have noticed quite a few people mixing up the the concepts of Authentication and Authorization. This isn’t a big deal if you’re using them interchangeably when talking about most anything besides tech, but these concepts are quite different and worth explaining.
+      <description>Lately I have noticed quite a few people mixing up the the concepts of Authentication and Authorization. This isn’t a big deal if you’re using them interchangeably when talking about most anything besides tech, but these concepts are quite different and worth explaining.
 So, What is the Difference Authentication is simply the notion of identity, but it’s a powerful concept. It’s proving to someone (your local TSA agent), or something (the IRS website) that you are who you say you are.</description>
     </item>
     
@@ -125,9 +126,9 @@ So, What is the Difference Authentication is simply the notion of identity, but 
       <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2018-01-20-setting-up-circle/</guid>
-      <description>Contiuons Integration with Node.js and CircleCI Software developers tend to come up with complicated names for simple topics. Examples of this include Dependency Injection, Orthogonality, or [think of something]. While these terms sound impressive, they often produce an adverse side effect; novice developers assume the subjects they are describing are complicated and unapproachable.
+      <description>Software developers tend to come up with complicated names for simple topics. Examples of this include Dependency Injection, Orthogonality, or [think of something]. While these terms sound impressive, they often produce an adverse side effect; novice developers assume the subjects they are describing are complicated and unapproachable.
 https://mobile.twitter.com/tenderlove/status/748579020703313920
-The above proved to be true for me when I first learned about Continuous Integration (CI).</description>
+The above proved to be true for me when I first learned about Continuous Integration (CI). I thought It sounded like a complex topic and one that I would never be able to understand let alone master.</description>
     </item>
     
     <item>
@@ -136,7 +137,8 @@ The above proved to be true for me when I first learned about Continuous Integra
       <pubDate>Wed, 20 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2017-12-20-how-to-explain-bitcoin-at-your-holiday-dinner/</guid>
-      <description>How to explain Bitcoin at your holiday dinner Bitcoin has become one of the biggest buzzwords of the year. From the mind-boggling growth, to the stories of people becoming billionaires seemingly overnight, it is a topic that is dominating headlines in both online circles and the mainstream media. While the hype and success stories are all fine and good, most people have no idea what Bitcoin is, let alone the blockchain technology that backs it.</description>
+      <description>Bitcoin has become one of the biggest buzzwords of the year. From the mind-boggling growth, to the stories of people becoming billionaires seemingly overnight, it is a topic that is dominating headlines in both online circles and the mainstream media. While the hype and success stories are all fine and good, most people have no idea what Bitcoin is, let alone the blockchain technology that backs it.
+With the holiday season in full swing, many of us will be with family and loved ones.</description>
     </item>
     
     <item>
@@ -145,8 +147,8 @@ The above proved to be true for me when I first learned about Continuous Integra
       <pubDate>Wed, 13 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2017-12-13-intro-to-docker-with-typescript/</guid>
-      <description>Intro to Docker with TypeScript Over the past few years Docker has emerged as one of the most efficient ways to manage and deploy cloud-based web applications☁️ 💻 . While containers have been around since 2008, Docker helped them go mainstream, fueling the Virtual Machine vs. Container argument.
-What are Docker Containers? (and why should I care?) In short, a container is an operating system agnostic environment that hosts a fully functional application.</description>
+      <description>Over the past few years Docker has emerged as one of the most efficient ways to manage and deploy cloud-based web applications☁️ 💻 . While containers have been around since 2008, Docker helped them go mainstream, fueling the Virtual Machine vs. Container argument.
+What are Docker Containers? (and why should I care?) In short, a container is an operating system agnostic environment that hosts a fully functional application. Docker uses a virtual machine under the hood which allows developers to declare runtime dependencies via a Dockerfile.</description>
     </item>
     
     <item>
@@ -155,7 +157,7 @@ What are Docker Containers? (and why should I care?) In short, a container is an
       <pubDate>Mon, 06 Nov 2017 10:09:12 -0800</pubDate>
       
       <guid>https://meshstudio.io/blog/2017-11-06-serving-html-with-golang/</guid>
-      <description>Building your next web app with Go! Here at Mesh, we like to keep up-to-date with the latest trends in software development; often trying out various programming languages and frameworks. One of the languages that we like to use is Go. We appreciate that Go is strongly-typed, is opinionated about formatting, and is strict about keeping the structure of programs simple. It is also quite a versatile language, so in this post we will explore how it can be used to create an HTML server using gorilla/mux, jteeuwen/go-bindata, and html/template.</description>
+      <description>Here at Mesh, we like to keep up-to-date with the latest trends in software development; often trying out various programming languages and frameworks. One of the languages that we like to use is Go. We appreciate that Go is strongly-typed, is opinionated about formatting, and is strict about keeping the structure of programs simple. It is also quite a versatile language, so in this post we will explore how it can be used to create an HTML server using gorilla/mux, jteeuwen/go-bindata, and html/template.</description>
     </item>
     
     <item>
@@ -164,7 +166,7 @@ What are Docker Containers? (and why should I care?) In short, a container is an
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2017-11-03-fun-with-levenshtein-distance/</guid>
-      <description>Fun with Levenshtein Distance The Levenshtein Distance is a clever way to calculate how similar two strings are to each other. Every character that differs between two words will count against the two words’ ‘score’. The lower that ‘score’ the more similar the two words are to each other. So comparing a word to itself will yield a ‘score’ of 0, while two four letter words that have no common characters will yield a ‘score’ of 4.</description>
+      <description>The Levenshtein Distance is a clever way to calculate how similar two strings are to each other. Every character that differs between two words will count against the two words’ ‘score’. The lower that ‘score’ the more similar the two words are to each other. So comparing a word to itself will yield a ‘score’ of 0, while two four letter words that have no common characters will yield a ‘score’ of 4.</description>
     </item>
     
     <item>

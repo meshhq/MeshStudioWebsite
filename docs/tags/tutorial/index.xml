@@ -17,8 +17,8 @@
       <pubDate>Wed, 13 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2017-12-13-intro-to-docker-with-typescript/</guid>
-      <description>Intro to Docker with TypeScript Over the past few years Docker has emerged as one of the most efficient ways to manage and deploy cloud-based web applications☁️ 💻 . While containers have been around since 2008, Docker helped them go mainstream, fueling the Virtual Machine vs. Container argument.
-What are Docker Containers? (and why should I care?) In short, a container is an operating system agnostic environment that hosts a fully functional application.</description>
+      <description>Over the past few years Docker has emerged as one of the most efficient ways to manage and deploy cloud-based web applications☁️ 💻 . While containers have been around since 2008, Docker helped them go mainstream, fueling the Virtual Machine vs. Container argument.
+What are Docker Containers? (and why should I care?) In short, a container is an operating system agnostic environment that hosts a fully functional application. Docker uses a virtual machine under the hood which allows developers to declare runtime dependencies via a Dockerfile.</description>
     </item>
     
   </channel>

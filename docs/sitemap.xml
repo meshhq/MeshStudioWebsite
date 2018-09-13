@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>https://meshstudio.io/careers/senior-software-engineer/</loc>
-    <lastmod>2018-09-04T10:09:12-08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://meshstudio.io/careers/business-development-manager/</loc>
     <lastmod>2018-08-20T10:09:12-08:00</lastmod>
   </url>
@@ -134,11 +129,6 @@
   
   <url>
     <loc>https://meshstudio.io/blog/2017-10-13-avoiding-retain-cycles-in-ios/</loc>
-    <lastmod>2017-10-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://meshstudio.io/jobs/2018-08-27-senior-engineer/</loc>
     <lastmod>2017-10-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -279,12 +269,6 @@
   <url>
     <loc>https://meshstudio.io/tags/javascript/</loc>
     <lastmod>2018-05-08T11:59:08-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://meshstudio.io/jobs/</loc>
-    <lastmod>2017-10-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -17,7 +17,7 @@
       <pubDate>Fri, 29 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2019-06-29-static-hosting-with-aws/</guid>
-      <description>The Complete Guide to Static Hosting with AWS At Mesh, we host a large number of static websites for ourselves and our customers. As a result, we’ve experimented with a number of different hosting technologies and platforms over the years. We’ve found that static hosting with AWS Simple Storage Service (S3) turns out to be a fantastic option.
+      <description>At Mesh, we host a large number of static websites for ourselves and our customers. As a result, we’ve experimented with a number of different hosting technologies and platforms over the years. We’ve found that static hosting with AWS Simple Storage Service (S3) turns out to be a fantastic option.
 In this guide, I’ll demonstrate how you can deploy a static site on AWS, complete with a custom domain, HTTPS, and lighting fast content delivery.</description>
     </item>
     
@@ -37,8 +37,8 @@ The first location will be opening this summer in Redmond, WA and a reciprocal c
       <pubDate>Thu, 29 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2018-03-29-locking-down-your-aws-in-5-steps/</guid>
-      <description>Lock Down Your AWS Security With 5 Easy Steps For the practically paranoid, improving the security of your AWS infrastructure should be an ever-changing goal to strive towards. Large organizations understand this reality. That’s why they employ entire teams that are dedicated to continually reviewing and auditing their cloud security infrastructure.
-For us startups, however, we’re focused on trying to run our company; this security stuff is just another thing to think about.</description>
+      <description>For the practically paranoid, improving the security of your AWS infrastructure should be an ever-changing goal to strive towards. Large organizations understand this reality. That’s why they employ entire teams that are dedicated to continually reviewing and auditing their cloud security infrastructure.
+For us startups, however, we’re focused on trying to run our company; this security stuff is just another thing to think about. That said, there are some quick and easy improvements we implement for all our customers that dramatically improve their hosting security.</description>
     </item>
     
     <item>
