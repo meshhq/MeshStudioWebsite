@@ -35,7 +35,7 @@ pygmentsUseClasses = true
     url = "/about/"
     weight = 4
 [[menu.main]]
-    name = "Join Us"
+    name = "Careers"
     url = "/careers/"
     weight = 5
 [[menu.main]]
