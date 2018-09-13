@@ -12,7 +12,6 @@ author:
   avatar: https://avatars2.githubusercontent.com/u/1266416?s=460&v=4
 ---
 
-### You allowed in here?
 Lately I have noticed quite a few people mixing up the the concepts of Authentication and Authorization. This isn’t a big deal if you’re using them interchangeably when talking about most anything besides tech, but these concepts are quite different and worth explaining.
 
 ### So, What is the Difference

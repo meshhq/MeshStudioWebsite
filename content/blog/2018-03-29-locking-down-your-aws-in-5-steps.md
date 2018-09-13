@@ -12,8 +12,6 @@ author:
   avatar: https://avatars2.githubusercontent.com/u/1266416?s=460&v=4
 ---
 
-## Lock Down Your AWS Security With 5 Easy Steps
-
 For the practically paranoid, improving the security of your AWS infrastructure should be an ever-changing goal to strive towards. Large organizations understand this reality. That’s why they employ entire teams that are dedicated to continually reviewing and auditing their cloud security infrastructure.
 
 For us startups, however, we’re focused on trying to run our company; this security stuff is just another thing to think about. That said, there are some quick and easy improvements we implement for all our customers that dramatically improve their hosting security.

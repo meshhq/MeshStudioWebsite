@@ -81,7 +81,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.35" />
+    <meta name="generator" content="Hugo 0.37.1" />
 
     <link rel="canonical" href="https://meshstudio.io/blog/2017-10-13-avoiding-retain-cycles-in-ios/" />
 
@@ -123,7 +123,7 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="https://mesh.workable.com/">Join Us</a>
+                        <a class="nav-link" href="/careers/">Join Us</a>
                     </li>
                     
                     <li class="nav-item active">
@@ -169,29 +169,31 @@
         <div class="hero-container d-flex justify-content-center">
             <img class="img-fluid" src="/images/blog/2017-10-13-avoiding-retain-cycles-in-iOS/hero.png" />
         </div>
-        
-        <div class="container post-container">
-                    
-            <div class="row blog-meta-row">
-                <div class="col-12 col-sm-12 col-lg-8 offset-lg-2">
-                    <header class="meta-header d-flex flex-row align-items-center">
-                        <div class="author-picture mr-3">
-                            <a class="founder-twitter ml-2 mb-5" href="https://medium.com/@reidweber_34407">
-                                <img class="img-fluid author-pic rounded-circle" src="https://avatars2.githubusercontent.com/u/8824846?s=460&amp;v=4" />
-                            </a>
+
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-10 offset-1 post-container">
+                    <div class="row blog-meta-row">
+                        <div class="col-10 offset-1">
+                            <header class="meta-header d-flex flex-column align-items-center">
+                                <div class="author-picture">
+                                    <a class="founder-twitter" href="https://medium.com/@reidweber_34407">
+                                        <img class="img-fluid author-pic rounded-circle" src="https://avatars2.githubusercontent.com/u/8824846?s=460&amp;v=4" />
+                                    </a>
+                                </div>
+                                <div class="author-meta mt-2">
+                                    <span class="post-meta author-name">Reid Weber</span>
+                                    <span class="post-meta post-date">Posted On Oct 13, 2017</span>
+                                    <p class="post-meta post-words mt-1">4 min read | 700 Words</p>
+                                </div>
+                            </header>
                         </div>
-                        <div class="author-meta">
-                            <p class="post-meta author-name">Reid Weber</p>
-                            <p class="post-meta post-date">Oct 13 | 4 min read</p>
-                            <p class="post-meta post-words">700 Words</p>
-                        </div>
-                    </header>
-                </div>
-            </div>
-            <div class="row blog-content-row">
-                <div class="col-12 col-sm-12 col-lg-8 offset-lg-2">
-                    <article class="post">
-                        <p>Retain cycles can be easily overlooked in the post ARC (automatic reference counting) world of iOS. They can quickly balloon out of control and crash your app with very cryptic crash logs if you don’t know how to catch them.</p>
+                    </div>
+                    <div class="row blog-content-row">
+                        <div class="col-10 offset-1">
+                            <article class="post">
+                                <p>Retain cycles can be easily overlooked in the post ARC (automatic reference counting) world of iOS. They can quickly balloon out of control and crash your app with very cryptic crash logs if you don’t know how to catch them.</p>
 
 <p>For those who may not be familiar, retain cycles are when two objects hold strong references to each other. Objects are only deallocated when they are not being held by strong references, so two objects that are referencing each other will never be deallocated. Enter Instruments!</p>
 
@@ -287,7 +289,9 @@ The allocations tool is the one I’ve found most useful in the past for spottin
 <span class="p">});</span></code></pre></div>
 <p>Sometimes things aren’t always so straightforward though. That’s why becoming familiar with the allocations tool can be a real lifesaver for debugging retain cycles.</p>
 
-                    </article>
+                            </article>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -367,7 +371,7 @@ The allocations tool is the one I’ve found most useful in the past for spottin
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link pt-1 pb-1" href="https://mesh.workable.com/">Join Us</a>
+                            <a class="nav-link pt-1 pb-1" href="/careers/">Join Us</a>
                         </li>
                         
                         <li class="nav-item">
@@ -379,7 +383,12 @@ The allocations tool is the one I’ve found most useful in the past for spottin
             </div>
 
             
-            <div class="col-12 col-md-4 offset-md-2  footer-list">
+            <div class="col-12 col-md-4 offset-md-2 footer-list">
+                
+                    <h5>Latest Blog Post</h5>
+                    
+                    <a class="blog-title d-block" href="/blog/2019-06-29-static-hosting-with-aws/">The Complete Guide to Static Hosting with AWS</a>
+                    <a class="blog-sub-title d-block pt-2" href="/blog/2019-06-29-static-hosting-with-aws/">AWS is Mesh&#39;s preferred platform for quickly and securely hosting static websites.</a>
                 
             </div>
         </div>

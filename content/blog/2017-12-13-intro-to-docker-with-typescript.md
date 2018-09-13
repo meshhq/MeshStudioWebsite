@@ -12,8 +12,6 @@ author:
   avatar: "https://avatars2.githubusercontent.com/u/8824846?s=460&v=4"
 ---
 
-## Intro to Docker with TypeScript
-
 Over the past few years Docker has emerged as one of the most efficient ways to manage and deploy cloud-based web applications☁️ 💻 . While containers have been around since 2008, Docker helped them go mainstream, fueling the Virtual Machine vs. Container argument.
 
 ### What are Docker Containers? (and why should I care?)

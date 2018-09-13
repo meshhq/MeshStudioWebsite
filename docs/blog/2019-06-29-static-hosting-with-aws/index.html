@@ -87,7 +87,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.35" />
+    <meta name="generator" content="Hugo 0.37.1" />
 
     <link rel="canonical" href="https://meshstudio.io/blog/2019-06-29-static-hosting-with-aws/" />
 
@@ -129,7 +129,7 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="https://mesh.workable.com/">Join Us</a>
+                        <a class="nav-link" href="/careers/">Join Us</a>
                     </li>
                     
                     <li class="nav-item active">
@@ -175,31 +175,31 @@
         <div class="hero-container d-flex justify-content-center">
             <img class="img-fluid" src="/images/blog/2018-06-29-static-hosting-with-aws/hero.png" />
         </div>
-        
-        <div class="container post-container">
-                    
-            <div class="row blog-meta-row">
-                <div class="col-12 col-sm-12 col-lg-8 offset-lg-2">
-                    <header class="meta-header d-flex flex-row align-items-center">
-                        <div class="author-picture mr-3">
-                            <a class="founder-twitter ml-2 mb-5" href="https://twitter.com/kcoleman731">
-                                <img class="img-fluid author-pic rounded-circle" src="https://pbs.twimg.com/profile_images/911288822217924608/Oq631azq_400x400.jpg" />
-                            </a>
-                        </div>
-                        <div class="author-meta">
-                            <p class="post-meta author-name">Kevin Coleman</p>
-                            <p class="post-meta post-date">Jun 29 | 7 min read</p>
-                            <p class="post-meta post-words">1500 Words</p>
-                        </div>
-                    </header>
-                </div>
-            </div>
-            <div class="row blog-content-row">
-                <div class="col-12 col-sm-12 col-lg-8 offset-lg-2">
-                    <article class="post">
-                        
 
-<h1 id="the-complete-guide-to-static-hosting-with-aws">The Complete Guide to Static Hosting with AWS</h1>
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-10 offset-1 post-container">
+                    <div class="row blog-meta-row">
+                        <div class="col-10 offset-1">
+                            <header class="meta-header d-flex flex-column align-items-center">
+                                <div class="author-picture">
+                                    <a class="founder-twitter" href="https://twitter.com/kcoleman731">
+                                        <img class="img-fluid author-pic rounded-circle" src="https://pbs.twimg.com/profile_images/911288822217924608/Oq631azq_400x400.jpg" />
+                                    </a>
+                                </div>
+                                <div class="author-meta mt-2">
+                                    <span class="post-meta author-name">Kevin Coleman</span>
+                                    <span class="post-meta post-date">Posted On Jun 29, 2018</span>
+                                    <p class="post-meta post-words mt-1">7 min read | 1500 Words</p>
+                                </div>
+                            </header>
+                        </div>
+                    </div>
+                    <div class="row blog-content-row">
+                        <div class="col-10 offset-1">
+                            <article class="post">
+                                
 
 <p>At Mesh, we host a large number of static websites for ourselves and our customers. As a result, we’ve experimented with a number of different hosting technologies and platforms over the years. We’ve found that static hosting with <a href="https://aws.amazon.com/s3/">AWS Simple Storage Service (S3)</a> turns out to be a fantastic option.</p>
 
@@ -217,7 +217,7 @@
 <p>To create our bucket, we’ll need to head over to the <a href="https://s3.console.aws.amazon.com/s3/home?region=us-east-1">S3 dashboard</a> and click the blue <code>Create Bucket</code> button.</p>
 
 
-<figure >
+<figure>
     
         <img src="/images/blog/2018-06-29-static-hosting-with-aws/1.png" alt="Creating an S3 bucket." />
     
@@ -239,7 +239,7 @@
 <p>For the purposes of this tutorial, I am going to use the domain <code>static.meshstudio.io</code>. Our S3 bucket must match our custom domain name, except that we will need to replace the periods with dashes. So I will need to name our S3 bucket <code>static-meshstudio-io</code>. Also, make sure to select a region for your bucket.</p>
 
 
-<figure >
+<figure>
     
         <img src="/images/blog/2018-06-29-static-hosting-with-aws/2.png" alt="Naming our bucket and selecting a region." />
     
@@ -278,7 +278,7 @@
 <p>To do so, we must click on our newly created bucket, which will bring us to the Bucket Overview screen. Click on the “Properties” tab, and then the “Static website hosting” box.</p>
 
 
-<figure >
+<figure>
     
         <img src="/images/blog/2018-06-29-static-hosting-with-aws/3.png" alt="Drivers Club web event list." />
     
@@ -298,7 +298,7 @@
 <p>This will display options for configuring our bucket to host a website. Select the “Use this bucket to host a website” option, and then enter <code>index.html</code> in the “Index Document” box. This tells AWS that we want it to serve our <code>index.html</code> document whenever someone visits our website.</p>
 
 
-<figure >
+<figure>
     
         <img src="/images/blog/2018-06-29-static-hosting-with-aws/4.png" alt="Drivers Club web event list." />
     
@@ -339,7 +339,7 @@
 <span class="p">}</span></code></pre></div>
 
 
-<figure >
+<figure>
     
         <img src="/images/blog/2018-06-29-static-hosting-with-aws/5.png" alt="Drivers Club web event list." />
     
@@ -369,7 +369,7 @@
 <p>In order to request our certificate, navigate to the <a href="https://console.aws.amazon.com/acm/home?region=us-east-1#/">Certificate Manager dashboard</a> and click on the “Request Certificate” button. Select “Request a Public Certificate” and click the “Request a certificate” button in the bottom right corner.</p>
 
 
-<figure >
+<figure>
     
         <img src="/images/blog/2018-06-29-static-hosting-with-aws/6.png" alt="Drivers Club web event list." />
     
@@ -389,7 +389,7 @@
 <p>Enter <code>*.your.domain</code> in the “Domains” box. This will ask AWS to request a certificate that will work with all subdomains associated with your domain. For our domain, we will enter <code>*.meshstudio.io</code> and click the “Next” button in the bottom right corner.</p>
 
 
-<figure >
+<figure>
     
         <img src="/images/blog/2018-06-29-static-hosting-with-aws/7.png" alt="Drivers Club web event list." />
     
@@ -411,7 +411,7 @@
 <p>Click the “DNS Validation” option and then the “Review” button in the bottom right corner.</p>
 
 
-<figure >
+<figure>
     
         <img src="/images/blog/2018-06-29-static-hosting-with-aws/8.png" alt="Drivers Club web event list." />
     
@@ -431,7 +431,7 @@
 <p>Review your information to be sure it is correct and then click “Confirm and Request” in the bottom right corner.</p>
 
 
-<figure >
+<figure>
     
         <img src="/images/blog/2018-06-29-static-hosting-with-aws/9.png" alt="Drivers Club web event list." />
     
@@ -453,7 +453,7 @@
 <p>If you are using Route 53 to manage your domain, you will see a button that says “Create Record in Route 53”. Click this button and the correct DNS record will be automatically added to Route 53.</p>
 
 
-<figure >
+<figure>
     
         <img src="/images/blog/2018-06-29-static-hosting-with-aws/10.png" alt="Drivers Club web event list." />
     
@@ -475,7 +475,7 @@
 <p>Wait for a few minutes to allow the DNS record to propagate. Once your domain is validated, the Certificate Manager dashboard will show your certificate state as ISSUED.</p>
 
 
-<figure >
+<figure>
     
         <img src="/images/blog/2018-06-29-static-hosting-with-aws/11.png" alt="Drivers Club web event list." />
     
@@ -499,7 +499,7 @@
 <p>In order to deliver our website via a CloudFront, we need to create what is called a CloudFront Distribution. Navigate to the <a href="https://console.aws.amazon.com/cloudfront/home?region=us-east-1">CloudFront dashboard</a> in AWS and click “Create Distribution”.</p>
 
 
-<figure >
+<figure>
     
         <img src="/images/blog/2018-06-29-static-hosting-with-aws/12.png" alt="Create a CloudFront distribution." />
     
@@ -519,7 +519,7 @@
 <p>Under the “Web” section, click “Get Started”.</p>
 
 
-<figure >
+<figure>
     
         <img src="/images/blog/2018-06-29-static-hosting-with-aws/13.png" alt="Drivers Club web event list." />
     
@@ -543,7 +543,7 @@
 <p>Scroll down to the “Default Cache Behavior Settings” section and click the “Redirect HTTP to HTTPS” radio button. This tells CloudFront to force all HTTP requests to use HTTPS.</p>
 
 
-<figure >
+<figure>
     
         <img src="/images/blog/2018-06-29-static-hosting-with-aws/14.png" alt="Drivers Club web event list." />
     
@@ -563,7 +563,7 @@
 <p>Lastly, scroll down to the “Distribution Settings” section. In the “Alternate Domain Names” box, add your custom domain. In our case, this is going to be <code>static.meshstudio.io</code>.</p>
 
 
-<figure >
+<figure>
     
         <img src="/images/blog/2018-06-29-static-hosting-with-aws/15.png" alt="Drivers Club web event list." />
     
@@ -591,7 +591,7 @@
 <p>Select an “A” record, and click the radio box next to “Alias”. Paste the CloudFront distribution URL into the “Alias Target” box. Lastly, click “Save Record Set”</p>
 
 
-<figure >
+<figure>
     
         <img src="/images/blog/2018-06-29-static-hosting-with-aws/17.png" alt="Drivers Club web event list." />
     
@@ -618,7 +618,9 @@
 
 <p>You are free to swap out the sample static website, for any website that your heart desires. All your need to do is swap out the index.html in your S3 bucket for your new website’s index.html, and be sure to upload any other files needed to serve your site.</p>
 
-                    </article>
+                            </article>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -698,7 +700,7 @@
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link pt-1 pb-1" href="https://mesh.workable.com/">Join Us</a>
+                            <a class="nav-link pt-1 pb-1" href="/careers/">Join Us</a>
                         </li>
                         
                         <li class="nav-item">
@@ -710,7 +712,12 @@
             </div>
 
             
-            <div class="col-12 col-md-4 offset-md-2  footer-list">
+            <div class="col-12 col-md-4 offset-md-2 footer-list">
+                
+                    <h5>Latest Blog Post</h5>
+                    
+                    <a class="blog-title d-block" href="/blog/2019-06-29-static-hosting-with-aws/">The Complete Guide to Static Hosting with AWS</a>
+                    <a class="blog-sub-title d-block pt-2" href="/blog/2019-06-29-static-hosting-with-aws/">AWS is Mesh&#39;s preferred platform for quickly and securely hosting static websites.</a>
                 
             </div>
         </div>

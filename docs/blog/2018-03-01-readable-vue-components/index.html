@@ -87,7 +87,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.35" />
+    <meta name="generator" content="Hugo 0.37.1" />
 
     <link rel="canonical" href="https://meshstudio.io/blog/2018-03-01-readable-vue-components/" />
 
@@ -129,7 +129,7 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="https://mesh.workable.com/">Join Us</a>
+                        <a class="nav-link" href="/careers/">Join Us</a>
                     </li>
                     
                     <li class="nav-item active">
@@ -175,31 +175,31 @@
         <div class="hero-container d-flex justify-content-center">
             <img class="img-fluid" src="/images/blog/2018-03-01-readable-vue-components/hero.png" />
         </div>
-        
-        <div class="container post-container">
-                    
-            <div class="row blog-meta-row">
-                <div class="col-12 col-sm-12 col-lg-8 offset-lg-2">
-                    <header class="meta-header d-flex flex-row align-items-center">
-                        <div class="author-picture mr-3">
-                            <a class="founder-twitter ml-2 mb-5" href="http://johnmcdaly.com/">
-                                <img class="img-fluid author-pic rounded-circle" src="https://avatars2.githubusercontent.com/u/1719443?s=460&amp;v=4" />
-                            </a>
-                        </div>
-                        <div class="author-meta">
-                            <p class="post-meta author-name">John Daly</p>
-                            <p class="post-meta post-date">Mar 1 | 17 min read</p>
-                            <p class="post-meta post-words">3600 Words</p>
-                        </div>
-                    </header>
-                </div>
-            </div>
-            <div class="row blog-content-row">
-                <div class="col-12 col-sm-12 col-lg-8 offset-lg-2">
-                    <article class="post">
-                        
 
-<h2 id="pros-and-cons-of-vue-js">Pros and Cons of Vue.js</h2>
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-10 offset-1 post-container">
+                    <div class="row blog-meta-row">
+                        <div class="col-10 offset-1">
+                            <header class="meta-header d-flex flex-column align-items-center">
+                                <div class="author-picture">
+                                    <a class="founder-twitter" href="http://johnmcdaly.com/">
+                                        <img class="img-fluid author-pic rounded-circle" src="https://avatars2.githubusercontent.com/u/1719443?s=460&amp;v=4" />
+                                    </a>
+                                </div>
+                                <div class="author-meta mt-2">
+                                    <span class="post-meta author-name">John Daly</span>
+                                    <span class="post-meta post-date">Posted On Mar 1, 2018</span>
+                                    <p class="post-meta post-words mt-1">17 min read | 3600 Words</p>
+                                </div>
+                            </header>
+                        </div>
+                    </div>
+                    <div class="row blog-content-row">
+                        <div class="col-10 offset-1">
+                            <article class="post">
+                                
 
 <p>When starting a new project, you want to get things up and running as quickly as possible. While modern JavaScript advancements have made things a lot easier on developers, they have also increased the complexity of getting things going. Every developer who has worked with Webpack knows what I am talking about; Webpack is a great example of a very powerful tool that has an incredibly steep learning curve, even for doing basic things. Fortunately there is a solution for those who want to go fast: <a href="https://vuejs.org">Vue</a> and <a href="https://github.com/vuejs/vue-cli">vue-cli</a>.</p>
 
@@ -261,9 +261,11 @@
 
 <p>Go into <code>src/main.js</code> and add the following imports:</p>
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="nx">Buefy</span> <span class="nx">from</span> <span class="s1">&#39;buefy&#39;</span>
-<span class="k">import</span> <span class="s1">&#39;buefy/lib/buefy.css&#39;</span></code></pre></div>
+<span class="k">import</span> <span class="s1">&#39;buefy/lib/buefy.css&#39;</span>
+</code></pre></div>
 <p>Next configure Vue to use Buefy:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Buefy</span><span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Buefy</span><span class="p">)</span>
+</code></pre></div>
 <p>Your <code>main.js</code> file should now look like this:</p>
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// The Vue build version to load with the `import` command
 </span><span class="c1">// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
@@ -283,7 +285,8 @@
   <span class="nx">router</span><span class="p">,</span>
   <span class="nx">components</span><span class="o">:</span> <span class="p">{</span> <span class="nx">App</span> <span class="p">},</span>
   <span class="nx">template</span><span class="o">:</span> <span class="s1">&#39;&lt;App/&gt;&#39;</span>
-<span class="p">})</span></code></pre></div>
+<span class="p">})</span>
+</code></pre></div>
 <h3 id="5-update-the-router">5. Update the Router</h3>
 
 <p>Go into <code>src/router/index.js</code> and update it to look as follows:</p>
@@ -301,7 +304,8 @@
       <span class="nx">component</span><span class="o">:</span> <span class="nx">Checklist</span>
     <span class="p">}</span>
   <span class="p">]</span>
-<span class="p">})</span></code></pre></div>
+<span class="p">})</span>
+</code></pre></div>
 <p>We are now ready to start building the <code>Checklist</code> and <code>ChecklistItem</code> components!</p>
 
 <h2 id="building-the-components">Building the Components</h2>
@@ -436,7 +440,8 @@ We will be building this component later, but we will add this here now.</p>
 <h5 id="name">Name</h5>
 
 <p>The name of the component will be <code>Checklist</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Checklist&#39;</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Checklist&#39;</span>
+</code></pre></div>
 <h5 id="components">Components</h5>
 
 <p>The <code>Checklist</code> component is going to render many <code>ChecklistItem</code> components as new items are added.
@@ -446,7 +451,8 @@ We need to import the <code>ChecklistItem</code> component and register it as a 
 
 <span class="k">const</span> <span class="nx">components</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">ChecklistItem</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span>
+</code></pre></div>
 <h5 id="props">Props</h5>
 
 <p>We won&rsquo;t need any props for this component</p>
@@ -461,7 +467,8 @@ We need to import the <code>ChecklistItem</code> component and register it as a 
     <span class="nx">checklistItems</span><span class="o">:</span> <span class="p">[],</span>
     <span class="nx">newItem</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
   <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span>
+</code></pre></div>
 <h5 id="methods">Methods</h5>
 
 <p>The methods we will need for this component are simple add/deleteItem operations</p>
@@ -485,7 +492,8 @@ component, and push it into the <code>checklistItems</code> list.</p>
 
   <span class="c1">// Reset the newItem value
 </span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">newItem</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span>
+</code></pre></div>
 <h6 id="deleteitem">deleteItem</h6>
 
 <p>deleteItem will take a <code>key</code>, and will remove the entry from <code>checklistItems</code> that has that key.</p>
@@ -500,7 +508,8 @@ component, and push it into the <code>checklistItems</code> list.</p>
       <span class="k">break</span>
     <span class="p">}</span>
   <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span>
+</code></pre></div>
 <h5 id="exporting-the-script">Exporting the script</h5>
 
 <p>With the script logic written, we need to export it in the same way you export in a standard Vue file:</p>
@@ -514,7 +523,8 @@ component, and push it into the <code>checklistItems</code> list.</p>
     <span class="nx">addItem</span><span class="p">,</span>
     <span class="nx">deleteItem</span>
   <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span>
+</code></pre></div>
 <h5 id="finishing-the-script">Finishing the Script</h5>
 
 <p>Here is what the finished script file should look like:</p>
@@ -592,7 +602,8 @@ component, and push it into the <code>checklistItems</code> list.</p>
     <span class="nx">addItem</span><span class="p">,</span>
     <span class="nx">deleteItem</span>
   <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span>
+</code></pre></div>
 <h4 id="writing-the-css">Writing the CSS</h4>
 
 <p>Finally we will add some styling for our component with the <code>src/components/Checklist/style.css</code> file.</p>
@@ -739,7 +750,8 @@ that is centered, has a rounded border, a bit of box-shadow, and some padding:</
 <h5 id="name-1">Name</h5>
 
 <p>The name of the component will be <code>Checklist</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;ChecklistItem&#39;</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;ChecklistItem&#39;</span>
+</code></pre></div>
 <h5 id="components-1">Components</h5>
 
 <p>We don&rsquo;t have any components to register for this component.</p>
@@ -750,7 +762,8 @@ that is centered, has a rounded border, a bit of box-shadow, and some padding:</
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">props</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">indexKey</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="nx">required</span><span class="o">:</span> <span class="kc">true</span> <span class="p">},</span>
   <span class="nx">itemTitle</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">required</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span>
+</code></pre></div>
 <h5 id="data-1">Data</h5>
 
 <p>According to our template, we will need four properties in our data object:
@@ -765,7 +778,8 @@ that is centered, has a rounded border, a bit of box-shadow, and some padding:</
     <span class="nx">itemTitleDone</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">itemTitle</span><span class="p">,</span>
     <span class="nx">itemTitleEdit</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">itemTitle</span>
   <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span>
+</code></pre></div>
 <h5 id="methods-1">Methods</h5>
 
 <p>The methods we will need for this component are operations to edit item, confirm edit, cancel edit, and delete item.</p>
@@ -777,14 +791,16 @@ that is centered, has a rounded border, a bit of box-shadow, and some padding:</
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">itemChecked</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">editingItem</span> <span class="o">=</span> <span class="kc">true</span>
   <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span>
+</code></pre></div>
 <h5 id="cancelitem">cancelItem</h5>
 
 <p>cancelItem will revert the item back to its previous description and hides the editing input field.</p>
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">cancelEdit</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">editingItem</span> <span class="o">=</span> <span class="kc">false</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">itemTitleEdit</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">itemTitleDone</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span>
+</code></pre></div>
 <h5 id="doneedit">doneEdit</h5>
 
 <p>doneEdit will confirm the edited changes, and will set the text value of the span to be equal to those
@@ -795,13 +811,15 @@ changes. If the value that is entered is blank, then the item will be deleted.</
   <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">itemTitleDone</span> <span class="o">===</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">deleteItem</span><span class="p">()</span>
   <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span>
+</code></pre></div>
 <h5 id="deleteitem-1">deleteItem</h5>
 
 <p>deleteItem will delete the item from the parent <code>Checklist</code> component.</p>
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">deleteItem</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">$parent</span><span class="p">.</span><span class="nx">deleteItem</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">indexKey</span><span class="p">)</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span>
+</code></pre></div>
 <h5 id="exporting-the-script-1">Exporting the script</h5>
 
 <p>With the script logic written, we need to export it in the same way you export in a standard Vue file:</p>
@@ -817,7 +835,8 @@ changes. If the value that is entered is blank, then the item will be deleted.</
     <span class="nx">doneEdit</span><span class="p">,</span>
     <span class="nx">deleteItem</span>
   <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span>
+</code></pre></div>
 <h5 id="finishing-the-script-1">Finishing the Script</h5>
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// ==================
 </span><span class="c1">// NAME
@@ -909,7 +928,8 @@ changes. If the value that is entered is blank, then the item will be deleted.</
     <span class="nx">doneEdit</span><span class="p">,</span>
     <span class="nx">deleteItem</span>
   <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span>
+</code></pre></div>
 <h4 id="writing-the-css-1">Writing the CSS</h4>
 
 <p>Finally, we will add a bit of styling in the <code>src/components/Checklist/ChecklistItem/style.css</code> file.</p>
@@ -919,8 +939,8 @@ changes. If the value that is entered is blank, then the item will be deleted.</
 <p>We also want to create a rule for the <code>item-checked</code> class, to put a line through the text of the completed item in the <code>Checklist</code></p>
 <div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">item-static</span> <span class="p">{</span>
   <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-  <span class="k">width</span><span class="p">:</span> <span class="bp">-moz-</span><span class="n">available</span><span class="p">;</span>
-  <span class="k">width</span><span class="p">:</span> <span class="bp">-webkit-</span><span class="kc">fill</span><span class="o">-</span><span class="n">available</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="kp">-moz-</span><span class="n">available</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="kp">-webkit-</span><span class="kc">fill</span><span class="o">-</span><span class="n">available</span><span class="p">;</span>
   <span class="k">width</span><span class="p">:</span> <span class="kc">fill</span><span class="o">-</span><span class="n">available</span><span class="p">;</span>
   <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
   <span class="k">align-items</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
@@ -1091,8 +1111,8 @@ followed the format specified in the official Vue documentation.</p>
 <span class="p">&lt;</span><span class="nt">style</span><span class="p"></span><span class="p">&gt;</span>
 <span class="p">.</span><span class="nc">item-static</span> <span class="p">{</span>
   <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-  <span class="k">width</span><span class="p">:</span> <span class="bp">-moz-</span><span class="n">available</span><span class="p">;</span>
-  <span class="k">width</span><span class="p">:</span> <span class="bp">-webkit-</span><span class="kc">fill</span><span class="o">-</span><span class="n">available</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="kp">-moz-</span><span class="n">available</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="kp">-webkit-</span><span class="kc">fill</span><span class="o">-</span><span class="n">available</span><span class="p">;</span>
   <span class="k">width</span><span class="p">:</span> <span class="kc">fill</span><span class="o">-</span><span class="n">available</span><span class="p">;</span>
   <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
   <span class="k">align-items</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
@@ -1114,7 +1134,9 @@ followed the format specified in the official Vue documentation.</p>
 
 <p>How do you structure your Vue projects? Do you use the standard <code>.vue</code> format? How have you tackled issues of scalability, maintainability, and readability. Feel free to reach out and let us know!</p>
 
-                    </article>
+                            </article>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1194,7 +1216,7 @@ followed the format specified in the official Vue documentation.</p>
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link pt-1 pb-1" href="https://mesh.workable.com/">Join Us</a>
+                            <a class="nav-link pt-1 pb-1" href="/careers/">Join Us</a>
                         </li>
                         
                         <li class="nav-item">
@@ -1206,7 +1228,12 @@ followed the format specified in the official Vue documentation.</p>
             </div>
 
             
-            <div class="col-12 col-md-4 offset-md-2  footer-list">
+            <div class="col-12 col-md-4 offset-md-2 footer-list">
+                
+                    <h5>Latest Blog Post</h5>
+                    
+                    <a class="blog-title d-block" href="/blog/2019-06-29-static-hosting-with-aws/">The Complete Guide to Static Hosting with AWS</a>
+                    <a class="blog-sub-title d-block pt-2" href="/blog/2019-06-29-static-hosting-with-aws/">AWS is Mesh&#39;s preferred platform for quickly and securely hosting static websites.</a>
                 
             </div>
         </div>

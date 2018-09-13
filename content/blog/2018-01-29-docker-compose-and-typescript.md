@@ -12,8 +12,6 @@ author:
   avatar: "https://avatars2.githubusercontent.com/u/8824846?s=460&v=4"
 ---
 
-# Docker Compose and Typescript
-
 These days, it’s easy for web applications to quickly balloon with dependencies and third party libraries. Managing your applications within a team can be a real headache when you start running into versioning issues, db configuration issues, local machine compatibility issues, etc... Docker Compose can help a lot with these issues — along with giving you a much cleaner way to get your app up and running.
 
 __If you want an intro to using Docker with Node and Typescript go [here](https://blog.meshstudio.io/intro-to-docker-with-typescript-21b89d8f8470).__

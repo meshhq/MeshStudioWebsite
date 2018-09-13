@@ -17,7 +17,6 @@ pygmentsUseClasses = true
     get_in_touch_content = "Let's talk about your project"
     typeformLink = "https://taylorhalliday.typeform.com/to/ji75xl"
 
-
 # Menu
 [[menu.main]]
     name = "Home"
@@ -37,7 +36,7 @@ pygmentsUseClasses = true
     weight = 4
 [[menu.main]]
     name = "Join Us"
-    url = "https://mesh.workable.com/"
+    url = "/careers/"
     weight = 5
 [[menu.main]]
     name = "Blog"

@@ -12,8 +12,6 @@ author:
   avatar: "https://avatars2.githubusercontent.com/u/1719443?s=460&v=4"
 ---
 
-## Building your next web app with Go!
-
 Here at Mesh, we like to keep up-to-date with the latest trends in software development; often trying out various programming languages and frameworks. One of the languages that we like to use is [Go](http://golang.org). We appreciate that Go is strongly-typed, is opinionated about formatting, and is strict about keeping the structure of programs simple. It is also quite a versatile language, so in this post we will explore how it can be used to create an HTML server using [gorilla/mux](http://github.com/gorilla/mux), [jteeuwen/go-bindata](http://github.com/jteeuwen/go-bindata), and [html/template](https://golang.org/pkg/html/template/).
 
 Check out the source of this project here: https://github.com/meshhq/golang-html-template-tutorial

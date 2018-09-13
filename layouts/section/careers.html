@@ -1,0 +1,65 @@
+{{ define "main" }}
+<div class="careers">
+
+    <div class="hero">
+        <div class="container">
+            {{partial "heroTitleBlock" .Params}}
+        </div>
+    </div>
+
+    <div class="primary-section">
+        <div class="container">
+            <!-- TITLE / SUBTITLE -->
+            <div class="row section-headers flex-column">
+                <p class="title">{{.Params.team_photos_title}}</p>
+                <p class="content">{{.Params.team_photos_sub_title}}</p>
+            </div>
+
+            <!-- TEAM PHOTOS -->
+            <div class="teamphotos col-12 mt-4">
+                {{partial "teamPhotos"}}
+            </div>
+
+            <!-- BENEFITS -->
+            <div class="benefits-wrapper">
+                <div class="bg"></div>
+                <div class="row section-headers flex-column">
+                    <p class="title">{{.Params.benefits_title}}</p>
+                    <p class="content">{{.Params.benefits_sub_title}}</p>
+                </div>
+                
+                <div class="benefits col-12 mt-4">        
+                    {{partial "benefits" .}}
+                </div>
+            </div>
+
+            <!-- POSITIONS -->
+            <div class="row section-headers flex-column">
+                <p class="title">{{.Params.positions_title}}</p>
+                <p class="content">{{.Params.positions_sub_title}}</p>
+            </div>
+            <div class="positions row mt-4 mb-5">
+                {{ range (where .Data.Pages "Section" "careers").ByWeight.Reverse }}
+                <div class="row position-row col-12 mb-3">
+                    <div class="col-12 ">
+                        <a class="position-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        <p class="position-location">{{ .Params.location }}</p>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+            <div class="no-position row mb-5">
+                <div class="col-12 col-sm-6 offset-sm-3 d-flex flex-column">
+                    <p class="no-position-title">{{ .Params.no_positions_title }}</p>
+                    <p class="no-position-description">{{ .Params.no_positions_sub_title }}</p>
+                    <div class="d-flex justify-content-center">
+                        <a class="no-position-link" href="mailto:info@meshstudio.io">{{ .Params.no_positions_get_in_touch }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{{ end }}

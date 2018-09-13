@@ -13,30 +13,34 @@
         <div class="hero-container d-flex justify-content-center">
             <img class="img-fluid" src="{{$.Params.hero_image}}" />
         </div>
-        
-        <div class="container post-container">
-            <!-- CASE STUDIES -->        
-            <div class="row blog-meta-row">
-                <div class="col-12 col-sm-12 col-lg-8 offset-lg-2">
-                    <header class="meta-header d-flex flex-row align-items-center">
-                        <div class="author-picture mr-3">
-                            <a class="founder-twitter ml-2 mb-5" href="{{$.Params.author.url}}">
-                                <img class="img-fluid author-pic rounded-circle" src="{{$.Params.author.avatar}}" />
-                            </a>
+
+        <div class="container">
+            <!-- CASE STUDIES -->
+            <div class="row">
+                <div class="col-10 offset-1 post-container">
+                    <div class="row blog-meta-row">
+                        <div class="col-10 offset-1">
+                            <header class="meta-header d-flex flex-column align-items-center">
+                                <div class="author-picture">
+                                    <a class="founder-twitter" href="{{$.Params.author.url}}">
+                                        <img class="img-fluid author-pic rounded-circle" src="{{$.Params.author.avatar}}" />
+                                    </a>
+                                </div>
+                                <div class="author-meta mt-2">
+                                    <span class="post-meta author-name">{{ .Params.author.name}}</span>
+                                    <span class="post-meta post-date">Posted On {{ .Date.Format "Jan 2, 2006" }}</span>
+                                    <p class="post-meta post-words mt-1">{{.ReadingTime}} min read | {{ .FuzzyWordCount }} Words</p>
+                                </div>
+                            </header>
                         </div>
-                        <div class="author-meta">
-                            <p class="post-meta author-name">{{ .Params.author.name}}</p>
-                            <p class="post-meta post-date">{{ .Date.Format "Jan 2" }} | {{.ReadingTime}} min read</p>
-                            <p class="post-meta post-words">{{ .FuzzyWordCount }} Words</p>
+                    </div>
+                    <div class="row blog-content-row">
+                        <div class="col-10 offset-1">
+                            <article class="post">
+                                {{ .Content }}
+                            </article>
                         </div>
-                    </header>
-                </div>
-            </div>
-            <div class="row blog-content-row">
-                <div class="col-12 col-sm-12 col-lg-8 offset-lg-2">
-                    <article class="post">
-                        {{ .Content }}
-                    </article>
+                    </div>
                 </div>
             </div>
         </div>

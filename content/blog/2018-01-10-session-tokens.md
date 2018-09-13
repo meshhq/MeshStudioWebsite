@@ -12,7 +12,6 @@ author:
   avatar: https://avatars2.githubusercontent.com/u/1266416?s=460&v=4
 ---
 
-### Session Tokens
 Authentication and session management are two areas almost all developers have to deal with repeatedly throughout their career. It’s common for us to reach for a well tested open-source library to bolt onto our app, and that’s a good thing since security logic is one of those things you want a lot of eyes on. But as everything in programming, it helps to know the underlying logic behind the tools we use.
 
 Authentication is the process of verifying you are who you say you are. When you enter a username/password to Facebook/bank/etc, you attempt to validate your identity - that process is called authentication. All you’re doing here is (attempting) to prove you are the same person who signed up for XYZ service in the first place. There’s plenty of articles on authentication methods (username/password, OAuth, social logins, etc), so we’re going to look at what happens after you’ve accomplished the authentication step - Session Management.

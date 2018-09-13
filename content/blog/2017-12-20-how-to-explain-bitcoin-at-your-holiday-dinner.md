@@ -12,7 +12,6 @@ author:
   avatar: "https://avatars2.githubusercontent.com/u/1719443?s=460&v=4"
 ---
 
-## How to explain Bitcoin at your holiday dinner
 Bitcoin has become one of the biggest buzzwords of the year. From the mind-boggling growth, to the stories of people becoming billionaires seemingly overnight, it is a topic that is dominating headlines in both online circles and the mainstream media. While the hype and success stories are all fine and good, most people have no idea what Bitcoin is, let alone the blockchain technology that backs it.
 
 With the holiday season in full swing, many of us will be with family and loved ones. Bitcoin will certainly be near the top of the list of potential conversation topics at the dinner table. In this post, I will hopefully make it easier for you to be able explain these concepts to your family and friends.

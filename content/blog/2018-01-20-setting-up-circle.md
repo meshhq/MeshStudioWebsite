@@ -12,8 +12,6 @@ author:
   avatar: https://avatars2.githubusercontent.com/u/1423931?s=460&v=4
 ---
 
-# Contiuons Integration with Node.js and CircleCI
-
 Software developers tend to come up with complicated names for simple topics. Examples of this include Dependency Injection, Orthogonality, or [think of something]. While these terms sound impressive, they often produce an adverse side effect; novice developers assume the subjects they are describing are complicated and unapproachable.
 
 https://mobile.twitter.com/tenderlove/status/748579020703313920

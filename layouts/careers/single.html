@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+<div class="job-post">
+
+    <div class="hero">
+        <div class="container">
+        {{partial "heroTitleBlock" (dict "title" "Careers" )}}
+        </div>
+    </div>
+
+    <div class="primary-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 offset-1 content">
+                    <div class="row section-headers flex-column">
+                        <p class="title">{{.Params.title}}</p>
+                        <p class="date">Posted on {{ .Date.Format "January 2, 2006" }}</p>
+                    </div>
+                    <div class="row post-content">
+                        <div class="col-10 offset-1">
+                            <article class="post">
+                                {{ .Content }}
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{{ end }}

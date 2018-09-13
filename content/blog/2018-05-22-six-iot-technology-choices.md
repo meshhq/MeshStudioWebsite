@@ -12,8 +12,6 @@ author:
   avatar: https://avatars2.githubusercontent.com/u/1266416?s=460&v=4
 ---
 
-# 6 Technology Choices To Consider When Shipping IoT Products
-
 Over the past year, we've worked on several high profiles IoT projects. Throughout this process, we have become acutely aware of the technical challenges that software teams will face when it comes to the shipping production grade connected devices.
  
 Regardless of form factor, most IoT products will share a standard set of fundamental technical requirements. In this post, we enumerate several of these requirements and frame them as questions that technical leaders should be asking themselves at the onset of any IoT project.

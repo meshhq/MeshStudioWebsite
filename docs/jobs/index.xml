@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jobs on Mesh Studio</title>
+    <link>https://meshstudio.io/jobs/</link>
+    <description>Recent content in Jobs on Mesh Studio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Oct 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://meshstudio.io/jobs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Avoiding Retain Cycles in iOS</title>
+      <link>https://meshstudio.io/jobs/2018-08-27-senior-engineer/</link>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://meshstudio.io/jobs/2018-08-27-senior-engineer/</guid>
+      <description>Retain cycles can be easily overlooked in the post ARC (automatic reference counting) world of iOS. They can quickly balloon out of control and crash your app with very cryptic crash logs if you don’t know how to catch them.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -17,7 +17,7 @@
       <pubDate>Mon, 29 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2018-01-15-spectre/</guid>
-      <description>Spectre and Meltdown Pt 1: What you need to know This is a two-part series that covers both Spectre and Meltdown. In the following piece we will attempt to give an explanation of a recent security exploit known as Spectre
+      <description>This is a two-part series that covers both Spectre and Meltdown. In the following piece we will attempt to give an explanation of a recent security exploit known as Spectre
 In the news If you&amp;rsquo;ve been paying attention to tech chatter over the past week, you have probably heard about two catastrophic security flaws called Spectre and Meltdown. With so many security breaches in the news, it can be hard to discern which headlines you should be concerned with.</description>
     </item>
     
@@ -27,7 +27,7 @@ In the news If you&amp;rsquo;ve been paying attention to tech chatter over the p
       <pubDate>Wed, 24 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2018-01-10-session-tokens/</guid>
-      <description>Session Tokens Authentication and session management are two areas almost all developers have to deal with repeatedly throughout their career. It’s common for us to reach for a well tested open-source library to bolt onto our app, and that’s a good thing since security logic is one of those things you want a lot of eyes on. But as everything in programming, it helps to know the underlying logic behind the tools we use.</description>
+      <description>Authentication and session management are two areas almost all developers have to deal with repeatedly throughout their career. It’s common for us to reach for a well tested open-source library to bolt onto our app, and that’s a good thing since security logic is one of those things you want a lot of eyes on. But as everything in programming, it helps to know the underlying logic behind the tools we use.</description>
     </item>
     
     <item>
@@ -36,7 +36,7 @@ In the news If you&amp;rsquo;ve been paying attention to tech chatter over the p
       <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2018-01-05-authentication-vs-authorization/</guid>
-      <description>You allowed in here? Lately I have noticed quite a few people mixing up the the concepts of Authentication and Authorization. This isn’t a big deal if you’re using them interchangeably when talking about most anything besides tech, but these concepts are quite different and worth explaining.
+      <description>Lately I have noticed quite a few people mixing up the the concepts of Authentication and Authorization. This isn’t a big deal if you’re using them interchangeably when talking about most anything besides tech, but these concepts are quite different and worth explaining.
 So, What is the Difference Authentication is simply the notion of identity, but it’s a powerful concept. It’s proving to someone (your local TSA agent), or something (the IRS website) that you are who you say you are.</description>
     </item>
     

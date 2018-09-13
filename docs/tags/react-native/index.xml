@@ -27,7 +27,7 @@ The first location will be opening this summer in Redmond, WA and a reciprocal c
       <pubDate>Tue, 08 May 2018 11:59:08 -0700</pubDate>
       
       <guid>https://meshstudio.io/blog/2018-05-08-react-native-navigation/</guid>
-      <description>React Native Navigation From Native to Cross-Platform React Native navigation code can seem very odd to developers coming from Objective C or Swift. Whereas native code asks that developers subclass Navigation and Tab Bar controllers, React Native demands that app navigation must be scaffolded in a single constructor.
+      <description>React Native navigation code can seem very odd to developers coming from Objective C or Swift. Whereas native code asks that developers subclass Navigation and Tab Bar controllers, React Native demands that app navigation must be scaffolded in a single constructor.
 This seemed more than a little odd when I first started doing React Native development. I was also frustrated to find that React Native&amp;rsquo;s documentation doesn&amp;rsquo;t really provide much guidance beyond the ‘Hello World’ set up.</description>
     </item>
     
@@ -37,7 +37,7 @@ This seemed more than a little odd when I first started doing React Native devel
       <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://meshstudio.io/blog/2018-05-03-three-reasons-you-should-consider-react-native/</guid>
-      <description>Three Reasons You Should Be Using React Native We are constantly evaluating new technologies and frameworks at Mesh. We do this to ensure that we make the right technology choices for our customers. We do after all, get paid to make these technology choices, so we have an obligation to our customers to make sure our choices are correct.
+      <description>We are constantly evaluating new technologies and frameworks at Mesh. We do this to ensure that we make the right technology choices for our customers. We do after all, get paid to make these technology choices, so we have an obligation to our customers to make sure our choices are correct.
 One of the frameworks that we’ve had our eye on for a while, but hadn’t pulled the trigger with is React Native.</description>
     </item>
     
