@@ -1,5 +1,5 @@
 ---
-title: "React-Native Typescript Boilerplate"
+title: "React Native Typescript Boilerplate"
 sub_title: "Build cross-platform mobile apps faster."
 tags: ["React Native", "TypeScript", "Mobile"]
 date: 2018-09-14T09:44:38-07:00
@@ -34,7 +34,7 @@ git clone git@github.com:meshhq/react-native-boilerplate.git
 
 > [`react-native-cli`](https://facebook.github.io/react-native/docs/getting-started.html)
 
-There are currently two ways to create a new React Native application;  `react-native-cli` and `create-react-native-app` (`CRNA`). We chose the former because it provides more flexibility when it comes to configuring settings in Xcode and Android Studio. `react-native-cli` also makes it much easier to link third-party libraries to underlying native libraries. 
+There are currently two ways to create a new React Native application:  `react-native-cli` and `create-react-native-app` (`CRNA`). We chose the former because it provides more flexibility when it comes to configuring settings in Xcode and Android Studio. `react-native-cli` also makes it much easier to link third-party libraries to underlying native libraries. 
 
 There is, however, a downside; more flexibility in local configuration can lead to build and runtime errors in Android Studio and Xcode (this is especially apparent in Android Studio with the way it is constantly syncing Gradle files).
 
@@ -42,7 +42,7 @@ There is, however, a downside; more flexibility in local configuration can lead 
 
 You’ll see the `android` and `ios` directories at the root of the project. Both of these can be opened and manipulated in their respective IDE’s.
 
-Note: Never edit Gradle files outside of Android Studio. It’s very easy to create build issues without taking advantage of the sync process embedded in Google’s IDE.
+Note: We recommend that you only edit Gradle files with Android Studio. Google's IDE does a lot of Gradle-related work behind the scenes via a sync process, which makes it very easy to introduce build issues if you modify these files with a different program.
 
 
 > [`TypeScript`](https://www.typescriptlang.org/)
@@ -73,7 +73,7 @@ Another great open-source resource from Wix that allows end-to-end UI testing. A
 
 > [`axios`](https://github.com/axios/axios)
 
-A Promise based HTTP client with TypeScript and React Native support. Allows a simple interface for clean HTTP requests and also allows automatic transforms for JSON data. Clean, simple, examples of how axios can be used to connect your application to remote resources can be found in `UserService.ts`.
+A Promise based HTTP client with TypeScript and React Native support. Provides a simple interface for clean HTTP requests, and also handles transforming JSON data for you. Clean, simple, examples of how axios can be used to connect your application to remote resources can be found in `UserService.ts`.
 
 
 > [`nock`](https://github.com/nock/nock)
