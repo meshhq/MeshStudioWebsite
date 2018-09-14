@@ -38,6 +38,9 @@
    3i - Blog Post (Single)
    3j - Hugo Fixture Shortcode customization
 
+   * SIZE CLASS SPECIFIC OVERRIDES * 
+   4a. Global Overrides for Size Classes
+
    ========================================================================== */
 
 /* ==========================================================================
@@ -122,6 +125,12 @@ a:hover {
     height: 46px;
 }
 
+@media (max-width: 576px) {
+    .seattle-rain {
+        opacity: 0.25;
+    }
+}
+
 /* ==========================================================================
    1b. Media Query Templates
    ========================================================================== */
@@ -173,6 +182,16 @@ article h5 {
     margin-bottom: 0.5em;
 }
 
+@media (max-width: 567px) {
+    article h1,
+    article h2,
+    article h3,
+    article h4,
+    article h5 {
+        text-align: center;
+    }   
+}
+
 article h1 {
     font-size: 1.4em;
 }
@@ -192,6 +211,14 @@ article p,
 article a,
 article li {
     line-height: 35px;
+}
+
+@media (max-width: 567px) {
+    article blockquote p,
+    article p,
+    article a {
+        text-align: center;
+    }
 }
 
 .primary-section article p {
@@ -944,6 +971,12 @@ article ol {
     text-transform: capitalize;
 }
 
+@media (max-width: 576px) {
+    .capabilities .capability-row .capability-sub-title {
+        margin-left: .75em;
+    }
+}
+
 .capabilities .capability-row .capability-card {
     padding: 20px;
     background: #fff;
@@ -1009,6 +1042,27 @@ article ol {
     margin-top: 5em !important;
 }
 
+.container nav {
+    margin-top: 5em;
+}
+
+@media (max-width: 576px) {
+    .container nav {
+        margin-top: 0.5em;
+        padding-right: 0em;
+        padding-left: 0em;
+    }
+
+    .container nav button {
+        background: #fff;
+        z-index: 10000;
+    }
+
+    .container nav .navbar-brand {
+        margin-right: 0em;
+    }
+}
+
 .navbar .main-logo {
     max-width: 197px;
     height: auto;
@@ -1023,6 +1077,22 @@ article ol {
     border-bottom: 2px solid transparent;
 }
 
+@media (max-width: 576px) {
+    .navbar-light .navbar-nav {
+        margin-top: 1em;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        width: 100%;
+    }
+
+    .navbar-light .navbar-nav li {
+        /* Clever trick for not letting border shove position on hover */
+        font-size: 1.5em;
+        padding-bottom: .75em;
+        padding-top: .75em;
+    }
+    
+}
+
 .navbar-light .navbar-nav li:hover {
     border-bottom: var(--mesh-dk-blue) 2px solid;
 }
@@ -1030,6 +1100,14 @@ article ol {
 .navbar-light .navbar-nav .active:hover,
 .navbar-light .navbar-nav .active {
     border-bottom: var(--mesh-blue) 2px solid;
+}
+
+@media (max-width: 576px) {
+    .navbar-light .navbar-nav .active:hover,
+    .navbar-light .navbar-nav .active {
+        border-bottom: var(--mesh-blue) 0px solid;
+        color: var(--mesh-blue);
+    }    
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -1622,13 +1700,17 @@ footer .nav-link {
     width: 100%;
 }
 
+.careers .carousel {
+    max-height: 200px;
+    margin-bottom: 6em;
+}
+
 .careers .primary-section .photo-mosaic {
     height: 350px;
     margin-bottom: 15px;
 }
 
 .careers .primary-section .photo-mosaic .pic-large {
-    background: green;
     height: 100%;
     overflow: hidden;
 }
@@ -1704,6 +1786,12 @@ footer .nav-link {
     position: relative;
 }
 
+@media (max-width: 576px) {
+    .careers .primary-section .benefits-wrapper .bg {
+        height: 110%;
+    }
+}
+
 .careers .primary-section .benefits-wrapper .bg {
     width: 1000%;
     left: -250%;
@@ -1714,10 +1802,24 @@ footer .nav-link {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 576px) {
+    .careers .primary-section .benefits-wrapper .bg {
+        height: 100%;
+        top: 0%;
+    }
+}
+
 .careers .primary-section .benefits-wrapper .section-headers {
     position: relative;
     z-index: 1000;
 }
+
+@media (max-width: 576px) {
+    .careers .primary-section .benefits-wrapper .section-headers .title {
+        padding-top: 2em;
+    }
+}
+
 
 .careers .primary-section .benefits .benefit-card .title {
     font-size: 1.25rem;
@@ -1796,6 +1898,17 @@ footer .nav-link {
     margin-bottom: 2em;
 }
 
+@media (max-width: 576px) {
+    .job-post .hero {
+        margin-top: 1em;
+        margin-bottom: 0em;
+    }
+
+    .job-post .hero h2 {
+        font-size: 2em;
+    }
+}
+
 .job-post .primary-section {
     background: var(--mesh-dk-blue-bg);
     border: var(--mesh-dk-blue-bg-border) 1px solid;
@@ -1814,6 +1927,20 @@ footer .nav-link {
     margin-bottom: 4em;
     border: var(--mesh-dk-blue-dk-border) 1px solid;   
     background: #fff;
+}
+
+@media (max-width: 576px) {
+    .job-post .primary-section .content {
+        margin-top: -1px;
+        margin-bottom: -1px;
+        margin-bottom: 0em;
+        border: var(--mesh-dk-blue-dk-border) 1px solid;   
+        background: #fff;
+    }
+
+    .job-post .primary-section .content .section-headers {
+        margin-top: 2em;
+    }
 }
 
 .job-post .primary-section .content .title,
@@ -2256,5 +2383,31 @@ footer .nav-link {
 @media (max-width: 576px) {
     .blog-post .primary-section .blog-meta-row {
         margin-top: 6em;
+    }
+}
+
+/* ==========================================================================
+   4a. Global Overrides for Size Classes
+   ========================================================================== */
+
+@media (max-width: 576px) {
+    #content .hero {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    #content .hero h2 {
+        font-size: 2em;
+    }
+
+    #content .hero h3 {
+        font-size: 1.25em;
+    }
+}
+
+@media (max-width: 576px) {
+    #content .container .section-headers {
+        margin-top: 2em;
+        padding: 0em .75em;
     }
 }

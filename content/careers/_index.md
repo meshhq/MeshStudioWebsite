@@ -1,7 +1,7 @@
 ---
 title: Careers
 nav_title: Careers
-sub_title: Come work to a place where yuo can help build tomorrow's technology.
+sub_title: Come work to a place where you can help build tomorrow's technology.
 team_photos_title: The Team
 team_photos_sub_title: We are a team of engineers and designers, and we hold the products we craft to the highest standard.
 benefits_title: Benefits
