@@ -4,7 +4,7 @@ sub_title: Depending on the needs of your IoT project, you'll need to choose wis
 tags: ["IoT", "Cloud", "Software"]
 date: 2018-05-20
 publishdate: 2018-05-20
-hero_image: /images/blog/2018-05-22-six-iot-technology-choices/hero.jpg
+hero_image: /images/blog/2018-05-22-six-iot-technology-choices/hero.png
 author:
   name: Taylor Halliday
   url: https://twitter.com/tayhalliday

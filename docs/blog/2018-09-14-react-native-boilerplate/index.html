@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    
+    <link rel="shortcut icon" href="https://meshstudio.io/images/site/favicon/favicon.png">
+    <link rel="apple-touch-icon" href="https://meshstudio.io/images/site/favicon/favicon.png" />
+
+    
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta property="og:title" content=" React-Native Typescript Boilerplate &middot;  Mesh Studio" />
+<meta property="og:site_name" content="Mesh Studio" />
+<meta property="og:url" content="https://meshstudio.io/blog/2018-09-14-react-native-boilerplate/" />
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:domain" value="meshstudio.io" />
+<meta name="twitter:title" value="Mesh Studio" />
+<meta name="twitter:description" value="We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products." />
+<meta name="twitter:image" content="https://meshstudio.io/images/site/twitter_logo.jpg">
+<meta name="twitter:url" value="https://meshstudio.io/" />
+<meta name="twitter:label1" value="Cloud Development" />
+<meta name="twitter:label2" value="Application Development" />
+
+
+  <meta property="og:type" content="article" />
+
+<meta property="og:article:published_time" content="2018-09-14T09:44:38-07:00" />
+
+
+<meta property="og:article:tag" content="React Native" />
+
+<meta property="og:article:tag" content="TypeScript" />
+
+<meta property="og:article:tag" content="Mobile" />
+
+
+
+
+
+<title>
+ React-Native Typescript Boilerplate &middot;  Mesh Studio
+</title>
+
+<meta name="description" content="We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products." />
+
+<meta name="HandheldFriendly" content="True" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/site/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/site/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/site/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/site/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/site/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/site/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/site/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/site/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/site/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/site/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/site/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/site/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/site/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/site/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://meshstudio.io/css/main.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/qxb4anb.css">
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6268016/6917392/css/fonts.css" />
+
+    
+    
+      
+          <link href="https://meshstudio.io/index.xml" rel="alternate" type="application/rss+xml" title="Mesh Studio" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.36" />
+
+    <link rel="canonical" href="https://meshstudio.io/blog/2018-09-14-react-native-boilerplate/" />
+
+</head>
+<body class="nav-closed">
+
+  <div class="container" id="container">
+    <nav class="navbar navbar-expand-md navbar-light">
+
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        
+        <a class="navbar-brand" href="https://meshstudio.io/">
+            <img class="img-fluid main-logo" src="/images/site/meshlogo-black-vector.svg" alt="Home" />
+        </a>
+
+        
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <form class="form-inline ml-auto my-2 my-lg-0">
+                <ul class="navbar-nav">
+                    
+                     
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/work/">Work</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/services/">Services</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about/">About</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/careers/">Careers</a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/blog/">Blog</a>
+                    </li>
+                    
+                </ul>
+            </form>
+        </div>
+
+    </nav>
+</div>
+
+
+
+<body class="nav-closed">
+    <img class="seattle-rain" src="/images/site/rain.svg" alt="Home" />
+    <main id="content" class="content" role="main">
+
+        
+
+<div class="blog-post">
+    <div class="hero">
+        <div class="container">
+            <div class="row d-flex flex-row align-items-center justify-content-center">
+                <div class="row justify-content-center hero-title-block">
+    <div class="col-12">
+        <div class="d-flex justify-content-center">
+            <h2>React-Native Typescript Boilerplate</h2>
+        </div>
+    </div>
+    <div class="col-12 mt-2">
+        <div class="d-flex justify-content-center">
+            <h3>Build cross-platform mobile apps better, faster, stronger.</h3>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="primary-section">
+        <div class="hero-container d-flex justify-content-center">
+            <img class="img-fluid" src="" />
+        </div>
+
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-10 offset-1 post-container">
+                    <div class="row blog-meta-row">
+                        <div class="col-10 offset-1">
+                            <header class="meta-header d-flex flex-column align-items-center">
+                                <div class="author-picture">
+                                    <a class="founder-twitter" href="https://medium.com/@reidweb1">
+                                        <img class="img-fluid author-pic rounded-circle" src="https://avatars2.githubusercontent.com/u/8824846?s=460&amp;v=4" />
+                                    </a>
+                                </div>
+                                <div class="author-meta mt-2">
+                                    <span class="post-meta author-name">Reid Weber</span>
+                                    <span class="post-meta post-date">Posted On Sep 14, 2018</span>
+                                    <p class="post-meta post-words mt-1">4 min read | 700 Words</p>
+                                </div>
+                            </header>
+                        </div>
+                    </div>
+                    <div class="row blog-content-row">
+                        <div class="col-10 offset-1">
+                            <article class="post">
+                                
+
+<p>React Native has established itself as an incredibly powerful tool for building cross-platform mobile applications. We set out to try and create a clone-able repository so developers can jump right into building features/UI instead of spending hours configuring their environment.</p>
+
+<h3 id="getting-started">Getting Started</h3>
+
+<p>If you want to jump right into developing your own cross-platform mobile application, get started with the README <a href="https://github.com/meshhq/react-native-boilerplate">here</a>.</p>
+
+<p>If you want more insight into the tooling/frameworks used in this project - continue reading.</p>
+
+<p>First go ahead and clone the repository so you can follow along in the codebase.</p>
+
+<pre><code>git clone git@github.com:meshhq/react-native-boilerplate.git
+</code></pre>
+
+<h2 id="tooling">Tooling</h2>
+
+<blockquote>
+<p><code>react-native-cli</code></p>
+</blockquote>
+
+<p>There are currently two ways to create a new React Native application;  <code>react-native-cli</code> and <code>create-react-native-app</code> (<code>CRNA</code>). We chose the former because it provides more flexibility when it comes to configuring settings in Xcode and Android Studio. <code>react-native-cli</code> also makes it much easier to link third-party libraries to underlying native libraries.</p>
+
+<p>There is, however, a downside; more flexibility in local configuration can lead to build and runtime errors in Android Studio and Xcode (this is especially apparent in Android Studio with the way it is constantly syncing Gradle files).</p>
+
+<blockquote>
+<p><code>Project Directories</code></p>
+</blockquote>
+
+<p>You’ll see the <code>android</code> and <code>ios</code> directories at the root of the project. Both of these can be opened and manipulated in their respective IDE’s.</p>
+
+<p>Note: Never edit Gradle files outside of Android Studio. It’s very easy to create build issues without taking advantage of the sync process embedded in Google’s IDE.</p>
+
+<blockquote>
+<p><code>TypeScript</code></p>
+</blockquote>
+
+<p>Having strongly typed class and components makes it much easier to understand and interpret the original author’s code. This is especially useful when dealing with React component’s <code>state</code> and <code>props</code>. The only drawback with TypeScript is setting up the environment (which is already taken care of in this project).</p>
+
+<blockquote>
+<p><code>react-native-navigation</code></p>
+</blockquote>
+
+<p>An open-source library maintained by Wix that provides developers with access to built-in navigation animations you’d expect from a native application. This project comes prebuilt with a <code>TabBarNavigator</code> and a couple of screens to illustrate best practices on how to set up your navigation stack.</p>
+
+<p>Note: If you’re interested in building a single screen application. See the docs <a href="https://wix.github.io/react-native-navigation/#/top-level-api">here</a>.</p>
+
+<blockquote>
+<p><code>jest</code></p>
+</blockquote>
+
+<p>Jest is a great unit testing suite that ships with React Native. It provides a simple, flexible syntax that is powerful and human-readable. Jest also runs all tests in parallel - speeding up the test process. In this project, run the test suite with</p>
+
+<pre><code>yarn jest
+</code></pre>
+
+<blockquote>
+<p><code>detox</code></p>
+</blockquote>
+
+<p>Another great open-source resource from Wix that allows end-to-end UI testing. Allows you to tag all of your components and manipulate them to simulate user inputs. This project has a single UI test in <code>./e2e/HomeScreen.spec.js</code> to illustrate the correct way to label and manipulate components.</p>
+
+<blockquote>
+<p><code>axios</code></p>
+</blockquote>
+
+<p>A Promise based HTTP client with TypeScript and React Native support. Allows a simple interface for clean HTTP requests and also allows automatic transforms for JSON data. Clean, simple, examples of how axios can be used to connect your application to remote resources can be found in <code>UserService.ts</code>.</p>
+
+<blockquote>
+<p><code>nock</code></p>
+</blockquote>
+
+<p>A mocking library that allows you to simulate HTTP requests/responses in the test suite without hitting a live endpoint. This is helpful if you’re building a client application before its server is ready to hit. You can mock the expected responses to make sure your application is ready to send/receive data when the servers are up. Mocking examples can be found in <code>__tests__/models/UserService.ts</code>.</p>
+
+<blockquote>
+<p><code>Realm</code></p>
+</blockquote>
+
+<p>A simple, yet powerful solution to local storage in React Native. Realm makes it easy to define model schemas and provides a clean, synchronous interface to manage your local store. An example of a model definition can be found in <code>./src/models/User.ts</code>. An example of how a model’s functionality and repository can be exposed can be found in the <code>store</code> directory.</p>
+
+<blockquote>
+<p><code>Watchman</code></p>
+</blockquote>
+
+<p>Also ships with React Native, it tracks changes in your file system to enable the hot reload. To see this in action - run the project on a device and perform a ‘shake-gesture’. The React Native developer menu will pop up and you can select ‘Reload’ to quickly see any new changes you’ve made since the last launch.</p>
+
+<p>Now you can move on to building awesome cross-platform features and UI - no need to worry about all the boring configuration stuff.</p>
+
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+    </main>
+
+</body>
+
+<footer>
+    
+    <div class="get-in-touch-container">
+    <div class="container">
+        <div class="row get-in-touch">
+            <div class="col-12 col-md-6 content-col d-flex flex-column justify-content-start align-items-center">
+                <p class="get-in-touch-header mb-0">Ready to get started</p>
+                <p class="get-in-touch-content">Let&#39;s talk about your project</p>
+            </div>
+            <div class="col-12 col-md-6 btn-col d-flex align-items-center">
+                <button type="button" href="https://taylorhalliday.typeform.com/to/ji75xl" class="btn get-in-touch-btn typeform-share">get in touch</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container footer-container py-5" id="container">
+        <div class="row">
+            
+            <div class="col">
+                <a class="navbar-brand mb-5 mt-2" href="https://meshstudio.io/">
+                    <img class="img-fluid main-logo" src="/images/site/meshlogo-white-vector.svg" alt="Home" />
+                </a>
+            </div>
+        </div>
+        <div class="row">
+
+            
+            <div class="col-6 col-md-3 footer-list">
+                <h5>Contact</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        3621 Stone Way N Suite G
+                    </li>
+                    <li>
+                        Seattle, WA 98103
+                    </li>
+                    <li>
+                        info@meshstudio.io
+                    </li>
+                </ul>
+            </div>
+
+            
+            <div class="col-6 col-md-3 footer-list nav-list">
+                <h5>Pages</h5>
+                <ul class="list-unstyled text-small">
+
+                    <ul class="footer-nav">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/">Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/work/">Work</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/services/">Services</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/about/">About</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/careers/">Careers</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link pt-1 pb-1" href="/blog/">Blog</a>
+                        </li>
+                        
+                    </ul>
+                </ul>
+            </div>
+
+            
+            <div class="col-12 col-md-4 offset-md-2 footer-list">
+                
+                    <h5>Latest Blog Post</h5>
+                    
+                    <a class="blog-title d-block" href="/blog/2018-09-14-react-native-boilerplate/">React-Native Typescript Boilerplate</a>
+                    <a class="blog-sub-title d-block pt-2" href="/blog/2018-09-14-react-native-boilerplate/">Build cross-platform mobile apps better, faster, stronger.</a>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script src="/js/googleAnalytics.js"></script>
+<script src="/js/typeform.js"></script>
+<script src="/js/mailchimp.js"></script>
+
+
+</html>
