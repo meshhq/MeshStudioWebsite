@@ -6,10 +6,21 @@
     <description>Recent content in Mesh Studio Blog on Mesh Studio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Sep 2018 09:44:38 -0700</lastBuildDate>
     
 	<atom:link href="https://meshstudio.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>React Native Typescript Boilerplate</title>
+      <link>https://meshstudio.io/blog/2018-09-14-react-native-boilerplate/</link>
+      <pubDate>Fri, 14 Sep 2018 09:44:38 -0700</pubDate>
+      
+      <guid>https://meshstudio.io/blog/2018-09-14-react-native-boilerplate/</guid>
+      <description>React Native has established itself as an incredibly powerful tool for building cross-platform mobile applications. We set out to try and create a clone-able repository so developers can jump right into building features/UI instead of spending hours configuring their environment.
+Getting Started If you want to jump right into developing your own cross-platform mobile application, get started with the README here.
+If you want more insight into the tooling/frameworks used in this project - continue reading.</description>
+    </item>
     
     <item>
       <title>The Complete Guide to Static Hosting with AWS</title>
