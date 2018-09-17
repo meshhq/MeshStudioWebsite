@@ -13,7 +13,7 @@
     <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<meta property="og:title" content=" React-Native Typescript Boilerplate &middot;  Mesh Studio" />
+<meta property="og:title" content=" React Native Typescript Boilerplate &middot;  Mesh Studio" />
 <meta property="og:site_name" content="Mesh Studio" />
 <meta property="og:url" content="https://meshstudio.io/blog/2018-09-14-react-native-boilerplate/" />
 
@@ -42,9 +42,11 @@
 
 
 
+  <meta property="og:image" content="/images/blog/2018-09-14-react-native-boilerplate/hero.png" />
+
 
 <title>
- React-Native Typescript Boilerplate &middot;  Mesh Studio
+ React Native Typescript Boilerplate &middot;  Mesh Studio
 </title>
 
 <meta name="description" content="We’re Mesh, a Seattle based software development consultancy. We help innovative companies ship incredible software products." />
@@ -85,7 +87,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.36" />
+    <meta name="generator" content="Hugo 0.37.1" />
 
     <link rel="canonical" href="https://meshstudio.io/blog/2018-09-14-react-native-boilerplate/" />
 
@@ -156,12 +158,12 @@
                 <div class="row justify-content-center hero-title-block">
     <div class="col-12">
         <div class="d-flex justify-content-center">
-            <h2>React-Native Typescript Boilerplate</h2>
+            <h2>React Native Typescript Boilerplate</h2>
         </div>
     </div>
     <div class="col-12 mt-2">
         <div class="d-flex justify-content-center">
-            <h3>Build cross-platform mobile apps better, faster, stronger.</h3>
+            <h3>Build cross-platform mobile apps faster.</h3>
         </div>
     </div>
 </div>
@@ -171,7 +173,7 @@
 
     <div class="primary-section">
         <div class="hero-container d-flex justify-content-center">
-            <img class="img-fluid" src="" />
+            <img class="img-fluid" src="/images/blog/2018-09-14-react-native-boilerplate/hero.png" />
         </div>
 
         <div class="container">
@@ -189,7 +191,7 @@
                                 <div class="author-meta mt-2">
                                     <span class="post-meta author-name">Reid Weber</span>
                                     <span class="post-meta post-date">Posted On Sep 14, 2018</span>
-                                    <p class="post-meta post-words mt-1">4 min read | 700 Words</p>
+                                    <p class="post-meta post-words mt-1">4 min read | 800 Words</p>
                                 </div>
                             </header>
                         </div>
@@ -215,10 +217,10 @@
 <h2 id="tooling">Tooling</h2>
 
 <blockquote>
-<p><code>react-native-cli</code></p>
+<p><a href="https://facebook.github.io/react-native/docs/getting-started.html"><code>react-native-cli</code></a></p>
 </blockquote>
 
-<p>There are currently two ways to create a new React Native application;  <code>react-native-cli</code> and <code>create-react-native-app</code> (<code>CRNA</code>). We chose the former because it provides more flexibility when it comes to configuring settings in Xcode and Android Studio. <code>react-native-cli</code> also makes it much easier to link third-party libraries to underlying native libraries.</p>
+<p>There are currently two ways to create a new React Native application:  <code>react-native-cli</code> and <code>create-react-native-app</code> (<code>CRNA</code>). We chose the former because it provides more flexibility when it comes to configuring settings in Xcode and Android Studio. <code>react-native-cli</code> also makes it much easier to link third-party libraries to underlying native libraries.</p>
 
 <p>There is, however, a downside; more flexibility in local configuration can lead to build and runtime errors in Android Studio and Xcode (this is especially apparent in Android Studio with the way it is constantly syncing Gradle files).</p>
 
@@ -228,16 +230,16 @@
 
 <p>You’ll see the <code>android</code> and <code>ios</code> directories at the root of the project. Both of these can be opened and manipulated in their respective IDE’s.</p>
 
-<p>Note: Never edit Gradle files outside of Android Studio. It’s very easy to create build issues without taking advantage of the sync process embedded in Google’s IDE.</p>
+<p>Note: We recommend that you only edit Gradle files with Android Studio. Google&rsquo;s IDE does a lot of Gradle-related work behind the scenes via a sync process, which makes it very easy to introduce build issues if you modify these files with a different program.</p>
 
 <blockquote>
-<p><code>TypeScript</code></p>
+<p><a href="https://www.typescriptlang.org/"><code>TypeScript</code></a></p>
 </blockquote>
 
 <p>Having strongly typed class and components makes it much easier to understand and interpret the original author’s code. This is especially useful when dealing with React component’s <code>state</code> and <code>props</code>. The only drawback with TypeScript is setting up the environment (which is already taken care of in this project).</p>
 
 <blockquote>
-<p><code>react-native-navigation</code></p>
+<p><a href="https://github.com/wix/react-native-navigation"><code>react-native-navigation</code></a></p>
 </blockquote>
 
 <p>An open-source library maintained by Wix that provides developers with access to built-in navigation animations you’d expect from a native application. This project comes prebuilt with a <code>TabBarNavigator</code> and a couple of screens to illustrate best practices on how to set up your navigation stack.</p>
@@ -245,7 +247,7 @@
 <p>Note: If you’re interested in building a single screen application. See the docs <a href="https://wix.github.io/react-native-navigation/#/top-level-api">here</a>.</p>
 
 <blockquote>
-<p><code>jest</code></p>
+<p><a href="https://jestjs.io/"><code>jest</code></a></p>
 </blockquote>
 
 <p>Jest is a great unit testing suite that ships with React Native. It provides a simple, flexible syntax that is powerful and human-readable. Jest also runs all tests in parallel - speeding up the test process. In this project, run the test suite with</p>
@@ -254,31 +256,31 @@
 </code></pre>
 
 <blockquote>
-<p><code>detox</code></p>
+<p><a href="https://github.com/wix/detox"><code>detox</code></a></p>
 </blockquote>
 
 <p>Another great open-source resource from Wix that allows end-to-end UI testing. Allows you to tag all of your components and manipulate them to simulate user inputs. This project has a single UI test in <code>./e2e/HomeScreen.spec.js</code> to illustrate the correct way to label and manipulate components.</p>
 
 <blockquote>
-<p><code>axios</code></p>
+<p><a href="https://github.com/axios/axios"><code>axios</code></a></p>
 </blockquote>
 
-<p>A Promise based HTTP client with TypeScript and React Native support. Allows a simple interface for clean HTTP requests and also allows automatic transforms for JSON data. Clean, simple, examples of how axios can be used to connect your application to remote resources can be found in <code>UserService.ts</code>.</p>
+<p>A Promise based HTTP client with TypeScript and React Native support. Provides a simple interface for clean HTTP requests, and also handles transforming JSON data for you. Clean, simple, examples of how axios can be used to connect your application to remote resources can be found in <code>UserService.ts</code>.</p>
 
 <blockquote>
-<p><code>nock</code></p>
+<p><a href="https://github.com/nock/nock"><code>nock</code></a></p>
 </blockquote>
 
 <p>A mocking library that allows you to simulate HTTP requests/responses in the test suite without hitting a live endpoint. This is helpful if you’re building a client application before its server is ready to hit. You can mock the expected responses to make sure your application is ready to send/receive data when the servers are up. Mocking examples can be found in <code>__tests__/models/UserService.ts</code>.</p>
 
 <blockquote>
-<p><code>Realm</code></p>
+<p><a href="https://realm.io/"><code>Realm</code></a></p>
 </blockquote>
 
 <p>A simple, yet powerful solution to local storage in React Native. Realm makes it easy to define model schemas and provides a clean, synchronous interface to manage your local store. An example of a model definition can be found in <code>./src/models/User.ts</code>. An example of how a model’s functionality and repository can be exposed can be found in the <code>store</code> directory.</p>
 
 <blockquote>
-<p><code>Watchman</code></p>
+<p><a href="https://facebook.github.io/watchman/docs/install.html"><code>Watchman</code></a></p>
 </blockquote>
 
 <p>Also ships with React Native, it tracks changes in your file system to enable the hot reload. To see this in action - run the project on a device and perform a ‘shake-gesture’. The React Native developer menu will pop up and you can select ‘Reload’ to quickly see any new changes you’ve made since the last launch.</p>
@@ -383,8 +385,8 @@
                 
                     <h5>Latest Blog Post</h5>
                     
-                    <a class="blog-title d-block" href="/blog/2018-09-14-react-native-boilerplate/">React-Native Typescript Boilerplate</a>
-                    <a class="blog-sub-title d-block pt-2" href="/blog/2018-09-14-react-native-boilerplate/">Build cross-platform mobile apps better, faster, stronger.</a>
+                    <a class="blog-title d-block" href="/blog/2018-09-14-react-native-boilerplate/">React Native Typescript Boilerplate</a>
+                    <a class="blog-sub-title d-block pt-2" href="/blog/2018-09-14-react-native-boilerplate/">Build cross-platform mobile apps faster.</a>
                 
             </div>
         </div>
